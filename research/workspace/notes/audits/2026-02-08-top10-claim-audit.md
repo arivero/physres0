@@ -42,7 +42,7 @@ Scoring rule:
 
 | Claim | Score | Rationale |
 |---|---:|---|
-| 1 | 8.7 | Scoped theorem package now includes intrinsic moment-based sufficient conditions replacing key quartic-tail external hypotheses, plus manuscript-integrated non-factorized large-\(N\) quartic-tail convergence and normalization/observable/SD/covariance closures; global continuum interacting equivalence remains open. |
+| 1 | 8.8 | Scoped theorem package now includes manuscript-integrated intrinsic moment-based criteria for quartic-tail hypotheses, non-factorized large-\(N\) quartic-tail convergence, and normalization/observable/SD/covariance closures; global continuum interacting equivalence remains open. |
 | 2 | 9.0 | Local asymptotic theorem closure is strong; global phase-space completion pending. |
 | 3 | 6.5 | Classification structure is solid but asymptotic-time closure remains incomplete. |
 | 4 | 9.0 | Phase-portrait and global-time topology closure are theorem-grade in scoped model. |
@@ -89,4 +89,5 @@ Scoring rule:
 32. [done] Built a non-factorized large-\(N\) interacting quartic-tail family with proven convergence (under explicit derivative/summability conditions) beyond Gaussian tails.
 33. [done] Integrated Phase T into the scoped Claim 1 manuscript and propagated strengthened assumptions/dependency chain.
 34. [done] Derived intrinsic moment-based sufficient conditions for quartic-tail non-vanishing and log-derivative bounds.
-35. [next] Integrate Phase V intrinsic-condition theorem into the scoped manuscript and update dependency chain accordingly.
+35. [done] Integrated Phase V intrinsic-condition theorem into the scoped manuscript and dependency chain.
+36. [next] Resume non-Claim1 frontier: close Claim 3 with explicit collision/escape asymptotic-time estimates.

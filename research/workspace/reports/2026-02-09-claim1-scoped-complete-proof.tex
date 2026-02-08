@@ -653,6 +653,57 @@ e^{(B+\tilde B)\|u\|^2}\|u\|^2\sum_{j=N+1}^{N'}L_jA_j,
 for a finite $\tilde B$ (tail-sum bound). Integrating against $e^{-\eta P_m}$ gives numerator/denominator Cauchy bounds, and the ratio estimate follows as in Theorem \ref{thm:largen-coupled}. 
 \end{proof}
 
+\begin{corollary}[Intrinsic sufficient conditions for Theorem \ref{thm:quartic-tail}]
+\label{cor:quartic-intrinsic}
+For each $j$, define block moments
+\[
+\overline M^{(1)}_j:=\sup_{b\ge0}\mathbb E_{\nu_{j,b}}[S_{j,b}],\qquad
+\overline M^{(2)}_j:=\sup_{b\ge0}\mathbb E_{\nu_{j,b}}[t^2],
+\]
+where
+\[
+\nu_{j,b}(dt):=\frac{e^{-\eta S_{j,b}(t)}}{\int e^{-\eta S_{j,b}}}\,dt,\quad
+S_{j,b}(t)=\left(\frac{\lambda_j}{2}+b\right)t^2+\gamma_j t^4.
+\]
+If
+\[
+\eps>\sup_j \overline M^{(1)}_j,
+\]
+and
+\[
+\sum_{j=m+1}^\infty
+A_j\frac{|c|\,\overline M^{(2)}_j}{1-\overline M^{(1)}_j/\eps}
+<\infty,
+\]
+then hypotheses (Q1)--(Q2) in Theorem \ref{thm:quartic-tail} hold with
+\[
+L_j=
+\frac{|c|\,\overline M^{(2)}_j}{1-\overline M^{(1)}_j/\eps}.
+\]
+\end{corollary}
+
+\begin{proof}
+By Theorem \ref{thm:nonvanish} applied to each block $S_{j,b}$:
+\[
+|I_j(b)|\ge \left(\int e^{-\eta S_{j,b}}\right)\left(1-\frac{\overline M^{(1)}_j}{\eps}\right)>0,
+\]
+so (Q1) holds.
+Also
+\[
+\partial_b I_j(b)=-c\int t^2 e^{-cS_{j,b}(t)}dt,
+\]
+thus
+\[
+\left|\partial_b\log I_j(b)\right|
+\le
+\frac{|c|\int t^2e^{-\eta S_{j,b}}dt}
+{\int e^{-\eta S_{j,b}}dt\,(1-\overline M^{(1)}_j/\eps)}
+\le
+\frac{|c|\,\overline M^{(2)}_j}{1-\overline M^{(1)}_j/\eps}.
+\]
+This is (Q2). Summability is exactly the second assumption.
+\end{proof}
+
 \section{Partition-Factor Non-Vanishing Bounds}
 
 \begin{theorem}[Moment criteria]
@@ -822,7 +873,7 @@ Hence numerator and denominator kernels are unchanged.
 The proofs in this manuscript now close in the following order:
 \begin{enumerate}[leftmargin=1.6em]
 \item Sections \ref{sec:projective}--\ref{sec:channels}: core scoped Claim 1 closure.
-\item Theorems \ref{thm:largen-coupled} and \ref{thm:quartic-tail}: large-$N$ coupled extensions (Gaussian-tail explicit rate and non-factorized quartic-tail class).
+\item Theorems \ref{thm:largen-coupled}, \ref{thm:quartic-tail}, and Corollary \ref{cor:quartic-intrinsic}: large-$N$ coupled extensions (Gaussian-tail rate, non-factorized quartic-tail class, and intrinsic moment-based sufficient conditions).
 \item Theorem \ref{thm:nonvanish}: explicit non-vanishing criteria for partition factors.
 \item Theorem \ref{thm:observable-extension}: observable-class extension to Schwartz/Sobolev.
 \item Theorems \ref{thm:sd} and \ref{thm:tau}: Schwinger-Dyson identities and exact scale-flow covariance.
@@ -834,7 +885,7 @@ This manuscript now gives a theorem-grade chain from the static/finite-dimension
 \begin{enumerate}[leftmargin=1.6em]
 \item exact projective closure and de-regularization,
 \item explicit semiclassical channel expansion,
-\item large-$N$ mode-coupled convergence with quantitative tail control (Gaussian-tail and non-factorized quartic-tail classes),
+\item large-$N$ mode-coupled convergence with quantitative tail control (Gaussian-tail and non-factorized quartic-tail classes), with intrinsic moment criteria for quartic-tail hypotheses,
 \item non-vanishing control for normalization factors,
 \item extension to large observable classes,
 \item Schwinger-Dyson identities and scale-flow covariance.
