@@ -36,7 +36,7 @@ The proof closes:
 (iv) de-regularization $\eta\to0^+$ via contour rotation (Gaussian, factorized quartic, and coupled quartic block),
 and (v) explicit Gaussian semiclassical channel expansion in point-supported distribution modes.
 It further closes:
-(vi) genuinely large-$N$ mode-coupled lifts, including an explicit Gaussian-tail rate and a non-factorized quartic-tail class under log-derivative summability,
+(vi) genuinely large-$N$ mode-coupled lifts, including an explicit Gaussian-tail rate, a non-factorized quadratic-mixing determinant class, and a non-factorized quartic-tail class under log-derivative summability,
 (vii) explicit non-vanishing lower bounds for normalized oscillatory partition factors,
 (viii) extension of observables from Gaussian-exponential test families to Schwartz and weighted Sobolev classes,
 and (ix) finite-dimensional Schwinger-Dyson identities and exact $\tau_\mu$-type scale-flow covariance.
@@ -704,6 +704,147 @@ thus
 This is (Q2). Summability is exactly the second assumption.
 \end{proof}
 
+\begin{theorem}[Non-factorized quadratic-mixing large-$N$ extension]
+\label{thm:quadratic-mixing}
+Let
+\[
+S_N(u,v)
+=
+P_m(u)+\frac12\,v^\top\!\big(D_N(u)+K_N\big)v,
+\]
+where $u\in\R^m$, $v\in\R^{N-m}$, $D_N(u)=\mathrm{diag}(d_{m+1}(u),\dots,d_N(u))$ with
+\[
+d_j(u)=\lambda_j+2\beta_j(u),\quad
+\beta_j(u)=\sum_{i=1}^m a_{ij}u_i^2,\quad
+a_{ij}\ge0,\ \lambda_j\ge\lambda_->0.
+\]
+Assume coercive $P_m$ and
+\[
+A_j:=\sum_{i=1}^m a_{ij},\qquad
+\sum_{j=m+1}^\infty \frac{A_j}{\lambda_j}<\infty.
+\]
+Let $K=(\kappa_{jk})_{j,k>m}$ be real symmetric, $K_N$ its principal truncation, and with $\Lambda=\mathrm{diag}(\lambda_j)$ define
+\[
+\widetilde K:=\Lambda^{-1/2}K\Lambda^{-1/2}.
+\]
+Assume
+\[
+\|\widetilde K\|<\theta<1,\qquad \|\widetilde K\|_1<\infty,
+\]
+and
+\[
+\tau_N:=\|\widetilde K-P_N\widetilde K P_N\|_1\to0
+\]
+($P_N$: projection onto indices $m+1,\dots,N$).
+
+Then for bounded cylinder $F_m$,
+\[
+\omega_{\eps,\eta,N}(F_m)=
+\frac{\int e^{-cS_N}F_m(u)\,du\,dv}{\int e^{-cS_N}\,du\,dv},
+\qquad c=\eta-i/\eps,\ \eta>0,
+\]
+converges as $N\to\infty$ (if the limiting denominator is nonzero), and there exists $C_{F_m,\eps,\eta}>0$ such that
+\[
+|\omega_{\eps,\eta,N'}(F_m)-\omega_{\eps,\eta,N}(F_m)|
+\le
+C_{F_m,\eps,\eta}\left(
+\sum_{j=N+1}^{N'}\frac{A_j}{\lambda_j}
+\;+\;\tau_N
+\right),
+\quad N'>N\ge m.
+\]
+\end{theorem}
+
+\begin{proof}
+Integrate in $v$:
+\[
+\int_{\R^{N-m}}e^{-c\frac12 v^\top(D_N+K_N)v}dv
+=
+C_N(c)\det(D_N+K_N)^{-1/2},
+\]
+with $u$-independent $C_N(c)$ that cancels in normalized ratios. So
+\[
+\omega_{\eps,\eta,N}(F_m)
+=
+\frac{\int_{\R^m}e^{-cP_m(u)}F_m(u)\Phi_N(u)\,du}
+{\int_{\R^m}e^{-cP_m(u)}\Phi_N(u)\,du},
+\quad
+\Phi_N(u):=\det(D_N(u)+K_N)^{-1/2}.
+\]
+Write
+\[
+\Phi_N(u)=\Phi_N^{\mathrm{diag}}(u)\,\Delta_N(u),
+\]
+\[
+\Phi_N^{\mathrm{diag}}(u):=\prod_{j=m+1}^N d_j(u)^{-1/2},
+\qquad
+\Delta_N(u):=\det(I+M_N(u))^{-1/2},
+\]
+\[
+M_N(u):=D_N(u)^{-1/2}K_ND_N(u)^{-1/2}.
+\]
+
+By Theorem \ref{thm:largen-coupled}, $\Phi_N^{\mathrm{diag}}$ has Cauchy tail control by
+\[
+\sigma_N:=\sum_{j=N+1}^\infty A_j/\lambda_j.
+\]
+
+Since $D_N(u)\ge \Lambda_N$, we have
+\[
+\|M_N(u)\|\le\|\widetilde K\|<\theta,\qquad
+\|M_N(u)\|_1\le\|\widetilde K\|_1=:K_1.
+\]
+Thus $I+M_N(u)$ is invertible and
+\[
+|\log\det(I+M_N(u))|
+\le
+\frac{1}{1-\theta}\|M_N(u)\|_1
+\le
+\frac{K_1}{1-\theta},
+\]
+hence $|\Delta_N(u)|\le C_\Delta$ uniformly.
+
+Now set
+\[
+Q(u):=\mathrm{diag}\!\left((\lambda_j/d_j(u))^{1/2}\right),\qquad 0<Q(u)\le I.
+\]
+Then $M_\infty(u)=Q(u)\widetilde KQ(u)$ and $M_N(u)=P_NM_\infty(u)P_N$, so
+\[
+\|M_\infty(u)-M_N(u)\|_1
+\le
+\|\widetilde K-P_N\widetilde K P_N\|_1
+=\tau_N.
+\]
+On $\|A\|,\|B\|\le\theta<1$,
+\[
+|\log\det(I+A)-\log\det(I+B)|
+\le
+\frac{1}{1-\theta}\|A-B\|_1,
+\]
+thus
+\[
+|\Delta_\infty(u)-\Delta_N(u)|\le C_\Delta'\tau_N
+\]
+uniformly in $u$.
+
+Therefore, for $N'>N$,
+\[
+\Phi_{N'}-\Phi_N
+=
+\Delta_{N'}(\Phi_{N'}^{\mathrm{diag}}-\Phi_N^{\mathrm{diag}})
++\Phi_N^{\mathrm{diag}}(\Delta_{N'}-\Delta_N),
+\]
+and
+\[
+|\Phi_{N'}(u)-\Phi_N(u)|
+\le
+C_1e^{B\|u\|^2}\big(\sigma_N+\tau_N\big),
+\]
+for constants $C_1,B$ independent of $N,u$. Multiplying by
+$|e^{-cP_m(u)}|=e^{-\eta P_m(u)}$ gives an integrable envelope by quartic coercivity.
+Dominated convergence plus the standard ratio-difference estimate yields convergence and the stated mixed tail rate.
+\end{proof}
+
 \section{Partition-Factor Non-Vanishing Bounds}
 
 \begin{theorem}[Moment criteria]
@@ -873,7 +1014,7 @@ Hence numerator and denominator kernels are unchanged.
 The proofs in this manuscript now close in the following order:
 \begin{enumerate}[leftmargin=1.6em]
 \item Sections \ref{sec:projective}--\ref{sec:channels}: core scoped Claim 1 closure.
-\item Theorems \ref{thm:largen-coupled}, \ref{thm:quartic-tail}, and Corollary \ref{cor:quartic-intrinsic}: large-$N$ coupled extensions (Gaussian-tail rate, non-factorized quartic-tail class, and intrinsic moment-based sufficient conditions).
+\item Theorems \ref{thm:largen-coupled}, \ref{thm:quadratic-mixing}, \ref{thm:quartic-tail}, and Corollary \ref{cor:quartic-intrinsic}: large-$N$ coupled extensions (Gaussian-tail rate, non-factorized quadratic-mixing determinant class, non-factorized quartic-tail class, and intrinsic moment-based sufficient conditions).
 \item Theorem \ref{thm:nonvanish}: explicit non-vanishing criteria for partition factors.
 \item Theorem \ref{thm:observable-extension}: observable-class extension to Schwartz/Sobolev.
 \item Theorems \ref{thm:sd} and \ref{thm:tau}: Schwinger-Dyson identities and exact scale-flow covariance.
@@ -885,7 +1026,7 @@ This manuscript now gives a theorem-grade chain from the static/finite-dimension
 \begin{enumerate}[leftmargin=1.6em]
 \item exact projective closure and de-regularization,
 \item explicit semiclassical channel expansion,
-\item large-$N$ mode-coupled convergence with quantitative tail control (Gaussian-tail and non-factorized quartic-tail classes), with intrinsic moment criteria for quartic-tail hypotheses,
+\item large-$N$ mode-coupled convergence with quantitative tail control (Gaussian-tail, non-factorized quadratic-mixing, and non-factorized quartic-tail classes), with intrinsic moment criteria for quartic-tail hypotheses,
 \item non-vanishing control for normalization factors,
 \item extension to large observable classes,
 \item Schwinger-Dyson identities and scale-flow covariance.

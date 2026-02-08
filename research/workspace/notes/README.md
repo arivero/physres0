@@ -51,6 +51,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-scale-flow-covariance.md`
 - `theorems/2026-02-09-claim1-largeN-coupled-quartic-tail.md`
 - `theorems/2026-02-09-claim1-quartic-tail-intrinsic-conditions.md`
+- `theorems/2026-02-09-claim1-nonfactorized-quadratic-mixing-cylinder-limit.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -88,6 +89,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_scale_flow_covariance_check.py`
 - `../simulations/claim1_largeN_coupled_quartic_tail_check.py`
 - `../simulations/claim1_quartic_tail_intrinsic_conditions_check.py`
+- `../simulations/claim1_nonfactorized_quadratic_mixing_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
