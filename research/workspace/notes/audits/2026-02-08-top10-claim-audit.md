@@ -55,4 +55,5 @@ Canonical rendered companion: `conv_patched.pdf`
 20. [done] Extended Claim 1 closure from Gaussian core to small-coupling quartic perturbations (regularized model) with explicit \(O(g)\) bound.
 21. [done] Removed regularization gap in the Gaussian sector (\(\eta\to 0^+\) exact closure for Gaussian-exponential cylinder class).
 22. [done] Removed regularization gap for the factorized quartic interacting class (Gaussian-exponential cylinder observables) via contour closure at \(\eta\to 0^+\).
-23. [next] Extend de-regularization from factorized quartic blocks to non-factorized mode-coupled interactions.
+23. [done] Extended de-regularization to a non-factorized coupled quartic finite block (\(x_1^2x_2^2\) mode coupling).
+24. [next] Lift coupled-block de-regularization to projective large-\(N\) mode-coupled families with uniform control.
