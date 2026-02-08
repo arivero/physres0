@@ -51,4 +51,5 @@ Canonical rendered companion: `conv_patched.pdf`
 16. [done] Specialized Claim 9 into model-class propositions (pure YM, YM+fundamental matter, Abelian Higgs) with explicit assumptions.
 17. [done] Produced synthesis note with dependency graph and long-horizon conjecture list (Phase F).
 18. [done] Added Claim 1 continuum skeleton with explicit spaces/topologies/counterterm flow and convergence template.
-19. [next] Prove a concrete Gaussian-model closure of H1-H6 (full theorem statement + proof details).
+19. [done] Proved Gaussian-model closure of Claim 1 continuum hypotheses H1-H6 with explicit counterterm-repair construction.
+20. [next] Extend Claim 1 closure from Gaussian core to polynomial perturbations with explicit small-coupling bounds.
