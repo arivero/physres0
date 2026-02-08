@@ -25,6 +25,7 @@ This folder stores analysis artifacts derived from source documents.
 
 - `theorems/2026-02-08-claim1-scoped-bridge-statement.md`
 - `theorems/2026-02-08-claim1-discrete-variational-delta-lemmas.md`
+- `theorems/2026-02-08-claim1-manifold-halfdensity-convolution.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim4-n3-duffing-phase-portrait.md`
@@ -48,3 +49,7 @@ This folder stores analysis artifacts derived from source documents.
 ## Current Reports
 
 - `../reports/2026-02-08-claim1-variational-delta-note.tex`
+
+## Supplemental Audit Notes
+
+- `audits/2026-02-08-point-supported-distribution-scaling-subclaims.md`

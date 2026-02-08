@@ -19,7 +19,8 @@ Notation clarification used in these notes:
   \delta(f')\quad\text{or}\quad \delta\!\left(\frac{\delta S}{\delta \phi}\right),
   \]
   meaning a Dirac delta concentrated on extrema.
-- This is not the derivative distribution \(\delta'\) of Dirac.
+- More precisely, \(\delta(f')\) is a pullback/composition by the map \(f'\), not the distribution derivative \(\partial_x\delta\) (often denoted \(\delta'\)).
+- Both objects belong the point-supported-distribution framework: in 1D, point-supported distributions are finite sums \(\sum_{m=0}^N c_m\,\delta^{(m)}\), with dilation weights \(\delta^{(m)}(\lambda x)\sim \lambda^{-m-1}\delta^{(m)}(x)\) (\(\lambda>0\)). This gives multiple scaling eigendirections/fixed-mode channels, not a single one.
 
 The same extremum-selector pattern appears at three levels.
 
@@ -152,3 +153,7 @@ For finite-dimensional QM/lattice-QFT truncations, see:
 `research/workspace/notes/theorems/2026-02-08-claim1-discrete-variational-delta-lemmas.md`
 
 This makes \(\delta(\nabla S_N)\) support/weights explicit before continuum limits.
+
+For the finite-dimensional manifold/groupoid half-density step, see:
+
+`research/workspace/notes/theorems/2026-02-08-claim1-manifold-halfdensity-convolution.md`

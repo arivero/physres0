@@ -27,7 +27,18 @@ We use the shorthand
 \delta(\partial S)
 \]
 for ``delta of first variation'' (or gradient in finite dimensions), i.e. a Dirac concentration on critical points.
-This is \emph{not} the derivative distribution $\delta'$ of Dirac.
+This is \emph{not} the distribution derivative $\partial_x\delta$ (often denoted $\delta'$): it is composition/pullback by the map $\partial S$.
+
+At the same time, both belong the point-supported-distribution framework:
+in one dimension, any point-supported distribution is a finite sum
+\[
+\sum_{m=0}^N c_m\,\delta^{(m)}.
+\]
+Under dilation $x\mapsto \lambda x$ (\(\lambda>0\)),
+\[
+\delta^{(m)}(\lambda x)=\lambda^{-m-1}\delta^{(m)}(x),
+\]
+so different derivatives of $\delta$ carry different scaling weights, i.e. multiple scaling modes/fixed channels.
 
 \section{Level 0: Static Oscillatory Integral}
 
