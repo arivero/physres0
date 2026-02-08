@@ -1,0 +1,25 @@
+numpy
+scipy
+sympy
+mpmath
+matplotlib
+jupyterlab
+pandas
+networkx
+pint
+uncertainties
+qutip
+einsteinpy
+tqdm
+pyyaml
+pytest
+
+# Optional HEP stack
+uproot
+awkward
+vector
+pyhf
+iminuit
+
+# Optional accelerated numerics
+jax
