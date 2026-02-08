@@ -94,3 +94,11 @@ python3.12 research/workspace/simulations/claim9_phase_longrange_table.py
 ```
 
 The script prints the asymptotic form table by \((D,\text{phase})\).
+
+## Companion Model-Class Note
+
+See:
+
+`research/workspace/notes/theorems/2026-02-08-claim9-model-class-propositions.md`
+
+for explicit assumption-by-assumption propositions (massless Abelian, Abelian Higgs, pure YM, YM + dynamical fundamental matter).

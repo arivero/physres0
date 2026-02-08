@@ -22,14 +22,14 @@ Canonical rendered companion: `conv_patched.pdf`
 | 6 | Fixed-energy Schwarzschild bound-orbit interval \(\ell_{\min}(E)<\ell\le\ell_{\max}(E)\) via separatrix | `conv_patched.md:521`, `conv_patched.md:535` | `proved` | Formalized in `research/workspace/notes/theorems/2026-02-08-claim6-schwarzschild-fixed-energy-interval.md` with explicit circular-branch discriminant, closed-form \(u_{\mathrm{st/un}}(E)\), and \(\ell_{\min/\max}(E)\). | Extend to null geodesic analogue and Kerr deformation of the interval picture. |
 | 7 | GR ISCO threshold statement for stable bounded orbits (including \(L=\sqrt{12}\,GMm/c\) form) | `conv_patched.md:519`, `conv_patched.md:597` | `proved` | Canonical Schwarzschild result, correctly framed as geometry-driven threshold and source-backed. | Add unit-convention crosswalk (\(G=c=1\) vs SI) to avoid ambiguity. |
 | 8 | Higher-D GR claim: no stable circular orbits for standard single-hole backgrounds in high dimensions | `conv_patched.md:539` | `heuristic` | Scoped theorem exists for static Tangherlini in `research/workspace/notes/theorems/2026-02-08-claim8-tangherlini-no-stable-circular.md`, plus asymptotic extension in `research/workspace/notes/theorems/2026-02-08-claim8-beyond-tangherlini-asymptotic.md` showing far-zone instability for \(D>5\); rotating/global classes remain open. | Extend the same rigor to Myers-Perry and other non-static classes with precise parameter assumptions. |
-| 9 | Gauge-theory long-range taxonomy across dimensions/phases (Coulomb/log/linear/screened) | `conv_patched.md:619`, `conv_patched.md:633`, `conv_patched.md:647` | `heuristic` | Upgraded to explicit phase-split propositions in `research/workspace/notes/theorems/2026-02-08-claim9-gauge-long-range-phase-split.md`; still assumption-sensitive across gauge groups/matter sectors. | Add theorem-grade statements for specific model classes (pure YM, YM+fundamental matter, Abelian Higgs) with explicit IR assumptions. |
+| 9 | Gauge-theory long-range taxonomy across dimensions/phases (Coulomb/log/linear/screened) | `conv_patched.md:619`, `conv_patched.md:633`, `conv_patched.md:647` | `heuristic` | Upgraded to explicit phase and model-class propositions in `research/workspace/notes/theorems/2026-02-08-claim9-gauge-long-range-phase-split.md` and `research/workspace/notes/theorems/2026-02-08-claim9-model-class-propositions.md`; still assumption-sensitive and class-dependent. | Convert each model-class proposition into theorem-grade statements under specific rigorous frameworks (lattice/continuum assumptions). |
 | 10 | SR circular-orbit benchmark inequalities: \(n=2\Rightarrow L>K/c\), \(n=3\Rightarrow L^2\ge Km\) | `conv_patched.md:143`, `conv_patched.md:230` | `proved` | Formalized as model-internal benchmark derivations in `research/workspace/notes/theorems/2026-02-08-claim10-circular-threshold-benchmarks.md`. | Encode these identities as regression checks in symbolic/numeric pipelines. |
 
 ## Priority for Novelty Work (Post-Audit)
 
 1. Claim 1 (speculative): highest novelty, highest risk.
-2. Claim 9 (heuristic): medium novelty, medium risk, model-class specialization still pending.
-3. Claim 8 (heuristic): medium novelty, medium risk, rotating/global class closure pending.
+2. Claim 8 (heuristic): medium novelty, medium risk, rotating/global class closure pending.
+3. Claim 3 (heuristic): medium novelty, medium risk, collision/escape asymptotic closure pending.
 
 ## Immediate Work Plan
 
@@ -48,4 +48,5 @@ Canonical rendered companion: `conv_patched.pdf`
 13. [done] Built a controlled cylinder-limit program (QM then lattice-QFT toy) with explicit convergence assumptions and failure modes.
 14. [done] Tightened pair/tangent-groupoid half-density statements into theorem/proof format with explicit hypotheses and composition laws.
 15. [done] Closed Claim 3/4 global time-domain classifications and extended Claim 8 beyond static Tangherlini via asymptotic theorem.
-16. [next] Specialize Claim 9 into model-class propositions (pure YM, YM+fundamental matter, Abelian Higgs) with explicit assumptions.
+16. [done] Specialized Claim 9 into model-class propositions (pure YM, YM+fundamental matter, Abelian Higgs) with explicit assumptions.
+17. [next] Produce synthesis note with dependency graph and long-horizon conjecture list (Phase F).
