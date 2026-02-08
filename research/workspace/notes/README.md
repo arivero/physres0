@@ -32,6 +32,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-08-claim1-scoped-bridge-statement.md`
 - `theorems/2026-02-08-claim1-discrete-variational-delta-lemmas.md`
 - `theorems/2026-02-08-claim1-manifold-halfdensity-convolution.md`
+- `theorems/2026-02-08-claim1-point-supported-scaling-channels.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim4-n3-duffing-phase-portrait.md`
@@ -44,6 +45,7 @@ This folder stores analysis artifacts derived from source documents.
 ## Current Simulation Checks
 
 - `../simulations/claim1_halfdensity_static_check.py`
+- `../simulations/claim1_point_supported_scaling_modes.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim4_duffing_n3_portrait_check.py`

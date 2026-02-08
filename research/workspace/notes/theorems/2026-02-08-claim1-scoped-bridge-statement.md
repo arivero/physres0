@@ -157,3 +157,7 @@ This makes \(\delta(\nabla S_N)\) support/weights explicit before continuum limi
 For the finite-dimensional manifold/groupoid half-density step, see:
 
 `research/workspace/notes/theorems/2026-02-08-claim1-manifold-halfdensity-convolution.md`
+
+For explicit multi-channel point-supported scaling modes, see:
+
+`research/workspace/notes/theorems/2026-02-08-claim1-point-supported-scaling-channels.md`
