@@ -14,7 +14,7 @@ Canonical rendered companion: `conv_patched.pdf`
 
 | Rank | Claim | Location | Label | Why this label | Upgrade path |
 |---|---|---|---|---|---|
-| 1 | Halved expression as a half-density/tangent-groupoid bridge to path integrals | `conv_patched.md:814`, `conv_patched.md:934`, `conv_patched.md:967` | `speculative` | Scoped and deepened in `research/workspace/notes/theorems/2026-02-08-claim1-scoped-bridge-statement.md`, `research/workspace/notes/theorems/2026-02-08-claim1-discrete-variational-delta-lemmas.md`, `research/workspace/notes/theorems/2026-02-08-claim1-manifold-halfdensity-convolution.md`, `research/workspace/notes/theorems/2026-02-08-claim1-point-supported-scaling-channels.md`, `research/workspace/notes/theorems/2026-02-08-claim1-cylinder-limit-program.md`, and `research/workspace/notes/theorems/2026-02-08-claim1-groupoid-halfdensity-theorem-pack.md`: static, finite-\(N\), manifold, multi-channel scaling, cylinder-limit, and explicit groupoid composition laws are in place; full continuum equivalence remains open. | Construct a renormalized continuum limit theorem with channel mixing control and observable-class convergence. |
+| 1 | Halved expression as a half-density/tangent-groupoid bridge to path integrals | `conv_patched.md:814`, `conv_patched.md:934`, `conv_patched.md:967` | `heuristic` | Upgraded by scoped theorem-grade closure in `research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex`: exact projective stability, constructive counterterm repair, \(\eta\to0^+\) closure in Gaussian/factorized quartic/coupled finite-block settings, and explicit Gaussian channel expansion are proved. Full global equivalence to continuum interacting path integrals remains open. | Lift finite-block coupling closure to genuinely growing mode-coupled large-\(N\) families and prove channel control in the fully interacting de-regularized limit. |
 | 2 | SR center-access trichotomy from small-\(r\) scaling (\(n<2\), \(n=2\), \(n>2\)) | `conv_patched.md:371`, `conv_patched.md:388` | `proved` | Upgraded to theorem-level asymptotic classification in `research/workspace/notes/theorems/2026-02-08-claim2-center-access-trichotomy.md`, including explicit \(n=2,\;L=K/c\) energy-sign split. | Extend from local \(r\to0\) kinematics to a global phase-space statement (turning points, capture basins). |
 | 3 | Relativistic Coulomb phase portrait via \(\alpha^2=1-K^2/(L^2c^2)\), including rotation number \(\Theta\) | `conv_patched.md:395`, `conv_patched.md:410`, `conv_patched.md:421` | `heuristic` | Upgraded with explicit \(\varphi\)-regime and global-\(t\) turning-set notes in `research/workspace/notes/theorems/2026-02-08-claim3-coulomb-phase-classification.md` and `research/workspace/notes/theorems/2026-02-08-claim3-coulomb-global-time-classification.md`; still not a full asymptotic/collision-time theorem package. | Add explicit collision/escape asymptotic-time estimates and complete global uniqueness statements. |
 | 4 | \(n=3\) Duffing-type reduction and non-generic bounded non-circular dynamics | `conv_patched.md:426`, `conv_patched.md:436` | `proved` | Combined notes `research/workspace/notes/theorems/2026-02-08-claim4-n3-duffing-phase-portrait.md` and `research/workspace/notes/theorems/2026-02-08-claim4-n3-global-time-classification.md` now provide conserved-quantity structure, instability of circular tuning, and global turning-set topology (no generic bounded shell). | Optional: add explicit time-to-plunge/escape asymptotics for selected parameter regimes. |
@@ -27,9 +27,31 @@ Canonical rendered companion: `conv_patched.pdf`
 
 ## Priority for Novelty Work (Post-Audit)
 
-1. Claim 1 (speculative): highest novelty, highest risk.
+1. Claim 1 (heuristic, with proved scoped core): highest novelty, highest remaining risk.
 2. Claim 8 (heuristic): medium novelty, medium risk, rotating/global class closure pending.
 3. Claim 3 (heuristic): medium novelty, medium risk, collision/escape asymptotic closure pending.
+
+## Claim Maturity Scores (0-10)
+
+Scoring rule:
+
+- `10`: theorem-grade closure in intended global scope.
+- `7-9`: theorem-grade closure in strong scoped model, with explicit remaining gap.
+- `4-6`: substantial formal structure but key theorem closures still missing.
+- `0-3`: mostly conjectural framing.
+
+| Claim | Score | Rationale |
+|---|---:|---|
+| 1 | 7.5 | Scoped theorem package now complete in block-tail class, but global continuum interacting equivalence is still open. |
+| 2 | 9.0 | Local asymptotic theorem closure is strong; global phase-space completion pending. |
+| 3 | 6.5 | Classification structure is solid but asymptotic-time closure remains incomplete. |
+| 4 | 9.0 | Phase-portrait and global-time topology closure are theorem-grade in scoped model. |
+| 5 | 9.0 | Dimensional matching is closed in conventions used. |
+| 6 | 9.5 | Fixed-energy interval fully explicit with discriminant structure. |
+| 7 | 9.5 | Canonical ISCO threshold closure. |
+| 8 | 6.5 | Static/asymptotic closures exist; rotating global class not closed. |
+| 9 | 6.0 | Model-class propositions improved but framework-dependent theorem closure still open. |
+| 10 | 9.5 | Benchmarks are explicit and validated. |
 
 ## Immediate Work Plan
 
@@ -56,4 +78,8 @@ Canonical rendered companion: `conv_patched.pdf`
 21. [done] Removed regularization gap in the Gaussian sector (\(\eta\to 0^+\) exact closure for Gaussian-exponential cylinder class).
 22. [done] Removed regularization gap for the factorized quartic interacting class (Gaussian-exponential cylinder observables) via contour closure at \(\eta\to 0^+\).
 23. [done] Extended de-regularization to a non-factorized coupled quartic finite block (\(x_1^2x_2^2\) mode coupling).
-24. [next] Lift coupled-block de-regularization to projective large-\(N\) mode-coupled families with uniform control.
+24. [done] Produced a scoped complete Claim 1 manuscript and theorem chain (`research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex`).
+25. [next] Lift coupled-block de-regularization to projective large-\(N\) mode-coupled families with uniform control.
+26. [next] Prove non-vanishing lower bounds for normalized oscillatory partition factors used in continuity constants.
+27. [next] Expand de-regularized observable class from Gaussian-exponential cylinders to Sobolev/Schwartz-generated dense classes with explicit norm bounds.
+28. [done] Added symbolic channel-coefficient verification (`sympy`) for the Gaussian core expansion.

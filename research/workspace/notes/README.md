@@ -26,6 +26,9 @@ This folder stores analysis artifacts derived from source documents.
 - `tectonic` is installed at `/usr/local/bin/tectonic` (version `0.15.0`).
 - To compile the Claim 1 LaTeX note:
   - `tectonic research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex --outdir research/workspace/reports`
+- Current environment note: `tectonic` panics when it tries network fetches, so for the scoped Claim 1 paper we currently generate PDF via:
+  - `pandoc research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex -s -t html5 --mathml -o research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.html`
+  - `weasyprint research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.html research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.pdf`
 
 ## Current Theorem Notes
 
@@ -66,6 +69,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_eta_zero_gaussian_limit_check.py`
 - `../simulations/claim1_eta_zero_quartic_block_check.py`
 - `../simulations/claim1_eta_zero_coupled_quartic_block_check.py`
+- `../simulations/claim1_gaussian_channel_series_sympy.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -82,6 +86,9 @@ This folder stores analysis artifacts derived from source documents.
 
 - `../reports/2026-02-08-claim1-variational-delta-note.tex`
 - `../reports/2026-02-08-synthesis-proof-dependency.md`
+- `../reports/2026-02-09-claim1-scoped-complete-proof.tex`
+- `../reports/2026-02-09-claim1-scoped-complete-proof.html`
+- `../reports/2026-02-09-claim1-scoped-complete-proof.pdf`
 
 ## Supplemental Audit Notes
 
