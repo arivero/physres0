@@ -54,4 +54,5 @@ Canonical rendered companion: `conv_patched.pdf`
 19. [done] Proved Gaussian-model closure of Claim 1 continuum hypotheses H1-H6 with explicit counterterm-repair construction.
 20. [done] Extended Claim 1 closure from Gaussian core to small-coupling quartic perturbations (regularized model) with explicit \(O(g)\) bound.
 21. [done] Removed regularization gap in the Gaussian sector (\(\eta\to 0^+\) exact closure for Gaussian-exponential cylinder class).
-22. [next] Remove regularization gap for interacting quartic/polynomial perturbations with uniform contour/deformation bounds.
+22. [done] Removed regularization gap for the factorized quartic interacting class (Gaussian-exponential cylinder observables) via contour closure at \(\eta\to 0^+\).
+23. [next] Extend de-regularization from factorized quartic blocks to non-factorized mode-coupled interactions.
