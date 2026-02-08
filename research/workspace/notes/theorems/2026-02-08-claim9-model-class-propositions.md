@@ -86,3 +86,9 @@ python3.12 research/workspace/simulations/claim9_model_class_table.py
 ```
 
 This prints the model-class assumption/outcome table.
+
+## Companion Theorem (Scoped Closure)
+
+For theorem-grade closure of Proposition B (screened Abelian class), see:
+
+`research/workspace/notes/theorems/2026-02-09-claim9-abelian-screened-theorem.md`

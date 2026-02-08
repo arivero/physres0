@@ -22,7 +22,7 @@ Canonical rendered companion: `conv_patched.pdf`
 | 6 | Fixed-energy Schwarzschild bound-orbit interval \(\ell_{\min}(E)<\ell\le\ell_{\max}(E)\) via separatrix | `conv_patched.md:521`, `conv_patched.md:535` | `proved` | Formalized in `research/workspace/notes/theorems/2026-02-08-claim6-schwarzschild-fixed-energy-interval.md` with explicit circular-branch discriminant, closed-form \(u_{\mathrm{st/un}}(E)\), and \(\ell_{\min/\max}(E)\). | Extend to null geodesic analogue and Kerr deformation of the interval picture. |
 | 7 | GR ISCO threshold statement for stable bounded orbits (including \(L=\sqrt{12}\,GMm/c\) form) | `conv_patched.md:519`, `conv_patched.md:597` | `proved` | Canonical Schwarzschild result, correctly framed as geometry-driven threshold and source-backed. | Add unit-convention crosswalk (\(G=c=1\) vs SI) to avoid ambiguity. |
 | 8 | Higher-D GR claim: no stable circular orbits for standard single-hole backgrounds in high dimensions | `conv_patched.md:539` | `heuristic` | Static Tangherlini closure is theoremized in `research/workspace/notes/theorems/2026-02-08-claim8-tangherlini-no-stable-circular.md`, asymptotic instability extension in `research/workspace/notes/theorems/2026-02-08-claim8-beyond-tangherlini-asymptotic.md`, and rotating map added in `research/workspace/notes/theorems/2026-02-09-claim8-rotating-parameter-map.md` (5D MP no-bound theorem; 6D singly spinning MP stable-bound sector). The global all-parameter rotating closure remains open. | Close the remaining rotating \(D\ge 6\) multiparameter Myers-Perry sectors (all spin tuples) and then extend to other rotating families with uniform assumptions. |
-| 9 | Gauge-theory long-range taxonomy across dimensions/phases (Coulomb/log/linear/screened) | `conv_patched.md:619`, `conv_patched.md:633`, `conv_patched.md:647` | `heuristic` | Upgraded to explicit phase and model-class propositions in `research/workspace/notes/theorems/2026-02-08-claim9-gauge-long-range-phase-split.md` and `research/workspace/notes/theorems/2026-02-08-claim9-model-class-propositions.md`; still assumption-sensitive and class-dependent. | Convert each model-class proposition into theorem-grade statements under specific rigorous frameworks (lattice/continuum assumptions). |
+| 9 | Gauge-theory long-range taxonomy across dimensions/phases (Coulomb/log/linear/screened) | `conv_patched.md:619`, `conv_patched.md:633`, `conv_patched.md:647` | `heuristic` | Phase/model split was formalized in `research/workspace/notes/theorems/2026-02-08-claim9-gauge-long-range-phase-split.md` and `research/workspace/notes/theorems/2026-02-08-claim9-model-class-propositions.md`; the screened Abelian branch is now theorem-closed in `research/workspace/notes/theorems/2026-02-09-claim9-abelian-screened-theorem.md` with explicit \(D\)-dependent Yukawa asymptotics. Remaining gaps are non-Abelian confining rigor and full string-breaking crossover theorems. | Close one non-Abelian branch next (area-law to linear-potential theorem under explicit lattice assumptions), then address dynamical-matter crossover rigor. |
 | 10 | SR circular-orbit benchmark inequalities: \(n=2\Rightarrow L>K/c\), \(n=3\Rightarrow L^2\ge Km\) | `conv_patched.md:143`, `conv_patched.md:230` | `proved` | Formalized as model-internal benchmark derivations in `research/workspace/notes/theorems/2026-02-08-claim10-circular-threshold-benchmarks.md`. | Encode these identities as regression checks in symbolic/numeric pipelines. |
 
 ## Priority for Novelty Work (Post-Audit)
@@ -50,7 +50,7 @@ Scoring rule:
 | 6 | 9.5 | Fixed-energy interval fully explicit with discriminant structure. |
 | 7 | 9.5 | Canonical ISCO threshold closure. |
 | 8 | 7.4 | Static + rotating dimension-split map now in place (5D no-bound, 6D singly-spinning stable sector); all-spin \(D\ge 6\) closure remains open. |
-| 9 | 6.0 | Model-class propositions improved but framework-dependent theorem closure still open. |
+| 9 | 6.9 | Screened Abelian branch is theorem-closed with explicit asymptotics; non-Abelian confining and dynamical-matter rigor remain open. |
 | 10 | 9.5 | Benchmarks are explicit and validated. |
 
 ## Immediate Work Plan
@@ -92,4 +92,5 @@ Scoring rule:
 35. [done] Integrated Phase V intrinsic-condition theorem into the scoped manuscript and dependency chain.
 36. [done] Closed Claim 3 with explicit collision/escape asymptotic-time estimates.
 37. [done] Advanced Claim 8 with rotating-class parameter map (5D MP no-bound closure + 6D singly-spinning stable-bound branch).
-38. [next] Push Claim 9 from model-class propositions to theorem-grade scoped closure in one concrete framework (start with Abelian screened class).
+38. [done] Pushed Claim 9 to theorem-grade scoped closure for the Abelian screened class (explicit Yukawa kernel + asymptotic theorem).
+39. [next] Return to Claim 8 rotating closure: map \(D\ge 6\) multi-spin Myers-Perry sectors and separate proven no-bound vs stable-bound regimes.

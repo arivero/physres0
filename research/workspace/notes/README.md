@@ -64,6 +64,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim8-rotating-parameter-map.md`
 - `theorems/2026-02-08-claim9-gauge-long-range-phase-split.md`
 - `theorems/2026-02-08-claim9-model-class-propositions.md`
+- `theorems/2026-02-09-claim9-abelian-screened-theorem.md`
 - `theorems/2026-02-08-claim10-circular-threshold-benchmarks.md`
 
 ## Current Simulation Checks
@@ -99,6 +100,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim8_rotating_parameter_map_table.py`
 - `../simulations/claim9_phase_longrange_table.py`
 - `../simulations/claim9_model_class_table.py`
+- `../simulations/claim9_abelian_screened_asymptotic_check.py`
 
 ## Current Reports
 
