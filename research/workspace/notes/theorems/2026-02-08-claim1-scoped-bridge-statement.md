@@ -165,3 +165,7 @@ For explicit multi-channel point-supported scaling modes, see:
 For the controlled cylinder-limit program (QM/lattice-QFT truncations), see:
 
 `research/workspace/notes/theorems/2026-02-08-claim1-cylinder-limit-program.md`
+
+For theorem-format pair/tangent-groupoid half-density composition laws, see:
+
+`research/workspace/notes/theorems/2026-02-08-claim1-groupoid-halfdensity-theorem-pack.md`
