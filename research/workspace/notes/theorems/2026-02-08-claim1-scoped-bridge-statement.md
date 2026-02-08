@@ -144,3 +144,11 @@ The script uses an exactly solvable Gaussian test case and verifies
 |A_\varepsilon|^2 \to 2\pi
 \]
 as \(\varepsilon\to 0^+\), matching the static half-density scaling claim.
+
+## Companion Note (Discrete Truncations)
+
+For finite-dimensional QM/lattice-QFT truncations, see:
+
+`research/workspace/notes/theorems/2026-02-08-claim1-discrete-variational-delta-lemmas.md`
+
+This makes \(\delta(\nabla S_N)\) support/weights explicit before continuum limits.

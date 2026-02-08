@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Claim 1 Note: Variational Delta from Static Integrals to QM and QFT}
+\author{}
+\date{2026-02-08}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note organizes Claim 1 into a three-level ladder:
+static finite-dimensional oscillatory integrals, quantum mechanics in time, and quantum field theory in spacetime.
+At each level, the same object appears: a Dirac delta of the first variation, supported on extrema of the corresponding action.
+The static level is theorem-grade; the full infinite-dimensional bridge to continuum path integrals remains conjectural.
+\end{abstract}
+
+\section{Notation and Scope}
+
+We use the shorthand
+\[
+\delta(\partial S)
+\]
+for ``delta of first variation'' (or gradient in finite dimensions), i.e. a Dirac concentration on critical points.
+This is \emph{not} the derivative distribution $\delta'$ of Dirac.
+
+\section{Level 0: Static Oscillatory Integral}
+
+Let $f \in C^\infty(\mathbb{R})$ and $O \in C_c^\infty(\mathbb{R})$. Define
+\[
+A_\varepsilon(O) := \varepsilon^{-1/2}\int_{\mathbb{R}} e^{\frac{i}{\varepsilon}f(x)}\,O(x)\,dx,
+\qquad \varepsilon>0.
+\]
+
+\begin{proposition}[Single nondegenerate critical point]
+Assume $f'(x_0)=0$, $f''(x_0)\neq 0$, and $x_0$ is the unique critical point.
+Then, as $\varepsilon\to 0^+$,
+\[
+|A_\varepsilon(O)|^2
+=
+2\pi\,\frac{|O(x_0)|^2}{|f''(x_0)|}
++o(1),
+\]
+up to Fourier-normalization convention.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Apply stationary phase to $A_\varepsilon$:
+\[
+\int e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx
+\sim
+e^{\frac{i}{\varepsilon}f(x_0)}e^{i\frac{\pi}{4}\operatorname{sgn}(f''(x_0))}
+\sqrt{\frac{2\pi\varepsilon}{|f''(x_0)|}}\,O(x_0).
+\]
+Multiply by $\varepsilon^{-1/2}$, then take modulus squared.
+\end{proof}
+
+Distributionally, this is the finite-dimensional template
+\[
+|A_\varepsilon(O)|^2 \to 2\pi\,\langle \delta(f'), |O|^2\rangle.
+\]
+
+\begin{remark}[Multiple critical points]
+With several nondegenerate critical points, cross terms carry phases
+$e^{i(f(x_i)-f(x_j))/\varepsilon}$.
+Pointwise limits of $|A_\varepsilon|^2$ can fail without averaging/weak-limit prescriptions.
+\end{remark}
+
+\section{Level 1: Quantum Mechanics (Action in Time)}
+
+For paths $\phi:[t_0,t_1]\to M$ and action
+\[
+S[\phi]=\int_{t_0}^{t_1}L(\phi,\dot\phi)\,dt,
+\]
+the critical-point equation is Euler--Lagrange:
+\[
+\frac{\delta S}{\delta \phi}=0.
+\]
+The direct analogue of $\delta(f')$ is
+\[
+\Delta_{\mathrm{QM}}:=\delta\!\left(\frac{\delta S}{\delta \phi}\right),
+\]
+formally supported on classical trajectories.
+
+\subsection*{Discrete approximation}
+Time slicing yields finite-dimensional variables $(q_1,\dots,q_N)$ and discrete action $S_N(q_1,\dots,q_N)$.
+Then
+\[
+\delta\!\left(\frac{\delta S}{\delta \phi}\right)
+\rightsquigarrow
+\delta(\nabla S_N),
+\]
+where $\nabla S_N=0$ are the discrete Euler--Lagrange equations.
+This is the exact finite-dimensional support statement at each fixed $N$.
+
+\section{Level 2: Quantum Field Theory (Action in Spacetime)}
+
+For a field $\Phi$ in $D$ dimensions,
+\[
+S[\Phi]=\int \mathcal{L}(\Phi,\partial\Phi)\,d^Dx,
+\qquad
+\frac{\delta S}{\delta \Phi}=0.
+\]
+The corresponding object is
+\[
+\Delta_{\mathrm{QFT}}:=\delta\!\left(\frac{\delta S}{\delta \Phi}\right),
+\]
+formally concentrated on classical field equations.
+
+\subsection*{Lattice regularization}
+On a lattice with finitely many variables $\Phi_1,\dots,\Phi_N$,
+\[
+S[\Phi] \rightsquigarrow S_N(\Phi_1,\dots,\Phi_N),\qquad
+\Delta_{\mathrm{QFT}} \rightsquigarrow \delta(\nabla S_N),
+\]
+again making the ``support on extrema'' statement exact at fixed cutoff.
+
+\section{Half-Density Interpretation and Open Step}
+
+The ``halved'' amplitude viewpoint is:
+\begin{itemize}[leftmargin=1.4em]
+\item amplitudes behave as half-density-level objects,
+\item modulus square produces density-level concentration on critical sets.
+\end{itemize}
+
+In finite dimensions this is standard stationary phase/distribution theory.
+The open step is to prove, with full control, the continuum limit from finite-dimensional regularizations to a rigorous infinite-dimensional object compatible with tangent-groupoid composition and renormalized QFT limits.
+
+\section{Summary}
+
+The core structural claim survives escalation:
+\[
+\text{static } \delta(\nabla S)
+\;\longrightarrow\;
+\text{QM } \delta\!\left(\frac{\delta S}{\delta\phi}\right)
+\;\longrightarrow\;
+\text{QFT } \delta\!\left(\frac{\delta S}{\delta\Phi}\right).
+\]
+At every stage, the delta of first variation localizes on extrema of the corresponding action.
+
+\end{document}
