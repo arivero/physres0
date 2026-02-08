@@ -42,7 +42,7 @@ Scoring rule:
 
 | Claim | Score | Rationale |
 |---|---:|---|
-| 1 | 8.2 | Scoped theorem package is now substantially deeper (large-\(N\) coupled lift + normalization + observable + SD/covariance closures), but global continuum interacting equivalence remains open. |
+| 1 | 8.4 | Scoped theorem package now includes non-factorized large-\(N\) quartic-tail convergence under explicit summability/derivative conditions, plus normalization/observable/SD/covariance closures; global continuum interacting equivalence remains open. |
 | 2 | 9.0 | Local asymptotic theorem closure is strong; global phase-space completion pending. |
 | 3 | 6.5 | Classification structure is solid but asymptotic-time closure remains incomplete. |
 | 4 | 9.0 | Phase-portrait and global-time topology closure are theorem-grade in scoped model. |
@@ -86,4 +86,5 @@ Scoring rule:
 29. [done] Formalized finite-dimensional Schwinger-Dyson identities (rigorous Eq.(11)-type closure) from integration by parts.
 30. [done] Added exact \(\tau_\mu\)-type scale-flow covariance theorem for the dressed finite-dimensional family.
 31. [done] Integrated phases N/O/P/Q/R into the scoped Claim 1 manuscript with a consolidated dependency chain.
-32. [next] Build a non-factorized large-\(N\) interacting quartic family with proven de-regularized convergence beyond Gaussian tails.
+32. [done] Built a non-factorized large-\(N\) interacting quartic-tail family with proven convergence (under explicit derivative/summability conditions) beyond Gaussian tails.
+33. [next] Integrate Phase T into the scoped Claim 1 manuscript and propagate the strengthened assumptions/dependency graph.
