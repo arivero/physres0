@@ -35,6 +35,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-08-claim1-point-supported-scaling-channels.md`
 - `theorems/2026-02-08-claim1-cylinder-limit-program.md`
 - `theorems/2026-02-08-claim1-groupoid-halfdensity-theorem-pack.md`
+- `theorems/2026-02-08-claim1-continuum-skeleton.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -54,6 +55,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_point_supported_scaling_modes.py`
 - `../simulations/claim1_cylinder_gaussian_toy.py`
 - `../simulations/claim1_pair_groupoid_convolution_check.py`
+- `../simulations/claim1_continuum_cauchy_diagnostics.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`

@@ -50,4 +50,5 @@ Canonical rendered companion: `conv_patched.pdf`
 15. [done] Closed Claim 3/4 global time-domain classifications and extended Claim 8 beyond static Tangherlini via asymptotic theorem.
 16. [done] Specialized Claim 9 into model-class propositions (pure YM, YM+fundamental matter, Abelian Higgs) with explicit assumptions.
 17. [done] Produced synthesis note with dependency graph and long-horizon conjecture list (Phase F).
-18. [next] Start Claim 1 continuum skeleton (spaces/topologies/counterterms/convergence template).
+18. [done] Added Claim 1 continuum skeleton with explicit spaces/topologies/counterterm flow and convergence template.
+19. [next] Prove a concrete Gaussian-model closure of H1-H6 (full theorem statement + proof details).
