@@ -83,3 +83,6 @@ Scoring rule:
 26. [done] Proved explicit first-/second-moment sufficient lower bounds for non-vanishing oscillatory partition factors.
 27. [done] Expanded de-regularized observable class to Schwartz and weighted Sobolev classes with explicit continuity bounds and convergence diagnostics.
 28. [done] Added symbolic channel-coefficient verification (`sympy`) for the Gaussian core expansion.
+29. [done] Formalized finite-dimensional Schwinger-Dyson identities (rigorous Eq.(11)-type closure) from integration by parts.
+30. [done] Added exact \(\tau_\mu\)-type scale-flow covariance theorem for the dressed finite-dimensional family.
+31. [next] Integrate new phases (N/O/P/Q/R) into the scoped Claim 1 manuscript as theorem sections with a single consolidated dependency chain.
