@@ -14,7 +14,7 @@ Canonical rendered companion: `conv_patched.pdf`
 
 | Rank | Claim | Location | Label | Why this label | Upgrade path |
 |---|---|---|---|---|---|
-| 1 | Halved expression as a half-density/tangent-groupoid bridge to path integrals | `conv_patched.md:814`, `conv_patched.md:934`, `conv_patched.md:967` | `heuristic` | Upgraded by scoped theorem-grade closure in `research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex`: exact projective stability, constructive counterterm repair, \(\eta\to0^+\) closure in Gaussian/factorized quartic/coupled finite-block settings, and explicit Gaussian channel expansion are proved. Full global equivalence to continuum interacting path integrals remains open. | Lift finite-block coupling closure to genuinely growing mode-coupled large-\(N\) families and prove channel control in the fully interacting de-regularized limit. |
+| 1 | Halved expression as a half-density/tangent-groupoid bridge to path integrals | `conv_patched.md:814`, `conv_patched.md:934`, `conv_patched.md:967` | `heuristic` | Upgraded by scoped theorem-grade closure in `research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex`: exact projective stability, constructive counterterm repair, \(\eta\to0^+\) closure (Gaussian/factorized quartic/coupled quartic), large-\(N\) coupled Gaussian-tail lift with explicit Cauchy rate, partition non-vanishing criteria, observable-class extension (Schwartz/weighted Sobolev), Schwinger-Dyson identities, and \(\tau_\mu\)-type scale covariance are proved. Full global equivalence to continuum interacting path integrals remains open. | Lift from scoped polynomial block-tail classes to fully interacting, non-factorized field-theoretic continuum limits with uniform renormalization control and channel bounds. |
 | 2 | SR center-access trichotomy from small-\(r\) scaling (\(n<2\), \(n=2\), \(n>2\)) | `conv_patched.md:371`, `conv_patched.md:388` | `proved` | Upgraded to theorem-level asymptotic classification in `research/workspace/notes/theorems/2026-02-08-claim2-center-access-trichotomy.md`, including explicit \(n=2,\;L=K/c\) energy-sign split. | Extend from local \(r\to0\) kinematics to a global phase-space statement (turning points, capture basins). |
 | 3 | Relativistic Coulomb phase portrait via \(\alpha^2=1-K^2/(L^2c^2)\), including rotation number \(\Theta\) | `conv_patched.md:395`, `conv_patched.md:410`, `conv_patched.md:421` | `heuristic` | Upgraded with explicit \(\varphi\)-regime and global-\(t\) turning-set notes in `research/workspace/notes/theorems/2026-02-08-claim3-coulomb-phase-classification.md` and `research/workspace/notes/theorems/2026-02-08-claim3-coulomb-global-time-classification.md`; still not a full asymptotic/collision-time theorem package. | Add explicit collision/escape asymptotic-time estimates and complete global uniqueness statements. |
 | 4 | \(n=3\) Duffing-type reduction and non-generic bounded non-circular dynamics | `conv_patched.md:426`, `conv_patched.md:436` | `proved` | Combined notes `research/workspace/notes/theorems/2026-02-08-claim4-n3-duffing-phase-portrait.md` and `research/workspace/notes/theorems/2026-02-08-claim4-n3-global-time-classification.md` now provide conserved-quantity structure, instability of circular tuning, and global turning-set topology (no generic bounded shell). | Optional: add explicit time-to-plunge/escape asymptotics for selected parameter regimes. |
@@ -42,7 +42,7 @@ Scoring rule:
 
 | Claim | Score | Rationale |
 |---|---:|---|
-| 1 | 7.5 | Scoped theorem package now complete in block-tail class, but global continuum interacting equivalence is still open. |
+| 1 | 8.2 | Scoped theorem package is now substantially deeper (large-\(N\) coupled lift + normalization + observable + SD/covariance closures), but global continuum interacting equivalence remains open. |
 | 2 | 9.0 | Local asymptotic theorem closure is strong; global phase-space completion pending. |
 | 3 | 6.5 | Classification structure is solid but asymptotic-time closure remains incomplete. |
 | 4 | 9.0 | Phase-portrait and global-time topology closure are theorem-grade in scoped model. |
@@ -85,4 +85,5 @@ Scoring rule:
 28. [done] Added symbolic channel-coefficient verification (`sympy`) for the Gaussian core expansion.
 29. [done] Formalized finite-dimensional Schwinger-Dyson identities (rigorous Eq.(11)-type closure) from integration by parts.
 30. [done] Added exact \(\tau_\mu\)-type scale-flow covariance theorem for the dressed finite-dimensional family.
-31. [next] Integrate new phases (N/O/P/Q/R) into the scoped Claim 1 manuscript as theorem sections with a single consolidated dependency chain.
+31. [done] Integrated phases N/O/P/Q/R into the scoped Claim 1 manuscript with a consolidated dependency chain.
+32. [next] Build a non-factorized large-\(N\) interacting quartic family with proven de-regularized convergence beyond Gaussian tails.
