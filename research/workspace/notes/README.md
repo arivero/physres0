@@ -54,6 +54,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
+- `theorems/2026-02-09-claim3-collision-escape-asymptotic-time.md`
 - `theorems/2026-02-08-claim4-n3-duffing-phase-portrait.md`
 - `theorems/2026-02-08-claim4-n3-global-time-classification.md`
 - `theorems/2026-02-08-claim5-ddim-gr-matching.md`
@@ -87,6 +88,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
+- `../simulations/claim3_asymptotic_time_estimates_check.py`
 - `../simulations/claim4_duffing_n3_portrait_check.py`
 - `../simulations/claim4_global_time_shell_scan.py`
 - `../simulations/claim5_ddim_prefactor_scan.py`
