@@ -200,13 +200,15 @@ drift, (iv) de-regularization
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">\eta\to0^+</annotation></semantics></math>
 via contour rotation (Gaussian, factorized quartic, and coupled quartic
 block), and (v) explicit Gaussian semiclassical channel expansion in
-point-supported distribution modes. It further closes: (vi) a genuinely
+point-supported distribution modes. It further closes: (vi) genuinely
 large-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
-mode-coupled lift with explicit Cauchy tail rate, (vii) explicit
-non-vanishing lower bounds for normalized oscillatory partition factors,
-(viii) extension of observables from Gaussian-exponential test families
-to Schwartz and weighted Sobolev classes, and (ix) finite-dimensional
-Schwinger-Dyson identities and exact
+mode-coupled lifts, including an explicit Gaussian-tail rate and a
+non-factorized quartic-tail class under log-derivative summability,
+(vii) explicit non-vanishing lower bounds for normalized oscillatory
+partition factors, (viii) extension of observables from
+Gaussian-exponential test families to Schwartz and weighted Sobolev
+classes, and (ix) finite-dimensional Schwinger-Dyson identities and
+exact
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>τ</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">\tau_\mu</annotation></semantics></math>-type
 scale-flow covariance. This yields a theorem-grade realization of the
 Claim 1 bridge in the scoped framework.</p>
@@ -765,10 +767,101 @@ and
 \frac{|a&#39;-a|}{|b&#39;|}+\frac{|a|\,|b&#39;-b|}{|b&#39;||b|}</annotation></semantics></math>
 gives the stated rate. ◻</p>
 </div>
+<div id="thm:quartic-tail" class="theorem">
+<p><strong>Theorem 16</strong> (Non-factorized quartic-tail
+large-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+extension). <em>Let
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>P</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo minsize="180%" maxsize="180%" stretchy="true" form="prefix">(</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mstyle displaystyle="false"><mfrac><msub><mi>λ</mi><mi>j</mi></msub><mn>2</mn></mfrac></mstyle><mo>+</mo><msub><mi>β</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><msubsup><mi>v</mi><mi>j</mi><mn>2</mn></msubsup><mo>+</mo><msub><mi>γ</mi><mi>j</mi></msub><msubsup><mi>v</mi><mi>j</mi><mn>4</mn></msubsup><mo minsize="180%" maxsize="180%" stretchy="true" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">S_N(u,v)
+=
+P_m(u)+\sum_{j=m+1}^N
+\Big(\big(\tfrac{\lambda_j}{2}+\beta_j(u)\big)v_j^2+\gamma_j v_j^4\Big),</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>j</mi></msub><mo>≥</mo><msub><mi>λ</mi><mo>−</mo></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda_j\ge\lambda_-&gt;0</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>γ</mi><mi>j</mi></msub><mo>≥</mo><msub><mi>γ</mi><mo>−</mo></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\gamma_j\ge\gamma_-&gt;0</annotation></semantics></math>,
+coercive
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>m</mi></msub><annotation encoding="application/x-tex">P_m</annotation></semantics></math>,
+and
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><msub><mi>A</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>A</mi><mi>j</mi></msub><mo>≥</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\beta_j(u)\le A_j\|u\|^2,\qquad A_j\ge0.</annotation></semantics></math>
+For
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><msub><mo>∫</mo><mi>ℝ</mi></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>λ</mi><mi>j</mi></msub><mi>/</mi><mn>2</mn><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><msub><mi>γ</mi><mi>j</mi></msub><msup><mi>t</mi><mn>4</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow></msup><mi>d</mi><mi>t</mi><mo>,</mo><mspace width="1.0em"></mspace><mi>c</mi><mo>=</mo><mi>η</mi><mo>−</mo><mi>i</mi><mi>/</mi><mi>ε</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>b</mi><mo>≥</mo><mn>0</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">I_j(b):=\int_\mathbb{R}e^{-c((\lambda_j/2+b)t^2+\gamma_j t^4)}dt,\quad c=\eta-i/\varepsilon,\ b\ge0,</annotation></semantics></math>
+assume:</em></p>
+<ol>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">I_j(b)\neq0</annotation></semantics></math>
+for all
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>,</mo><mi>b</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">j,b\ge0</annotation></semantics></math>,</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">sup</mi><mo>&#8289;</mo></mrow><mrow><mi>b</mi><mo>≥</mo><mn>0</mn></mrow></msub><mo stretchy="false" form="prefix">|</mo><msub><mi>∂</mi><mi>b</mi></msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msub><mi>L</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\sup_{b\ge0}|\partial_b\log I_j(b)|\le L_j</annotation></semantics></math>
+and
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo accent="false">∞</mo></munderover><msub><mi>L</mi><mi>j</mi></msub><msub><mi>A</mi><mi>j</mi></msub><mo>&lt;</mo><mi>∞</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\sum_{j=m+1}^\infty L_jA_j&lt;\infty.</annotation></semantics></math></em></p></li>
+</ol>
+<p><em>Then for bounded cylinder observables
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mi>m</mi></msub><annotation encoding="application/x-tex">F_m</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mrow><mi>ε</mi><mo>,</mo><mi>η</mi><mo>,</mo><mi>N</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><mfrac><mrow><mo>∫</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><msub><mi>S</mi><mi>N</mi></msub></mrow></msup><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>u</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>v</mi></mrow><mrow><mo>∫</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><msub><mi>S</mi><mi>N</mi></msub></mrow></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>u</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>v</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\omega_{\varepsilon,\eta,N}(F_m)
+:=
+\frac{\int e^{-cS_N}F_m(u)\,du\,dv}{\int e^{-cS_N}\,du\,dv}</annotation></semantics></math>
+converges as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">N\to\infty</annotation></semantics></math>
+(if the limiting denominator is nonzero), and satisfies the tail
+estimate
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>ω</mi><mrow><mi>ε</mi><mo>,</mo><mi>η</mi><mo>,</mo><msup><mi>N</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msub><mi>ω</mi><mrow><mi>ε</mi><mo>,</mo><mi>η</mi><mo>,</mo><mi>N</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msub><mi>C</mi><mrow><msub><mi>F</mi><mi>m</mi></msub><mo>,</mo><mi>ε</mi><mo>,</mo><mi>η</mi></mrow></msub><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>N</mi><mo>+</mo><mn>1</mn></mrow><msup><mi>N</mi><mo>′</mo></msup></munderover><msub><mi>L</mi><mi>j</mi></msub><msub><mi>A</mi><mi>j</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">|\omega_{\varepsilon,\eta,N&#39;}(F_m)-\omega_{\varepsilon,\eta,N}(F_m)|
+\le
+C_{F_m,\varepsilon,\eta}\sum_{j=N+1}^{N&#39;}L_jA_j.</annotation></semantics></math></em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Integrate each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mi>j</mi></msub><annotation encoding="application/x-tex">v_j</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mrow><mi>ε</mi><mo>,</mo><mi>η</mi><mo>,</mo><mi>N</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><msub><mo>∫</mo><msup><mi>ℝ</mi><mi>m</mi></msup></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><msub><mi>P</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>u</mi></mrow><mrow><msub><mo>∫</mo><msup><mi>ℝ</mi><mi>m</mi></msup></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><msub><mi>P</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>u</mi></mrow></mfrac><mo>,</mo><mspace width="1.0em"></mspace><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∏</mo><mrow><mi>j</mi><mo>=</mo><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\omega_{\varepsilon,\eta,N}(F_m)=
+\frac{\int_{\mathbb{R}^m}e^{-cP_m(u)}F_m(u)\Phi_N(u)\,du}
+{\int_{\mathbb{R}^m}e^{-cP_m(u)}\Phi_N(u)\,du},
+\quad
+\Phi_N(u)=\prod_{j=m+1}^N\frac{I_j(\beta_j(u))}{I_j(0)}.</annotation></semantics></math>
+For each
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">log</mi><mfrac><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><msubsup><mo>∫</mo><mn>0</mn><mrow><msub><mi>β</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><msub><mi>∂</mi><mi>b</mi></msub><mi mathvariant="normal">log</mi><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>b</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><msub><mi>L</mi><mi>j</mi></msub><msub><mi>A</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">\left|\log\frac{I_j(\beta_j(u))}{I_j(0)}\right|
+=
+\left|\int_0^{\beta_j(u)}\partial_b\log I_j(b)\,db\right|
+\le
+L_jA_j\|u\|^2.</annotation></semantics></math> Hence
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo accent="false">∞</mo></munderover><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">log</mi><mfrac><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo accent="false">∞</mo></munderover><msub><mi>L</mi><mi>j</mi></msub><msub><mi>A</mi><mi>j</mi></msub><mo>&lt;</mo><mi>∞</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\sum_{j=m+1}^\infty\left|\log\frac{I_j(\beta_j(u))}{I_j(0)}\right|
+\le
+\|u\|^2\sum_{j=m+1}^\infty L_jA_j
+&lt;\infty,</annotation></semantics></math> so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><msub><mi mathvariant="normal">Φ</mi><mi>∞</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Phi_N(u)\to\Phi_\infty(u)</annotation></semantics></math>
+pointwise and
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mrow><mi mathvariant="normal">exp</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>B</mi><mo>:=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo accent="false">∞</mo></munderover><msub><mi>L</mi><mi>j</mi></msub><msub><mi>A</mi><mi>j</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">|\Phi_N(u)|\le \exp(B\|u\|^2),\qquad B:=\sum_{j=m+1}^\infty L_jA_j.</annotation></semantics></math>
+Thus
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><msub><mi>P</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>F</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mo stretchy="false" form="postfix">∥</mo><msub><mi>F</mi><mi>m</mi></msub><msub><mo stretchy="false" form="postfix">∥</mo><mi>∞</mi></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>η</mi><msub><mi>P</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><msup><mi>e</mi><mrow><mi>B</mi><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup></mrow></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">|e^{-cP_m(u)}\Phi_N(u)F_m(u)|
+\le
+\|F_m\|_\infty e^{-\eta P_m(u)}e^{B\|u\|^2},</annotation></semantics></math>
+integrable by quartic coercivity; dominated convergence yields
+numerator/denominator limits and ratio convergence.</p>
+<p>For the rate, define
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mrow><mi>N</mi><mo>,</mo><msup><mi>N</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>N</mi><mo>+</mo><mn>1</mn></mrow><msup><mi>N</mi><mo>′</mo></msup></munderover><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mfrac><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>I</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>,</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Δ</mi><mrow><mi>N</mi><mo>,</mo><msup><mi>N</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>N</mi><mo>+</mo><mn>1</mn></mrow><msup><mi>N</mi><mo>′</mo></msup></munderover><msub><mi>L</mi><mi>j</mi></msub><msub><mi>A</mi><mi>j</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\Delta_{N,N&#39;}(u):=\sum_{j=N+1}^{N&#39;}\log\frac{I_j(\beta_j(u))}{I_j(0)},
+\quad
+|\Delta_{N,N&#39;}(u)|\le \|u\|^2\sum_{j=N+1}^{N&#39;}L_jA_j.</annotation></semantics></math>
+With
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><msup><mi>N</mi><mo>′</mo></msup></msub><mo>=</mo><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><msup><mi>e</mi><msub><mi mathvariant="normal">Δ</mi><mrow><mi>N</mi><mo>,</mo><msup><mi>N</mi><mo>′</mo></msup></mrow></msub></msup></mrow><annotation encoding="application/x-tex">\Phi_{N&#39;}=\Phi_N e^{\Delta_{N,N&#39;}}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Φ</mi><msup><mi>N</mi><mo>′</mo></msup></msub><mo>−</mo><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><msup><mi>e</mi><msub><mi mathvariant="normal">Δ</mi><mrow><mi>N</mi><mo>,</mo><msup><mi>N</mi><mo>′</mo></msup></mrow></msub></msup><mo>−</mo><mn>1</mn><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msup><mi>e</mi><mrow><mi>B</mi><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup></mrow></msup><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Δ</mi><mrow><mi>N</mi><mo>,</mo><msup><mi>N</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false" form="prefix">|</mo><msup><mi>e</mi><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Δ</mi><mrow><mi>N</mi><mo>,</mo><msup><mi>N</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false" form="prefix">|</mo></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">|\Phi_{N&#39;}-\Phi_N|
+\le
+|\Phi_N|\,|e^{\Delta_{N,N&#39;}}-1|
+\le
+e^{B\|u\|^2}\,|\Delta_{N,N&#39;}|e^{|\Delta_{N,N&#39;}|}.</annotation></semantics></math>
+This gives
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="normal">Φ</mi><msup><mi>N</mi><mo>′</mo></msup></msub><mo>−</mo><msub><mi mathvariant="normal">Φ</mi><mi>N</mi></msub><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><msup><mi>e</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>+</mo><mover><mi>B</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup></mrow></msup><mo stretchy="false" form="postfix">∥</mo><mi>u</mi><msup><mo stretchy="false" form="postfix">∥</mo><mn>2</mn></msup><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mi>N</mi><mo>+</mo><mn>1</mn></mrow><msup><mi>N</mi><mo>′</mo></msup></munderover><msub><mi>L</mi><mi>j</mi></msub><msub><mi>A</mi><mi>j</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">|\Phi_{N&#39;}-\Phi_N|
+\le
+e^{(B+\tilde B)\|u\|^2}\|u\|^2\sum_{j=N+1}^{N&#39;}L_jA_j,</annotation></semantics></math>
+for a finite
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">̃</mo></mover><annotation encoding="application/x-tex">\tilde B</annotation></semantics></math>
+(tail-sum bound). Integrating against
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>η</mi><msub><mi>P</mi><mi>m</mi></msub></mrow></msup><annotation encoding="application/x-tex">e^{-\eta P_m}</annotation></semantics></math>
+gives numerator/denominator Cauchy bounds, and the ratio estimate
+follows as in Theorem <a href="#thm:largen-coupled"
+data-reference-type="ref"
+data-reference="thm:largen-coupled">15</a>. ◻</p>
+</div>
 <h1 id="partition-factor-non-vanishing-bounds">Partition-Factor
 Non-Vanishing Bounds</h1>
 <div id="thm:nonvanish" class="theorem">
-<p><strong>Theorem 16</strong> (Moment criteria). <em>Let
+<p><strong>Theorem 17</strong> (Moment criteria). <em>Let
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>η</mi></msub><mo>=</mo><mo>∫</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>η</mi><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mi>d</mi><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mi>∞</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A_\eta=\int e^{-\eta S(x)}dx\in(0,\infty)</annotation></semantics></math>
 and
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mrow><mi>ε</mi><mo>,</mo><mi>η</mi></mrow></msub><mo>:=</mo><mo>∫</mo><msup><mi>e</mi><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo>−</mo><mi>i</mi><mi>/</mi><mi>ε</mi><mo stretchy="false" form="postfix">)</mo><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mi>d</mi><mi>x</mi><mo>=</mo><msub><mi>A</mi><mi>η</mi></msub><mspace width="0.167em"></mspace><msub><mi>𝔼</mi><msub><mi>μ</mi><mi>η</mi></msub></msub><mo stretchy="false" form="prefix">[</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>S</mi><mi>/</mi><mi>ε</mi></mrow></msup><mo stretchy="false" form="postfix">]</mo><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>μ</mi><mi>η</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><mfrac><msup><mi>e</mi><mrow><mi>−</mi><mi>η</mi><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><msub><mi>A</mi><mi>η</mi></msub></mfrac><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">Z_{\varepsilon,\eta}:=\int e^{-(\eta-i/\varepsilon)S(x)}dx
@@ -810,7 +903,7 @@ gives the inequality for
 </div>
 <h1 id="observable-class-extension">Observable-Class Extension</h1>
 <div id="thm:observable-extension" class="theorem">
-<p><strong>Theorem 17</strong> (Continuity on Schwartz and weighted
+<p><strong>Theorem 18</strong> (Continuity on Schwartz and weighted
 Sobolev classes). <em>Let
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℐ</mi><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mo>∫</mo><msup><mi>ℝ</mi><mi>d</mi></msup></msub><msup><mi>e</mi><mrow><mi>i</mi><mi mathvariant="normal">Φ</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mi>W</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>y</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathcal I(F)=\int_{\mathbb{R}^d}e^{i\Phi(y)}W(y)F(Ay)\,dy,</annotation></semantics></math>
 with
@@ -862,7 +955,7 @@ after linear change of variables. ◻</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>τ</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">\tau_\mu</annotation></semantics></math>
 Scale Covariance</h1>
 <div id="thm:sd" class="theorem">
-<p><strong>Theorem 18</strong> (Finite-dimensional Schwinger-Dyson
+<p><strong>Theorem 19</strong> (Finite-dimensional Schwinger-Dyson
 identity). <em>Let
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mi>η</mi><mo>−</mo><mi>i</mi><mi>/</mi><mi>ε</mi></mrow><annotation encoding="application/x-tex">c=\eta-i/\varepsilon</annotation></semantics></math>
 and
@@ -896,7 +989,7 @@ Rearrange, then divide by
 for the normalized form. ◻</p>
 </div>
 <div id="thm:tau" class="theorem">
-<p><strong>Theorem 19</strong> (Exact
+<p><strong>Theorem 20</strong> (Exact
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>τ</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">\tau_\mu</annotation></semantics></math>
 covariance). <em>For
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mrow><mi>κ</mi><mo>,</mo><mi>η</mi><mo>,</mo><mi>h</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><mfrac><mrow><mo>∫</mo><msup><mi>e</mi><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo>−</mo><mi>i</mi><mi>/</mi><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mi>κ</mi><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi></mrow><mrow><mo>∫</mo><msup><mi>e</mi><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo>−</mo><mi>i</mi><mi>/</mi><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mi>κ</mi><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi></mrow></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">\omega_{\kappa,\eta,h}(F):=
@@ -920,20 +1013,23 @@ denominator kernels are unchanged. ◻</p>
 data-reference="sec:projective">2</a>–<a href="#sec:channels"
 data-reference-type="ref" data-reference="sec:channels">5</a>: core
 scoped Claim 1 closure.</p></li>
-<li><p>Theorem <a href="#thm:largen-coupled" data-reference-type="ref"
-data-reference="thm:largen-coupled">15</a>:
+<li><p>Theorems <a href="#thm:largen-coupled" data-reference-type="ref"
+data-reference="thm:largen-coupled">15</a> and <a
+href="#thm:quartic-tail" data-reference-type="ref"
+data-reference="thm:quartic-tail">16</a>:
 large-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
-coupled extension with explicit tail rate.</p></li>
+coupled extensions (Gaussian-tail explicit rate and non-factorized
+quartic-tail class).</p></li>
 <li><p>Theorem <a href="#thm:nonvanish" data-reference-type="ref"
-data-reference="thm:nonvanish">16</a>: explicit non-vanishing criteria
+data-reference="thm:nonvanish">17</a>: explicit non-vanishing criteria
 for partition factors.</p></li>
 <li><p>Theorem <a href="#thm:observable-extension"
 data-reference-type="ref"
-data-reference="thm:observable-extension">17</a>: observable-class
+data-reference="thm:observable-extension">18</a>: observable-class
 extension to Schwartz/Sobolev.</p></li>
 <li><p>Theorems <a href="#thm:sd" data-reference-type="ref"
-data-reference="thm:sd">18</a> and <a href="#thm:tau"
-data-reference-type="ref" data-reference="thm:tau">19</a>:
+data-reference="thm:sd">19</a> and <a href="#thm:tau"
+data-reference-type="ref" data-reference="thm:tau">20</a>:
 Schwinger-Dyson identities and exact scale-flow covariance.</p></li>
 </ol>
 <h1 id="conclusion">Conclusion</h1>
@@ -944,7 +1040,8 @@ family of oscillatory states including:</p>
 <li><p>exact projective closure and de-regularization,</p></li>
 <li><p>explicit semiclassical channel expansion,</p></li>
 <li><p>large-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
-mode-coupled convergence with quantitative tail control,</p></li>
+mode-coupled convergence with quantitative tail control (Gaussian-tail
+and non-factorized quartic-tail classes),</p></li>
 <li><p>non-vanishing control for normalization factors,</p></li>
 <li><p>extension to large observable classes,</p></li>
 <li><p>Schwinger-Dyson identities and scale-flow covariance.</p></li>

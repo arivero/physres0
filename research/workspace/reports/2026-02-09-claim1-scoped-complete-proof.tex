@@ -36,7 +36,7 @@ The proof closes:
 (iv) de-regularization $\eta\to0^+$ via contour rotation (Gaussian, factorized quartic, and coupled quartic block),
 and (v) explicit Gaussian semiclassical channel expansion in point-supported distribution modes.
 It further closes:
-(vi) a genuinely large-$N$ mode-coupled lift with explicit Cauchy tail rate,
+(vi) genuinely large-$N$ mode-coupled lifts, including an explicit Gaussian-tail rate and a non-factorized quartic-tail class under log-derivative summability,
 (vii) explicit non-vanishing lower bounds for normalized oscillatory partition factors,
 (viii) extension of observables from Gaussian-exponential test families to Schwartz and weighted Sobolev classes,
 and (ix) finite-dimensional Schwinger-Dyson identities and exact $\tau_\mu$-type scale-flow covariance.
@@ -555,6 +555,104 @@ For large $N$, $|\mathcal D_N|\ge d_*>0$, and
 gives the stated rate. 
 \end{proof}
 
+\begin{theorem}[Non-factorized quartic-tail large-$N$ extension]
+\label{thm:quartic-tail}
+Let
+\[
+S_N(u,v)
+=
+P_m(u)+\sum_{j=m+1}^N
+\Big(\big(\tfrac{\lambda_j}{2}+\beta_j(u)\big)v_j^2+\gamma_j v_j^4\Big),
+\]
+with $\lambda_j\ge\lambda_->0$, $\gamma_j\ge\gamma_->0$, coercive $P_m$, and
+\[
+\beta_j(u)\le A_j\|u\|^2,\qquad A_j\ge0.
+\]
+For
+\[
+I_j(b):=\int_\R e^{-c((\lambda_j/2+b)t^2+\gamma_j t^4)}dt,\quad c=\eta-i/\eps,\ b\ge0,
+\]
+assume:
+\begin{enumerate}[label=(Q\arabic*),leftmargin=1.6em]
+\item $I_j(b)\neq0$ for all $j,b\ge0$,
+\item $\sup_{b\ge0}|\partial_b\log I_j(b)|\le L_j$ and
+\[
+\sum_{j=m+1}^\infty L_jA_j<\infty.
+\]
+\end{enumerate}
+Then for bounded cylinder observables $F_m$,
+\[
+\omega_{\eps,\eta,N}(F_m)
+:=
+\frac{\int e^{-cS_N}F_m(u)\,du\,dv}{\int e^{-cS_N}\,du\,dv}
+\]
+converges as $N\to\infty$ (if the limiting denominator is nonzero), and satisfies the tail estimate
+\[
+|\omega_{\eps,\eta,N'}(F_m)-\omega_{\eps,\eta,N}(F_m)|
+\le
+C_{F_m,\eps,\eta}\sum_{j=N+1}^{N'}L_jA_j.
+\]
+\end{theorem}
+
+\begin{proof}
+Integrate each $v_j$:
+\[
+\omega_{\eps,\eta,N}(F_m)=
+\frac{\int_{\R^m}e^{-cP_m(u)}F_m(u)\Phi_N(u)\,du}
+{\int_{\R^m}e^{-cP_m(u)}\Phi_N(u)\,du},
+\quad
+\Phi_N(u)=\prod_{j=m+1}^N\frac{I_j(\beta_j(u))}{I_j(0)}.
+\]
+For each $j$,
+\[
+\left|\log\frac{I_j(\beta_j(u))}{I_j(0)}\right|
+=
+\left|\int_0^{\beta_j(u)}\partial_b\log I_j(b)\,db\right|
+\le
+L_jA_j\|u\|^2.
+\]
+Hence
+\[
+\sum_{j=m+1}^\infty\left|\log\frac{I_j(\beta_j(u))}{I_j(0)}\right|
+\le
+\|u\|^2\sum_{j=m+1}^\infty L_jA_j
+<\infty,
+\]
+so $\Phi_N(u)\to\Phi_\infty(u)$ pointwise and
+\[
+|\Phi_N(u)|\le \exp(B\|u\|^2),\qquad B:=\sum_{j=m+1}^\infty L_jA_j.
+\]
+Thus
+\[
+|e^{-cP_m(u)}\Phi_N(u)F_m(u)|
+\le
+\|F_m\|_\infty e^{-\eta P_m(u)}e^{B\|u\|^2},
+\]
+integrable by quartic coercivity; dominated convergence yields numerator/denominator limits and ratio convergence.
+
+For the rate, define
+\[
+\Delta_{N,N'}(u):=\sum_{j=N+1}^{N'}\log\frac{I_j(\beta_j(u))}{I_j(0)},
+\quad
+|\Delta_{N,N'}(u)|\le \|u\|^2\sum_{j=N+1}^{N'}L_jA_j.
+\]
+With $\Phi_{N'}=\Phi_N e^{\Delta_{N,N'}}$:
+\[
+|\Phi_{N'}-\Phi_N|
+\le
+|\Phi_N|\,|e^{\Delta_{N,N'}}-1|
+\le
+e^{B\|u\|^2}\,|\Delta_{N,N'}|e^{|\Delta_{N,N'}|}.
+\]
+This gives
+\[
+|\Phi_{N'}-\Phi_N|
+\le
+e^{(B+\tilde B)\|u\|^2}\|u\|^2\sum_{j=N+1}^{N'}L_jA_j,
+\]
+for a finite $\tilde B$ (tail-sum bound). Integrating against $e^{-\eta P_m}$ gives numerator/denominator Cauchy bounds, and the ratio estimate follows as in Theorem \ref{thm:largen-coupled}. 
+\end{proof}
+
 \section{Partition-Factor Non-Vanishing Bounds}
 
 \begin{theorem}[Moment criteria]
@@ -724,7 +822,7 @@ Hence numerator and denominator kernels are unchanged.
 The proofs in this manuscript now close in the following order:
 \begin{enumerate}[leftmargin=1.6em]
 \item Sections \ref{sec:projective}--\ref{sec:channels}: core scoped Claim 1 closure.
-\item Theorem \ref{thm:largen-coupled}: large-$N$ coupled extension with explicit tail rate.
+\item Theorems \ref{thm:largen-coupled} and \ref{thm:quartic-tail}: large-$N$ coupled extensions (Gaussian-tail explicit rate and non-factorized quartic-tail class).
 \item Theorem \ref{thm:nonvanish}: explicit non-vanishing criteria for partition factors.
 \item Theorem \ref{thm:observable-extension}: observable-class extension to Schwartz/Sobolev.
 \item Theorems \ref{thm:sd} and \ref{thm:tau}: Schwinger-Dyson identities and exact scale-flow covariance.
@@ -736,7 +834,7 @@ This manuscript now gives a theorem-grade chain from the static/finite-dimension
 \begin{enumerate}[leftmargin=1.6em]
 \item exact projective closure and de-regularization,
 \item explicit semiclassical channel expansion,
-\item large-$N$ mode-coupled convergence with quantitative tail control,
+\item large-$N$ mode-coupled convergence with quantitative tail control (Gaussian-tail and non-factorized quartic-tail classes),
 \item non-vanishing control for normalization factors,
 \item extension to large observable classes,
 \item Schwinger-Dyson identities and scale-flow covariance.

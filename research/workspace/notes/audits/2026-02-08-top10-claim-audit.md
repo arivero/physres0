@@ -42,7 +42,7 @@ Scoring rule:
 
 | Claim | Score | Rationale |
 |---|---:|---|
-| 1 | 8.4 | Scoped theorem package now includes non-factorized large-\(N\) quartic-tail convergence under explicit summability/derivative conditions, plus normalization/observable/SD/covariance closures; global continuum interacting equivalence remains open. |
+| 1 | 8.5 | Scoped theorem package now includes manuscript-integrated non-factorized large-\(N\) quartic-tail convergence (under explicit summability/derivative conditions), plus normalization/observable/SD/covariance closures; global continuum interacting equivalence remains open. |
 | 2 | 9.0 | Local asymptotic theorem closure is strong; global phase-space completion pending. |
 | 3 | 6.5 | Classification structure is solid but asymptotic-time closure remains incomplete. |
 | 4 | 9.0 | Phase-portrait and global-time topology closure are theorem-grade in scoped model. |
@@ -87,4 +87,5 @@ Scoring rule:
 30. [done] Added exact \(\tau_\mu\)-type scale-flow covariance theorem for the dressed finite-dimensional family.
 31. [done] Integrated phases N/O/P/Q/R into the scoped Claim 1 manuscript with a consolidated dependency chain.
 32. [done] Built a non-factorized large-\(N\) interacting quartic-tail family with proven convergence (under explicit derivative/summability conditions) beyond Gaussian tails.
-33. [next] Integrate Phase T into the scoped Claim 1 manuscript and propagate the strengthened assumptions/dependency graph.
+33. [done] Integrated Phase T into the scoped Claim 1 manuscript and propagated strengthened assumptions/dependency chain.
+34. [next] Derive intrinsic sufficient conditions for the quartic-tail log-derivative/non-vanishing assumptions (remove them as external hypotheses).
