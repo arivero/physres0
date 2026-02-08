@@ -44,6 +44,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-08-claim1-eta-zero-gaussian-closure.md`
 - `theorems/2026-02-08-claim1-eta-zero-quartic-product-closure.md`
 - `theorems/2026-02-08-claim1-eta-zero-coupled-quartic-block.md`
+- `theorems/2026-02-09-claim1-largeN-coupled-gaussian-tail.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -70,6 +71,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_eta_zero_quartic_block_check.py`
 - `../simulations/claim1_eta_zero_coupled_quartic_block_check.py`
 - `../simulations/claim1_gaussian_channel_series_sympy.py`
+- `../simulations/claim1_largeN_coupled_gaussian_tail_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
