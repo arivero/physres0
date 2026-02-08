@@ -80,6 +80,6 @@ Scoring rule:
 23. [done] Extended de-regularization to a non-factorized coupled quartic finite block (\(x_1^2x_2^2\) mode coupling).
 24. [done] Produced a scoped complete Claim 1 manuscript and theorem chain (`research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex`).
 25. [done] Lifted coupled-block work to a genuinely large-\(N\) mode-coupled family (Gaussian-tail class) with explicit Cauchy-rate theorem.
-26. [next] Prove non-vanishing lower bounds for normalized oscillatory partition factors used in continuity constants.
+26. [done] Proved explicit first-/second-moment sufficient lower bounds for non-vanishing oscillatory partition factors.
 27. [next] Expand de-regularized observable class from Gaussian-exponential cylinders to Sobolev/Schwartz-generated dense classes with explicit norm bounds.
 28. [done] Added symbolic channel-coefficient verification (`sympy`) for the Gaussian core expansion.
