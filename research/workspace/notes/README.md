@@ -21,6 +21,12 @@ This folder stores analysis artifacts derived from source documents.
   - next step to upgrade rigor.
 - For Python commands in this repository, always call `python3.12` explicitly.
 
+## TeX Toolchain
+
+- `tectonic` is installed at `/usr/local/bin/tectonic` (version `0.15.0`).
+- To compile the Claim 1 LaTeX note:
+  - `tectonic research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex --outdir research/workspace/reports`
+
 ## Current Theorem Notes
 
 - `theorems/2026-02-08-claim1-scoped-bridge-statement.md`
