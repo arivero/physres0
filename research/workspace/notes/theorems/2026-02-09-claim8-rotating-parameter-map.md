@@ -59,3 +59,7 @@ python3.12 research/workspace/simulations/claim8_rotating_parameter_map_table.py
 ```
 
 The script prints the dimension/model split table used in this note.
+
+For the \(D\ge 6\) multi-spin refinement, see:
+
+`research/workspace/notes/theorems/2026-02-09-claim8-multispin-dge6-regime-map.md`
