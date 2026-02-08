@@ -105,3 +105,11 @@ python3.12 research/workspace/simulations/claim3_coulomb_classification_scan.py
 ```
 
 The script reports invariant quantities \((\alpha^2,A,B,e,u_{\min},u_{\max})\) and representative regime labels for benchmark cases.
+
+## Companion Global-Time Note
+
+See:
+
+`research/workspace/notes/theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
+
+for turning-point based \(r(t)\) branch topology (bounded shell / threshold / scattering / plunge-access).

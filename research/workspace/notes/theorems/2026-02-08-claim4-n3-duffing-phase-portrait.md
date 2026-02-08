@@ -103,3 +103,11 @@ python3.12 research/workspace/simulations/claim4_duffing_n3_portrait_check.py
 ```
 
 This check numerically verifies local instability of \(u_\star\) and branch splitting under small perturbations.
+
+## Companion Global-Time Note
+
+See:
+
+`research/workspace/notes/theorems/2026-02-08-claim4-n3-global-time-classification.md`
+
+for coordinate-time turning-set topology in \(r\) (escape/plunge channel structure and absence of generic bounded shell).

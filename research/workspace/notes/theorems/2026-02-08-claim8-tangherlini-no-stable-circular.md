@@ -56,6 +56,10 @@ Therefore:
 For standard static single-hole backgrounds (Tangherlini), the ``no stable circular orbits in higher dimensions'' statement is theorem-level for \(D\ge 5\).  
 The broader multi-background claim in `conv_patched.md:539` remains partially open until rotating/more general classes are pinned with equal precision.
 
+For asymptotic extension beyond exact Tangherlini, see:
+
+`research/workspace/notes/theorems/2026-02-08-claim8-beyond-tangherlini-asymptotic.md`
+
 ## Reproducibility Check
 
 Run:
