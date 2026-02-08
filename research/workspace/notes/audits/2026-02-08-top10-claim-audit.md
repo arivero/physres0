@@ -49,4 +49,5 @@ Canonical rendered companion: `conv_patched.pdf`
 14. [done] Tightened pair/tangent-groupoid half-density statements into theorem/proof format with explicit hypotheses and composition laws.
 15. [done] Closed Claim 3/4 global time-domain classifications and extended Claim 8 beyond static Tangherlini via asymptotic theorem.
 16. [done] Specialized Claim 9 into model-class propositions (pure YM, YM+fundamental matter, Abelian Higgs) with explicit assumptions.
-17. [next] Produce synthesis note with dependency graph and long-horizon conjecture list (Phase F).
+17. [done] Produced synthesis note with dependency graph and long-horizon conjecture list (Phase F).
+18. [next] Start Claim 1 continuum skeleton (spaces/topologies/counterterms/convergence template).

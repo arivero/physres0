@@ -69,6 +69,7 @@ This folder stores analysis artifacts derived from source documents.
 ## Current Reports
 
 - `../reports/2026-02-08-claim1-variational-delta-note.tex`
+- `../reports/2026-02-08-synthesis-proof-dependency.md`
 
 ## Supplemental Audit Notes
 
