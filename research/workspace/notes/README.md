@@ -38,6 +38,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-08-claim1-continuum-skeleton.md`
 - `theorems/2026-02-08-claim1-gaussian-h1-h6-closure.md`
 - `theorems/2026-02-08-claim1-small-coupling-perturbation-closure.md`
+- `theorems/2026-02-08-claim1-eta-zero-gaussian-closure.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -60,6 +61,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_continuum_cauchy_diagnostics.py`
 - `../simulations/claim1_gaussian_h1_h6_closure_check.py`
 - `../simulations/claim1_small_coupling_perturbation_check.py`
+- `../simulations/claim1_eta_zero_gaussian_limit_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`

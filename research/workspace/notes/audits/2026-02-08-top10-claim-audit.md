@@ -53,4 +53,5 @@ Canonical rendered companion: `conv_patched.pdf`
 18. [done] Added Claim 1 continuum skeleton with explicit spaces/topologies/counterterm flow and convergence template.
 19. [done] Proved Gaussian-model closure of Claim 1 continuum hypotheses H1-H6 with explicit counterterm-repair construction.
 20. [done] Extended Claim 1 closure from Gaussian core to small-coupling quartic perturbations (regularized model) with explicit \(O(g)\) bound.
-21. [next] Remove regularization gap: control \(\eta\to 0^+\) while preserving cylinder-limit and channel statements.
+21. [done] Removed regularization gap in the Gaussian sector (\(\eta\to 0^+\) exact closure for Gaussian-exponential cylinder class).
+22. [next] Remove regularization gap for interacting quartic/polynomial perturbations with uniform contour/deformation bounds.
