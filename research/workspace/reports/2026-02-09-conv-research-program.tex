@@ -2,7 +2,6 @@
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{bm}
-\usepackage{enumitem}
 \usepackage{hyperref}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -18,11 +17,10 @@
 \newcommand{\e}{\mathrm{e}}
 \newcommand{\Cyl}{\mathrm{Cyl}}
 \newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\path}[1]{\texttt{#1}}
 
 \newcommand{\TODO}[1]{\par\noindent\textbf{TODO:} #1\par}
 
-\title{From \path{conv\_patched.md} to a Research Program:\\
+\title{From \texttt{conv\_patched.md} to a Research Program:\\
 Foundational Goals, Proof Targets, Work Done, and Next Steps}
 \author{}
 \date{2026-02-09 (CET)}
@@ -68,7 +66,7 @@ All claims, program decisions, and anchors in this report should be traced back 
 conversation or to one of the theorem-grade artifacts produced in this workspace.
 
 The minimal entry points are:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \path{research/workspace/notes/2026-02-09-core-goal-compass.md} (program compass and ``north star''),
 \item \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md} (current audit labels and the next queue item),
 \item \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex} (the main scoped Claim~1 proof report),
@@ -80,7 +78,7 @@ This report is meant to support two readers:
 humans who want a narrative of what is known and what is not, and future agents/models that need a
 compact, unambiguous summary of the proof targets and the current state of the work tree.
 The recommended path is:
-\begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
+\begin{enumerate}
 \item Read \S\ref{sec:conv} to recover the \emph{problem statement} as it appeared in the conversation.
 \item Read \S\ref{sec:aim}--\S\ref{sec:targets} to see the \emph{research program} and the proof standards used here.
 \item Read \S\ref{sec:done}--\S\ref{sec:status} to see the \emph{executed results} (what is theorem-grade today).
@@ -119,7 +117,7 @@ integrals, or refinement limits in time slicing and lattice field theory) must b
 scales. This is where \(\tau_\mu\)-type scale flows, Schwinger--Dyson identities, and de-regularization \(\eta\to0^+\)
 enter the program.
 
-\subsection{Canonical Anchors in \path{conv\_patched.md}}
+\subsection{Canonical Anchors in \texttt{conv\_patched.md}}
 The anchors below are the minimal set of \path{conv\_patched.md} lines that define the program.
 Line numbers refer to the \emph{patched} transcript, so they should be treated as stable for this repository.
 
@@ -163,7 +161,7 @@ The level separation is not rhetorical; it is the main mechanism for preventing 
 but it is not accepted as a substitute for the dynamical work needed to pass to continuum limits.
 
 The three levels are:
-\begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
+\begin{enumerate}
 \item \textbf{Statics (0D action):}
   prototype object \(\delta(f'(x))\), and stationary-phase control of the halved amplitude
   \[
@@ -190,14 +188,14 @@ before any claim is allowed to upgrade to ``field-level closure''.
 
 The roadmap is pinned to \path{research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md}.
 In that roadmap, field-level work is dimension-indexed by design:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \(d=2\): strongest closure candidate; we closed an interacting ultralocal \(\phi^4\) field-indexed theorem (AP).
 \item \(d=3\): intermediate bridge rung; candidate theorem stated with explicit proof obligations B1--B5 (AS).
 \item \(d=4\): physically central frontier; explicit lift-obstruction sheet enumerates missing inputs (AQ).
 \end{itemize}
 
 At the field level, we separate:
-\begin{enumerate}[label=(\roman*),leftmargin=1.8em]
+\begin{enumerate}
 \item regulated existence (finite cutoff objects),
 \item continuum existence (regulator removal with nontrivial limit),
 \item physical reconstruction (Euclidean-to-Minkowski, or equivalent).
@@ -230,7 +228,7 @@ In finite dimensions this is standard stationary phase; the research challenge i
 procedures honest across the time and field escalations.
 
 To prevent ambiguity, this repository treats Claim~1 as a hierarchy of increasingly strong targets:
-\begin{enumerate}[label=(\roman*),leftmargin=1.8em]
+\begin{enumerate}
 \item \emph{Finite-dimensional theorem-grade:} explicit stationary phase / distributional localization statements.
 \item \emph{Regulated infinite family theorem-grade:} a specified projective/cylinder family of normalized oscillatory
   states with exact stability, explicit control of renormalization/counterterms, SD closure, and de-regularization
@@ -253,7 +251,7 @@ precession regimes or Schwarzschild separatrices), that is immediate evidence of
 an incorrect scaling assumption.
 
 Per the top-10 audit, the following are \texttt{proved} as theorem notes (with explicit derivations and cross-checks):
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item SR center-access trichotomy (Claim~2) and SR Coulomb phase portrait (Claim~3),
 \item Duffing-type \(n=3\) reduction (Claim~4),
 \item \(D\)-dimensional GR matching (Claim~5),
@@ -268,7 +266,7 @@ no statement is upgraded to ``proved'' unless it states its assumptions and pass
 verification route (formal proof when feasible; otherwise symbolic or numerical checks).
 
 Every upgraded statement is expected to include:
-\begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
+\begin{enumerate}
 \item explicit assumptions (model, regime, approximations),
 \item units/dimensions check (where relevant),
 \item symmetry/conservation checks (where relevant),
@@ -297,7 +295,7 @@ and (ii) it enforces a non-drift filter so that new work must strengthen one of 
 variational-distribution, geometry-of-force, or scale-control.
 
 The most important audit outcomes so far are:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item Claim~1 remains the highest-novelty, highest-risk item, but has a nontrivial scoped proof closure report.
 \item Claims~2--7 and Claim~10 are \texttt{proved} in dedicated theorem notes; Claims~8--9 are partially closed with explicit open sectors.
 \item The audit enforces a non-drift filter: new work must strengthen
@@ -317,7 +315,7 @@ The theorem notes are bite-sized upgrades of individual claims with explicit ass
 longer manuscripts that weave multiple notes into a single dependency chain.
 
 The current core reports are:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \path{research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex}:
   static $\to$ QM $\to$ QFT ladder and \(\delta(\partial S)\) viewpoint.
 \item \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}:
@@ -327,7 +325,7 @@ The current core reports are:
 \end{itemize}
 
 At the field level, three notes define the current dimension-gated status:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \path{research/workspace/notes/theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md}:
   theorem-grade field-indexed closure in \(d=2\) ultralocal interacting class.
 \item \path{research/workspace/notes/theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md}:
@@ -344,7 +342,7 @@ continuity bounds and in ratio-state control).
 
 As recorded in \path{research/workspace/notes/theorems/2026-02-09-claim1-lean-formalization-status.md},
 the current machine-checked modules include:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \(c\)-invariance under \(\tau_\mu\) scaling and composition laws,
 \item quotient-derivative covariance form for \(\omega=N/Z\),
 \item finite-average covariance inequality templates,
@@ -359,7 +357,7 @@ checks (e.g.\ sign errors, scaling regimes, stability criteria) and to explore t
 theorems. The canonical index is kept in \path{research/workspace/notes/README.md}.
 
 Representative examples include:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \(d=2\) ultralocal closure diagnostic:
   \path{research/workspace/simulations/claim1_d2_ultralocal_phi4_closure_check.py}.
 \item half-density kinematic vs dynamical counterexample diagnostic:
@@ -381,7 +379,7 @@ and (ii) \emph{analytic control} sufficient to justify de-regularization and the
 structure in that class.
 
 Concretely, within the stated block-tail and interacting extensions, the report proves:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item exact projective stability on cylinder observables,
 \item a well-defined continuum state on cylinder observables,
 \item constructive counterterm repair mechanisms,
@@ -391,7 +389,7 @@ Concretely, within the stated block-tail and interacting extensions, the report 
 \end{itemize}
 
 It is equally important to record what the scoped report does \emph{not} claim:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item it does not claim a full continuum local QFT construction in \(d=4\),
 \item it does not identify a unique interacting continuum field theory beyond the cylinder/regulated scope,
 \item it does not bypass the dimension-gated existence and reconstruction obligations.
@@ -400,7 +398,7 @@ It is equally important to record what the scoped report does \emph{not} claim:
 \subsection{Statics and Dynamics: Where the Delta-of-Variation Logic Is Theorem-Grade}
 At the static level, the delta-of-variation logic is theorem-grade under standard nondegeneracy hypotheses.
 The core facts are:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item In finite dimensions, stationary phase yields \(|A_\varepsilon|^2\to 2\pi\langle \delta(f'),|O|^2\rangle\)
   in nondegenerate regimes.
 \item The distributional identity \(\delta(f')=\sum \delta_{x_i}/|f''(x_i)|\) reduces the limiting object
@@ -413,7 +411,7 @@ The open work is the controlled refinement limit under which these finite-dimens
 continuum object.
 In this repository, that refinement control is represented by the projective/cylinder framework and the scale-control
 invariants (SD and \(\tau_\mu\)-type covariance).
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item time-slicing makes \(\delta(\delta S/\delta q)\) exact as \(\delta(\nabla S_N)\) at fixed discretization,
 \item continuum claims require limit control under refinement, tracked by projective/cylinder programs and scale-flow constraints.
 \end{itemize}
@@ -428,7 +426,7 @@ We proved a fully explicit interacting field-indexed closure in an ultralocal \(
 Because the action is sitewise additive, cylinder expectations become exactly scale-independent once the cylinder sites
 are distinct, and the continuum limit exists without renormalization. In that model we also obtain a field-level SD
 identity by one-dimensional integration by parts and exact \(c\)-invariance along \(\tau_\mu\)-orbits.
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \(d=2\) ultralocal interacting \(\phi^4\) model: exact cylinder stabilization and continuum existence,
   field-level SD identity, and exact \(c\)-invariance along \(\tau_\mu\)-orbits.
 \item interpretation: this is non-Gaussian but ultralocal, serving as a controlled baseline rather than full local QFT.
@@ -440,7 +438,7 @@ We stated a precise candidate theorem in \path{research/workspace/notes/theorems
 and made the closure obligations explicit (B1--B5). The most important point is that the \(d=2\) proof does not even
 begin to lift until one has moment/tightness and denominator control uniformly in \((a,L)\), and a quantitative
 small-\(\kappa\) continuity bound for local cylinders.
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item add nearest-neighbor gradient coupling \(\kappa\ge 0\) and seek a small-\(\kappa\) regime \([0,\kappa_*]\),
   with explicit proof obligations:
   B1 moments, B2 tightness, B3 non-vanishing denominator, B4 SD insertion control, B5 \(\kappa\)-continuity.
@@ -454,7 +452,7 @@ records why naive lifts fail once local propagation and regulator removal are ta
 loss of product structure, non-closed SD hierarchies, and renormalization dependence. In \(d=4\) one must add
 explicit renormalization flow control and a nontriviality criterion; otherwise one can at best obtain a theorem-grade
 scoped statement (regulated and/or cylinder-level) without a claim of a nontrivial interacting continuum theory.
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item restoring local propagation destroys product structure and exact cylinder decoupling;
   SD hierarchy is no longer one-site closed.
 \item regulator removal requires explicit renormalization flow control and nontriviality criteria.
@@ -470,7 +468,7 @@ an already-mechanized lemma chain, or discharge one of the explicit \(d=3\) brid
 particular \(d=4\) upgrade is blocked.
 
 Immediate targets:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item \textbf{AN-18 (Lean hygiene):} reduce assumptions in the finite exponential-family increment chain by proving
   automatic regularity and non-vanishing conditions in that model. This keeps the Lean spine tight and prevents
   later reuse from silently importing unjustified hypotheses.
@@ -488,7 +486,7 @@ tooling (stationary phase intuition, half-density kinematics, SD identities) mus
 control (tightness, renormalization, and reconstruction).
 
 The core missing analytic ingredients are:
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item tightness/precompactness mechanisms for cylinder marginals in local interacting field models,
 \item robust non-vanishing control for oscillatory partition normalizations on complex parameter domains,
 \item SD pass-through with gradient terms (control of insertions and boundary terms),
@@ -502,7 +500,7 @@ The core missing analytic ingredients are:
 \subsection{Glossary}
 This appendix summarizes the minimal vocabulary used throughout the notes and reports.
 The canonical Markdown version lives in \path{research/workspace/notes/2026-02-09-foundational-glossary.md}.
-\begin{description}[leftmargin=3.0em,style=nextline]
+\begin{description}
 \item[\(c\)-parameter]
 The combined complex parameter
 \[
@@ -548,7 +546,7 @@ python3.12 research/workspace/simulations/claim1_halfdensity_kinematic_dynamic_s
 
 \subsection{File Map}
 This is a curated entry-point index, not an exhaustive list of all notes produced.
-\begin{itemize}[leftmargin=1.4em]
+\begin{itemize}
 \item source: \path{conv\_patched.md}, \path{conv\_patched.pdf}.
 \item audit: \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
 \item compass: \path{research/workspace/notes/2026-02-09-core-goal-compass.md}.

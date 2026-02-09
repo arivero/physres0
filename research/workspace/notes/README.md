@@ -173,6 +173,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../reports/2026-02-09-newton-action-path-integral-lecture.html`
 - `../reports/2026-02-09-newton-action-path-integral-lecture.pdf`
 - `../reports/2026-02-09-conv-research-program.tex`
+- `../reports/2026-02-09-conv-research-program.pdf`
 
 ## Current Lean Proofs
 

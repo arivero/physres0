@@ -27,6 +27,7 @@ This folder stores longer-form manuscripts that consolidate multiple theorem not
   - Canonical "research program" report for humans and future models:
     what was claimed in `conv_patched.md`, what we aimed to prove, what has been
     proved so far, and how the roadmap continues.
+  - Rendered companion: `2026-02-09-conv-research-program.pdf`.
 
 ## Notes Index
 
