@@ -289,10 +289,14 @@ identities in the limit). This split is spelled out in
 \label{sec:done}
 
 \subsection{Audit Results}
-\textbf{Top-10 audit lock.}
 The canonical audit is \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
+Its job is to keep the work focused and to prevent ``proof by accumulation'' (writing many notes without closing
+the foundational gaps). It does that in two ways:
+(i) it assigns rigor labels (\texttt{proved}, \texttt{heuristic}, \texttt{speculative}) with explicit upgrade paths,
+and (ii) it enforces a non-drift filter so that new work must strengthen one of the three cores:
+variational-distribution, geometry-of-force, or scale-control.
 
-\textbf{Key audit outcomes (scheme).}
+The most important audit outcomes so far are:
 \begin{itemize}[leftmargin=1.4em]
 \item Claim~1 remains the highest-novelty, highest-risk item, but has a nontrivial scoped proof closure report.
 \item Claims~2--7 and Claim~10 are \texttt{proved} in dedicated theorem notes; Claims~8--9 are partially closed with explicit open sectors.
@@ -300,12 +304,19 @@ The canonical audit is \path{research/workspace/notes/audits/2026-02-08-top10-cl
   (i) variational-distribution core, (ii) geometry-of-force bridge, or (iii) scale-control core.
 \end{itemize}
 
-\textbf{Current ``next'' audit item (scheme).}
 As of the latest update, the next queued Lean target is AN-18:
-reduce finite exponential-family increment hypotheses by proving automatic regularity and non-vanishing conditions.
+reduce the finite exponential-family increment hypotheses by proving automatic regularity and non-vanishing conditions.
+This is intentionally modest: it is a ``hygiene'' step that reduces assumptions in the mechanized spine and keeps the
+field-level bridge obligations clearly separated from toy-model artifacts.
 
 \subsection{Theorem Notes and Reports}
-\textbf{Core reports (scheme).}
+This repository separates two types of human-readable artifacts:
+\emph{theorem notes} (\path{research/workspace/notes/theorems/}) and
+\emph{reports} (\path{research/workspace/reports/}).
+The theorem notes are bite-sized upgrades of individual claims with explicit assumptions and proofs; the reports are
+longer manuscripts that weave multiple notes into a single dependency chain.
+
+The current core reports are:
 \begin{itemize}[leftmargin=1.4em]
 \item \path{research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex}:
   static $\to$ QM $\to$ QFT ladder and \(\delta(\partial S)\) viewpoint.
@@ -315,7 +326,7 @@ reduce finite exponential-family increment hypotheses by proving automatic regul
   Newton $\to$ action reduction $\to$ oscillatory localization lecture narrative.
 \end{itemize}
 
-\textbf{Field-level dimension notes (scheme).}
+At the field level, three notes define the current dimension-gated status:
 \begin{itemize}[leftmargin=1.4em]
 \item \path{research/workspace/notes/theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md}:
   theorem-grade field-indexed closure in \(d=2\) ultralocal interacting class.
@@ -326,12 +337,13 @@ reduce finite exponential-family increment hypotheses by proving automatic regul
 \end{itemize}
 
 \subsection{Lean Formalization (Machine-Checked Spine)}
-\textbf{Lean workspace.}
-The Lean project lives in \path{research/workspace/proofs/}.
+The Lean project lives in \path{research/workspace/proofs/}. Its role is not to formalize the entire analytic
+infrastructure of stationary phase or continuum QFT; it is to machine-check a reusable spine of algebraic and
+finite-dimensional analytic lemmas that show up repeatedly in the Claim~1 program (especially in small-parameter
+continuity bounds and in ratio-state control).
 
-\textbf{Machine-checked modules (scheme).}
 As recorded in \path{research/workspace/notes/theorems/2026-02-09-claim1-lean-formalization-status.md},
-the current Lean spine includes:
+the current machine-checked modules include:
 \begin{itemize}[leftmargin=1.4em]
 \item \(c\)-invariance under \(\tau_\mu\) scaling and composition laws,
 \item quotient-derivative covariance form for \(\omega=N/Z\),
@@ -342,11 +354,11 @@ the current Lean spine includes:
 \end{itemize}
 
 \subsection{Simulation and Symbolic Checks}
-\textbf{Scope.}
-Python scripts are used as \emph{diagnostics}, not as proof substitutes.
-The index is kept in \path{research/workspace/notes/README.md}.
+Python scripts are used as \emph{diagnostics}, not as proof substitutes. Their purpose is to provide fast sanity
+checks (e.g.\ sign errors, scaling regimes, stability criteria) and to explore toy parameter scans for candidate
+theorems. The canonical index is kept in \path{research/workspace/notes/README.md}.
 
-\textbf{Examples (scheme).}
+Representative examples include:
 \begin{itemize}[leftmargin=1.4em]
 \item \(d=2\) ultralocal closure diagnostic:
   \path{research/workspace/simulations/claim1_d2_ultralocal_phi4_closure_check.py}.
