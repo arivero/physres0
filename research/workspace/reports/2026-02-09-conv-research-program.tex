@@ -500,38 +500,54 @@ The core missing analytic ingredients are:
 \label{sec:appendix}
 
 \subsection{Glossary}
-\textbf{Core glossary (scheme).}
-\begin{itemize}[leftmargin=1.4em]
-\item \(c\)-parameter:
-  \(c := (\eta - i/h)\kappa\).
-\item \(c\)-invariant:
-  invariant under parameter changes that keep \(c\) fixed; constant on \(\tau_\mu\)-orbits.
-\item \(\tau_\mu\) flow:
-  \(\tau_\mu:(\kappa,\eta,h)\mapsto(\mu\kappa,\eta/\mu,\mu h)\), \(\mu>0\).
-\item de-regularization:
-  one-sided limit \(\eta\to0^+\) from damped oscillatory weights to purely oscillatory ones.
-\item SD identity (scoped finite form):
-  \(\langle \partial_i\psi\rangle_c = c\,\langle \psi\,\partial_i S\rangle_c\).
-\item half-density (here):
-  amplitude-level object whose modulus-square yields density-level quantities; natural for groupoid convolution kernels.
-\end{itemize}
+This appendix summarizes the minimal vocabulary used throughout the notes and reports.
+The canonical Markdown version lives in \path{research/workspace/notes/2026-02-09-foundational-glossary.md}.
+\begin{description}[leftmargin=3.0em,style=nextline]
+\item[\(c\)-parameter]
+The combined complex parameter
+\[
+c := (\eta - i/h)\kappa
+\]
+that governs the dressed kernel family.
+\item[\(c\)-invariant]
+Invariant under changes of \((\kappa,\eta,h)\) that keep \(c\) fixed; equivalently, constant on a \(\tau_\mu\)-orbit.
+\item[\(\tau_\mu\) flow]
+Scale reparameterization
+\[
+\tau_\mu:(\kappa,\eta,h)\mapsto(\mu\kappa,\eta/\mu,\mu h),\qquad \mu>0,
+\]
+which preserves \(c\).
+\item[de-regularization]
+The one-sided limit \(\eta\to0^+\) from damped oscillatory weights to the purely oscillatory branch.
+\item[Schwinger--Dyson identity]
+Integration-by-parts identity (scoped finite form):
+\[
+\langle \partial_i\psi\rangle_c = c\,\langle \psi\,\partial_i S\rangle_c.
+\]
+\item[half-density (here)]
+An amplitude-level object whose modulus-square yields density-level quantities; natural for coordinate-free groupoid
+convolution kernels.
+\end{description}
 
 \subsection{Reproducibility (Commands and Entry Points)}
-\textbf{Lean build (scheme).}
+This repository is designed so that key statements have executable entry points:
+Lean modules are built by \path{lake}, and diagnostics are run with \path{python3.12}.
+
+\paragraph{Lean build.}
 \begin{verbatim}
 cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake update
 /Users/arivero/.elan/bin/lake build Claim1lean
 \end{verbatim}
 
-\textbf{Selected diagnostics (scheme).}
+\paragraph{Selected diagnostics.}
 \begin{verbatim}
 python3.12 research/workspace/simulations/claim1_d2_ultralocal_phi4_closure_check.py
 python3.12 research/workspace/simulations/claim1_halfdensity_kinematic_dynamic_split_check.py
 \end{verbatim}
 
 \subsection{File Map}
-\textbf{Curated index (scheme).}
+This is a curated entry-point index, not an exhaustive list of all notes produced.
 \begin{itemize}[leftmargin=1.4em]
 \item source: \path{conv\_patched.md}, \path{conv\_patched.pdf}.
 \item audit: \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
