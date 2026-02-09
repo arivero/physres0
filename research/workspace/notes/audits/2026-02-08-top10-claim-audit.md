@@ -127,4 +127,11 @@ Scoring rule:
 57. [done] Executed AN-5: proved a quantitative small-\(\kappa\) Lipschitz-type bound in the finite-dimensional surrogate and mapped it to B5 in the \(d=3\) bridge note.
 58. [done] Executed AN-6: Lean + mathlib workspace added; \(c\)-invariance and small-\(\kappa\) prototype core formalized in machine-checked modules.
 59. [done] Executed AN-7: Lean covariance-derivative bridge lemma for \(\omega=N/Z\) quotient evolution (expanded and factored forms).
-60. [next] Execute AN-8: formalize a finite-support covariance inequality in Lean (or equivalent abstract bound) to connect the AV identity to a machine-checked small-\(\kappa\) control bound.
+60. [done] Executed AN-8: formalized a finite-support covariance-style centered-product inequality in Lean (`FiniteCovarianceBound.lean`).
+61. [done] Executed AN-9: combined AN-7 and AN-8 into a Lean ratio-state derivative-bound corollary (abstract `|∂ω|` control template).
+62. [done] Executed AN-10: Lean interval-level increment corollary from AN-9 derivative bounds + small-\(\kappa\) theorem (`RatioStateIncrementBound.lean`).
+63. [done] Executed AN-11: interior `derivWithin = deriv` bridge formalized and used to produce boundary-aware AN-10 variants with reduced assumptions.
+64. [done] Executed AN-12: one-sided boundary derivative-control template formalized in Lean (`Icc`↔`Ici` bridge at \(t=0\), \(\kappa>0\)).
+65. [done] Executed AN-13: added compact Lean dependency spine AU→BA mapped to B5 obligations with explicit missing ingredient.
+66. [done] Executed AN-14: formalized a finite-dimensional integral-differentiation bridge lemma in Lean (`FiniteExponentialFamilyDeriv.lean`) for exponential-family finite sums, proving the concrete derivative hypotheses \(N'=-A\), \(Z'=-B\) used by AN-7.
+67. [next] Execute AN-15: formalize a finite-model representation bridge in Lean (covariance/centered representation for the exponential-family ratio state) to connect AN-14 model assumptions directly to AN-9/AN-10 bounds.

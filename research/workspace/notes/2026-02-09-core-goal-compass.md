@@ -15,6 +15,12 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
+- `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
+- `theorems/2026-02-09-claim1-lean-ratio-derivative-bound-template.md`
+- `theorems/2026-02-09-claim1-lean-ratio-increment-bound.md`
+- `theorems/2026-02-09-claim1-lean-interior-derivwithin-bridge.md`
+- `theorems/2026-02-09-claim1-lean-onesided-boundary-bridge.md`
+- `theorems/2026-02-09-claim1-lean-dependency-spine.md`
 
 ## North Star
 
@@ -58,6 +64,17 @@ and connect that emergence to geometric descriptions of forces.
 - Quantitative bridge step completed (Phase AT): proved a small-\(\kappa\) Lipschitz prototype estimate (B5 surrogate) for a nearest-neighbor finite-dimensional model.
 - Formal verification ramp completed (Phase AU): Lean workspace with mathlib integrated; \(c\)-invariance and small-\(\kappa\) Lipschitz core lemmas are machine-checked.
 - Lean bridge extension completed (Phase AV): quotient-derivative covariance-form lemma formalized in Lean for the AN-5 derivative-control backbone.
+- Lean inequality bridge completed (Phase AW): finite-support covariance-style centered-product bound formalized in Lean.
+- Lean derivative template completed (Phase AX): AN-7 + AN-8 combined into a machine-checked abstract `|∂ω|` bound for ratio states.
+- Lean interval bridge completed (Phase AY): machine-checked interval increment bound from derivative templates, including centered-average AN-9 instantiation.
+- Lean assumption-reduction completed (Phase AZ): interior `derivWithin = deriv` bridge and boundary-aware ratio increment template formalized.
+- Lean one-sided boundary reduction completed (Phase BA): \(t=0\) `Icc`↔`Ici` derivative bridge and one-sided boundary variant of centered-average increment bound.
+- Lean dependency map completed (Phase BB): module-level spine from AU→BA to B5 obligations with explicit next missing formal ingredient.
+- Lean finite-model derivative bridge completed (Phase BC): finite exponential-family parameter-derivative lemmas machine-checked (`N'=-A`, `Z'=-B`) to discharge AN-7 derivative hypotheses in a concrete scoped class.
+
+## Next Active Target
+
+- Phase BD (AN-15): formalize the missing representation bridge in Lean for the same finite exponential family, so AN-14 model assumptions can feed the AN-9/AN-10 bound pipeline without manual representation hypotheses.
 
 ## De-Prioritized Unless Supporting North Star
 

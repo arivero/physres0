@@ -98,6 +98,7 @@ Preference order for new Claim 1 results:
 Primary setup and folders are in `research/README.md`.
 Package baseline is in `research/requirements.txt`.
 Reading program and project ideas are in `research/books-and-ideas.md`.
+For Python commands in this repository, always call `python3.12` explicitly.
 Lean toolchain (installed):
 - `/Users/arivero/.elan/bin/lean`
 - `/Users/arivero/.elan/bin/lake`
@@ -120,9 +121,16 @@ At session start (or after a context reset), read in this order:
 10. `research/workspace/notes/theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
 11. `research/workspace/notes/theorems/2026-02-09-claim1-lean-formalization-status.md`
 12. `research/workspace/notes/theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
-13. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
-14. `research/workspace/notes/README.md`
-15. `research/workspace/proofs/README.md`
+13. `research/workspace/notes/theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
+14. `research/workspace/notes/theorems/2026-02-09-claim1-lean-ratio-derivative-bound-template.md`
+15. `research/workspace/notes/theorems/2026-02-09-claim1-lean-ratio-increment-bound.md`
+16. `research/workspace/notes/theorems/2026-02-09-claim1-lean-interior-derivwithin-bridge.md`
+17. `research/workspace/notes/theorems/2026-02-09-claim1-lean-onesided-boundary-bridge.md`
+18. `research/workspace/notes/theorems/2026-02-09-claim1-lean-dependency-spine.md`
+19. `research/workspace/notes/theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
+20. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
+21. `research/workspace/notes/README.md`
+22. `research/workspace/proofs/README.md`
 
 Minimum extraction requirement:
 

@@ -26,6 +26,10 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.CInvariant
 /Users/arivero/.elan/bin/lake build Claim1lean.SmallKappaLipschitz
 /Users/arivero/.elan/bin/lake build Claim1lean.CovarianceDerivative
+/Users/arivero/.elan/bin/lake build Claim1lean.FiniteCovarianceBound
+/Users/arivero/.elan/bin/lake build Claim1lean.RatioStateDerivativeBound
+/Users/arivero/.elan/bin/lake build Claim1lean.RatioStateIncrementBound
+/Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialFamilyDeriv
 ```
 
 ## Current formalized modules
@@ -36,3 +40,11 @@ cd research/workspace/proofs
   derivative-bound implies `O(κ)` increment inequality on `[0,κ]`.
 - `Claim1lean/CovarianceDerivative.lean`:
   quotient-derivative identity in covariance form (`ω = N/Z` backbone).
+- `Claim1lean/FiniteCovarianceBound.lean`:
+  finite-support centered-product covariance inequality templates.
+- `Claim1lean/RatioStateDerivativeBound.lean`:
+  abstract `|∂ω|` bound from AN-7 + AN-8 ingredients.
+- `Claim1lean/RatioStateIncrementBound.lean`:
+  interval increment bound from derivative templates (`Cκ` control).
+- `Claim1lean/FiniteExponentialFamilyDeriv.lean`:
+  finite-sum exponential-family derivative bridge (`N'=-A`, `Z'=-B`).

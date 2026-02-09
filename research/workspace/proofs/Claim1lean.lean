@@ -4,3 +4,7 @@ import Claim1lean.Basic
 import Claim1lean.CInvariant
 import Claim1lean.SmallKappaLipschitz
 import Claim1lean.CovarianceDerivative
+import Claim1lean.FiniteCovarianceBound
+import Claim1lean.RatioStateDerivativeBound
+import Claim1lean.RatioStateIncrementBound
+import Claim1lean.FiniteExponentialFamilyDeriv

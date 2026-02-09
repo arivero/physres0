@@ -86,6 +86,13 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
+- `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
+- `theorems/2026-02-09-claim1-lean-ratio-derivative-bound-template.md`
+- `theorems/2026-02-09-claim1-lean-ratio-increment-bound.md`
+- `theorems/2026-02-09-claim1-lean-interior-derivwithin-bridge.md`
+- `theorems/2026-02-09-claim1-lean-onesided-boundary-bridge.md`
+- `theorems/2026-02-09-claim1-lean-dependency-spine.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -168,6 +175,10 @@ This folder stores analysis artifacts derived from source documents.
 - `../proofs/Claim1lean/CInvariant.lean`
 - `../proofs/Claim1lean/SmallKappaLipschitz.lean`
 - `../proofs/Claim1lean/CovarianceDerivative.lean`
+- `../proofs/Claim1lean/FiniteCovarianceBound.lean`
+- `../proofs/Claim1lean/RatioStateDerivativeBound.lean`
+- `../proofs/Claim1lean/RatioStateIncrementBound.lean`
+- `../proofs/Claim1lean/FiniteExponentialFamilyDeriv.lean`
 
 ## Supplemental Audit Notes
 
@@ -187,3 +198,10 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
+- `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
+- `theorems/2026-02-09-claim1-lean-ratio-derivative-bound-template.md`
+- `theorems/2026-02-09-claim1-lean-ratio-increment-bound.md`
+- `theorems/2026-02-09-claim1-lean-interior-derivwithin-bridge.md`
+- `theorems/2026-02-09-claim1-lean-onesided-boundary-bridge.md`
+- `theorems/2026-02-09-claim1-lean-dependency-spine.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
