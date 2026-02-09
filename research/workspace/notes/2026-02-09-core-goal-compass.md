@@ -18,6 +18,9 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`
 - `theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`
 - `theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`
+- `theorems/2026-02-09-claim1-d3-cb1-tail-insertion-closure.md`
+- `theorems/2026-02-09-claim1-d3-insertion-lq-moment-verification.md`
+- `theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -92,7 +95,10 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) scoped continuum-branch candidate completed (Phase BN / AN-22): AN-21 renormalized B5b input integrated with B1-B4 into an explicit scoped continuum theorem candidate, synced into Paper 3 + bridge note.
 - \(d=3\) concrete B1-B4 closure completed (Phase BO / AN-23): compact-spin interacting Euclidean subclass closes B1-B4 (tightness, \(Z>0\), SD pass-through) and upgrades the AN-22 candidate to scoped closure in that subclass.
 - \(d=3\) hard-cutoff lift completed (Phase BP / AN-24): removed \(R\to\infty\) artifact in the AN-23 branch with B1-B4 preserved in the Euclidean local-renormalized channel.
-- \(d=3\) class-extension lane started (Phase BQ / AN-25): observable-side compact-support \(\to\) bounded-continuous local extension is closed; full \(C_b^1\) SD-test extension remains open.
+- \(d=3\) class-extension lane completed (Phase BQ / AN-25): observable-side compact-support \(\to\) bounded-continuous local extension is closed and synchronized with SD test-side closure.
+- \(d=3\) SD test-side tail insertion closure completed (Phase BR / AN-26): \(C_c^1\to C_b^1\) extension is closed in-branch.
+- \(d=3\) insertion-moment gate verification completed (Phase BS / AN-26B): explicit uniform insertion \(L^{4/3}\)-moment bound discharges AN-26 hypotheses in the scoped Euclidean branch.
+- \(d=3\) oscillatory/de-regularized class transfer completed (Phase BT / AN-27): widened local classes and SD-test extension now pass to \(c_\eta=\eta-i/h\) and \(\eta\to0^+\) in the scoped branch under explicit non-vanishing/envelope hypotheses.
 
 ## Next Active Target
 
@@ -105,8 +111,11 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BN (completed): AN-22 scoped continuum-branch theorem candidate delivered and integrated into Goal 1C track.
 - Phase BO (completed): AN-23 compact-spin \(d=3\) B1-B4 closure delivered and integrated into the bridge lane.
 - Phase BP (completed): AN-24 hard-cutoff lift \(R\to\infty\) delivered in the AN-23 branch.
-- Phase BQ (active): AN-25 class-extension started with observable-side closure.
-- Active support lane (AN-26): finish SD-test \(C_b^1\) tail control and then transfer to oscillatory/de-regularized branch.
+- Phase BQ (completed): AN-25 local class-extension lane completed in the scoped Euclidean branch.
+- Phase BR (completed): AN-26 SD-test tail-control theorem delivered.
+- Phase BS (completed): AN-26B insertion-moment verification delivered.
+- Phase BT (completed): AN-27 oscillatory/de-regularized class-transfer note delivered.
+- Active support lane (AN-28): extend the same branch from local classes to first nonlocal-cylinder observables.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

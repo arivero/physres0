@@ -81,8 +81,11 @@ Program stance:
 10. **AN-23 (done):** discharged B1-B4 in an explicit interacting compact-spin \(d=3\) subclass (tightness + denominator non-vanishing + SD insertion pass-through) in `research/workspace/notes/theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`.
 11. **Goal 1C paper track (done):** started a general-dimension field manuscript with explicit closure gates and literature anchors (`research/workspace/reports/2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.tex`).
 12. **AN-24 (done):** removed hard cutoff \(R\to\infty\) in the AN-23 Euclidean branch while preserving B1-B4 in the local-renormalized channel (`research/workspace/notes/theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`).
-13. **AN-25 (active):** started AN-24 class extension in `research/workspace/notes/theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`; observable-side \(C_c\to C_b\) extension is closed, while full SD test-side \(C_b^1\) extension is still open.
-14. **AN-26 (next):** complete AN-25 by discharging tail insertion-control for \(C_b^1\) SD tests, then begin oscillatory/de-regularized transfer in the same \(d=3\) branch.
+13. **AN-25 (done):** class extension in `research/workspace/notes/theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md` closes observable-side \(C_c\to C_b\) and, with AN-26/AN-26B, closes SD test-side \(C_c^1\to C_b^1\) in the scoped branch.
+14. **AN-26 (done):** SD test-side tail insertion-control theorem delivered in `research/workspace/notes/theorems/2026-02-09-claim1-d3-cb1-tail-insertion-closure.md`.
+15. **AN-26B (done):** verified AN-26 insertion \(L^q\)-moment hypothesis (with explicit \(q=4/3\) bound) in `research/workspace/notes/theorems/2026-02-09-claim1-d3-insertion-lq-moment-verification.md`.
+16. **AN-27 (done):** transferred the widened local class to oscillatory/de-regularized branch in the same \(d=3\) lane in `research/workspace/notes/theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`.
+17. **AN-28 (next):** extend the AN-27 branch from strictly local blocks to a first nonlocal-cylinder observable family with explicit denominator/non-vanishing bookkeeping.
 
 ## Non-Drift Rule
 

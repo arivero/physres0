@@ -215,7 +215,7 @@ AN-25 now starts in:
 
 - `research/workspace/notes/theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`
 
-Output of AN-25 (current):
+Output of AN-25 (start snapshot):
 
 1. observable-side local extension \(C_c\to C_b\) is closed with explicit
    \(O(R^{-2})\)-type tail control from renormalized moments,
@@ -224,8 +224,32 @@ Output of AN-25 (current):
 
 Implication:
 
-1. AN-25 is active and partially closed,
-2. next concrete target is AN-26 tail insertion-control closure for SD tests.
+1. this was the pre-AN-26 state,
+2. it is superseded by the AN-26/AN-26B update below.
+
+## AN-26/AN-26B Update (Test-Side Tail-Insertion Closure Landed)
+
+AN-26 and AN-26B close the remaining AN-25 SD test-side gap in:
+
+- `research/workspace/notes/theorems/2026-02-09-claim1-d3-cb1-tail-insertion-closure.md`
+- `research/workspace/notes/theorems/2026-02-09-claim1-d3-insertion-lq-moment-verification.md`
+
+Output:
+
+1. AN-26 establishes explicit tail insertion-control from Holder + Markov for
+   SD tests,
+2. AN-26B verifies the needed insertion moment with explicit
+   \(q=4/3\) finite-volume uniform bound,
+3. together they close \(C_c^1\to C_b^1\) SD-test extension in the same
+   Euclidean branch through cutoff-approximant limit control.
+4. AN-27 transfers the widened local classes to oscillatory/de-regularized
+   branch in `research/workspace/notes/theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`.
+
+Implication:
+
+1. AN-25 class-extension lane is now theorem-closed in this scoped branch,
+2. next concrete target is AN-28 nonlocal-cylinder extension in the same
+   oscillatory/de-regularized lane.
 
 ## Why \(d=3\) Here
 
@@ -247,6 +271,8 @@ python3.12 research/workspace/simulations/claim1_d3_an22_continuum_branch_proxy_
 python3.12 research/workspace/simulations/claim1_d3_an23_compact_spin_closure_check.py
 python3.12 research/workspace/simulations/claim1_d3_an24_cutoff_lift_check.py
 python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py
+python3.12 research/workspace/simulations/claim1_d3_an26_tail_insertion_control_check.py
+python3.12 research/workspace/simulations/claim1_d3_an27_oscillatory_dereg_transfer_check.py
 ```
 
 The first script gives a nearest-neighbor toy weak-coupling scan.
@@ -256,3 +282,5 @@ The fourth script gives AN-22 continuum-branch proxy diagnostics.
 The fifth script checks AN-23 compact-spin B1-B4 closure diagnostics.
 The sixth script checks AN-24 hard-cutoff lift diagnostics across \(R\).
 The seventh script checks AN-25 observable-class extension and SD-test residual diagnostics.
+The eighth script checks AN-26 SD-test tail insertion-control diagnostics.
+The ninth script checks AN-27 oscillatory/de-regularized transfer diagnostics.

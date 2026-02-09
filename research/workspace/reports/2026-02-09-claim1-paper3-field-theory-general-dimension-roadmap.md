@@ -12,9 +12,11 @@ This paper sets a dimension-indexed field-theory program with explicit closure
 gates: regulated existence, continuum existence, and reconstruction. It does
 not claim full interacting closure in all dimensions. Current progress
 establishes a scoped \(d=3\) closure in one compact-spin interacting Euclidean
-subclass; AN-24 then removes the hard cutoff in a local-renormalized channel.
-The next scientific step is to widen that channel from compact-support local
-classes to broader local classes, and this AN-25 lane is now active.
+subclass; AN-24 removes the hard cutoff in a local-renormalized channel, and
+AN-26 plus AN-26B close SD test-side \(C_b^1\) extension with explicit
+tail-control and insertion-moment verification in-branch. AN-27 then transfers
+the widened local class to the oscillatory/de-regularized branch under
+explicit non-vanishing and contour-envelope hypotheses.
 
 ## Scope
 
@@ -100,8 +102,9 @@ AN-23 closes B1--B4 in a concrete interacting compact-spin Euclidean subclass:
 This upgrades the AN-22 candidate to scoped closure in that subclass.
 AN-24 now removes hard-cutoff \(R\to\infty\) with B1-B4 preserved in a
 local-renormalized compact-support channel.
-AN-25 now starts this class-widening: observable-side \(C_c\to C_b\) extension
-is closed, while SD test-side \(C_b^1\) extension remains open.
+AN-25 closes observable-side widening \(C_c\to C_b\).
+AN-26 + AN-26B close SD test-side widening \(C_c^1\to C_b^1\) by combining the
+Holder/Markov tail criterion with an explicit \(q=4/3\) insertion-moment bound.
 
 ## Literature Anchors
 
@@ -114,9 +117,9 @@ is closed, while SD test-side \(C_b^1\) extension remains open.
 
 ## Immediate Next Scientific Step
 
-1. complete AN-25 by closing SD test-side \(C_b^1\) extension (tail
-   insertion-control) in the same \(d=3\) channel,
-2. then transfer the widened local class to oscillatory/de-regularized branch.
+1. extend AN-27 from strictly local blocks to a first nonlocal-cylinder
+   observable family (AN-28) in the same \(d=3\) channel,
+2. keep non-vanishing/envelope assumptions explicit while widening this scope.
 
 ## Validation Contract
 
@@ -133,10 +136,15 @@ is closed, while SD test-side \(C_b^1\) extension remains open.
      - `python3.12 research/workspace/simulations/claim1_d3_an22_continuum_branch_proxy_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an23_compact_spin_closure_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an24_cutoff_lift_check.py`,
-     - `python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py`.
+     - `python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an26_tail_insertion_control_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an26b_insertion_lq_moment_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an27_oscillatory_dereg_transfer_check.py`.
 4. **Confidence statement:** this is a theorem-program with scoped \(d=3\)
-   closure plus hard-cutoff lift and an active AN-25 class-extension lane, not
-   yet a full broad-class unbounded-field closure.
+   closure plus hard-cutoff lift and AN-25/AN-26/AN-26B class-extension closure
+   in a scoped Euclidean branch; AN-27 closes oscillatory/de-regularized
+   transfer in that scoped branch under explicit assumptions. Full nonlocal and
+   global continuum interacting closure remains open.
 
 ## Reproducibility Metadata
 

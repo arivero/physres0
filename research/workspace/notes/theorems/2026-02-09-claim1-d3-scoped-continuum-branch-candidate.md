@@ -101,7 +101,16 @@ AN-25 update:
 1. class-extension lane started in
    `research/workspace/notes/theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`,
 2. observable-side local extension \(C_c\to C_b\) is closed,
-3. SD test-side \(C_b^1\) extension remains the active tail-control gap.
+3. SD test-side \(C_b^1\) extension is now closed via AN-26 + AN-26B in the
+   same scoped Euclidean branch.
+
+AN-27 update:
+
+1. widened local classes are now transferred to the oscillatory/de-regularized
+   branch in
+   `research/workspace/notes/theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`,
+2. transfer is theorem-grade in this scoped branch under explicit
+   denominator-nonvanishing and contour-envelope assumptions.
 
 ## Validation Contract
 
@@ -128,6 +137,9 @@ Run:
 python3.12 research/workspace/simulations/claim1_d3_an22_continuum_branch_proxy_check.py
 python3.12 research/workspace/simulations/claim1_d3_an24_cutoff_lift_check.py
 python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py
+python3.12 research/workspace/simulations/claim1_d3_an26_tail_insertion_control_check.py
+python3.12 research/workspace/simulations/claim1_d3_an26b_insertion_lq_moment_check.py
+python3.12 research/workspace/simulations/claim1_d3_an27_oscillatory_dereg_transfer_check.py
 ```
 
 The script provides finite-volume diagnostics for:
@@ -137,12 +149,14 @@ The script provides finite-volume diagnostics for:
 3. coarse Cauchy-style drift checks across spacing refinements.
 4. hard-cutoff lift stabilization and SD residual checks across \(R\).
 5. observable-class extension error decay and noncompact SD-probe residual behavior.
+6. oscillatory/de-regularized transfer diagnostics for widened local classes.
 
 ### Confidence statement
 
 The dependency integration is theorem-grade, and a concrete AN-23/AN-24
 subclass realization is closed in the Euclidean local-renormalized channel.
-AN-25 class extension is active with observable-side closure and SD-test side still open.
+AN-25 class extension and AN-27 oscillatory/de-regularized transfer are now
+theorem-closed in the same scoped branch (with explicit AN-27 assumptions).
 
 ### Reproducibility metadata
 

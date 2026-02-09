@@ -1,4 +1,4 @@
-# Claim 1 Phase BQ (AN-25 Start): \(d=3\) Local-Class Extension Beyond Compact Support
+# Claim 1 Phase BQ (AN-25): \(d=3\) Local-Class Extension Beyond Compact Support
 
 Date: 2026-02-09 (CET)  
 Depends on:
@@ -72,30 +72,38 @@ Hence \(\omega(f_R)\to\omega(f)\) uniformly as \(R\to\infty\).
 Uniqueness follows because \(C_c\) approximants have vanishing tail error.
 \(\square\)
 
-## Proposition B (Started): Test-Class Extension \(C_c^1\to C_b^1\)
+## Proposition B (Closed via AN-26 + AN-26B): Test-Class Extension \(C_c^1\to C_b^1\)
 
 For \(\psi\in\mathcal T_{B,\mathrm{ext}}^{\mathrm{ren}}\), finite-volume SD
-identity is expected to extend from AN-24 by cutoff approximation
-\(\psi_R=\chi_R\psi\in C_c^1\), provided the tail insertion-control condition
+identity extends from AN-24 by cutoff approximation
+\(\psi_R=\chi_R\psi\in C_c^1\), once the AN-26 tail insertion-control condition
 is available:
 \[
 \sup_{a,L,\kappa,c}
 \omega\!\left(|\partial_i S_{a,L}^{(\kappa)}|\,\mathbf 1_{\|v_B\|>R}\right)
 \xrightarrow[R\to\infty]{}0.
 \]
-This is the remaining AN-25 test-side analytic obligation.
+This condition is reduced in:
+`research/workspace/notes/theorems/2026-02-09-claim1-d3-cb1-tail-insertion-closure.md`,
+and its insertion-moment gate is discharged in:
+`research/workspace/notes/theorems/2026-02-09-claim1-d3-insertion-lq-moment-verification.md`.
 
 ## AN-25 Status (This Pass)
 
 Closed now:
 
 1. observable-side class extension \(C_c\to C_b\) with explicit tail rate
-   \(O(R^{-2})\) from AN-24 moments.
+   \(O(R^{-2})\) from AN-24 moments,
+2. SD test-side class extension \(C_c^1\to C_b^1\) closed via AN-26 + AN-26B
+   in the same scoped branch.
 
-Still open in AN-25:
+AN-27 update:
 
-1. full \(C_b^1\) SD-test extension via explicit tail insertion-control proof,
-2. post-extension transfer to oscillatory/de-regularized branch.
+1. widened local class transfer to oscillatory/de-regularized branch is now
+   closed in
+   `research/workspace/notes/theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`.
+2. next open step is AN-28: extend this transfer from strictly local blocks to
+   first nonlocal-cylinder observables.
 
 ## Validation Contract
 
@@ -103,6 +111,7 @@ Still open in AN-25:
 
 1. AN-24 local-renormalized Euclidean branch,
 2. uniform renormalized second-moment control from AN-24.
+3. AN-26 insertion-moment gate verified by AN-26B for \(q=4/3\).
 
 ### Units and dimensions check
 
@@ -119,17 +128,24 @@ Run:
 
 ```bash
 python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py
+python3.12 research/workspace/simulations/claim1_d3_an26_tail_insertion_control_check.py
+python3.12 research/workspace/simulations/claim1_d3_an26b_insertion_lq_moment_check.py
+python3.12 research/workspace/simulations/claim1_d3_an27_oscillatory_dereg_transfer_check.py
 ```
 
 The script checks:
 
 1. \(C_c\to C_b\) observable approximation error decay vs cutoff radius,
-2. SD residual behavior for bounded noncompact \(C_b^1\)-type test probes.
+2. SD residual behavior for bounded noncompact \(C_b^1\)-type test probes,
+3. tail insertion-control diagnostics used for AN-26 test-side closure,
+4. insertion \(L^{4/3}\)-moment diagnostics closing the AN-26 gate.
+5. oscillatory/de-regularized transfer diagnostics for the widened class.
 
 ### Confidence statement
 
 Observable-side AN-25 extension is theorem-grade in the AN-24 channel.
-Test-side \(C_b^1\) extension remains a started lane with explicit tail condition.
+Test-side \(C_b^1\) extension is theorem-grade in this scoped branch via
+AN-26 + AN-26B.
 
 ### Reproducibility metadata
 

@@ -24,8 +24,10 @@ regulated existence, continuum existence, and reconstruction.
 Current progress includes an explicit \(d=2\) interacting closure in an ultralocal class,
 plus a \(d=3\) local-interaction scoped closure in a compact-spin Euclidean subclass.
 AN-24 removes the hard cutoff in that same branch inside a local-renormalized channel.
-The immediate next theorem step is to widen that channel from compact-support local
-classes to broader local classes; this AN-25 lane is now active.
+AN-26 plus AN-26B close SD test-side \(C_b^1\) extension with explicit
+tail-control and insertion-moment verification in-branch.
+AN-27 then transfers the widened local class to the oscillatory/de-regularized
+branch under explicit non-vanishing and contour-envelope hypotheses.
 \end{abstract}
 
 \section{Scope}
@@ -95,7 +97,8 @@ Its role is to prevent overclaiming and to force assumption-explicit upgrades.
 \(c\)-invariance in that class).
 \item \textbf{\(d=3\):} nearest-neighbor local interactions now have scoped closure in a
 compact-spin Euclidean subclass (B1-B4 + renormalized B5 input closed there), while
-hard-cutoff removal is now closed in a local-renormalized channel and class-widening remains open.
+hard-cutoff removal is now closed in a local-renormalized channel and class-widening
+is closed in this scoped Euclidean branch through AN-25/AN-26/AN-26B.
 \item \textbf{\(d=4\):} frontier branch; no full interacting closure claim is made here.
 \item \textbf{\(d>4\):} treated as EFT/triviality-guided unless a UV-complete model is fixed.
 \end{enumerate}
@@ -150,8 +153,9 @@ interacting Euclidean subclass:
 Thus the AN-22 candidate is upgraded to scoped closure in that subclass.
 AN-24 then removes the hard compact-spin cutoff \(R\to\infty\) while keeping
 B1-B4 in the local-renormalized compact-support channel.
-AN-25 now starts this widening: observable-side \(C_c\to C_b\) local extension
-is closed, while SD test-side \(C_b^1\) extension remains open.
+AN-25 closes observable-side widening \(C_c\to C_b\).
+AN-26 + AN-26B close SD test-side widening \(C_c^1\to C_b^1\) by combining the
+Holder/Markov tail criterion with an explicit \(q=4/3\) insertion-moment bound.
 
 \section{Literature Anchors for the Dimension Ladder}
 
@@ -187,8 +191,8 @@ is closed, while SD test-side \(C_b^1\) extension remains open.
 
 The next theorem target is:
 \begin{enumerate}
-\item complete AN-25 by closing SD test-side \(C_b^1\) extension (tail insertion-control) in the same \(d=3\) channel,
-\item then transfer the widened local class to the oscillatory/de-regularized branch.
+\item extend AN-27 from strictly local blocks to a first nonlocal-cylinder observable family (AN-28) in the same \(d=3\) channel,
+\item keep non-vanishing/envelope assumptions explicit while widening this scope.
 \end{enumerate}
 
 \section{Validation Contract}
@@ -221,12 +225,21 @@ The next theorem target is:
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an24\_cutoff\_lift\_check.py}.
 \item AN-25 local class-extension diagnostics:
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an25\_class\_extension\_check.py}.
+\item AN-26 SD-test tail insertion-control diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an26\_tail\_insertion\_control\_check.py}.
+\item AN-26B insertion \(L^{4/3}\)-moment diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an26b\_insertion\_lq\_moment\_check.py}.
+\item AN-27 oscillatory/de-regularized transfer diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an27\_oscillatory\_dereg\_transfer\_check.py}.
 \end{enumerate}
 
 \subsection*{Confidence statement}
 This document is a theorem-program and source-anchored roadmap.
-It now includes scoped \(d=3\) closure with hard-cutoff lift and an active AN-25
-class-extension lane; full broad-class unbounded-field closure is not yet complete.
+It now includes scoped \(d=3\) closure with hard-cutoff lift and
+AN-25/AN-26/AN-26B class-extension closure in a scoped Euclidean branch.
+AN-27 closes oscillatory/de-regularized transfer in that scoped branch under
+explicit assumptions. Full nonlocal and global continuum interacting closure
+remains open.
 
 \section{Reproducibility Metadata}
 
