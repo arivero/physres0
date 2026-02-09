@@ -48,7 +48,72 @@ The continuum bridge tasks must now track channel behavior explicitly:
 3. characterize fixed points/lines/manifolds in channel coordinates.
 
 This aligns the Claim 1 program with the extracted fixed-point topology notes in
-`arXiv-hep-th9411081v1/9411081.tex` (via the supplementary audit note).
+`arXiv-hep-th9411081v1/9411081.tex` (via the supplementary audit note), where point-supported degrees of freedom
+appear as a nontrivial fixed-point landscape even in 1D QM.
+
+## Toy Model: Wilson--Kogut RG for 1D Contact Interactions (hep-th/9411081)
+
+This local preprint (`arXiv-hep-th9411081v1/9411081.tex`) is a concrete demonstration that
+``point-supported sectors = multiple fixed points + relevant/irrelevant directions`` is not a metaphor.
+
+### RG Action and Fixed Points (S-Matrix Form)
+
+The preprint defines a Wilson--Kogut-style RG on the space of *dimensionless* cutoff interactions
+represented by scattering matrices `\tilde S_{\tilde k}`. The RG action is simply an argument rescaling:
+
+\[
+\tilde S^t_{\tilde k} = T^t[\tilde S]_{\tilde k} = \tilde S_{e^{-t}\tilde k}.
+\]
+
+Hence fixed points are exactly the constant (in `\tilde k`) matrices in the allowed interaction space
+(a subset of `U(2)` defined by physical conjugation/reciprocity constraints).
+
+With time-reversal symmetry imposed, the fixed points reduce to a continuous circle plus two isolated points
+(denoted `\pm Q` in the paper). The circle is interpreted there as Kurasov's scale-invariant `\delta'` family.
+
+### Linearization: Scaling Exponents as Relevant/Irrelevant Directions
+
+Perturbing around a fixed point using the Lie algebra of `U(2)`, the preprint obtains an eigenmode equation whose
+solutions have explicit scaling form
+
+\[
+{\vec a}(k) = k^{-n}\,{\vec a}_0,
+\]
+
+with relevance/irrelevance controlled directly by the exponent `n` (in the usual RG sense: modes that grow toward the
+IR are "relevant", those that die are "irrelevant", and those that stay flat are "marginal").
+
+This is exactly the same structural statement as Proposition 2 above:
+point-supported modes come with definite scaling weights, and RG evolution classifies them by those weights.
+
+### Why This Matters for Claim 1
+
+Claim 1 is trying to export a *delta-of-variation localization* story across refinement limits. The toy RG model says:
+
+1. Even when the underlying bulk dynamics is free, the *point-supported* sector can have a rich fixed-point topology.
+2. Scale invariance can live on a manifold of fixed points (a "fixed circle"), not only on isolated points.
+3. Regularization choice matters: different regulators may land you in different attraction basins.
+
+So a Claim 1 continuum statement must specify:
+
+1. which local channel(s) are being targeted;
+2. what the intended fixed structure is (point, line, manifold);
+3. what counterterms/transport maps are used to keep the trajectory on (or near) the intended stable manifold.
+
+## Bridge: Classical Limit vs Renormalization as Two Faces of Scaling
+
+This note is focused on point-supported channels, but the same scaling logic underlies the two "big limits"
+in the foundational program:
+
+1. **Classical limit (`\hbar \to 0`)**: stationary phase concentrates amplitudes on extrema, and local prefactors encode
+   Hessian/Van-Vleck determinants. This is a scaling limit of a deformation parameter.
+2. **Continuum/QFT limit (cutoff `a\to 0`, lattice spacing, UV regulator removal)**: refinement can diverge, so one
+   follows an RG trajectory; the existence of a continuum theory is controlled by fixed points and stable manifolds.
+
+The contact-interaction fixed points show these are not separate ideas: both are about how a theory behaves under
+rescaling and refinement, and both become sharp when expressed in terms of fixed points and scaling exponents.
+Our internal `\tau_\mu` flow is the operational bridge: it is the repository's explicit "compare across scales"
+mechanism, designed to be the analog of an RG reparameterization at the level of the dressed kernels.
 
 ## Reproducibility Check
 

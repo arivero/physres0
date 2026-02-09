@@ -107,10 +107,15 @@ Finally, the conversation centered on a specific distributional object and a spe
 The distributional object is the ``delta of first variation'':
 in statics, \(\delta(f'(x))\); in mechanics and fields, the functional delta
 \(\delta(\delta S/\delta \phi)\) or \(\delta(\delta S/\delta \Phi)\).
-This is emphatically \emph{not} the derivative distribution \(\delta'\); it is a pullback/composition of the Dirac
-delta by the map \(f'\) (or the Euler--Lagrange map). The compositional intuition is that amplitudes are the correct
-objects to compose, not probabilities: the ``halved expression'' behaves like an amplitude (or half-density), and
-modulus-square produces a density-level localizing object.
+This is \emph{not} the derivative distribution \(\delta'\) (the distributional derivative of Dirac's \(\delta\)):
+it is the pullback/composition of \(\delta\) by the map \(f'\) (or the Euler--Lagrange map).%
+\footnote{To avoid a persistent notational trap: the prime in \(\delta(f')\) belongs to \(f'\), not to \(\delta\).
+Separately, the symbol ``\(\delta'\)'' appears in point-interaction literature to label contact-interaction families;
+that usage is conceptually adjacent (it is also a point-supported sector), but it is not the same as ``differentiate
+Dirac's \(\delta\)''.}
+The compositional intuition is that amplitudes are the correct objects to compose, not probabilities:
+the ``halved expression'' behaves like an amplitude (or half-density), and modulus-square produces a density-level
+localizing object.
 
 The conversation also made an explicit control demand: the relevant limits (e.g.\ \(\varepsilon\to0\) in oscillatory
 integrals, or refinement limits in time slicing and lattice field theory) must be compatible with composition across
@@ -145,6 +150,22 @@ The synthesis line is that quantization can be read as the refinement-compatible
 (\path{conv\_patched.md:1209}): the same localization object appears at each level, but compatibility with composition
 across scales forces nontrivial structure (a surviving finite deformation parameter).
 
+\paragraph{Newton's refinement template (finite invariants before limits).}
+The conversation explicitly returns to Newton's area-law proof as the archetype of ``do it discretely, then refine'':
+equal areas in equal times are first proved for a polygonal orbit under central impulses, and only then transported to
+the smooth limit (\path{conv\_patched.md:2497}). The same passage appears again in action language:
+Newton's additivity of swept areas is structurally identical to the additivity of the time-sliced action
+(\path{conv\_patched.md:2531}), and ``more triangles, thinner triangles'' is ``more time slices, smaller \(\Delta t\)''
+(\path{conv\_patched.md:2537}). This is the conceptual bridge that makes the later ``composition forces exponentials''
+argument feel inevitable rather than mystical.
+
+\paragraph{Fixed points as the scale-control locus.}
+The transcript already speaks in Wilson--Kogut language: the relevant limit exists only when refinement can be compared
+across scales, which is precisely what RG fixed points and their stable/unstable manifolds control
+(\path{conv\_patched.md:1164}). It also flags that higher-dimensional generalisation will plausibly exhibit ``more exotic
+fixed points'' (\path{conv\_patched.md:816}) and that fixed-point structure is where one expects universal scales to
+appear (\path{conv\_patched.md:1426}).
+
 \section{Research Aims (North Star)}
 \label{sec:aim}
 
@@ -178,6 +199,84 @@ The three levels are:
   formal localization \(\delta(\delta S/\delta \Phi)\),
   and a dimension-gated existence program for regulator removal and reconstruction.
 \end{enumerate}
+
+\subsection{Foundational Motifs: Refinement, Scaling, and Fixed Points}
+\label{sec:motifs}
+There are three recurring structural motifs behind almost every successful step in this program.
+They are conceptually independent of the ``half-density'' packaging, but half-densities are often a convenient
+coordinate-free way to express them.
+
+\paragraph{(M1) Prove invariants at finite resolution, then take a controlled limit.}
+Newton's polygonal proof of the area law is the template:
+one proves an \emph{exact} discrete invariant (equal triangle areas per equal time-step) for a finite refinement,
+and then one defines the smooth statement by an explicit refinement limit (\(\Delta t\to0\)).%
+\footnote{This is exactly the discipline Newton codifies in the ``first and last ratios'' lemmas: the limit is an
+explicit definitional step, not an assumption of indivisible geometric atoms.}
+For us, the analog is:
+define finite-dimensional objects at a regulator (time-slicing, lattice spacing, cutoff \(a\), damping \(\eta\)),
+prove exact identities there (projective stability, SD, \(\tau_\mu\) covariance), and then justify the continuum
+limit as a theorem.
+
+\paragraph{(M2) Refinement-compatible composition forces exponential weights.}
+If an amplitude \(K(t_2,t_0)\) composes under cutting,
+\(
+K(t_2,t_0)=\int K(t_2,t_1)\,K(t_1,t_0)\,dq(t_1),
+\)
+then the weight assigned to a history must be multiplicative under concatenation.
+Multiplicativity is the reason exponentials appear.
+The additive functional singled out by the classical variational principle is the action, hence the canonical weight
+\(\exp(\tfrac{i}{\hbar}S)\) at the dynamic level.
+At the static level, the same logic is already visible in the Fourier representation of \(\delta(f')\) and its
+near-diagonal scaling; and in tangent-groupoid language, it is encoded as ``compose arrows, then rescale the
+deformation parameter''.
+
+\paragraph{(M3) When limits fail, scale control moves to RG flows and fixed points.}
+In mechanics, time slicing usually converges once the measure is interpreted correctly.
+In field theory (especially \(d=4\)), refinement often creates divergences, so one must:
+introduce a scale, define renormalized objects relative to that scale, and demand that changing the scale does not
+change observables.
+In other words, ``existence of the continuum limit'' becomes ``existence of a controlled RG trajectory'';
+fixed points and their stable manifolds are where universal behavior and universal scales live.
+
+\paragraph{Point-supported sectors have multiple scaling eigenmodes.}
+The delta-of-variation slogan localizes on extrema, but the \emph{local distributional sector} is not one-dimensional.
+In 1D, every distribution supported at \(\{0\}\) is a finite linear combination of \(\delta^{(m)}\), and the dilation
+pullback satisfies the exact eigenmode law
+\[
+U_\lambda \delta^{(m)} = \lambda^{-m-1}\,\delta^{(m)}.
+\]
+Thus the point-supported sector decomposes into multiple scaling channels, each with its own scaling exponent.
+This is the minimal mathematical model for ``multiple fixed points'' at the level of local singular data:
+depending on regularization and symmetry, channels may be excited, suppressed, or mixed under scaling.
+
+\paragraph{Toy model: 1D contact RG fixed points make the channel picture concrete.}
+The local preprint \path{arXiv-hep-th9411081v1/9411081.tex} builds a Wilson--Kogut-style RG directly on the space of
+dimensionless cutoff scattering matrices \(\tilde S_{\tilde k}\) in 1D QM.
+The RG action is an argument rescaling,
+\begin{equation}
+\tilde S^t_{\tilde k}=T^t[\tilde S]_{\tilde k}=\tilde S_{e^{-t}\tilde k},
+\end{equation}
+so fixed points are exactly the constant \(\tilde S\in U(2)\) satisfying the physical conjugation constraint.
+Under time-reversal symmetry the fixed points reduce to \(\{\text{a circle}\}\cup\{\pm Q\}\), and the paper interprets
+the circle as Kurasov's scale-invariant ``\(\delta'\)'' family.
+Linearization around a fixed point yields scaling eigen-directions with
+\(
+{\vec a}(k)=k^{-n}{\vec a}_0,
+\)
+so that ``relevant/irrelevant'' is literally the sign of a scaling exponent \(n\) in a point-supported sector.
+This is the cleanest toy model we currently have for the Claim~1 intuition:
+refinement plus rescaling defines an RG map, and the continuum physics is controlled by fixed points and their stable
+manifolds; multiple fixed points are not an accident but a structural feature of point-supported degrees of freedom.
+
+\paragraph{Bridge back to Claim~1.}
+Our internal \(\tau_\mu\) flow is the analog of an RG reparameterization: it changes presentation
+\((\kappa,\eta,h)\mapsto(\mu\kappa,\eta/\mu,\mu h)\) while keeping the combined parameter \(c\) fixed.
+The slogan ``\(c\)-invariance'' is therefore not a rhetorical label: it is the concrete mechanism by which we compare
+objects defined at different refinement scales.
+The multi-channel fixed-point picture above is a warning and a guide:
+Claim~1 can only be true as stated if we can track which scaling channels are present in the local sector and show
+that the refinement plus counterterm mechanism drives them into a controlled fixed structure (or at least a controlled
+stable manifold) across the three levels.
 
 \subsection{Dimension-Gated Field Existence Ladder}
 The field-level part of the program is explicitly dimension-gated. This is not just ``because physics is \(3+1\)'',
@@ -416,7 +515,7 @@ invariants (SD and \(\tau_\mu\)-type covariance).
 \item continuum claims require limit control under refinement, tracked by projective/cylinder programs and scale-flow constraints.
 \end{itemize}
 
-\subsection{Field Level: \(d=2\) Closure, \(d=3\) Bridge, \(d=4\) Obstruction}
+\subsection{Field Level: d=2 Closure, d=3 Bridge, d=4 Obstruction}
 At the field level, Claim~1 becomes dimension-sensitive and must be treated as a dimension-gated existence program.
 The current status by dimension is:
 

@@ -1,0 +1,12 @@
+# Local TeX build artifacts (keep the repo clean; PDFs are committed explicitly)
+research/workspace/reports/*.aux
+research/workspace/reports/*.log
+research/workspace/reports/*.out
+research/workspace/reports/*.toc
+research/workspace/reports/*.synctex.gz
+research/workspace/reports/missfont.log
+
+# TeX Live / kpathsea caches (sandbox-safe env vars point here)
+research/workspace/.texmf-var/
+research/workspace/.texmf-config/
+research/workspace/.texmf-home/
