@@ -91,48 +91,61 @@ The recommended path is:
 \label{sec:conv}
 
 \subsection{Conversation Inventory}
-\begin{itemize}[leftmargin=1.4em]
-\item \textbf{Input target:} transcribe and formalize the paper \path{9803035.pdf} (cited in the conversation)
-  ``first for the static case, then with quantum mechanics (action on a time line), then for field theory in \(D=4\),''
-  and connect the ``halved expression'' to the literature and to tangent-groupoid ideas.
-\item \textbf{Geometry-of-force:} central-force orbit taxonomy across:
-  special relativity (SR) power-law forces, Schwarzschild (and higher-$D$ generalizations),
-  and gauge potential long-range phases.
-\item \textbf{Variational-distribution core:} ``delta of first variation'' as
-  \(\delta(f'(x))\) in statics and \(\delta(\delta S/\delta\phi)\) in mechanics/fields.
-  Emphasis: this is \emph{not} the derivative distribution \(\delta'\), but a pullback/composition by the map \(f'\).
-\item \textbf{Halved/half-density viewpoint:} a square-root object (amplitude)
-  is more compositional than a density; modulus-square yields the concentrating density.
-  Groupoid convolution is naturally formulated for half-densities.
-\item \textbf{Scale/refinement control:} the limit \(\varepsilon\to0\) is only sensible
-  if the refinement/composition law is compatible across scales.
-  This motivated:
-  (i) explicit scale flows (\(\tau_\mu\)),
-  (ii) Schwinger--Dyson (integration-by-parts) identities as invariant structure,
-  (iii) de-regularization \(\eta\to0^+\) to pass from damped oscillatory weights to purely oscillatory ones.
-\end{itemize}
+The conversation was not a generic discussion of ``AI in physics.'' It was an explicit technical request:
+take an existing mathematical manuscript (referred to in the conversation as \path{9803035.pdf}) and treat it as
+a source for a foundational research program. The requested escalation was concrete and ordered:
+first the static case (finite-dimensional oscillatory integrals), then quantum mechanics (action integrated in a time
+coordinate, with time slicing), then field theory (action integrated in spacetime, with particular interest in
+\(D=4\)), while keeping track of the ``halved expression'' and its interpretation in the literature and in geometric
+frameworks (tangent groupoids and renormalization-style refinement control).
+
+At the same time, the conversation contained a second technical axis: a large body of central-force dynamics in SR/GR
+and gauge settings (power-law forces, Coulomb, Schwarzschild, higher-dimensional black holes, and long-range phase
+taxonomies). This axis matters because it makes the ``action reduction'' mechanism explicit and testable in many
+examples, and because it provides a concrete target for the slogan ``geometry-of-force emerges from variational
+mechanics''.
+
+Finally, the conversation centered on a specific distributional object and a specific compositional intuition.
+The distributional object is the ``delta of first variation'':
+in statics, \(\delta(f'(x))\); in mechanics and fields, the functional delta
+\(\delta(\delta S/\delta \phi)\) or \(\delta(\delta S/\delta \Phi)\).
+This is emphatically \emph{not} the derivative distribution \(\delta'\); it is a pullback/composition of the Dirac
+delta by the map \(f'\) (or the Euler--Lagrange map). The compositional intuition is that amplitudes are the correct
+objects to compose, not probabilities: the ``halved expression'' behaves like an amplitude (or half-density), and
+modulus-square produces a density-level localizing object.
+
+The conversation also made an explicit control demand: the relevant limits (e.g.\ \(\varepsilon\to0\) in oscillatory
+integrals, or refinement limits in time slicing and lattice field theory) must be compatible with composition across
+scales. This is where \(\tau_\mu\)-type scale flows, Schwinger--Dyson identities, and de-regularization \(\eta\to0^+\)
+enter the program.
 
 \subsection{Canonical Anchors in \path{conv\_patched.md}}
-\textbf{Static variational/distribution seed.}
-\begin{itemize}[leftmargin=1.4em]
-\item \(\delta(f'(x))\) is identified as the ``obvious'' answer (lines \(\sim 688\)).
-\item The halved amplitude is introduced (lines \(\sim 707\)).
-\item Tangent groupoid is proposed as a clean conceptual formulation (line \(\sim 814\)).
-\item The nondegenerate decomposition \(\delta(f')=\sum \delta(x-x_i)/|f''(x_i)|\) is stated (lines \(\sim 857\)--\(871\)).
-\end{itemize}
+The anchors below are the minimal set of \path{conv\_patched.md} lines that define the program.
+Line numbers refer to the \emph{patched} transcript, so they should be treated as stable for this repository.
 
-\textbf{Near-diagonal scaling and half-density interpretation.}
-\begin{itemize}[leftmargin=1.4em]
-\item ``Near diagonal only'' scaling and why it matters for \(\varepsilon\to0\) (line \(\sim 928\)).
-\item Explicit half-density/operator-kernel viewpoint for groupoid convolution (line \(\sim 967\)).
-\end{itemize}
+\paragraph{Static seed.}
+The conversation identifies \(\delta(f'(x))\) as the relevant concentrating object (\path{conv\_patched.md:688}),
+introduces the ``halved'' amplitude (\path{conv\_patched.md:707}), and records the standard nondegenerate identity
+\[
+\delta(f'(x))=\sum_{x_i\in\mathrm{Crit}(f)}\frac{\delta(x-x_i)}{|f''(x_i)|}
+\]
+(\path{conv\_patched.md:871}).
+These items are the static prototype of ``delta of first variation''.
 
-\textbf{Escalation to QM and QFT.}
-\begin{itemize}[leftmargin=1.4em]
-\item Functional delta analogue \(\delta(\delta S/\delta\phi)\) in time-sliced mechanics (lines \(\sim 1149\)--\(1157\)).
-\item ``Halved expression becomes propagator amplitude'' viewpoint (lines \(\sim 1122\)--\(1124\)).
-\item Synthesis slogan: quantization as refinement-compatible localization (line \(\sim 1209\)).
-\end{itemize}
+\paragraph{Near-diagonal scaling and half-densities.}
+The conversation emphasizes that the relevant \(\varepsilon\to0\) scaling is near-diagonal (\(y\approx x\)),
+not a far-away variable limit (\path{conv\_patched.md:928}). It also explicitly states the geometric reading:
+on a Lie groupoid, convolution is naturally formulated using half-densities so that composition is coordinate-free
+(\path{conv\_patched.md:967}). This is the conceptual reason the ``halved expression'' is treated as an amplitude-like
+object in the program.
+
+\paragraph{Escalation to mechanics and fields.}
+For quantum mechanics, the halved object is identified with the propagator amplitude
+(\path{conv\_patched.md:1122}) and the static \(\delta(f')\) is upgraded to the functional delta
+\(\delta(\delta S/\delta\phi)\) (\path{conv\_patched.md:1149}).
+The synthesis line is that quantization can be read as the refinement-compatible version of classical localization
+(\path{conv\_patched.md:1209}): the same localization object appears at each level, but compatibility with composition
+across scales forces nontrivial structure (a surviving finite deformation parameter).
 
 \section{Research Aims (North Star)}
 \label{sec:aim}
