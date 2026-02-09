@@ -63,10 +63,10 @@ Then:
 
 This is the direct field-level analog of the finite-dimensional \(c\)-invariant SD chain.
 
-## Half-Density Status in This Candidate
+## Amplitude / Geometric \(1/2\)-Density Status in This Candidate
 
-1. Core proof channel: correlator/cylinder state route (no mandatory half-density formalism).
-2. Compatible interpretation: amplitude/half-density route remains admissible if one keeps composition/Jacobian control explicit.
+1. Core proof channel: correlator/cylinder state route (no mandatory geometric \(1/2\)-density formalism).
+2. Compatible interpretation: probability-amplitude route with optional geometric \(1/2\)-density kernel packaging remains admissible if one keeps composition/Jacobian control explicit.
 
 ## \(d=4\) Obstruction Checklist (Why AN-1 Does Not Auto-Lift)
 

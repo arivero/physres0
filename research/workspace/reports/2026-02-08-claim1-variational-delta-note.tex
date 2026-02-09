@@ -1,7 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
-\usepackage{enumitem}
 
 \newtheorem{proposition}{Proposition}
 \newtheorem{remark}{Remark}
@@ -131,16 +130,25 @@ S[\Phi] \rightsquigarrow S_N(\Phi_1,\dots,\Phi_N),\qquad
 \]
 again making the ``support on extrema'' statement exact at fixed cutoff.
 
-\section{Half-Density Interpretation and Open Step}
+\section{Amplitude and Geometric Representation}
 
-The ``halved'' amplitude viewpoint is:
-\begin{itemize}[leftmargin=1.4em]
-\item amplitudes behave as half-density-level objects,
+The oscillatory probability-amplitude viewpoint is:
+\begin{itemize}
+\item amplitudes can be represented geometrically as \(1/2\)-density-level objects,
 \item modulus square produces density-level concentration on critical sets.
 \end{itemize}
 
 In finite dimensions this is standard stationary phase/distribution theory.
 The open step is to prove, with full control, the continuum limit from finite-dimensional regularizations to a rigorous infinite-dimensional object compatible with tangent-groupoid composition and renormalized QFT limits.
+
+\section{Current Program Status (Date-Anchored)}
+
+As of 2026-02-09, the ladder has the following state:
+\begin{itemize}
+\item \textbf{Statics:} theorem-grade closure in nondegenerate stationary-phase regimes (probability-amplitude to Born-density map).
+\item \textbf{Dynamics:} scoped consistency chain established for time-sliced transition amplitudes with explicit refinement/de-regularization/SD assumptions.
+\item \textbf{Fields:} \(d=2\) interacting ultralocal closure is established; \(d=3\) has a renormalized finite-volume bound channel and a scoped continuum-branch candidate; \(d=4\) remains frontier-sensitive and requires explicit renormalization/nontriviality input.
+\end{itemize}
 
 \section{Summary}
 

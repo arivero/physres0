@@ -1,4 +1,4 @@
-# Claim 1 Step: Finite-Dimensional Manifold Half-Density Convolution Statement
+# Claim 1 Step: Finite-Dimensional Manifold Geometric \(1/2\)-Density Convolution Statement
 
 Date: 2026-02-08  
 Source anchors in canonical transcript: `conv_patched.md:814`, `conv_patched.md:928`, `conv_patched.md:967`
@@ -7,7 +7,7 @@ Source anchors in canonical transcript: `conv_patched.md:814`, `conv_patched.md:
 
 State a finite-dimensional manifold result that is stronger than the flat static case and serves as the pre-infinite-dimensional bridge:
 
-1. kernels as half-densities on a pair/tangent-groupoid setting,
+1. kernels as geometric \(1/2\)-densities on a pair/tangent-groupoid setting,
 2. coordinate-free convolution,
 3. stationary-phase concentration on critical sets.
 
@@ -19,7 +19,7 @@ On the pair groupoid \(G=M\times M\rightrightarrows M\), arrows are \((x,y)\), w
 (x,y)\circ(y,z)=(x,z).
 \]
 
-Half-density kernels are sections of
+Geometric \(1/2\)-density kernels are sections of
 \[
 \Omega^{1/2}_{s}\otimes\Omega^{1/2}_{t}
 \]
@@ -27,13 +27,13 @@ on \(G\), where \(s,t\) are source/target maps.
 
 ## Proposition 1 (Coordinate-Free Convolution)
 
-If \(K_1,K_2\) are compactly supported smooth half-density kernels on \(G\), then
+If \(K_1,K_2\) are compactly supported smooth geometric \(1/2\)-density kernels on \(G\), then
 \[
 (K_1*K_2)(x,z)=\int_M K_1(x,y)\,K_2(y,z)
 \]
-is globally well-defined (coordinate-invariant) and defines again a smooth half-density kernel.
+is globally well-defined (coordinate-invariant) and defines again a smooth geometric \(1/2\)-density kernel.
 
-Interpretation: half-density normalization is exactly what removes coordinate Jacobian ambiguities in kernel composition.
+Interpretation: geometric \(1/2\)-density normalization is exactly what removes coordinate Jacobian ambiguities in kernel composition.
 
 ## Oscillatory Family Near the Diagonal
 
@@ -50,7 +50,7 @@ This is the manifold version of the ``near diagonal'' scaling used in the transc
 
 ## Proposition 2 (Local Stationary Concentration on Critical Set)
 
-Assume \(f\) is Morse and let \(\psi\) be a compactly supported test half-density on \(M\).  
+Assume \(f\) is Morse and let \(\psi\) be a compactly supported test geometric \(1/2\)-density on \(M\).  
 Define amplitude functional
 \[
 A_\varepsilon(\psi)
@@ -77,7 +77,7 @@ in the single-point Morse case.
 
 At finite dimension:
 
-1. ``halved expression'' is naturally a half-density-level amplitude.
+1. oscillatory amplitude expressions are naturally represented by geometric \(1/2\)-density-level objects.
 2. Modulus square yields a density-level concentration on critical sets.
 3. The pair-groupoid convolution is already coordinate-free, matching the geometric interpretation in `conv_patched.md:814` and `conv_patched.md:967`.
 

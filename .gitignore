@@ -10,3 +10,6 @@ research/workspace/reports/missfont.log
 research/workspace/.texmf-var/
 research/workspace/.texmf-config/
 research/workspace/.texmf-home/
+
+# External bibliography downloads (DOI PDFs, arXiv source tarballs, etc.)
+research/workspace/.ignore/

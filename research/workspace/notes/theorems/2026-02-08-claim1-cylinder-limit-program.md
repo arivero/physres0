@@ -85,7 +85,7 @@ python3.12 research/workspace/simulations/claim1_cylinder_gaussian_toy.py
 Claim 1 now has a concrete continuum roadmap:
 
 1. finite-dimensional variational-delta statements,
-2. finite-dimensional manifold half-density algebra,
+2. finite-dimensional manifold geometric \(1/2\)-density kernel algebra,
 3. controlled cylinder-limit requirements and diagnostics,
 
 leaving only the full renormalized continuum bridge as the remaining speculative frontier.

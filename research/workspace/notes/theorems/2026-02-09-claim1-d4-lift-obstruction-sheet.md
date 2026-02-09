@@ -79,7 +79,7 @@ Program consequence:
 
 ## Immediate AN-3 Link
 
-Given these obstructions, the half-density discussion must be split into:
+Given these obstructions, the amplitude vs geometric \(1/2\)-density discussion must be split into:
 
 1. kinematic composition/Jacobian statements (can hold widely),
 2. dynamical continuum-existence statements (dimension/renormalization sensitive).

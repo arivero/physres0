@@ -46,6 +46,15 @@ theorem differentiableOn_omegaExp_Icc {n : Nat} (s f : Fin (n + 1) → ℝ) (κ 
   intro t ht
   exact (differentiable_omegaExp (s := s) (f := f) t).differentiableWithinAt
 
+theorem derivWithin_omegaExp_Icc_eq_deriv
+    {n : Nat} (s f : Fin (n + 1) → ℝ) {κ t : ℝ}
+    (hκ : 0 < κ) (ht : t ∈ Set.Icc (0 : ℝ) κ) :
+    derivWithin (fun u => Nsum s f u / Zsum s u) (Set.Icc (0 : ℝ) κ) t
+      = deriv (fun u => Nsum s f u / Zsum s u) t := by
+  exact
+    (differentiable_omegaExp (s := s) (f := f) t).derivWithin
+      ((uniqueDiffOn_Icc hκ).uniqueDiffWithinAt ht)
+
 end
 
 end Claim1lean

@@ -39,6 +39,18 @@ Integration-by-parts identity (finite-dimensional scoped form):
 In this workspace, SD identities are tracked as structure preserved under
 \(\tau_\mu\) because they depend on \(c\).
 
-`half-density` (here)  
-Amplitude-level object whose modulus-square yields a density-level quantity.
-Used to organize the “halved expression” interpretation and groupoid-kernel composition.
+`probability amplitude`  
+Complex quantity whose modulus-square yields Born probabilities (physics-facing term).
+
+`transition amplitude`  
+Amplitude kernel between boundary data/time slices (dynamics/path-integral-facing term).
+
+`half-density` / `1/2-density` (geometric term)  
+Section of a square-root density bundle used in coordinate-free kernel composition.
+In this workspace, reserve this term for explicit geometric kernel calculus.
+
+`half-form` (geometric quantization term)  
+Square-root bundle correction (metaplectic correction context), distinct from generic physics amplitude wording.
+
+`terminology skepticism rule`  
+Wikipedia definitions are orientation only. Theorem-grade claims require non-Wikipedia technical validation.

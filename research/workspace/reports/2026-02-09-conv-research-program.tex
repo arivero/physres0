@@ -34,11 +34,13 @@ This report is the canonical ``what we are doing'' document for the
 The source conversation proposed a foundational slogan:
 representing ``classical solutions'' as Dirac-type localization on extrema, and then insisting
 that this localization be compatible with refinement and composition, naturally generates
-complex exponential weights \(\e^{\frac{i}{\hbar}S}\) and a ``halved'' object that behaves like an
-amplitude (or half-density) whose modulus-square yields the concentrating distribution.
+complex exponential weights \(\e^{\frac{i}{\hbar}S}\) and an oscillatory amplitude object whose
+modulus-square yields the concentrating distribution (with geometric \(1/2\)-density
+representation in kernel-composition sections).
 
 We turned that slogan into a concrete, dimension-aware research program:
-a three-level escalation (statics $\to$ mechanics-in-time $\to$ field theory), with half-density
+a three-level escalation (statics $\to$ mechanics-in-time $\to$ field theory), with
+probability/transition amplitude language as primary and geometric \(1/2\)-density
 as an \emph{optional} formalism at each level, and with explicit gates for field-level existence
 by spacetime dimension (\(d=2\) first, \(d=3\) next, \(d=4\) frontier).
 
@@ -69,6 +71,7 @@ The minimal entry points are:
 \begin{itemize}
 \item \path{research/workspace/notes/2026-02-09-core-goal-compass.md} (program compass and ``north star''),
 \item \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md} (current audit labels and the next queue item),
+\item \path{research/workspace/notes/2026-02-09-wikipedia-baseline-definitions-and-skepticism.md} (terminology baseline plus skepticism protocol),
 \item \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex} (the main scoped Claim~1 proof report),
 \item \path{research/workspace/proofs/} (Lean formalization workspace, built with \path{/Users/arivero/.elan/bin/lake}).
 \end{itemize}
@@ -94,7 +97,7 @@ take an existing mathematical manuscript (referred to in the conversation as \pa
 a source for a foundational research program. The requested escalation was concrete and ordered:
 first the static case (finite-dimensional oscillatory integrals), then quantum mechanics (action integrated in a time
 coordinate, with time slicing), then field theory (action integrated in spacetime, with particular interest in
-\(D=4\)), while keeping track of the ``halved expression'' and its interpretation in the literature and in geometric
+\(D=4\)), while keeping track of the oscillatory amplitude expression and its interpretation in the literature and in geometric
 frameworks (tangent groupoids and renormalization-style refinement control).
 
 At the same time, the conversation contained a second technical axis: a large body of central-force dynamics in SR/GR
@@ -114,7 +117,8 @@ Separately, the symbol ``\(\delta'\)'' appears in point-interaction literature t
 that usage is conceptually adjacent (it is also a point-supported sector), but it is not the same as ``differentiate
 Dirac's \(\delta\)''.}
 The compositional intuition is that amplitudes are the correct objects to compose, not probabilities:
-the ``halved expression'' behaves like an amplitude (or half-density), and modulus-square produces a density-level
+the oscillatory amplitude expression behaves like an amplitude (optionally represented geometrically as a
+\(1/2\)-density), and modulus-square produces a density-level
 localizing object.
 
 The conversation also made an explicit control demand: the relevant limits (e.g.\ \(\varepsilon\to0\) in oscillatory
@@ -128,22 +132,22 @@ Line numbers refer to the \emph{patched} transcript, so they should be treated a
 
 \paragraph{Static seed.}
 The conversation identifies \(\delta(f'(x))\) as the relevant concentrating object (\path{conv\_patched.md:688}),
-introduces the ``halved'' amplitude (\path{conv\_patched.md:707}), and records the standard nondegenerate identity
+introduces the oscillatory amplitude (\path{conv\_patched.md:707}), and records the standard nondegenerate identity
 \[
 \delta(f'(x))=\sum_{x_i\in\mathrm{Crit}(f)}\frac{\delta(x-x_i)}{|f''(x_i)|}
 \]
 (\path{conv\_patched.md:871}).
 These items are the static prototype of ``delta of first variation''.
 
-\paragraph{Near-diagonal scaling and half-densities.}
+\paragraph{Near-diagonal scaling and geometric \(1/2\)-densities.}
 The conversation emphasizes that the relevant \(\varepsilon\to0\) scaling is near-diagonal (\(y\approx x\)),
 not a far-away variable limit (\path{conv\_patched.md:928}). It also explicitly states the geometric reading:
-on a Lie groupoid, convolution is naturally formulated using half-densities so that composition is coordinate-free
-(\path{conv\_patched.md:967}). This is the conceptual reason the ``halved expression'' is treated as an amplitude-like
+on a Lie groupoid, convolution is naturally formulated using geometric \(1/2\)-densities so that composition is coordinate-free
+(\path{conv\_patched.md:967}). This is the conceptual reason the oscillatory amplitude expression is treated as an amplitude-like
 object in the program.
 
 \paragraph{Escalation to mechanics and fields.}
-For quantum mechanics, the halved object is identified with the propagator amplitude
+For quantum mechanics, the oscillatory object is identified with the propagator amplitude
 (\path{conv\_patched.md:1122}) and the static \(\delta(f')\) is upgraded to the functional delta
 \(\delta(\delta S/\delta\phi)\) (\path{conv\_patched.md:1149}).
 The synthesis line is that quantization can be read as the refinement-compatible version of classical localization
@@ -178,13 +182,13 @@ infinite-dimensional limit problem with dimension-dependent existence and renorm
 
 The program is pinned to \path{research/workspace/notes/theorems/2026-02-09-claim1-three-level-program.md}.
 The level separation is not rhetorical; it is the main mechanism for preventing over-claims.
-\emph{Half-density language is optional at every level:} it is structurally useful for composition statements,
+\emph{Geometric \(1/2\)-density language is optional at every level:} it is structurally useful for composition statements,
 but it is not accepted as a substitute for the dynamical work needed to pass to continuum limits.
 
 The three levels are:
 \begin{enumerate}
 \item \textbf{Statics (0D action):}
-  prototype object \(\delta(f'(x))\), and stationary-phase control of the halved amplitude
+  prototype object \(\delta(f'(x))\), and stationary-phase control of the oscillatory probability amplitude
   \[
   A_\varepsilon(O)=\varepsilon^{-1/2}\int_{\R} \e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx,
   \qquad
@@ -203,7 +207,7 @@ The three levels are:
 \subsection{Foundational Motifs: Refinement, Scaling, and Fixed Points}
 \label{sec:motifs}
 There are three recurring structural motifs behind almost every successful step in this program.
-They are conceptually independent of the ``half-density'' packaging, but half-densities are often a convenient
+They are conceptually independent of geometric \(1/2\)-density packaging, but geometric \(1/2\)-densities are often a convenient
 coordinate-free way to express them.
 
 \paragraph{(M1) Prove invariants at finite resolution, then take a controlled limit.}
@@ -313,15 +317,15 @@ It starts from a static distributional fact (\(\delta(f')\) localizes on extrema
 and fields by replacing \(f\) with an action functional \(S\).
 The slogan can be stated compactly as:
 \[
-\text{``halved'' amplitude / half-density}
+\text{oscillatory amplitude / geometric }\tfrac{1}{2}\text{-density}
 \quad\leadsto\quad
 \text{density-level localization on extrema}
 \quad\leadsto\quad
 \delta\!\left(\frac{\delta S}{\delta \phi}\right)\ \text{(QM/QFT)}.
 \]
 
-The ``halved'' object is important because it is the compositional object: it behaves like an amplitude or
-half-density under convolution/composition (this is the groupoid-kernel intuition), while the squaring step produces
+The oscillatory amplitude object is important because it is the compositional object: it behaves like an amplitude or
+geometric \(1/2\)-density under convolution/composition (this is the groupoid-kernel intuition), while the squaring step produces
 the density-level object that concentrates on classical solutions.
 In finite dimensions this is standard stationary phase; the research challenge is to make the limit/refinement
 procedures honest across the time and field escalations.
@@ -376,11 +380,13 @@ Every upgraded statement is expected to include:
 \end{enumerate}
 
 The key rule of thumb is the kinematic/dynamical split:
-half-density and groupoid convolution statements certify \emph{kinematic} consistency of composition laws at fixed
+geometric \(1/2\)-density and groupoid convolution statements certify \emph{kinematic} consistency of composition laws at fixed
 regulator, but they do not certify \emph{dynamical} convergence as the regulator is removed.
 Continuum-limit claims require separate analytic gates (tightness, non-vanishing normalization, and closure of SD
 identities in the limit). This split is spelled out in
 \path{research/workspace/notes/theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md}.
+Terminology skepticism protocol for future agents is tracked in
+\path{research/workspace/notes/2026-02-09-wikipedia-baseline-definitions-and-skepticism.md}.
 
 \section{What Has Been Done So Far (Artifacts and Results)}
 \label{sec:done}
@@ -401,10 +407,10 @@ The most important audit outcomes so far are:
   (i) variational-distribution core, (ii) geometry-of-force bridge, or (iii) scale-control core.
 \end{itemize}
 
-As of the latest update, the next queued Lean target is AN-18:
-reduce the finite exponential-family increment hypotheses by proving automatic regularity and non-vanishing conditions.
-This is intentionally modest: it is a ``hygiene'' step that reduces assumptions in the mechanized spine and keeps the
-field-level bridge obligations clearly separated from toy-model artifacts.
+As of the latest update, the finite-model Lean hygiene steps are already landed
+(including automatic regularity and renormalized-scale wrapper support in the increment chain).
+The current queued formal target is to package those templates for direct use in the \(d=3\) bridge closure lane
+so that field-level obligations remain explicit and cannot be silently hidden inside toy-model assumptions.
 
 \subsection{Theorem Notes and Reports}
 This repository separates two types of human-readable artifacts:
@@ -419,6 +425,12 @@ The current core reports are:
   static $\to$ QM $\to$ QFT ladder and \(\delta(\partial S)\) viewpoint.
 \item \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}:
   scoped complete proof in a projective oscillatory class (projective stability, counterterms, de-regularization, SD, \(\tau_\mu\)).
+\item \path{research/workspace/reports/2026-02-09-claim1-paper1-static-amplitude-qm-equivalence.tex}:
+  standalone statics manuscript (probability-amplitude to Born-density equivalence in scoped regime).
+\item \path{research/workspace/reports/2026-02-09-claim1-paper2-dynamics-path-integral-equivalence-history.tex}:
+  standalone dynamics manuscript (scoped path-integral equivalence plus historical thread).
+\item \path{research/workspace/reports/2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.tex}:
+  standalone field-theory manuscript track (dimension-gated closure program, current \(d=3\) candidate status).
 \item \path{research/workspace/reports/2026-02-09-newton-action-path-integral-lecture.md}:
   Newton $\to$ action reduction $\to$ oscillatory localization lecture narrative.
 \end{itemize}
@@ -459,7 +471,7 @@ Representative examples include:
 \begin{itemize}
 \item \(d=2\) ultralocal closure diagnostic:
   \path{research/workspace/simulations/claim1_d2_ultralocal_phi4_closure_check.py}.
-\item half-density kinematic vs dynamical counterexample diagnostic:
+\item geometric \(1/2\)-density kinematic vs dynamical counterexample diagnostic:
   \path{research/workspace/simulations/claim1_halfdensity_kinematic_dynamic_split_check.py}.
 \item \(d=3\) bridge toy scan:
   \path{research/workspace/simulations/claim1_d3_bridge_toy_coupling_scan.py}.
@@ -541,8 +553,8 @@ small-\(\kappa\) continuity bound for local cylinders.
 \item add nearest-neighbor gradient coupling \(\kappa\ge 0\) and seek a small-\(\kappa\) regime \([0,\kappa_*]\),
   with explicit proof obligations:
   B1 moments, B2 tightness, B3 non-vanishing denominator, B4 SD insertion control, B5 \(\kappa\)-continuity.
-\item Lean work mechanizes B5-shaped increment bounds in abstract and in a finite exponential-family toy class;
-  the field-level model bridge remains open.
+\item a renormalized finite-volume moment channel and a scoped continuum-branch candidate are now explicit,
+  but full closure still requires concrete discharge of B1--B4 in one interacting \(d=3\) subclass.
 \end{itemize}
 
 \paragraph{\(d=4\) obstruction sheet.}
@@ -555,7 +567,7 @@ scoped statement (regulated and/or cylinder-level) without a claim of a nontrivi
 \item restoring local propagation destroys product structure and exact cylinder decoupling;
   SD hierarchy is no longer one-site closed.
 \item regulator removal requires explicit renormalization flow control and nontriviality criteria.
-\item half-density statements must be split into kinematic vs dynamical (AR note).
+\item geometric \(1/2\)-density statements must be split into kinematic vs dynamical (AR note).
 \end{itemize}
 
 \section{How We Continue (Roadmap)}
@@ -568,20 +580,22 @@ particular \(d=4\) upgrade is blocked.
 
 Immediate targets:
 \begin{itemize}
-\item \textbf{AN-18 (Lean hygiene):} reduce assumptions in the finite exponential-family increment chain by proving
-  automatic regularity and non-vanishing conditions in that model. This keeps the Lean spine tight and prevents
-  later reuse from silently importing unjustified hypotheses.
+\item \textbf{\(d=3\) closure package (current priority):} discharge B1--B4 in one concrete interacting subclass
+  (tightness, denominator non-vanishing, SD insertion control, and topology/observable compatibility) to upgrade
+  the current scoped candidate to a scoped closure theorem.
+\item \textbf{Lean packaging for the same lane:} keep finite-model formal wrappers aligned with the \(d=3\) closure
+  constants so that formal support remains assumption-transparent.
 \item \textbf{\(d=3\) bridge closure work:} close at least one beyond-ultralocal \(d=3\) theorem fragment by addressing
   B1--B5 systematically (moments, tightness, denominator control, SD insertion control, and \(\kappa\)-continuity).
   The goal is not an all-at-once \(d=3\) continuum construction, but a sequence of honest theorems that reduce the gap.
-\item \textbf{Cross-level hygiene:} keep half-density composition results separate from continuum existence statements,
+\item \textbf{Cross-level hygiene:} keep geometric \(1/2\)-density composition results separate from continuum existence statements,
   and require every claimed ``lift'' (e.g.\ from \(d=2\) to \(d=4\)) to list its missing analytic gates explicitly.
 \end{itemize}
 
 \subsection{Longer-Horizon Conjectures and Risks}
 The longer-horizon targets are those that would upgrade Claim~1 from a scoped closure to a full field-level closure
 in a genuinely local interacting class. These targets are also the main risk points: they are where the existing
-tooling (stationary phase intuition, half-density kinematics, SD identities) must be matched with hard analytic
+tooling (stationary phase intuition, geometric \(1/2\)-density kinematics, SD identities) must be matched with hard analytic
 control (tightness, renormalization, and reconstruction).
 
 The core missing analytic ingredients are:
@@ -621,9 +635,10 @@ Integration-by-parts identity (scoped finite form):
 \[
 \langle \partial_i\psi\rangle_c = c\,\langle \psi\,\partial_i S\rangle_c.
 \]
-\item[half-density (here)]
-An amplitude-level object whose modulus-square yields density-level quantities; natural for coordinate-free groupoid
-convolution kernels.
+\item[probability amplitude (here)]
+A complex amplitude-level object whose modulus-square yields density-level quantities.
+\item[geometric \(1/2\)-density (here)]
+Square-root density bundle object used for coordinate-free groupoid convolution kernels.
 \end{description}
 
 \subsection{Reproducibility (Commands and Entry Points)}
@@ -641,6 +656,8 @@ cd research/workspace/proofs
 \begin{verbatim}
 python3.12 research/workspace/simulations/claim1_d2_ultralocal_phi4_closure_check.py
 python3.12 research/workspace/simulations/claim1_halfdensity_kinematic_dynamic_split_check.py
+python3.12 research/workspace/simulations/claim1_d3_renormalized_moment_channel_check.py
+python3.12 research/workspace/simulations/claim1_d3_an22_continuum_branch_proxy_check.py
 \end{verbatim}
 
 \subsection{File Map}
@@ -650,7 +667,10 @@ This is a curated entry-point index, not an exhaustive list of all notes produce
 \item audit: \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
 \item compass: \path{research/workspace/notes/2026-02-09-core-goal-compass.md}.
 \item Claim~1 reports: \path{research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex},
-  \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}.
+  \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex},
+  \path{research/workspace/reports/2026-02-09-claim1-paper1-static-amplitude-qm-equivalence.tex},
+  \path{research/workspace/reports/2026-02-09-claim1-paper2-dynamics-path-integral-equivalence-history.tex},
+  \path{research/workspace/reports/2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.tex}.
 \item synthesis report: \path{research/workspace/reports/2026-02-09-newton-action-path-integral-lecture.md}.
 \item Lean: \path{research/workspace/proofs/Claim1lean.lean} and \path{research/workspace/proofs/Claim1lean/}.
 \item theorem notes index: \path{research/workspace/notes/README.md}.

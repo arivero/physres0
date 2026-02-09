@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.12
-"""Claim 1 AR check: half-density kinematic success vs dynamical failure.
+"""Claim 1 AR check: geometric 1/2-density kinematic success vs dynamical failure.
 
 Run:
   python3.12 research/workspace/simulations/claim1_halfdensity_kinematic_dynamic_split_check.py

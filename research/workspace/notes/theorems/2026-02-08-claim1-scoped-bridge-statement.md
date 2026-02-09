@@ -1,4 +1,4 @@
-# Claim 1 Scoping: Half-Density and Tangent-Groupoid Bridge
+# Claim 1 Scoping: Amplitude and Tangent-Groupoid Geometric \(1/2\)-Density Bridge
 
 Date: 2026-02-08  
 Source anchors in canonical transcript: `conv_patched.md:814`, `conv_patched.md:934`, `conv_patched.md:967`, `conv_patched.md:991`, `conv_patched.md:1068`, `conv_patched.md:1088`, `conv_patched.md:1132`, `conv_patched.md:1152`
@@ -9,6 +9,9 @@ Reduce Claim 1 from a broad speculative statement into:
 
 1. a theorem-level static statement (0-dimensional oscillatory integral), and
 2. a precise conjectural bridge statement for the full path-integral/groupoid setting.
+
+Terminology guardrail:
+interpret Wikipedia definitions as orientation only; theorem-grade terminology and claims must be validated against technical sources and explicit local definitions.
 
 ## Variational-Delta Ladder (Static -> QM -> QFT)
 
@@ -94,7 +97,7 @@ then \(A_\varepsilon\) is a sum of stationary-phase contributions with relative 
 
 ## Level B (Geometric Reformulation Target)
 
-Use the tangent-groupoid near-diagonal scaling \((x,y,\varepsilon)\) with \(y=x+\varepsilon z\), and represent kernels as half-densities so convolution is coordinate-free.
+Use the tangent-groupoid near-diagonal scaling \((x,y,\varepsilon)\) with \(y=x+\varepsilon z\), and represent kernels as geometric \(1/2\)-densities so convolution is coordinate-free.
 
 The concrete target statement is:
 
@@ -102,13 +105,13 @@ For an admissible kernel family \(K_\varepsilon\) built from phase increments
 \[
 K_\varepsilon(x,y)\sim \exp\!\left(\frac{i}{\varepsilon}(f(y)-f(x))\right),
 \]
-the induced half-density convolution algebra has a well-defined \(\varepsilon\to 0\) classical limit matching the critical-point measure above.
+the induced geometric \(1/2\)-density convolution algebra has a well-defined \(\varepsilon\to 0\) classical limit matching the critical-point measure above.
 
-This identifies the "halved object" with a half-density-level amplitude whose square produces a density-level limit.
+This identifies the oscillatory amplitude object with a geometric \(1/2\)-density kernel representative whose square produces a density-level limit.
 
 ## Level C (Still Conjectural in Current Notes)
 
-The full statement "this tangent-groupoid half-density construction yields the same object as the continuum Feynman path integral for interacting field theories" remains conjectural in this workspace.
+The full statement "this tangent-groupoid geometric \(1/2\)-density construction yields the same object as the continuum Feynman path integral for interacting field theories" remains conjectural in this workspace.
 
 Current gap items:
 
@@ -121,8 +124,8 @@ Current gap items:
 
 1. Prove the static finite-dimensional statement in complete detail (already standard, but write self-contained proof with constants).
 2. Write finite-dimensional discrete-action lemmas (\(\delta(\nabla S_N)\) support on discrete Euler-Lagrange equations) for QM and lattice QFT.
-3. Extend to finite-dimensional manifold configuration spaces using half-densities and local charts.
-4. Define an explicit cylinder-limit scheme where each truncation is a rigorous groupoid/half-density object and show compatibility of limits.
+3. Extend to finite-dimensional manifold configuration spaces using geometric \(1/2\)-densities and local charts.
+4. Define an explicit cylinder-limit scheme where each truncation is a rigorous groupoid/geometric \(1/2\)-density object and show compatibility of limits.
 
 ## Status Update for Claim 1
 
@@ -144,7 +147,7 @@ The script uses an exactly solvable Gaussian test case and verifies
 \[
 |A_\varepsilon|^2 \to 2\pi
 \]
-as \(\varepsilon\to 0^+\), matching the static half-density scaling claim.
+as \(\varepsilon\to 0^+\), matching the static amplitude/Born scaling claim.
 
 ## Companion Note (Discrete Truncations)
 
@@ -154,7 +157,7 @@ For finite-dimensional QM/lattice-QFT truncations, see:
 
 This makes \(\delta(\nabla S_N)\) support/weights explicit before continuum limits.
 
-For the finite-dimensional manifold/groupoid half-density step, see:
+For the finite-dimensional manifold/groupoid geometric \(1/2\)-density step, see:
 
 `research/workspace/notes/theorems/2026-02-08-claim1-manifold-halfdensity-convolution.md`
 
@@ -166,6 +169,6 @@ For the controlled cylinder-limit program (QM/lattice-QFT truncations), see:
 
 `research/workspace/notes/theorems/2026-02-08-claim1-cylinder-limit-program.md`
 
-For theorem-format pair/tangent-groupoid half-density composition laws, see:
+For theorem-format pair/tangent-groupoid geometric \(1/2\)-density composition laws, see:
 
 `research/workspace/notes/theorems/2026-02-08-claim1-groupoid-halfdensity-theorem-pack.md`

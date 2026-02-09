@@ -1,4 +1,4 @@
-# Claim 1 Phase C: Pair/Tangent-Groupoid Half-Density Theorem Pack
+# Claim 1 Phase C: Pair/Tangent-Groupoid Geometric \(1/2\)-Density Theorem Pack
 
 Date: 2026-02-08  
 Source anchors in canonical transcript: `conv_patched.md:814`, `conv_patched.md:928`, `conv_patched.md:967`
@@ -10,7 +10,7 @@ Promote the finite-dimensional groupoid step to explicit theorem/proof format wi
 ## Hypotheses
 
 Let \(M\) be a smooth \(n\)-manifold with positive smooth density \(\nu\).  
-On pair groupoid \(G=M\times M\rightrightarrows M\), use half-density kernels
+On pair groupoid \(G=M\times M\rightrightarrows M\), use geometric \(1/2\)-density kernels
 \[
 K\in C_c^\infty\!\big(G,\Omega_s^{1/2}\otimes\Omega_t^{1/2}\big).
 \]
@@ -27,11 +27,11 @@ Define
 :=
 \int_M k_1(x,y)k_2(y,z)\,\nu(y)\,|\nu_x|^{1/2}|\nu_z|^{1/2}.
 \]
-Then \(K_1*K_2\) is again a compactly supported smooth half-density kernel, independent of local coordinate choices.
+Then \(K_1*K_2\) is again a compactly supported smooth geometric \(1/2\)-density kernel, independent of local coordinate choices.
 
 ### Proof sketch
 
-Half-density factors absorb Jacobians from coordinate changes on \(y\), leaving scalar integral invariant. Smoothness/compact support follow from standard pushforward under proper support.
+Geometric \(1/2\)-density factors absorb Jacobians from coordinate changes on \(y\), leaving scalar integral invariant. Smoothness/compact support follow from standard pushforward under proper support.
 
 ## Theorem 2 (Associativity and Involution)
 
@@ -71,7 +71,7 @@ This is the formal geometric mechanism behind the ``near diagonal'' Claim 1 inte
 
 ## Corollary
 
-At finite dimension, half-density amplitudes and their compositions are algebraically controlled before any infinite-dimensional limit is invoked.  
+At finite dimension, geometric \(1/2\)-density amplitudes and their compositions are algebraically controlled before any infinite-dimensional limit is invoked.  
 This isolates the true open frontier to continuum-limit and renormalization questions, not to the local groupoid algebra itself.
 
 ## Reproducibility Check

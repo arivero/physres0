@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.12
-"""Closed-form sanity check for Claim 1 static half-density scaling.
+"""Closed-form sanity check for Claim 1 static probability-amplitude scaling.
 
 Model choice:
   f(x) = x^2 / 2, O(x) = exp(-x^2 / 2), m = 1.

@@ -35,7 +35,7 @@ Extract scaling/fixed-point statements relevant to clarifying the role of \(\del
 
 1. Keep \(\delta(f')\) and distribution derivative \(\delta'\) distinct at notation level, but do not present them as unrelated objects.
 2. Explicitly acknowledge a multi-channel point-supported distribution structure (e.g. \(\delta,\delta',\delta'',\dots\)) under scaling.
-3. Treat the ``halved expression'' as potentially selecting a channel/fixed-mode sector depending on regularization and scaling prescription.
+3. Treat the oscillatory amplitude expression as potentially selecting a channel/fixed-mode sector depending on regularization and scaling prescription.
 4. In the static -> QM -> QFT ladder, preserve the possibility of multiple fixed structures rather than a single universal one.
 
 ## Immediate Integration Done

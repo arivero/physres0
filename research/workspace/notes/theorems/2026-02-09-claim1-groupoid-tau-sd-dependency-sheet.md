@@ -68,7 +68,7 @@ So Eq.(11)-type closures are fixed-point relations along the \(\tau_\mu\)-orbit.
 Tangent-groupoid near-diagonal scaling encodes composition with scale change.  
 In the scoped dressed family:
 
-1. half-density/groupoid composition gives multiplicative kernel structure,
+1. geometric \(1/2\)-density/groupoid composition gives multiplicative kernel structure,
 2. \(\tau_\mu\) keeps the dressed kernel parameter \(c\) fixed,
 3. Schwinger-Dyson identities are integration-by-parts invariants of that fixed \(c\)-kernel.
 
@@ -77,7 +77,7 @@ Thus groupoid scaling intuition and Eq.(11)-type identities are linked by the sa
 ## Corollary (Foundational Dependency Diagram)
 
 ```text
-groupoid half-density composition
+groupoid geometric \(1/2\)-density composition
   -> scale-change map (near-diagonal refinement)
      -> tau_mu reparameterization preserving c=(eta-i/h)kappa
         -> invariant dressed kernel

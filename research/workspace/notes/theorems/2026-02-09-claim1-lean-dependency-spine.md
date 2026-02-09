@@ -32,6 +32,12 @@ Provide a compact module-level map from Lean results (AU→BA) to the \(d=3\) B5
 10. `Claim1lean/FiniteExponentialIncrementBound.lean` (BF)
    - finite exponential-family AN-10-style interval `Cκ` theorem under explicit
      uniform interval assumptions.
+11. `Claim1lean/FiniteExponentialRegularity.lean` (AN-18 support)
+   - automatic finite-model regularity (`Zsum>0`, `Zsum≠0`, global differentiability),
+   - interval `derivWithin = deriv` bridge on `Icc(0,κ)` for `κ>0`.
+12. `Claim1lean/FiniteExponentialIncrementBound.lean` (AN-18 wrapper)
+   - auto-regularity wrapper theorem collapsing BF regularity assumptions to
+     centered and moment controls.
 
 ## Mapping to B5 Obligations (Phase AS)
 
@@ -54,8 +60,8 @@ Lean coverage now:
 
 Still missing for direct B5 closure in a field-like class:
 
-1. Lean closure of BF side-assumptions from intrinsic finite-model structure
-   (automatic differentiability and `Z` non-vanishing), so only core centered
-   and moment controls remain (AN-18 target).
+1. field-indexed (not finite-index) analogue of the AN-18 auto-regularity
+   collapse, so the Lean side aligns directly with the \(d=3\) bridge B1-B5
+   hypotheses without finite-support surrogate assumptions.
 
 This is the next formal target.

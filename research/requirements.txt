@@ -9,7 +9,7 @@ networkx
 pint
 uncertainties
 qutip
-einsteinpy
+#einsteinpy
 tqdm
 pyyaml
 pytest

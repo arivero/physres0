@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.12
-"""Discrete weighted checks for pair-groupoid half-density algebra identities.
+"""Discrete weighted checks for pair-groupoid geometric 1/2-density algebra identities.
 
 Given quadrature weights w_i > 0, define discrete convolution
   (A * B)_{ij} = sum_k A_{ik} w_k B_{kj}.

@@ -59,6 +59,10 @@ This folder stores longer-form manuscripts that consolidate multiple theorem not
     criterion, and explicit remaining
     string-breaking rigor gaps.
   - Rendered companion: `2026-02-09-claim9-gauge-phase-long-range-paper.pdf`.
+- `2026-02-09-winddown-status-snapshot.tex`
+  - Wind-down synthesis report from markdown corpus scan:
+    learned results, open proof gates, and next-agent queue.
+  - Rendered companion: `2026-02-09-winddown-status-snapshot.pdf`.
 
 ## Notes Index
 

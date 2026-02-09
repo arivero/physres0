@@ -2,7 +2,6 @@
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{bm}
-\usepackage{enumitem}
 \usepackage{hyperref}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -69,7 +68,7 @@ S_N(x)=P_b(x_1,\dots,x_b)+\sum_{j=b+1}^N q_j(x_j),
 q_j(u)=\frac{\lambda_j}{2}u^2+g\kappa_j u^4.
 \]
 Assume:
-\begin{enumerate}[label=(A\arabic*),leftmargin=1.6em]
+\begin{enumerate}
 \item $P_b$ is a real polynomial with $P_b(0)=0$, $\nabla P_b(0)=0$.
 \item There exist $c_4>0,c_2\ge0,C_0\ge0$ such that
 \[
@@ -91,7 +90,7 @@ whenever the denominator is nonzero.
 \begin{theorem}[Scoped Claim 1, complete proof]
 \label{thm:main}
 In the block-tail action class:
-\begin{enumerate}[label=(\roman*),leftmargin=1.6em]
+\begin{enumerate}
 \item \textbf{Exact projective stability}: for every cylinder observable $F_m$ and $N\ge M:=\max\{m,b\}$,
 \[
 \omega_{\eps,\eta,N}(F_m)=\omega_{\eps,\eta,M}(F_m).
@@ -452,7 +451,7 @@ S_N(u,v)=P_m(u)+\sum_{j=m+1}^N\left(\frac{\lambda_j}{2}+\beta_j(u)\right)v_j^2,
 \beta_j(u)=\sum_{i=1}^m a_{ij}u_i^2,
 \]
 with:
-\begin{enumerate}[label=(B\arabic*),leftmargin=1.6em]
+\begin{enumerate}
 \item $\lambda_j\ge \lambda_->0$,
 \item $a_{ij}\ge0$ and $A_j:=\sum_{i=1}^m a_{ij}$ satisfies
 \[
@@ -468,7 +467,7 @@ For bounded $F_m$ and $\eta>0,\eps>0$, define
 {\int_{\R^N}e^{-(\eta-i/\eps)S_N}\,du\,dv}.
 \]
 Then:
-\begin{enumerate}[label=(\roman*),leftmargin=1.6em]
+\begin{enumerate}
 \item $\omega_{\eps,\eta,N}(F_m)$ converges as $N\to\infty$.
 \item There exists $C_{F_m,\eps,\eta}>0$ such that for $N'>N\ge m$,
 \[
@@ -573,7 +572,7 @@ For
 I_j(b):=\int_\R e^{-c((\lambda_j/2+b)t^2+\gamma_j t^4)}dt,\quad c=\eta-i/\eps,\ b\ge0,
 \]
 assume:
-\begin{enumerate}[label=(Q\arabic*),leftmargin=1.6em]
+\begin{enumerate}
 \item $I_j(b)\neq0$ for all $j,b\ge0$,
 \item $\sup_{b\ge0}|\partial_b\log I_j(b)|\le L_j$ and
 \[
@@ -909,7 +908,7 @@ with $A\in GL(d,\C)$ and
 |W(y)|\le C_0 e^{-c_4\|y\|^4+c_2\|y\|^2},\qquad c_4>0.
 \]
 Then:
-\begin{enumerate}[label=(\roman*),leftmargin=1.6em]
+\begin{enumerate}
 \item for every integer $k>d$, there exists $C_k$ such that
 \[
 |\mathcal I(F)|\le C_k \sup_x (1+\|x\|)^k|F(x)|,\qquad F\in\mathcal S(\R^d);
@@ -1025,7 +1024,7 @@ Set
 c:=(\eta-i/h)\kappa.
 \]
 Then:
-\begin{enumerate}[label=(\roman*),leftmargin=1.6em]
+\begin{enumerate}
 \item \(\tau_\mu\) preserves \(c\),
 \item the Schwinger-Dyson identity in Theorem \ref{thm:sd} depends only on \(c\).
 \end{enumerate}
@@ -1039,7 +1038,7 @@ Part (i) is exactly the computation in Theorem \ref{thm:tau}. For part (ii), The
 \section{Dependency Chain}
 
 The proofs in this manuscript now close in the following order:
-\begin{enumerate}[leftmargin=1.6em]
+\begin{enumerate}
 \item Sections \ref{sec:projective}--\ref{sec:channels}: core scoped Claim 1 closure.
 \item Theorems \ref{thm:largen-coupled}, \ref{thm:quadratic-mixing}, \ref{thm:quartic-tail}, and Corollary \ref{cor:quartic-intrinsic}: large-$N$ coupled extensions (Gaussian-tail rate, non-factorized quadratic-mixing determinant class, non-factorized quartic-tail class, and intrinsic moment-based sufficient conditions).
 \item Theorem \ref{thm:nonvanish}: explicit non-vanishing criteria for partition factors.
@@ -1050,7 +1049,7 @@ The proofs in this manuscript now close in the following order:
 \section{Conclusion}
 
 This manuscript now gives a theorem-grade chain from the static/finite-dimensional variational-delta picture to a broad scoped family of oscillatory states including:
-\begin{enumerate}[leftmargin=1.6em]
+\begin{enumerate}
 \item exact projective closure and de-regularization,
 \item explicit semiclassical channel expansion,
 \item large-$N$ mode-coupled convergence with quantitative tail control (Gaussian-tail, non-factorized quadratic-mixing, and non-factorized quartic-tail classes), with intrinsic moment criteria for quartic-tail hypotheses,

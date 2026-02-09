@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+
+\title{Wind-Down Status Snapshot:\\
+Learned Results, Open Proof Gates, and Handoff Queue}
+\author{}
+\date{2026-02-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note records a wind-down synthesis after scanning the active markdown
+corpus in the repository. It separates current scoped theorem-grade closure
+from remaining proof gates and leaves a concrete next-agent queue. The note is
+status-facing: it does not assert new physical theorems beyond already tracked
+artifacts.
+\end{abstract}
+
+\section{Corpus and Method}
+
+The status pass scanned markdown artifacts under the active workspace
+(\texttt{rg --files -g '*.md'}), then extracted state-bearing signals
+(\texttt{done}, \texttt{closed}, \texttt{proved}, \texttt{queued},
+\texttt{frontier}) and checked canonical paper and audit sheets.
+
+\section{What Is Learned}
+
+\subsection*{Goal 1 Papers}
+\begin{enumerate}
+\item Paper 1 (statics): scoped theorem-grade static variational consistency and
+static measurement-layer equivalence are documented in
+\texttt{2026-02-09-claim1-paper1-static-amplitude-qm-equivalence.md}.
+\item Paper 2 (dynamics): scoped theorem-grade dynamic consistency and
+path-integral-equivalence chain (with historical section) are documented in
+\texttt{2026-02-09-claim1-paper2-dynamics-path-integral-equivalence-history.md}.
+\item Paper 3 (fields): the dimension-indexed program has progressed to AN-31 in
+a scoped \(d=3\) branch with explicit closure bookkeeping and open global gates.
+\end{enumerate}
+
+\subsection*{Top-10 Claim Snapshot}
+Using \texttt{2026-02-08-top10-claim-audit.md}:
+\begin{enumerate}
+\item strong scoped closure is already available for Claims 2, 3, 4, 5, 6, 7, 10,
+\item Claim 8 has explicit unresolved high-dimensional rotating sectors,
+\item Claim 9 has screened-Abelian theorem closure and scoped non-Abelian transfer lanes,
+\item Claim 1 has high scoped maturity with explicit global interacting gap.
+\end{enumerate}
+
+\section{Open Proof Gates}
+
+\subsection*{Claim 1 Frontier}
+\begin{enumerate}
+\item AN-32 remains next: extend AN-31 from cylinder observables to weighted-local
+SD-test classes with exhaustion-uniform insertion estimates.
+\item Full \(d=4\) interacting closure still requires explicit G2/G3 completion
+(continuum existence and reconstruction gates).
+\end{enumerate}
+
+\subsection*{Claim 9 Frontier}
+\begin{enumerate}
+\item Beyond-window transfer control needs first-principles completion and full
+propagation into paper and audit lanes.
+\item A new AF draft lane is now recorded in
+\texttt{2026-02-09-claim9-nonabelian-firstprinciples-transfer-clustering.md},
+with executable diagnostic scaffold
+\texttt{claim9\_nonabelian\_first\_principles\_transfer\_check.py}.
+\item Dynamical-matter string-breaking crossover remains at program level.
+\end{enumerate}
+
+\subsection*{Claim 8 Frontier}
+\begin{enumerate}
+\item Unresolved \(D\ge 6\) multi-spin rotating sectors remain explicit in the
+current theorem map.
+\end{enumerate}
+
+\section{Immediate Handoff Queue}
+
+\begin{enumerate}
+\item Integrate AF lane into Claim 9 manuscript and audit only after validating
+the AF diagnostic and consistency checks in the same pass.
+\item Start a dedicated theorem sheet for dynamical-matter string-breaking with
+explicit \((G,D,N_f)\)-tagged assumptions and extraction regime.
+\item Execute AN-32 and immediately synchronize Paper 3 under the existing paper
+update trigger rules.
+\end{enumerate}
+
+\section{Validation Contract}
+
+\subsection*{Assumptions}
+\begin{enumerate}
+\item this report is a status synthesis, not a new theorem derivation,
+\item all closure/open labels are inherited from tracked notes and reports.
+\end{enumerate}
+
+\subsection*{Units and Dimensions}
+\begin{enumerate}
+\item no new dimensional claim is introduced in this status document,
+\item unit-sensitive statements are delegated to the cited theorem notes.
+\end{enumerate}
+
+\subsection*{Symmetry/Conservation}
+\begin{enumerate}
+\item no new symmetry or conservation claim is asserted here.
+\end{enumerate}
+
+\subsection*{Independent Cross-Check Path}
+\begin{enumerate}
+\item run markdown corpus scan commands,
+\item compare extracted statuses with the audit and paper tracks listed above.
+\end{enumerate}
+
+\subsection*{Confidence}
+High confidence for status extraction consistency. Medium confidence for frontier
+ordering, since ordering depends on strategic preference between Claim 1 and
+Claim 9 proof acceleration.
+
+\section{Reproducibility Metadata}
+
+\begin{enumerate}
+\item date anchor: 2026-02-09 (US),
+\item shell environment: \texttt{zsh},
+\item TeX build toolchain in this workspace:
+\texttt{/Library/TeX/texbin/pdflatex} (TeX Live 2025) via safe wrapper script.
+\end{enumerate}
+
+\end{document}

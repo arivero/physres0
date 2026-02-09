@@ -1,4 +1,4 @@
-# Claim 1 Phase AR (AN-3): Half-Density Kinematic vs Dynamical Split
+# Claim 1 Phase AR (AN-3): Geometric \(1/2\)-Density Kinematic vs Dynamical Split
 
 Date: 2026-02-09 (CET)  
 Depends on:
@@ -8,7 +8,7 @@ Depends on:
 
 ## Goal
 
-Separate, in theorem form, what half-density formalism guarantees kinematically
+Separate, in theorem form, what geometric \(1/2\)-density formalism guarantees kinematically
 from what still requires dynamical/renormalization existence control.
 
 ## Definitions
@@ -20,9 +20,9 @@ from what still requires dynamical/renormalization existence control.
    existence/uniqueness/continuum claim that requires uniform bounds,
    non-vanishing normalization, and limit control.
 
-## Theorem 1 (Kinematic Half-Density Closure)
+## Theorem 1 (Kinematic Geometric \(1/2\)-Density Closure)
 
-On a smooth manifold pair groupoid, compactly supported smooth half-density kernels form a coordinate-free involutive convolution algebra:
+On a smooth manifold pair groupoid, compactly supported smooth geometric \(1/2\)-density kernels form a coordinate-free involutive convolution algebra:
 
 1. convolution is globally well-defined,
 2. associativity holds,
@@ -32,7 +32,7 @@ These results are independent of any choice of action functional or renormalizat
 
 ### Proof
 
-Directly inherited from the groupoid half-density theorem pack:
+Directly inherited from the groupoid geometric \(1/2\)-density theorem pack:
 Jacobian cancellation is geometric, and associativity/involution follow from
 Fubini plus compact support. No continuum limit is used. \(\square\)
 
@@ -59,20 +59,20 @@ require all of:
 3. Cauchy/compactness control of \(\omega_\rho(F)\),
 4. closure bounds for derivative insertions when passing SD identities to the limit.
 
-Without these, half-density kinematics alone is insufficient.
+Without these, geometric \(1/2\)-density kinematics alone is insufficient.
 
 ### Proof
 
 Each target conclusion needs a corresponding analytic passage to the limit:
 ratios require denominator control, limit existence needs tightness/Cauchy control,
 and SD pass-through needs derivative-insertion bounds.  
-None of these follows from algebraic half-density composition by itself. \(\square\)
+None of these follows from algebraic geometric \(1/2\)-density composition by itself. \(\square\)
 
 ## Corollary (Programmatic Rule)
 
 When reading Claim 1 status:
 
-1. half-density/groupoid composition results certify kinematic consistency,
+1. geometric \(1/2\)-density/groupoid composition results certify kinematic consistency,
 2. they do **not** by themselves certify continuum existence,
 3. dimension-indexed renormalization analysis remains mandatory for field-level closure.
 

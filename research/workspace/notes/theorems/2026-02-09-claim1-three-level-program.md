@@ -11,6 +11,9 @@ Lock Goal 1 into three explicit levels and separate:
 2. what remains open,
 3. where existence is dimension-dependent at the field level.
 
+Terminology guardrail:
+use probability/transition amplitude language by default, reserve geometric \(1/2\)-density language for explicit kernel-bundle statements, and apply the skepticism protocol in `research/workspace/notes/2026-02-09-wikipedia-baseline-definitions-and-skepticism.md`.
+
 ## Level 0: Statics (Zero-Dimensional Action)
 
 Prototype object:
@@ -22,7 +25,7 @@ Nondegenerate critical-point decomposition:
 \delta(f'(x))=\sum_{x_i\in\mathrm{Crit}(f)}\frac{\delta(x-x_i)}{|f''(x_i)|}.
 \]
 
-`halved` branch:
+`oscillatory amplitude` branch:
 \[
 A_\varepsilon(O)=\varepsilon^{-1/2}\int e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx,
 \qquad
@@ -31,7 +34,7 @@ A_\varepsilon(O)=\varepsilon^{-1/2}\int e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx,
 in the stationary-phase/nondegenerate regime.
 
 Status in workspace: theorem-grade in scoped finite-dimensional classes
-(distributional/static and manifold half-density bridges).
+(distributional/static and manifold geometric \(1/2\)-density bridges).
 
 ## Level 1: Dynamics (0+1D Action on Time Histories)
 
@@ -49,12 +52,12 @@ Current Claim 1 closure here: strong scoped closure via projective/cylinder
 families, de-regularization \(\eta\to0^+\), SD identities, and \(c\)-invariant
 \(\tau_\mu\)-flow covariance.
 
-Half-density choice:
+Amplitude/geometry packaging choice:
 
-1. with half-density: amplitude-first language (kernel composition, groupoid-aligned),
-2. without half-density: work directly with normalized density/correlation functionals.
+1. with geometric \(1/2\)-density language: amplitude-first kernel composition (groupoid-aligned),
+2. without geometric \(1/2\)-density language: work directly with normalized density/correlation functionals.
 
-Both are admissible in the scoped program; half-density is structural, not mandatory.
+Both are admissible in the scoped program; geometric \(1/2\)-density packaging is structural, not mandatory.
 
 ## Level 2: Fields (d-Dimensional Spacetime Action)
 
@@ -80,12 +83,12 @@ This table is a planning map for theorem targets, not a claim of full closure.
 | \(d=4\) | physically central but hardest regime; rigorous continuum existence is model-dependent/open in key interacting cases | keep as main conceptual target, but do not overstate theorem status |
 | \(d>4\) | EFT/nonrenormalizable behavior typically dominates generic local interactions | treat as asymptotic/EFT branch, not first closure target |
 
-### Field-Level Half-Density Branching
+### Field-Level Amplitude / Geometric \(1/2\)-Density Branching
 
-1. Kinematic half-density branch:
+1. Kinematic geometric \(1/2\)-density branch:
    use amplitude/kernels with square-root Jacobian behavior under composition.
 2. Correlator-only branch:
-   avoid explicit half-density formalism and work with Schwinger functions/Wightman-type objects plus reconstruction conditions.
+   avoid explicit geometric \(1/2\)-density formalism and work with Schwinger functions/Wightman-type objects plus reconstruction conditions.
 
 Both branches must pass the same continuum-existence gate, which is \(d\)-dependent.
 

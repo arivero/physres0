@@ -59,6 +59,10 @@ This folder stores analysis artifacts derived from source documents.
 - This directory is git-ignored by the repo root `.gitignore`.
 - Keep only citation metadata/notes in tracked files; keep raw downloaded artifacts in the ignored folder.
 
+## Handoff Notes
+
+- `2026-02-09-winddown-handoff.md`
+
 ## Current Theorem Notes
 
 - `theorems/2026-02-08-claim1-scoped-bridge-statement.md`
@@ -140,6 +144,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim9-nonabelian-strong-coupling-window-derivation.md`
 - `theorems/2026-02-09-claim9-nonabelian-beyond-window-transfer-assumptions.md`
 - `theorems/2026-02-09-claim9-nonabelian-derivative-covariance-criterion.md`
+- `theorems/2026-02-09-claim9-nonabelian-firstprinciples-transfer-clustering.md`
 - `theorems/2026-02-08-claim10-circular-threshold-benchmarks.md`
 
 ## Current Simulation Checks
@@ -207,6 +212,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim9_nonabelian_strong_coupling_window_check.py`
 - `../simulations/claim9_nonabelian_beyond_window_transfer_check.py`
 - `../simulations/claim9_nonabelian_derivative_covariance_check.py`
+- `../simulations/claim9_nonabelian_first_principles_transfer_check.py`
 
 ## Current Reports
 

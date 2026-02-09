@@ -43,11 +43,11 @@ Claim 8 (high-D stability: Tangherlini + asymptotic extension)
 Claim 9 (phase/model-class split gauge long-range taxonomy)
   -> pending theorem-grade closure per model framework
 
-Claim 1 (half-density/groupoid/path-integral bridge)
+Claim 1 (amplitude/groupoid/path-integral bridge, with geometric \(1/2\)-density kernel calculus)
   currently layered as:
     static theorem core
     finite-N variational-delta lemmas
-    finite-dimensional manifold half-density convolution
+    finite-dimensional manifold geometric \(1/2\)-density convolution
     point-supported scaling-channel decomposition
     cylinder-limit program with failure modes
   -> pending continuum renormalized equivalence theorem
@@ -65,7 +65,7 @@ Point-supported scaling channels (\(\delta^{(m)}\)-type modes) admit a controlle
 
 ### C3: Groupoid-to-Propagator Equivalence
 
-A theorem-level equivalence can be established between an admissible tangent-groupoid half-density family and the corresponding continuum propagator class for specified model spaces.
+A theorem-level equivalence can be established between an admissible tangent-groupoid geometric \(1/2\)-density kernel family and the corresponding continuum propagator class for specified model spaces.
 
 ### C4: Rotating High-D Orbit Stability Closure
 

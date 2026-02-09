@@ -25,6 +25,8 @@ The target is a first-month QFT companion narrative with explicit mathematical d
    unchanged under parameter changes that keep \(c\) fixed (equivalently, constant on a \(\tau_\mu\)-orbit).
 3. `de-regularization`:
    the one-sided limit \(\eta\to0^+\) from damped oscillatory kernels.
+4. `terminology guardrail`:
+   use probability/transition amplitude as default physics language; reserve geometric \(1/2\)-density for explicit kernel-bundle statements.
 
 ## 1. Newton’s Seed: Finite-Step Invariant Before the Limit
 
@@ -96,7 +98,7 @@ Fourier representation
 \]
 introduces oscillatory exponentials already at static level.
 
-The “halved expression”
+The oscillatory amplitude expression
 \[
 A_\varepsilon(O)=\varepsilon^{-1/2}\int e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx
 \]
@@ -107,7 +109,7 @@ has
 2\pi\langle \delta(f'),|O|^2\rangle
 \]
 in the stationary-phase/nondegenerate setting.  
-This is the amplitude-to-density pattern and motivates half-density language.
+This is the amplitude-to-density pattern and motivates probability-amplitude language; in geometric kernel calculus the same object is represented as a geometric \(1/2\)-density.
 
 References in workspace:
 
@@ -199,8 +201,8 @@ Newton finite-step area invariance
 
 Static variational distribution δ(f')
   -> Fourier/oscillatory representation
-     -> halved amplitude |A|^2 structure
-        -> half-density/groupoid formulation
+     -> oscillatory amplitude |A|^2 structure
+        -> geometric 1/2-density/groupoid formulation
            -> path-time slicing + RG-style control (tau flow)
               -> Schwinger-Dyson lifted equations
                  -> scoped Claim 1 theorem chain

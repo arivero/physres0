@@ -98,7 +98,7 @@ The foundational narrative is mathematically coherent:
 2. Action reduction translates symmetry to constants of motion.
 3. Orbit/geodesic class boundaries are discriminant/double-root conditions.
 4. The same action logic extends to gauge-defined static potentials.
-5. This supplies the geometry side of the Claim 1 program (distribution/half-density/path-integral side).
+5. This supplies the geometry side of the Claim 1 program (distribution/amplitude/path-integral side, with optional geometric \(1/2\)-density kernel packaging).
 
 ## Reproducibility
 
