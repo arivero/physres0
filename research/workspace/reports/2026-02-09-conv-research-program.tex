@@ -465,15 +465,29 @@ scoped statement (regulated and/or cylinder-level) without a claim of a nontrivi
 \label{sec:roadmap}
 
 \subsection{Immediate Next Targets}
-\textbf{Immediate queue (scheme).}
+The short-term queue is designed to be incremental and non-drifting: every target should either reduce assumptions in
+an already-mechanized lemma chain, or discharge one of the explicit \(d=3\) bridge obligations, or clarify why a
+particular \(d=4\) upgrade is blocked.
+
+Immediate targets:
 \begin{itemize}[leftmargin=1.4em]
-\item AN-18 (Lean): reduce finite exponential-family increment hypotheses by proving automatic regularity and non-vanishing conditions.
-\item Field-level: close at least one genuine beyond-ultralocal \(d=3\) statement by addressing B1--B5 systematically.
-\item Cross-level: keep half-density composition results separate from continuum existence, and ensure every ``lift'' names its missing analytic gates.
+\item \textbf{AN-18 (Lean hygiene):} reduce assumptions in the finite exponential-family increment chain by proving
+  automatic regularity and non-vanishing conditions in that model. This keeps the Lean spine tight and prevents
+  later reuse from silently importing unjustified hypotheses.
+\item \textbf{\(d=3\) bridge closure work:} close at least one beyond-ultralocal \(d=3\) theorem fragment by addressing
+  B1--B5 systematically (moments, tightness, denominator control, SD insertion control, and \(\kappa\)-continuity).
+  The goal is not an all-at-once \(d=3\) continuum construction, but a sequence of honest theorems that reduce the gap.
+\item \textbf{Cross-level hygiene:} keep half-density composition results separate from continuum existence statements,
+  and require every claimed ``lift'' (e.g.\ from \(d=2\) to \(d=4\)) to list its missing analytic gates explicitly.
 \end{itemize}
 
 \subsection{Longer-Horizon Conjectures and Risks}
-\textbf{Core missing analytic ingredients (scheme).}
+The longer-horizon targets are those that would upgrade Claim~1 from a scoped closure to a full field-level closure
+in a genuinely local interacting class. These targets are also the main risk points: they are where the existing
+tooling (stationary phase intuition, half-density kinematics, SD identities) must be matched with hard analytic
+control (tightness, renormalization, and reconstruction).
+
+The core missing analytic ingredients are:
 \begin{itemize}[leftmargin=1.4em]
 \item tightness/precompactness mechanisms for cylinder marginals in local interacting field models,
 \item robust non-vanishing control for oscillatory partition normalizations on complex parameter domains,
