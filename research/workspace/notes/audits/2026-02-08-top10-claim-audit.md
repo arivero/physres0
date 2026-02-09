@@ -10,6 +10,19 @@ Canonical rendered companion: `conv_patched.pdf`
 - `heuristic`: claim is plausible and technically motivated but still depends on asymptotics, omitted steps, scope caveats, or unproven global assumptions.
 - `speculative`: claim is interpretive/bridging/conceptual and currently lacks a strict theorem-level derivation.
 
+## Focus Lock (Foundational Axis from `conv_patched.md`)
+
+To prevent drift, new work must pass this filter before execution:
+
+1. **Variational-distribution core**: strengthens the chain
+   `static delta(f') -> action extremals -> path/field functional measure`
+   (halved/amplitude interpretation included).
+2. **Geometry-of-force bridge**: clarifies how action reduction yields force/orbit/geodesic structure across SR/GR/gauge settings.
+3. **Scale-control core**: advances refinement/RG/tangent-groupoid control
+   (`tau`-type flow, continuum/de-regularization existence, Schwinger-Dyson closure).
+
+If a task does not directly improve one of these three cores, it should be deprioritized.
+
 ## Top 10 Results
 
 | Rank | Claim | Location | Label | Why this label | Upgrade path |
@@ -28,8 +41,8 @@ Canonical rendered companion: `conv_patched.pdf`
 ## Priority for Novelty Work (Post-Audit)
 
 1. Claim 1 (heuristic, with proved scoped core): highest novelty, highest remaining risk.
-2. Claim 8 (heuristic): medium novelty, medium risk, rotating/global class closure pending.
-3. Claim 9 (heuristic): medium novelty, medium risk, framework-specific theorem closure pending.
+2. Claim 1 action-to-geometry bridge consolidation (mechanics -> field level): medium novelty, high conceptual centrality.
+3. Claim 8/9 only when they directly support the foundational action/geometry narrative.
 
 ## Claim Maturity Scores (0-10)
 

@@ -123,3 +123,7 @@ This folder stores analysis artifacts derived from source documents.
 ## Supplemental Audit Notes
 
 - `audits/2026-02-08-point-supported-distribution-scaling-subclaims.md`
+
+## Strategy Compass
+
+- `2026-02-09-core-goal-compass.md`
