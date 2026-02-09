@@ -33,6 +33,8 @@ AN-29 adds explicit refinement-Cauchy rates plus denominator bookkeeping for
 their continuum extraction in the same scoped lane.
 AN-30 extends this further to finite graph-indexed multi-block families with
 explicit combinatorial constants and projective-consistency closure.
+AN-31 then lifts AN-30 to uniformly locally finite exhaustion families with
+summability-weighted tail control.
 \end{abstract}
 
 \section{Scope}
@@ -109,6 +111,8 @@ AN-28/AN-29 then extend to disconnected nonlocal cylinders with explicit
 refinement-Cauchy and denominator-rate control in that same scoped branch.
 AN-30 upgrades this to finite graph-indexed multi-block families with explicit
 combinatorial rates and projective consistency in the refinement limit.
+AN-31 lifts this to exhaustion families with explicit summable-tail Cauchy and
+projective-defect control.
 \item \textbf{\(d=4\):} frontier branch; no full interacting closure claim is made here.
 \item \textbf{\(d>4\):} treated as EFT/triviality-guided unless a UV-complete model is fixed.
 \end{enumerate}
@@ -201,10 +205,10 @@ Holder/Markov tail criterion with an explicit \(q=4/3\) insertion-moment bound.
 
 The next theorem target is:
 \begin{enumerate}
-\item extend AN-30 from finite graph-indexed families to uniformly locally
-finite exhaustion families (AN-31),
-\item keep summability-weighted combinatorial constants explicit while preserving
-projective-consistency bookkeeping across exhaustion levels.
+\item extend AN-31 from cylinder observables to weighted-local test classes
+with explicit exhaustion-uniform insertion estimates (AN-32),
+\item keep summability-weighted constants explicit while preserving
+projective-consistency bookkeeping and de-regularization compatibility.
 \end{enumerate}
 
 \section{Validation Contract}
@@ -249,6 +253,8 @@ projective-consistency bookkeeping across exhaustion levels.
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an29\_nonlocal\_continuum\_cauchy\_check.py}.
 \item AN-30 multiblock projective-consistency diagnostics:
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an30\_multiblock\_projective\_consistency\_check.py}.
+\item AN-31 exhaustion-summability lift diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an31\_exhaustion\_summability\_check.py}.
 \end{enumerate}
 
 \subsection*{Confidence statement}
@@ -259,6 +265,7 @@ AN-27 closes oscillatory/de-regularized transfer; AN-28/AN-29 extend this to
 disconnected nonlocal cylinders with explicit refinement-Cauchy bookkeeping in
 the same scoped branch; AN-30 extends further to finite graph-indexed
 multi-block projective consistency with explicit combinatorial constants.
+AN-31 lifts this to exhaustion-family summability control.
 Full global continuum interacting closure remains open.
 
 \section{Reproducibility Metadata}

@@ -108,6 +108,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-an28-nonlocal-cylinder-transfer.md`
 - `theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
+- `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -137,6 +138,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim9-abelian-screened-theorem.md`
 - `theorems/2026-02-09-claim9-nonabelian-arealaw-linear-program.md`
 - `theorems/2026-02-09-claim9-nonabelian-strong-coupling-window-derivation.md`
+- `theorems/2026-02-09-claim9-nonabelian-beyond-window-transfer-assumptions.md`
 - `theorems/2026-02-08-claim10-circular-threshold-benchmarks.md`
 
 ## Current Simulation Checks
@@ -184,6 +186,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_d3_an28_nonlocal_cylinder_transfer_check.py`
 - `../simulations/claim1_d3_an29_nonlocal_continuum_cauchy_check.py`
 - `../simulations/claim1_d3_an30_multiblock_projective_consistency_check.py`
+- `../simulations/claim1_d3_an31_exhaustion_summability_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -201,6 +204,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim9_abelian_screened_asymptotic_check.py`
 - `../simulations/claim9_nonabelian_arealaw_linear_check.py`
 - `../simulations/claim9_nonabelian_strong_coupling_window_check.py`
+- `../simulations/claim9_nonabelian_beyond_window_transfer_check.py`
 
 ## Current Reports
 
@@ -258,6 +262,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-an28-nonlocal-cylinder-transfer.md`
 - `theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
+- `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`

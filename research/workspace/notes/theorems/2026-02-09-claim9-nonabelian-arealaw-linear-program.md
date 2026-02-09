@@ -106,8 +106,10 @@ Open gap remains: deriving (ALP)+(POS) from a full continuum non-Abelian model,
 and proving dynamical-matter string-breaking crossover at theorem level.
 Phase AC now derives (ALP)+(POS) in an explicit strong-coupling lattice window
 (`research/workspace/notes/theorems/2026-02-09-claim9-nonabelian-strong-coupling-window-derivation.md`).
-The remaining gap is extending that derivation beyond the strong-coupling window
-and closing dynamical-matter crossover rigor.
+Phase AD extends this with an explicit \(\beta\)-transfer theorem lane in
+`research/workspace/notes/theorems/2026-02-09-claim9-nonabelian-beyond-window-transfer-assumptions.md`.
+The remaining gap is first-principles control of transfer assumptions and
+closing dynamical-matter crossover rigor.
 
 ## Validation Contract
 
@@ -145,9 +147,9 @@ The script checks:
 ### Confidence statement
 
 This closes a scoped non-Abelian extraction theorem lane under explicit
-assumptions. With Phase AC, those assumptions are now derived in a scoped
-strong-coupling lattice window. Full continuum confinement/string-breaking rigor
-outside that window remains open.
+assumptions. With Phases AC and AD, those assumptions are derived in a scoped
+strong-coupling window and extended by an explicit transfer lane. Full
+continuum confinement/string-breaking rigor remains open.
 
 ### Reproducibility metadata
 

@@ -80,9 +80,9 @@ These formalizations support:
 
 ## Next Lean Target (Queued)
 
-AN-31 (Lean support lane): extend finite-index AN-30 packaging to uniformly
-locally finite exhaustion families with summability-weighted combinatorial
-constants and projective-consistency interfaces between exhaustion levels.
+AN-32 (Lean support lane): lift AN-31 exhaustion packaging from cylinder
+observables to weighted-local SD-test classes with explicit insertion-moment
+bookkeeping uniform in exhaustion level.
 
 ## Validation Priority (Locked)
 

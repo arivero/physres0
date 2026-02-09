@@ -26,8 +26,8 @@ theorem: under explicit \((SU(N),D)\) area-law-plus-perimeter hypotheses, finite
 Wilson-loop extraction converges to a linear potential with quantitative error
 bounds. In addition, we derive that hypothesis package inside an explicit
 strong-coupling lattice window for \(SU(N)\). Remaining open gaps are extending
-that derivation beyond the strong-coupling window and closing dynamical-matter
-string-breaking rigor.
+that derivation beyond the strong-coupling window via transfer assumptions and
+closing dynamical-matter string-breaking rigor.
 \end{abstract}
 
 \section{Scope}
@@ -37,7 +37,8 @@ string-breaking rigor.
 \item phase-conditioned static potential classification by Wilson-loop asymptotics,
 \item theorem-grade screened-Abelian branch with explicit dimension dependence,
 \item scoped non-Abelian finite-\(T\) extraction theorem under explicit \((G,D)\)-tagged assumptions,
-\item scoped derivation of those non-Abelian assumptions in a strong-coupling lattice window.
+\item scoped derivation of those non-Abelian assumptions in a strong-coupling lattice window,
+\item scoped \(\beta\)-transfer theorem extending that assumption package to a wider \(\beta\)-window.
 \end{enumerate}
 
 \subsection*{Out of scope}
@@ -76,7 +77,7 @@ No statement is promoted unless both dependencies are explicit:
 \hline
 \((U(1),\ \text{Higgs},\ \text{screened})\) & explicit in all \(D\) & \(r^{-(D-2)/2}e^{-mr}\) & theorem \\
 \hline
-\((SU(N),\ \text{none},\ \text{confining})\) & explicit \((G,D)\), finite-window \(r,T\), plus strong-coupling derivation lane & linear extraction with \(O(T^{-1})\) bounds & scoped theorem + scoped derivation \\
+\((SU(N),\ \text{none},\ \text{confining})\) & explicit \((G,D)\), finite-window \(r,T\), strong-coupling + \(\beta\)-transfer lanes & linear extraction with \(O(T^{-1})\) bounds & scoped theorem + scoped derivation \\
 \hline
 \((SU(N),\ N_f>0,\ \text{string-breaking})\) & dimension-tagged, model dependent & linear-to-saturation crossover & program \\
 \hline
@@ -186,6 +187,51 @@ Substitute \(A(C)\), \(P(C)\) into the assumed strong-coupling form and collect
 channels \(rT\), \(r+T\), and bounded residual.
 \end{proof}
 
+\begin{theorem}[Beyond-window transfer lane for AB hypotheses \((G=SU(N),N\ge2,D)\)]
+Fix an anchor \(\beta_0\in(0,\beta_{\mathrm{sc}}]\) where AB hypotheses are known.
+Assume for \(\beta\in[\beta_0,\beta_1]\):
+\[
+\partial_\beta\log\langle W(r,T)\rangle_\beta
+=
+-a_\beta\,rT+b_\beta\,(r+T)+R_\beta(r,T),
+\]
+with
+\[
+|a_\beta|\le A_*,\qquad |b_\beta|\le B_*,\qquad |R_\beta(r,T)|\le R_*.
+\]
+If
+\[
+\log\langle W(r,T)\rangle_{\beta_0}
+=
+-\sigma_0rT+p_0(r+T)+\varepsilon_0(r,T),\qquad |\varepsilon_0|\le C_0,
+\]
+then for all \(\beta\in[\beta_0,\beta_1]\),
+\[
+\log\langle W(r,T)\rangle_\beta
+=
+-\sigma(\beta)\,rT+p(\beta)\,(r+T)+\varepsilon_\beta(r,T),
+\]
+where
+\[
+\sigma(\beta)=\sigma_0+\int_{\beta_0}^{\beta}a_s\,ds,\qquad
+p(\beta)=p_0+\int_{\beta_0}^{\beta}b_s\,ds,
+\]
+\[
+\varepsilon_\beta(r,T)=\varepsilon_0(r,T)+\int_{\beta_0}^{\beta}R_s(r,T)\,ds,
+\]
+and
+\[
+|\sigma(\beta)-\sigma_0|\le A_*|\beta-\beta_0|,\qquad
+|p(\beta)-p_0|\le B_*|\beta-\beta_0|,\qquad
+|\varepsilon_\beta(r,T)|\le C_0+R_*|\beta-\beta_0|.
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Integrate the \(\beta\)-derivative decomposition between \(\beta_0\) and \(\beta\),
+then apply uniform bounds on \(a_\beta,b_\beta,R_\beta\).
+\end{proof}
+
 \begin{theorem}[Scoped non-Abelian linear extraction \((G=SU(N),N\ge2,D)\)]
 Fix \((G,D)=(SU(N),D)\), \(N\ge2\), and \(r\in[r_{\min},r_{\max}]\), \(T\ge T_0\).
 Assume constants \(\sigma_D>0\), \(p_D\), \(c_D\), \(C_D\) such that
@@ -244,9 +290,10 @@ Within the screened-Abelian class \((G=U(1),m>0)\), Claim 9 is theorem-closed
 with explicit \(D\)-dependence. In the confining non-Abelian branch
 \((G=SU(N),D)\), finite-\(T\) linear extraction is now theorem-closed in a scoped
 \((r,T)\)-window under explicit area-law-plus-perimeter assumptions, and those
-assumptions are now derived in a scoped strong-coupling lattice window.
-The remaining open gaps are extending this derivation beyond the strong-coupling
-window and proving full dynamical-matter string-breaking crossover theorems.
+assumptions are now derived in a scoped strong-coupling lattice window and
+extended by an explicit \(\beta\)-transfer theorem to a wider parameter window.
+The remaining open gaps are first-principles control of transfer assumptions and
+full dynamical-matter string-breaking crossover theorems.
 \end{corollary}
 
 \section{Literature Anchors}
@@ -262,6 +309,8 @@ window and proving full dynamical-matter string-breaking crossover theorems.
 \href{https://doi.org/10.1103/PhysRevD.19.3682}{doi:10.1103/PhysRevD.19.3682}.
 \item Kogut (1979), lattice gauge theory review (strong-coupling background):
 \href{https://doi.org/10.1103/RevModPhys.51.659}{doi:10.1103/RevModPhys.51.659}.
+\item Seiler (1982), Gauge Theories as a Problem of Constructive Quantum Field Theory:
+\href{https://doi.org/10.1007/978-3-540-39023-7}{doi:10.1007/978-3-540-39023-7}.
 \end{enumerate}
 
 \section{Validation Contract}
@@ -288,7 +337,8 @@ window and proving full dynamical-matter string-breaking crossover theorems.
 \item \texttt{python3.12 research/workspace/simulations/claim9\_model\_class\_table.py},
 \item \texttt{python3.12 research/workspace/simulations/claim9\_abelian\_screened\_asymptotic\_check.py},
 \item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_arealaw\_linear\_check.py},
-\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_strong\_coupling\_window\_check.py}.
+\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_strong\_coupling\_window\_check.py},
+\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_beyond\_window\_transfer\_check.py}.
 \end{itemize}
 \end{enumerate}
 
@@ -296,9 +346,9 @@ window and proving full dynamical-matter string-breaking crossover theorems.
 Screened-Abelian long-range behavior is theorem-grade in this scoped class.
 The confining non-Abelian extraction lane is now theorem-grade under explicit
 \((G,D)\)-tagged finite-window assumptions, and those assumptions are derived in
-a scoped strong-coupling lattice window.
-Extending the derivation beyond that window and closing string-breaking with
-dynamical matter remain open.
+a scoped strong-coupling lattice window with an explicit \(\beta\)-transfer lane.
+First-principles control beyond this scoped transfer model and closing
+string-breaking with dynamical matter remain open.
 
 \section{Reproducibility Metadata}
 
@@ -315,8 +365,9 @@ Claim 9 should be read as phase-resolved, not universal.
 The screened-Abelian branch is fully closed at theorem level in this manuscript.
 The non-Abelian confining branch is now closed at scoped extraction-theorem level
 under explicit \((G,D)\)-tagged area-law/perimeter assumptions, with a scoped
-derivation lane now grounded in an explicit strong-coupling lattice model.
-Extending beyond that window and full string-breaking crossover remain explicit
-\((G,D)\)-indexed next targets.
+derivation lane grounded in an explicit strong-coupling lattice model and
+extended by an explicit \(\beta\)-transfer theorem.
+First-principles control of the transfer assumptions and full string-breaking
+crossover remain explicit \((G,D)\)-indexed next targets.
 
 \end{document}

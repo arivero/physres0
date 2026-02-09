@@ -24,6 +24,7 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-d3-an28-nonlocal-cylinder-transfer.md`
 - `theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
+- `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -105,6 +106,7 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) first nonlocal-cylinder transfer completed (Phase BU / AN-28): disconnected two-block bounded cylinders and \(C_b^1\) SD-test extension now persist in the same oscillatory/de-regularized branch under explicit denominator/moment assumptions.
 - \(d=3\) nonlocal refinement-Cauchy closure completed (Phase BV / AN-29): explicit numerator/denominator scale-rate bookkeeping now yields refinement Cauchy bounds and SD pass-through for AN-28 nonlocal cylinders in the same scoped branch.
 - \(d=3\) multiblock projective-consistency closure completed (Phase BW / AN-30): finite graph-indexed nonlocal families now carry explicit combinatorial Cauchy constants and projective-consistent refinement limits.
+- \(d=3\) exhaustion-summability lift completed (Phase BX / AN-31): AN-30 now extends to uniformly locally finite exhaustion families with explicit tail-summability Cauchy/projective control.
 
 ## Next Active Target
 
@@ -124,7 +126,8 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BU (completed): AN-28 first nonlocal-cylinder transfer note delivered.
 - Phase BV (completed): AN-29 refinement-Cauchy nonlocal-cylinder continuum extraction delivered.
 - Phase BW (completed): AN-30 finite graph-indexed multiblock/projective-consistency closure delivered.
-- Active support lane (AN-31): extend AN-30 to uniformly locally finite exhaustion families with summability-weighted combinatorial constants.
+- Phase BX (completed): AN-31 exhaustion-family summability lift delivered.
+- Active support lane (AN-32): extend AN-31 to weighted-local SD-test classes with explicit exhaustion-uniform insertion estimates.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

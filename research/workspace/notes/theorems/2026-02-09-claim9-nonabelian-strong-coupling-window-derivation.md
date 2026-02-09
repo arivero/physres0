@@ -130,7 +130,9 @@ The script checks:
 ### Confidence statement
 
 AC provides a scoped derivation of AB assumptions in an explicit strong-coupling
-model window. Remaining open gap: extend derivation beyond that window and close
+model window. Phase AD now extends this with an explicit \(\beta\)-transfer
+assumption lane (`research/workspace/notes/theorems/2026-02-09-claim9-nonabelian-beyond-window-transfer-assumptions.md`).
+Remaining open gap: first-principles control of transfer assumptions and full
 continuum non-Abelian confinement/string-breaking rigor.
 
 ### Reproducibility metadata
