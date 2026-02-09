@@ -27,7 +27,8 @@ Wilson-loop extraction converges to a linear potential with quantitative error
 bounds. In addition, we derive that hypothesis package inside an explicit
 strong-coupling lattice window for \(SU(N)\). Remaining open gaps are extending
 that derivation beyond the strong-coupling window via transfer assumptions and
-closing dynamical-matter string-breaking rigor.
+closing dynamical-matter string-breaking rigor. We also add a covariance-based
+criterion that reduces transfer assumptions to explicit plaquette-class bounds.
 \end{abstract}
 
 \section{Scope}
@@ -38,7 +39,8 @@ closing dynamical-matter string-breaking rigor.
 \item theorem-grade screened-Abelian branch with explicit dimension dependence,
 \item scoped non-Abelian finite-\(T\) extraction theorem under explicit \((G,D)\)-tagged assumptions,
 \item scoped derivation of those non-Abelian assumptions in a strong-coupling lattice window,
-\item scoped \(\beta\)-transfer theorem extending that assumption package to a wider \(\beta\)-window.
+\item scoped \(\beta\)-transfer theorem extending that assumption package to a wider \(\beta\)-window,
+\item covariance-based sufficient criterion for transfer-channel bounds.
 \end{enumerate}
 
 \subsection*{Out of scope}
@@ -232,6 +234,22 @@ Integrate the \(\beta\)-derivative decomposition between \(\beta_0\) and \(\beta
 then apply uniform bounds on \(a_\beta,b_\beta,R_\beta\).
 \end{proof}
 
+\begin{proposition}[Covariance criterion for transfer-channel bounds]
+Assume \(\partial_\beta\log\langle W(r,T)\rangle_\beta\) is written as a sum of
+normalized plaquette covariances and plaquettes are partitioned into area class
+\(\mathcal A\), perimeter class \(\mathcal P\), and remainder class \(\mathcal R\).
+If
+\[
+\left|\frac{1}{|\mathcal A|}\sum_{p\in\mathcal A}\Xi_{\beta,p}\right|\le A_*,
+\qquad
+\left|\frac{1}{|\mathcal P|}\sum_{p\in\mathcal P}\Xi_{\beta,p}\right|\le B_*,
+\qquad
+\left|\sum_{p\in\mathcal R}\Xi_{\beta,p}\right|\le R_*,
+\]
+then AD assumptions (TB-DIFF)+(TB-BOUNDS) hold with channel coefficients
+\((a_\beta,b_\beta,R_\beta)\) bounded by \((A_*,B_*,R_*)\).
+\end{proposition}
+
 \begin{theorem}[Scoped non-Abelian linear extraction \((G=SU(N),N\ge2,D)\)]
 Fix \((G,D)=(SU(N),D)\), \(N\ge2\), and \(r\in[r_{\min},r_{\max}]\), \(T\ge T_0\).
 Assume constants \(\sigma_D>0\), \(p_D\), \(c_D\), \(C_D\) such that
@@ -292,6 +310,7 @@ with explicit \(D\)-dependence. In the confining non-Abelian branch
 \((r,T)\)-window under explicit area-law-plus-perimeter assumptions, and those
 assumptions are now derived in a scoped strong-coupling lattice window and
 extended by an explicit \(\beta\)-transfer theorem to a wider parameter window.
+The transfer assumptions are now linked to an explicit covariance-criterion checklist.
 The remaining open gaps are first-principles control of transfer assumptions and
 full dynamical-matter string-breaking crossover theorems.
 \end{corollary}
@@ -338,7 +357,8 @@ full dynamical-matter string-breaking crossover theorems.
 \item \texttt{python3.12 research/workspace/simulations/claim9\_abelian\_screened\_asymptotic\_check.py},
 \item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_arealaw\_linear\_check.py},
 \item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_strong\_coupling\_window\_check.py},
-\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_beyond\_window\_transfer\_check.py}.
+\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_beyond\_window\_transfer\_check.py},
+\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_derivative\_covariance\_check.py}.
 \end{itemize}
 \end{enumerate}
 
@@ -346,7 +366,8 @@ full dynamical-matter string-breaking crossover theorems.
 Screened-Abelian long-range behavior is theorem-grade in this scoped class.
 The confining non-Abelian extraction lane is now theorem-grade under explicit
 \((G,D)\)-tagged finite-window assumptions, and those assumptions are derived in
-a scoped strong-coupling lattice window with an explicit \(\beta\)-transfer lane.
+a scoped strong-coupling lattice window with an explicit \(\beta\)-transfer lane
+and covariance-based sufficient criterion.
 First-principles control beyond this scoped transfer model and closing
 string-breaking with dynamical matter remain open.
 
@@ -366,7 +387,7 @@ The screened-Abelian branch is fully closed at theorem level in this manuscript.
 The non-Abelian confining branch is now closed at scoped extraction-theorem level
 under explicit \((G,D)\)-tagged area-law/perimeter assumptions, with a scoped
 derivation lane grounded in an explicit strong-coupling lattice model and
-extended by an explicit \(\beta\)-transfer theorem.
+extended by an explicit \(\beta\)-transfer theorem and covariance criterion.
 First-principles control of the transfer assumptions and full string-breaking
 crossover remain explicit \((G,D)\)-indexed next targets.
 

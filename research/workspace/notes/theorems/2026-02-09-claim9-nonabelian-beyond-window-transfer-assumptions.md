@@ -5,6 +5,7 @@ Depends on:
 
 - `research/workspace/notes/theorems/2026-02-09-claim9-nonabelian-strong-coupling-window-derivation.md`
 - `research/workspace/notes/theorems/2026-02-09-claim9-nonabelian-arealaw-linear-program.md`
+- `research/workspace/notes/theorems/2026-02-09-claim9-nonabelian-derivative-covariance-criterion.md`
 
 ## Goal
 
@@ -130,6 +131,8 @@ The script checks:
 AD is a scoped theorem lane under explicit transfer assumptions. It does not
 prove those assumptions from first principles outside strong coupling; it
 provides the explicit bridge object needed for that next step.
+Phase AE now adds a concrete covariance-based sufficient criterion for those
+transfer assumptions in the same \((SU(N),D)\) lane.
 
 ### Reproducibility metadata
 

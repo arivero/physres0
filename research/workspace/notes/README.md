@@ -139,6 +139,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim9-nonabelian-arealaw-linear-program.md`
 - `theorems/2026-02-09-claim9-nonabelian-strong-coupling-window-derivation.md`
 - `theorems/2026-02-09-claim9-nonabelian-beyond-window-transfer-assumptions.md`
+- `theorems/2026-02-09-claim9-nonabelian-derivative-covariance-criterion.md`
 - `theorems/2026-02-08-claim10-circular-threshold-benchmarks.md`
 
 ## Current Simulation Checks
@@ -205,6 +206,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim9_nonabelian_arealaw_linear_check.py`
 - `../simulations/claim9_nonabelian_strong_coupling_window_check.py`
 - `../simulations/claim9_nonabelian_beyond_window_transfer_check.py`
+- `../simulations/claim9_nonabelian_derivative_covariance_check.py`
 
 ## Current Reports
 

@@ -54,8 +54,9 @@ This folder stores longer-form manuscripts that consolidate multiple theorem not
   - Claim 9 standalone manuscript track: \((G,D)\)-explicit, phase-resolved
   long-range gauge potentials with theorem-grade screened-Abelian closure,
   scoped non-Abelian linear-extraction theorem under explicit finite-window
-    assumptions, scoped strong-coupling derivation of that hypothesis package,
-    scoped beyond-window transfer theorem lane, and explicit remaining
+  assumptions, scoped strong-coupling derivation of that hypothesis package,
+    scoped beyond-window transfer theorem lane, covariance-based transfer
+    criterion, and explicit remaining
     string-breaking rigor gaps.
   - Rendered companion: `2026-02-09-claim9-gauge-phase-long-range-paper.pdf`.
 

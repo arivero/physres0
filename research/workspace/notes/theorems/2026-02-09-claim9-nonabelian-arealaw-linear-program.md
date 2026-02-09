@@ -148,7 +148,8 @@ The script checks:
 
 This closes a scoped non-Abelian extraction theorem lane under explicit
 assumptions. With Phases AC and AD, those assumptions are derived in a scoped
-strong-coupling window and extended by an explicit transfer lane. Full
+strong-coupling window and extended by an explicit transfer lane. Phase AE adds
+a covariance-based sufficient criterion for that transfer lane. Full
 continuum confinement/string-breaking rigor remains open.
 
 ### Reproducibility metadata
