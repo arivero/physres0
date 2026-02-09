@@ -103,8 +103,9 @@ At session start (or after a context reset), read in this order:
 3. `research/workspace/notes/theorems/2026-02-09-claim1-three-level-program.md`
 4. `research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 5. `research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
-6. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
-7. `research/workspace/notes/README.md`
+6. `research/workspace/notes/theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md`
+7. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
+8. `research/workspace/notes/README.md`
 
 Minimum extraction requirement:
 

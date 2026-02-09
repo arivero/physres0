@@ -8,6 +8,7 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-three-level-program.md`
 - `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 - `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
+- `theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md`
 
 ## North Star
 
@@ -43,6 +44,7 @@ and connect that emergence to geometric descriptions of forces.
 - New structure lock completed (Phase AM): Goal 1 reorganized as a three-level program with explicit field-level dimension-dependent existence ladder.
 - Field execution map completed (Phase AN): dimension-gated field existence roadmap with concrete next deliverables (AN-1/AN-2/AN-3).
 - Field bridge draft completed (Phase AO): first \(d=2\) field-indexed Claim 1 candidate with explicit \(d=4\) obstruction checklist.
+- Field theorem closure completed (Phase AP): closed \(d=2\) interacting ultralocal \(\phi^4\) field-level Claim 1 theorem (existence + SD + \(c\)-invariance).
 
 ## De-Prioritized Unless Supporting North Star
 

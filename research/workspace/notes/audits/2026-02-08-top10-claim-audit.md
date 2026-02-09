@@ -120,4 +120,5 @@ Scoring rule:
 50. [done] Reframed Goal 1 as a three-level program (statics, dynamics, fields) with half-density-optional branches and field-level dimension-dependent existence map.
 51. [done] Added a dedicated field-level dimension-gated existence roadmap (regulated/continuum/reconstruction split plus \(d=2\to d=3\to d=4\) escalation).
 52. [done] Drafted AN-1 \(d=2\) field-indexed cylinder theorem candidate with explicit \(d=4\) obstruction checklist (`research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`).
-53. [next] Upgrade the AN-1 \(d=2\) candidate from assumption-level theorem shape to a closed theorem in one explicit interacting class with verified assumptions.
+53. [done] Closed AN-1 in an explicit interacting \(d=2\) ultralocal \(\phi^4\) class (exact cylinder existence + field-level SD + \(c\)-invariance) with verification script.
+54. [next] Execute AN-2: write explicit \(d=4\) lift-obstruction sheet mapping which estimates used in AP fail or require new renormalization input once gradient coupling/local propagation is restored.
