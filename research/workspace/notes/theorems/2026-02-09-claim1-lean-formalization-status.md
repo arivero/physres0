@@ -47,6 +47,9 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
    - formalizes a centered representation bridge for the same finite exponential family,
    - rewrites \((A/Z)-\omega(B/Z)\) as weighted centered sums (raw and normalized-weight forms),
    - discharges the AN-13 missing representation ingredient in concrete finite models.
+9. `Claim1lean/FiniteExponentialDerivativeBound.lean`
+   - combines AN-14 derivative bridge and AN-15 centered representation in a concrete model class,
+   - proves model-internal \(|\omega'|\) bounds (general weighted-absolute and centered-\(K\) forms).
 
 ## Relation to Current Claim 1 Queue
 
@@ -55,11 +58,12 @@ These formalizations support:
 1. the \(c\)-invariance backbone used in AL/AP/AQ notes,
 2. the AN-5 B5-prototype inequality pattern (small-\(\kappa\) Lipschitz step),
 3. the AN-14 finite-dimensional derivative-under-sum bridge from concrete model assumptions to AN-7 hypotheses,
-4. the AN-15 finite-dimensional centered-representation bridge from concrete model assumptions to AN-9 representation side.
+4. the AN-15 finite-dimensional centered-representation bridge from concrete model assumptions to AN-9 representation side,
+5. the AN-16 model-internal derivative-bound corollary for the finite exponential family.
 
 ## Next Lean Target (Queued)
 
-AN-16: formalize a finite exponential-family derivative-bound corollary using AN-15 centered representation and inequality templates, reducing assumptions for AN-10 interval-increment control.
+AN-17: formalize an interval-increment corollary specialized to the finite exponential family, lifting AN-16 derivative bounds into AN-10-style `Cκ` control under explicit uniform-on-interval hypotheses.
 
 ## Validation Priority (Locked)
 
@@ -81,4 +85,5 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.RatioStateIncrementBound
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialFamilyDeriv
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialRepresentation
+/Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialDerivativeBound
 ```

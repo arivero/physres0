@@ -23,6 +23,7 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-lean-dependency-spine.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-derivative-bound.md`
 
 ## North Star
 
@@ -74,10 +75,11 @@ and connect that emergence to geometric descriptions of forces.
 - Lean dependency map completed (Phase BB): module-level spine from AU→BA to B5 obligations with explicit next missing formal ingredient.
 - Lean finite-model derivative bridge completed (Phase BC): finite exponential-family parameter-derivative lemmas machine-checked (`N'=-A`, `Z'=-B`) to discharge AN-7 derivative hypotheses in a concrete scoped class.
 - Lean finite-model representation bridge completed (Phase BD): centered covariance representation for the finite exponential-family ratio state machine-checked in weighted and normalized-weight forms.
+- Lean finite-model derivative bound completed (Phase BE): model-internal \(|\omega'|\) bounds machine-checked from BD representation without external representation hypotheses.
 
 ## Next Active Target
 
-- Phase BE (AN-16): formalize a finite exponential-family derivative-bound corollary (from BD representation plus inequality templates) that feeds AN-10 increment control with minimal extra assumptions.
+- Phase BF (AN-17): formalize an interval-increment corollary specialized to the finite exponential family, using BE derivative bounds under explicit uniform-on-interval assumptions.
 
 ## De-Prioritized Unless Supporting North Star
 

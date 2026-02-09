@@ -129,9 +129,10 @@ At session start (or after a context reset), read in this order:
 18. `research/workspace/notes/theorems/2026-02-09-claim1-lean-dependency-spine.md`
 19. `research/workspace/notes/theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
 20. `research/workspace/notes/theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`
-21. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
-22. `research/workspace/notes/README.md`
-23. `research/workspace/proofs/README.md`
+21. `research/workspace/notes/theorems/2026-02-09-claim1-lean-finite-exponential-derivative-bound.md`
+22. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
+23. `research/workspace/notes/README.md`
+24. `research/workspace/proofs/README.md`
 
 Minimum extraction requirement:
 
