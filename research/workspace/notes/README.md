@@ -41,11 +41,23 @@ This folder stores analysis artifacts derived from source documents.
 ## TeX Toolchain
 
 - `tectonic` is installed at `/usr/local/bin/tectonic` (version `0.15.0`).
+- `pdflatex` is available at `/Library/TeX/texbin/pdflatex` (TeX Live 2025).
 - To compile the Claim 1 LaTeX note:
   - `tectonic research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex --outdir research/workspace/reports`
+- For reliable `pdflatex` builds in this environment (font/cache writes redirected to `/tmp`), use:
+  - `~/.codex/skills/pdflatex-safe-build/scripts/build_pdflatex_safe.sh <path/to/file.tex> [output-dir]`
+  - Example:
+    - `~/.codex/skills/pdflatex-safe-build/scripts/build_pdflatex_safe.sh research/workspace/reports/2026-02-09-conv-research-program.tex /tmp/pdflatex-check`
 - Current environment note: `tectonic` panics when it tries network fetches, so for the scoped Claim 1 paper we currently generate PDF via:
   - `pandoc research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex -s -t html5 --mathml -o research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.html`
   - `weasyprint research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.html research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.pdf`
+
+## Bibliography Downloads
+
+- External DOI/arXiv downloads must go under:
+  - `../.ignore/downloads/`
+- This directory is git-ignored by the repo root `.gitignore`.
+- Keep only citation metadata/notes in tracked files; keep raw downloaded artifacts in the ignored folder.
 
 ## Current Theorem Notes
 
@@ -84,6 +96,11 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md`
 - `theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
+- `theorems/2026-02-09-claim1-d3-finite-volume-centered-moment-proposition.md`
+- `theorems/2026-02-09-claim1-d3-renormalized-moment-channel-proposition.md`
+- `theorems/2026-02-09-claim1-d3-scoped-continuum-branch-candidate.md`
+- `theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`
+- `theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -146,6 +163,11 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_halfdensity_kinematic_dynamic_split_check.py`
 - `../simulations/claim1_d3_bridge_toy_coupling_scan.py`
 - `../simulations/claim1_d3_lipschitz_prototype_check.py`
+- `../simulations/claim1_d3_finite_volume_centered_moment_bound_check.py`
+- `../simulations/claim1_d3_renormalized_moment_channel_check.py`
+- `../simulations/claim1_d3_an22_continuum_branch_proxy_check.py`
+- `../simulations/claim1_d3_an23_compact_spin_closure_check.py`
+- `../simulations/claim1_d3_an24_cutoff_lift_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -196,6 +218,8 @@ This folder stores analysis artifacts derived from source documents.
 
 - `2026-02-09-core-goal-compass.md`
 - `2026-02-09-foundational-glossary.md`
+- `2026-02-09-terminology-map-amplitude-halfform-halfdensity.md`
+- `2026-02-09-wikipedia-baseline-definitions-and-skepticism.md`
 - `theorems/2026-02-09-claim1-three-level-program.md`
 - `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 - `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
@@ -204,6 +228,11 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md`
 - `theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
+- `theorems/2026-02-09-claim1-d3-finite-volume-centered-moment-proposition.md`
+- `theorems/2026-02-09-claim1-d3-renormalized-moment-channel-proposition.md`
+- `theorems/2026-02-09-claim1-d3-scoped-continuum-branch-candidate.md`
+- `theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`
+- `theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`

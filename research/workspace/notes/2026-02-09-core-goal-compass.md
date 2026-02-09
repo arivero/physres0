@@ -5,6 +5,8 @@ Date: 2026-02-09
 Terminology companion:
 
 - `2026-02-09-foundational-glossary.md`
+- `2026-02-09-terminology-map-amplitude-halfform-halfdensity.md`
+- `2026-02-09-wikipedia-baseline-definitions-and-skepticism.md`
 - `theorems/2026-02-09-claim1-three-level-program.md`
 - `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 - `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
@@ -13,6 +15,8 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md`
 - `theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
+- `theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`
+- `theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -39,16 +43,16 @@ and connect that emergence to geometric descriptions of forces.
 ## Canonical Source Anchors (`conv_patched.md`)
 
 - Variational/distribution seed: `conv_patched.md:681`, `conv_patched.md:684`, `conv_patched.md:733`, `conv_patched.md:1085`.
-- Halved/amplitude-half-density interpretation: `conv_patched.md:710`, `conv_patched.md:932`, `conv_patched.md:1195`.
+- Halved/amplitude-to-density interpretation: `conv_patched.md:710`, `conv_patched.md:932`, `conv_patched.md:1195`.
 - Scale/refinement/RG/tangent-groupoid control: `conv_patched.md:795`, `conv_patched.md:799`, `conv_patched.md:1118`, `conv_patched.md:1207`.
 - Action -> force/geodesic/gauge bridge: `conv_patched.md:549`, `conv_patched.md:595`, `conv_patched.md:601`, `conv_patched.md:611`.
 
 ## Immediate Execution Priorities
 
-1. Keep Goal 1 explicitly three-level: statics \(\to\) dynamics \(\to\) fields, with half-density optional at each level and assumptions stated branchwise.
-2. For field level, enforce a dimension-indexed existence program (\(d=2\), then \(d=3\), then \(d=4\) frontier) instead of a dimension-blind continuum claim.
-3. Promote the Claim 1 continuum candidate to a closed non-Gaussian theorem in one field-compatible class, with explicit statement of why the same proof does or does not lift to \(d=4\).
-4. Use Lean-first verification for core reusable lemmas (\(c\)-invariance, small-\(\kappa\) control, covariance bounds), keeping numerical checks as complement.
+1. **Goal 1A (highest priority):** close a proof of consistency for statics and package it as a paper on probability amplitudes (with geometric \(1/2\)-density appendix language), with explicit equivalence statement to quantum mechanics without time evolution.
+2. **Goal 1B (immediate next):** close consistency for dynamics on time histories and package it as a second paper establishing equivalence to the path-integral formalism, including a dedicated historical discussion section.
+3. Keep Goal 1 explicitly three-level (statics \(\to\) dynamics \(\to\) fields); continue the field dimension ladder (\(d=2\to d=3\to d=4\) frontier) as a downstream extension after Goal 1A and Goal 1B manuscript locks.
+4. Use Lean-first verification for reusable lemmas (\(c\)-invariance, small-\(\kappa\) control, covariance bounds), with symbolic/numeric checks as complements to paper-facing theorem chains.
 
 ## Progress (This Pass)
 
@@ -63,7 +67,7 @@ and connect that emergence to geometric descriptions of forces.
 - Field bridge draft completed (Phase AO): first \(d=2\) field-indexed Claim 1 candidate with explicit \(d=4\) obstruction checklist.
 - Field theorem closure completed (Phase AP): closed \(d=2\) interacting ultralocal \(\phi^4\) field-level Claim 1 theorem (existence + SD + \(c\)-invariance).
 - Lift-gap analysis completed (Phase AQ): explicit \(d=4\) obstruction sheet mapping why AP does not auto-lift once local propagation is restored.
-- Formal split completed (Phase AR): half-density claims separated into kinematic algebraic truths vs dynamical continuum-existence gates.
+- Formal split completed (Phase AR): geometric \(1/2\)-density claims separated into kinematic algebraic truths vs dynamical continuum-existence gates.
 - Intermediate rung drafted (Phase AS): \(d=3\) beyond-ultralocal bridge candidate with explicit closure obligations B1-B5.
 - Quantitative bridge step completed (Phase AT): proved a small-\(\kappa\) Lipschitz prototype estimate (B5 surrogate) for a nearest-neighbor finite-dimensional model.
 - Formal verification ramp completed (Phase AU): Lean workspace with mathlib integrated; \(c\)-invariance and small-\(\kappa\) Lipschitz core lemmas are machine-checked.
@@ -78,10 +82,46 @@ and connect that emergence to geometric descriptions of forces.
 - Lean finite-model representation bridge completed (Phase BD): centered covariance representation for the finite exponential-family ratio state machine-checked in weighted and normalized-weight forms.
 - Lean finite-model derivative bound completed (Phase BE): model-internal \(|\omega'|\) bounds machine-checked from BD representation without external representation hypotheses.
 - Lean finite-model increment bound completed (Phase BF): AN-10-style interval `Cκ` theorem machine-checked for the finite exponential family under explicit uniform interval assumptions.
+- Lean automatic-regularity closure completed (Phase BG1 / AN-18): finite-model `Zsum>0`, `Zsum≠0`, global differentiability, and interval `derivWithin=deriv` bridge formalized and wired into an AN-18 auto-wrapper theorem reducing BF regularity assumptions to centered/moment controls.
+- Priority reset recorded (Phase BG0): Goal 1 ordering updated to statics-consistency paper first, then dynamics/path-integral-equivalence paper with historical framing.
+- \(d=3\) bridge alignment update completed (Phase BG2 / AN-19): AN-18 finite-model assumption collapse is now mapped into B5 structure in the \(d=3\) bridge candidate, separating resolved regularity bookkeeping from remaining field-side centered/moment obligations.
+- Goal 1C paper kickoff completed (Phase BK): field-theory general-dimension manuscript track started with explicit G1/G2/G3 closure gates and literature anchors (`2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.{md,tex}`).
+- \(d=3\) finite-volume B5b constants completed (Phase BL / AN-20): explicit centered/moment proposition added with uniform finite-volume constants and synced into Paper 3 + bridge note.
+- \(d=3\) renormalized B5b channel completed (Phase BM / AN-21): AN-20 raw \(a^{-3}\) moment scaling replaced by an \(a\)-uniform renormalized channel with explicit finite-volume constants, synced into Paper 3 + bridge note.
+- \(d=3\) scoped continuum-branch candidate completed (Phase BN / AN-22): AN-21 renormalized B5b input integrated with B1-B4 into an explicit scoped continuum theorem candidate, synced into Paper 3 + bridge note.
+- \(d=3\) concrete B1-B4 closure completed (Phase BO / AN-23): compact-spin interacting Euclidean subclass closes B1-B4 (tightness, \(Z>0\), SD pass-through) and upgrades the AN-22 candidate to scoped closure in that subclass.
+- \(d=3\) hard-cutoff lift completed (Phase BP / AN-24): removed \(R\to\infty\) artifact in the AN-23 branch with B1-B4 preserved in the Euclidean local-renormalized channel.
 
 ## Next Active Target
 
-- Phase BG (AN-18): formalize automatic regularity assumptions for the finite exponential family (global differentiability and non-vanishing `Z`) so BF hypotheses collapse to minimal model-data bounds.
+- Phase BH (completed): Goal 1A paper lock delivered (`2026-02-09-claim1-paper1-static-amplitude-qm-equivalence.{md,tex,pdf}`).
+- Phase BI (completed): Goal 1B paper lock delivered (`2026-02-09-claim1-paper2-dynamics-path-integral-equivalence-history.{md,tex,pdf}`).
+- Phase BJ (paper-sync gate, done for AN-18): AN-18 assumption updates were propagated to both paper manuscripts in the same execution pass.
+- Phase BK (completed): Goal 1C paper track draft started (`2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.{md,tex}`).
+- Phase BL (completed): AN-20 finite-volume centered/moment proposition delivered and integrated into Goal 1C track.
+- Phase BM (completed): AN-21 renormalized B5b channel delivered and integrated into Goal 1C track.
+- Phase BN (completed): AN-22 scoped continuum-branch theorem candidate delivered and integrated into Goal 1C track.
+- Phase BO (completed): AN-23 compact-spin \(d=3\) B1-B4 closure delivered and integrated into the bridge lane.
+- Phase BP (completed): AN-24 hard-cutoff lift \(R\to\infty\) delivered in the AN-23 branch.
+- Active support lane (AN-25): extend AN-24 compact-support local classes to wider local classes before oscillatory/de-regularized transfer.
+
+### Paper Synchronization Trigger (Future Chain Rule)
+
+After any new theorem/Lean result, update the relevant Goal 1 paper track(s) (Paper 1, Paper 2, Paper 3) in the same pass if any of the following is true:
+
+1. hypothesis set changes (added/removed/relaxed assumptions),
+2. theorem strength changes (candidate -> proved, scoped -> wider scope, or new limitation),
+3. confidence label changes (`proved/heuristic/speculative` score movement),
+4. terminology rule changes affecting statement wording,
+5. new reproducibility artifact (script/proof module) becomes citation-relevant.
+
+## Terminology Guardrail
+
+Apply the skepticism protocol in `2026-02-09-wikipedia-baseline-definitions-and-skepticism.md`:
+
+1. use Wikipedia for baseline orientation only,
+2. require technical-source cross-check before promoting terminology-critical claims,
+3. mark terminology as provisional whenever definition and proof scope are misaligned.
 
 ## De-Prioritized Unless Supporting North Star
 

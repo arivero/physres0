@@ -1,0 +1,237 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{upquote}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Field-Theory Consistency Across Spacetime Dimension:\\
+General-Dimension Program, Gates, and Literature Anchors}
+\author{}
+\date{2026-02-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This manuscript starts Goal 1C (fields) as a general-dimension paper track.
+It does not claim full interacting closure in all dimensions.
+Instead it fixes a dimension-indexed theorem program with explicit gates:
+regulated existence, continuum existence, and reconstruction.
+Current progress includes an explicit \(d=2\) interacting closure in an ultralocal class,
+plus a \(d=3\) local-interaction scoped closure in a compact-spin Euclidean subclass.
+AN-24 removes the hard cutoff in that same branch inside a local-renormalized channel.
+The immediate next theorem step is to widen that channel from compact-support local
+classes to broader local classes.
+\end{abstract}
+
+\section{Scope}
+
+\subsection*{In scope}
+\begin{enumerate}
+\item one paper-level framework that treats \(d=2\), \(d=3\), \(d=4\), and \(d>4\) in a unified way,
+\item explicit assumptions and failure gates by dimension,
+\item source-backed baseline claims from standard literature.
+\end{enumerate}
+
+\subsection*{Out of scope}
+\begin{enumerate}
+\item claiming a fully closed interacting \(d=4\) continuum theorem in this pass,
+\item replacing constructive estimates with formal kernel language alone.
+\end{enumerate}
+
+\section{Field Setup}
+
+For a local scalar prototype on \(\mathbb{R}^d\),
+\[
+S_d[\Phi]=\int_{\mathbb{R}^d}\left[\frac12 |\nabla\Phi|^2+\frac{m^2}{2}\Phi^2+\frac{\lambda}{4!}\Phi^4\right]\,d^dx.
+\]
+At finite cutoff/volume level (symbolically \(\Lambda,a,L\)),
+\[
+\omega_{c,\Lambda,a,L}(F)=
+\frac{\int e^{-cS_{d,\Lambda,a,L}[\Phi]}F[\Phi]\,D\Phi}
+{\int e^{-cS_{d,\Lambda,a,L}[\Phi]}\,D\Phi},
+\qquad \Re c>0.
+\]
+
+\section{Three Gates (Mandatory)}
+
+For any dimension branch, the paper only upgrades to ``closed'' when all three gates are met:
+\begin{enumerate}
+\item \textbf{G1 Regulated existence}: finite cutoff and finite volume channel is well-defined.
+\item \textbf{G2 Continuum existence}: limits in cutoff/volume exist with nontrivial content.
+\item \textbf{G3 Reconstruction}: Euclidean channel maps to the intended physical QFT object class.
+\end{enumerate}
+
+\section{Dimension-Indexed Program Claim}
+
+\begin{proposition}[General-dimension program schema]
+Let \(d\ge2\). For each dimension branch \(\mathcal{B}_d\), define closure status
+\[
+\mathrm{Closed}(\mathcal{B}_d)\iff G1(\mathcal{B}_d)\wedge G2(\mathcal{B}_d)\wedge G3(\mathcal{B}_d).
+\]
+Then:
+\begin{enumerate}
+\item \(d=2\) is the first full-closure candidate branch.
+\item \(d=3\) is the next branch with superrenormalizable control targets.
+\item \(d=4\) remains a frontier branch where theorem-grade scoped statements and explicit open assumptions must be separated.
+\item \(d>4\) is treated primarily as EFT/mean-field/triviality-guided branch unless a UV-complete model class is fixed.
+\end{enumerate}
+\end{proposition}
+
+\begin{remark}
+This proposition is a program statement, not a universal theorem of existence.
+Its role is to prevent overclaiming and to force assumption-explicit upgrades.
+\end{remark}
+
+\section{Current Status by Dimension}
+
+\begin{enumerate}
+\item \textbf{\(d=2\):} scoped interacting closure is already available in an ultralocal
+\(\phi^4\) class (existence of the cylinder limit state, SD pass-through, and exact
+\(c\)-invariance in that class).
+\item \textbf{\(d=3\):} nearest-neighbor local interactions now have scoped closure in a
+compact-spin Euclidean subclass (B1-B4 + renormalized B5 input closed there), while
+hard-cutoff removal is now closed in a local-renormalized channel and class-widening remains open.
+\item \textbf{\(d=4\):} frontier branch; no full interacting closure claim is made here.
+\item \textbf{\(d>4\):} treated as EFT/triviality-guided unless a UV-complete model is fixed.
+\end{enumerate}
+
+\section{What the Current Lean Chain Supports}
+
+Machine-checked finite-model modules provide reusable inequality templates for
+small-parameter increment control and regularity bookkeeping.
+
+Current limitation:
+these modules do not by themselves discharge field-level G2/G3.
+They feed the field program only when translated into dimension-indexed bound propositions.
+
+\section{Current \(d=3\) Interacting Branch (Scoped Closure + Open Gap)}
+
+Work in the local periodic finite-volume \(\phi^4\) lattice class with nearest-neighbor coupling,
+Euclidean \(c\in[c_0,c_1]\subset(0,\infty)\), bounded local cylinders
+\(F(\phi)=f(\phi|_B)\), and local edge insertion
+\[
+G_B=\sum_{\langle x,y\rangle\in E_B}(\phi_x-\phi_y)^2.
+\]
+
+A first finite-volume estimate layer gives explicit constants
+\[
+K_F=2\|F\|_\infty,\qquad
+M_{B,a}=\frac{4|E_B|}{c_0m_0^2a^3},
+\]
+with
+\[
+|F-\omega(F)|\le K_F,\qquad \omega(G_B)\le M_{B,a},
+\]
+uniform in \(L\) and \(\kappa\in[0,\kappa_*]\).
+
+A renormalized insertion channel removes explicit \(a^{-3}\) growth from this B5b input:
+\[
+G_{B,a}^{\mathrm{ren}}:=a^3G_B,\qquad
+\omega(G_{B,a}^{\mathrm{ren}})\le M_B^{\mathrm{ren}},
+\qquad
+M_B^{\mathrm{ren}}=\frac{4|E_B|}{c_0m_0^2},
+\]
+uniform in \(a,L,\kappa\).
+
+The AN-23 compact-spin branch discharges these four obligations in one explicit
+interacting Euclidean subclass:
+\begin{itemize}
+\item \textbf{B1} uniform local moment bounds in \((a,L)\),
+\item \textbf{B2} local tightness/precompactness of cylinder marginals,
+\item \textbf{B3} denominator non-vanishing on the working \(c\)-domain,
+\item \textbf{B4} SD insertion-control pass-through to the continuum limit.
+\end{itemize}
+
+Thus the AN-22 candidate is upgraded to scoped closure in that subclass.
+AN-24 then removes the hard compact-spin cutoff \(R\to\infty\) while keeping
+B1-B4 in the local-renormalized compact-support channel.
+What remains open is widening that channel to broader local classes.
+
+\section{Literature Anchors for the Dimension Ladder}
+
+\subsection*{Reconstruction and Euclidean axioms}
+\begin{enumerate}
+\item Osterwalder--Schrader I (1973), Euclidean axioms:
+\href{https://doi.org/10.1007/BF01645738}{doi:10.1007/BF01645738}.
+\item Osterwalder--Schrader II (1975), reconstruction continuation:
+\href{https://doi.org/10.1007/BF01608978}{doi:10.1007/BF01608978}.
+\end{enumerate}
+
+\subsection*{Scale/refinement framework}
+\begin{enumerate}
+\item Wilson--Kogut (1974), renormalization-group framing:
+\href{https://doi.org/10.1016/0370-1573(74)90023-4}{doi:10.1016/0370-1573(74)90023-4}.
+\end{enumerate}
+
+\subsection*{Constructive \(d=2\) baseline}
+\begin{enumerate}
+\item Guerra--Rosen--Simon (1975), \(P(\phi)_2\) Euclidean construction:
+\href{https://doi.org/10.2307/1970985}{doi:10.2307/1970985}.
+\end{enumerate}
+
+\subsection*{\(d=4\) frontier and triviality anchors}
+\begin{enumerate}
+\item Aizenman (1981), \(\phi^4_d\) triviality/mean-field features for \(d>4\):
+\href{https://doi.org/10.1103/PhysRevLett.47.1}{doi:10.1103/PhysRevLett.47.1}.
+\item Aizenman--Duminil-Copin (2021), marginal triviality in critical \(4d\) scaling limits:
+\href{https://doi.org/10.4007/annals.2021.194.1.3}{doi:10.4007/annals.2021.194.1.3}.
+\end{enumerate}
+
+\section{Immediate Next Scientific Step}
+
+The next theorem target is:
+\begin{enumerate}
+\item extend the AN-24 compact-support local observable/test classes to broader local classes while preserving B1-B4 controls,
+\item keep the same renormalized \(d=3\) SD pass-through channel during that class extension.
+\end{enumerate}
+
+\section{Validation Contract}
+
+\subsection*{Assumptions}
+\begin{enumerate}
+\item model class and dimension branch are explicit in each statement,
+\item closure status is always reported against G1/G2/G3, never implied.
+\end{enumerate}
+
+\subsection*{Units and dimensions}
+\begin{enumerate}
+\item \(S_d\) has action dimension,
+\item phase/weight argument is dimensionless.
+\end{enumerate}
+
+\subsection*{Independent checks}
+\begin{enumerate}
+\item theorem/estimate channel (Lean where feasible, analytic where not),
+\item bibliography check against standard references above,
+\item executable finite surrogate checks:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_finite\_volume\_centered\_moment\_bound\_check.py}.
+\item renormalized-channel check:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_renormalized\_moment\_channel\_check.py}.
+\item continuum-branch proxy check:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an22\_continuum\_branch\_proxy\_check.py}.
+\item AN-23 compact-spin closure diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an23\_compact\_spin\_closure\_check.py}.
+\item AN-24 hard-cutoff lift diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an24\_cutoff\_lift\_check.py}.
+\end{enumerate}
+
+\subsection*{Confidence statement}
+This document is a theorem-program and source-anchored roadmap.
+It now includes scoped \(d=3\) closure with hard-cutoff lift in a local-renormalized channel,
+but it is not yet a full broad-class unbounded-field closure report.
+
+\section{Reproducibility Metadata}
+
+\begin{itemize}
+\item date anchor: 2026-02-09 (US),
+\item build toolchain: \texttt{/Library/TeX/texbin/pdflatex} (TeX Live 2025),
+\item safe build script:
+\texttt{\textasciitilde/.codex/skills/pdflatex-safe-build/scripts/build\_pdflatex\_safe.sh}.
+\end{itemize}
+
+\end{document}
