@@ -55,6 +55,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-multimode-quartic-firstorder.md`
 - `theorems/2026-02-09-claim1-multimode-quartic-nonperturbative-euclidean.md`
 - `theorems/2026-02-09-claim1-multimode-quartic-nonperturbative-oscillatory.md`
+- `theorems/2026-02-09-claim1-multimode-quartic-dereg-eta0.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -96,6 +97,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_multimode_quartic_firstorder_check.py`
 - `../simulations/claim1_multimode_quartic_nonperturbative_euclidean_check.py`
 - `../simulations/claim1_multimode_quartic_nonperturbative_oscillatory_check.py`
+- `../simulations/claim1_multimode_quartic_dereg_eta0_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
