@@ -1,0 +1,149 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\Cyl}{\mathrm{Cyl}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\path}[1]{\texttt{#1}}
+
+\newcommand{\TODO}[1]{\par\noindent\textbf{TODO:} #1\par}
+
+\title{From \path{conv\_patched.md} to a Research Program:\\
+Foundational Goals, Proof Targets, Work Done, and Next Steps}
+\author{}
+\date{2026-02-09 (CET)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\TODO{Write a 10--15 line abstract once the article is filled.}
+This report is the canonical ``what we are doing'' document for the
+\path{conv\_patched.md} conversation and the subsequent research carried out in this repository.
+It explains:
+(i) what was already known in the source conversation,
+(ii) what we aimed to research,
+(iii) what we expect to prove (and what counts as a proof here),
+(iv) what has been done so far (theorem notes, Lean proofs, scripts, and reports),
+and (v) how we intend to continue.
+\end{abstract}
+
+\tableofcontents
+
+\section{Reading Instructions (for Humans and Future Agents)}
+\label{sec:reading}
+
+\begin{itemize}[leftmargin=1.4em]
+\item Primary source: \path{conv\_patched.md} and its rendered companion \path{conv\_patched.pdf}.
+\item Research compass: \path{research/workspace/notes/2026-02-09-core-goal-compass.md}.
+\item Top-10 claim audit: \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
+\item Claim 1 scoped proof report: \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}.
+\item Lean proof workspace: \path{research/workspace/proofs/} (build via \path{/Users/arivero/.elan/bin/lake}).
+\end{itemize}
+
+\TODO{Add a short ``how to use this report'' paragraph after the rest is written.}
+
+\section{The Source Conversation: What Was Known and What Was Claimed}
+\label{sec:conv}
+
+\subsection{Conversation Inventory}
+\TODO{Summarize the major themes in \path{conv\_patched.md}:}
+\begin{itemize}[leftmargin=1.4em]
+\item action reduction and geometry-of-force: SR/GR/gauge central-force taxonomy,
+\item variational/distribution core: $\delta(\nabla S)$, ``delta of first variation'', and scaling channels,
+\item half-density / ``halved amplitude'' viewpoint and tangent-groupoid composition intuition,
+\item scale/refinement control: \(\tau_\mu\), Schwinger--Dyson identities, and de-regularization \(\eta\to0^+\).
+\end{itemize}
+
+\subsection{Canonical Anchors in \path{conv\_patched.md}}
+\TODO{Insert the most important line references used in later sections.}
+
+\section{Research Aims (North Star)}
+\label{sec:aim}
+
+\subsection{Goal 1 as a Three-Level Program}
+\TODO{Explain the three levels, and that half-density is optional at each level:}
+\begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
+\item statics (``0D action''): finite-dimensional oscillatory integrals and distributional localization,
+\item dynamics (QM): action integrated over a time coordinate \(t\) and discrete-time limits,
+\item fields (QFT): action integrated over spacetime coordinates with dimension-dependent existence gates.
+\end{enumerate}
+
+\subsection{Dimension-Gated Field Existence Ladder}
+\TODO{Explain why \(d=2\) is tractable, \(d=3\) is a bridge target, and \(d=4\) is the frontier.}
+
+\section{What We Expect to Prove (Proof Targets and Success Criteria)}
+\label{sec:targets}
+
+\subsection{Claim 1 (Foundational Claim)}
+\TODO{State the core Claim 1 hypothesis/claim in repository language, with a clear notion of ``proved'' vs ``scoped proof'' vs ``heuristic''.}
+
+\subsection{Auxiliary Claims (2--10)}
+\TODO{State which non-Claim-1 results are now theorem-grade and why they matter to the narrative.}
+
+\subsection{What Counts as a Proof Here}
+\TODO{Explain the validation contract: assumptions, units, symmetry, and independent cross-check paths (Lean/symbolic/numeric).}
+
+\section{What Has Been Done So Far (Artifacts and Results)}
+\label{sec:done}
+
+\subsection{Audit Results}
+\TODO{Summarize the current top-10 audit table and the current ``next'' item.}
+
+\subsection{Theorem Notes and Reports}
+\TODO{Curate the most important \path{research/workspace/notes/theorems/*.md} and \path{research/workspace/reports/*} artifacts.}
+
+\subsection{Lean Formalization (Machine-Checked Spine)}
+\TODO{Summarize the Lean modules and the logical chain they support.}
+
+\subsection{Simulation and Symbolic Checks}
+\TODO{Summarize the Python scripts used as diagnostics and cross-checks.}
+
+\section{Current Status of Claim 1 (Closed Pieces, Open Gaps)}
+\label{sec:status}
+
+\subsection{The Scoped Complete Proof and Its Scope}
+\TODO{Explain what \path{2026-02-09-claim1-scoped-complete-proof.tex} proves and what it does not.}
+
+\subsection{Statics and Dynamics: Where the Delta-of-Variation Logic Is Theorem-Grade}
+\TODO{Summarize what is proved at static and discrete-time levels, and what is conjectural in the continuum.}
+
+\subsection{Field Level: \(d=2\) Closure, \(d=3\) Bridge, \(d=4\) Obstruction}
+\TODO{Summarize \path{claim1-d2-ultralocal-phi4-closure.md}, \path{claim1-d3-intermediate-bridge-candidate.md}, and \path{claim1-d4-lift-obstruction-sheet.md}.}
+
+\section{How We Continue (Roadmap)}
+\label{sec:roadmap}
+
+\subsection{Immediate Next Targets}
+\TODO{List the next research targets in the AN queue, and how they tie back to Goal 1.}
+
+\subsection{Longer-Horizon Conjectures and Risks}
+\TODO{List key missing ingredients (tightness, reconstruction, renormalization, dimension-dependent breakdowns).}
+
+\section{Appendices}
+\label{sec:appendix}
+
+\subsection{Glossary}
+\TODO{Copy/adapt the core glossary (\path{research/workspace/notes/2026-02-09-foundational-glossary.md}) into TeX form.}
+
+\subsection{Reproducibility (Commands and Entry Points)}
+\TODO{Write the minimal commands to build Lean and run key scripts.}
+
+\subsection{File Map}
+\TODO{Provide a curated index of the most important files produced so far.}
+
+\end{document}
