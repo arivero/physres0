@@ -121,4 +121,9 @@ Scoring rule:
 51. [done] Added a dedicated field-level dimension-gated existence roadmap (regulated/continuum/reconstruction split plus \(d=2\to d=3\to d=4\) escalation).
 52. [done] Drafted AN-1 \(d=2\) field-indexed cylinder theorem candidate with explicit \(d=4\) obstruction checklist (`research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`).
 53. [done] Closed AN-1 in an explicit interacting \(d=2\) ultralocal \(\phi^4\) class (exact cylinder existence + field-level SD + \(c\)-invariance) with verification script.
-54. [next] Execute AN-2: write explicit \(d=4\) lift-obstruction sheet mapping which estimates used in AP fail or require new renormalization input once gradient coupling/local propagation is restored.
+54. [done] Executed AN-2: explicit \(d=4\) lift-obstruction sheet plus power-count diagnostic script documenting where AP assumptions fail after restoring local propagation.
+55. [done] Executed AN-3: formal half-density split (kinematic vs dynamical) with executable counterexample showing that fixed-scale algebra does not imply continuum convergence.
+56. [done] Executed AN-4: built a \(d=3\) beyond-ultralocal bridge candidate with explicit B1-B5 proof obligations and a weak-coupling toy scan.
+57. [done] Executed AN-5: proved a quantitative small-\(\kappa\) Lipschitz-type bound in the finite-dimensional surrogate and mapped it to B5 in the \(d=3\) bridge note.
+58. [done] Executed AN-6: Lean + mathlib workspace added; \(c\)-invariance and small-\(\kappa\) prototype core formalized in machine-checked modules.
+59. [next] Execute AN-7: prove a Lean lemma matching the covariance-derivative control pattern used in AN-5 (an abstract finite-probability inequality bridge toward measure-level control).

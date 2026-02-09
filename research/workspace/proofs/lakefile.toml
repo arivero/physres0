@@ -1,0 +1,15 @@
+name = "claim1lean"
+version = "0.1.0"
+defaultTargets = ["claim1lean"]
+
+[[lean_lib]]
+name = "Claim1lean"
+
+[[lean_exe]]
+name = "claim1lean"
+root = "Main"
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.27.0"

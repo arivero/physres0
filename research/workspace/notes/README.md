@@ -20,6 +20,23 @@ This folder stores analysis artifacts derived from source documents.
   - label per claim (`proved`, `heuristic`, `speculative`),
   - next step to upgrade rigor.
 - For Python commands in this repository, always call `python3.12` explicitly.
+- Verification priority:
+  - first Lean formalization when feasible,
+  - then symbolic proof support,
+  - numerical checks as fallback/complement.
+
+## Lean Toolchain
+
+- Lean/Lake path:
+  - `/Users/arivero/.elan/bin/lean`
+  - `/Users/arivero/.elan/bin/lake`
+- Workspace:
+  - `../proofs/`
+- Update deps:
+  - `cd research/workspace/proofs && /Users/arivero/.elan/bin/lake update`
+- Build targeted formal modules:
+  - `cd research/workspace/proofs && /Users/arivero/.elan/bin/lake build Claim1lean.CInvariant`
+  - `cd research/workspace/proofs && /Users/arivero/.elan/bin/lake build Claim1lean.SmallKappaLipschitz`
 
 ## TeX Toolchain
 
@@ -63,6 +80,11 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 - `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 - `theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md`
+- `theorems/2026-02-09-claim1-d4-lift-obstruction-sheet.md`
+- `theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md`
+- `theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
+- `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
+- `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -109,6 +131,10 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_groupoid_tau_sd_dependency_check.py`
 - `../simulations/claim1_continuum_c_invariant_sd_candidate_check.py`
 - `../simulations/claim1_d2_ultralocal_phi4_closure_check.py`
+- `../simulations/claim1_d4_lift_powercount_check.py`
+- `../simulations/claim1_halfdensity_kinematic_dynamic_split_check.py`
+- `../simulations/claim1_d3_bridge_toy_coupling_scan.py`
+- `../simulations/claim1_d3_lipschitz_prototype_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -136,6 +162,11 @@ This folder stores analysis artifacts derived from source documents.
 - `../reports/2026-02-09-newton-action-path-integral-lecture.html`
 - `../reports/2026-02-09-newton-action-path-integral-lecture.pdf`
 
+## Current Lean Proofs
+
+- `../proofs/Claim1lean/CInvariant.lean`
+- `../proofs/Claim1lean/SmallKappaLipschitz.lean`
+
 ## Supplemental Audit Notes
 
 - `audits/2026-02-08-point-supported-distribution-scaling-subclaims.md`
@@ -148,3 +179,8 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 - `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 - `theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md`
+- `theorems/2026-02-09-claim1-d4-lift-obstruction-sheet.md`
+- `theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md`
+- `theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
+- `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
+- `theorems/2026-02-09-claim1-lean-formalization-status.md`

@@ -9,6 +9,11 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 - `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 - `theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md`
+- `theorems/2026-02-09-claim1-d4-lift-obstruction-sheet.md`
+- `theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md`
+- `theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
+- `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
+- `theorems/2026-02-09-claim1-lean-formalization-status.md`
 
 ## North Star
 
@@ -32,6 +37,7 @@ and connect that emergence to geometric descriptions of forces.
 1. Keep Goal 1 explicitly three-level: statics \(\to\) dynamics \(\to\) fields, with half-density optional at each level and assumptions stated branchwise.
 2. For field level, enforce a dimension-indexed existence program (\(d=2\), then \(d=3\), then \(d=4\) frontier) instead of a dimension-blind continuum claim.
 3. Promote the Claim 1 continuum candidate to a closed non-Gaussian theorem in one field-compatible class, with explicit statement of why the same proof does or does not lift to \(d=4\).
+4. Use Lean-first verification for core reusable lemmas (\(c\)-invariance, small-\(\kappa\) control, covariance bounds), keeping numerical checks as complement.
 
 ## Progress (This Pass)
 
@@ -45,6 +51,11 @@ and connect that emergence to geometric descriptions of forces.
 - Field execution map completed (Phase AN): dimension-gated field existence roadmap with concrete next deliverables (AN-1/AN-2/AN-3).
 - Field bridge draft completed (Phase AO): first \(d=2\) field-indexed Claim 1 candidate with explicit \(d=4\) obstruction checklist.
 - Field theorem closure completed (Phase AP): closed \(d=2\) interacting ultralocal \(\phi^4\) field-level Claim 1 theorem (existence + SD + \(c\)-invariance).
+- Lift-gap analysis completed (Phase AQ): explicit \(d=4\) obstruction sheet mapping why AP does not auto-lift once local propagation is restored.
+- Formal split completed (Phase AR): half-density claims separated into kinematic algebraic truths vs dynamical continuum-existence gates.
+- Intermediate rung drafted (Phase AS): \(d=3\) beyond-ultralocal bridge candidate with explicit closure obligations B1-B5.
+- Quantitative bridge step completed (Phase AT): proved a small-\(\kappa\) Lipschitz prototype estimate (B5 surrogate) for a nearest-neighbor finite-dimensional model.
+- Formal verification ramp completed (Phase AU): Lean workspace with mathlib integrated; \(c\)-invariance and small-\(\kappa\) Lipschitz core lemmas are machine-checked.
 
 ## De-Prioritized Unless Supporting North Star
 

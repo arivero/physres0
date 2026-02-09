@@ -21,6 +21,7 @@ This setup is intentionally free wheeling in exploration style, but strict in va
 - keep conceptual and executable artifacts clearly separated,
 - require dimensional, numerical, and known result checks before accepting claims,
 - prioritize centaur workflows (human + tool assisted agent loops).
+- when a statement is formalizable in Lean within reasonable effort, prioritize Lean proof over numeric-only validation.
 
 ## External Reality Check (Recent, Date Anchored)
 
@@ -66,6 +67,12 @@ Every technical output must include:
 
 If any check fails, the claim is marked "unverified" and not promoted as a result.
 
+Preference order for new Claim 1 results:
+
+1. Lean proof (`research/workspace/proofs`) when feasible,
+2. symbolic derivation support,
+3. numerical checks.
+
 ## Domain Checklists
 
 ### Quantum Theory
@@ -91,6 +98,9 @@ If any check fails, the claim is marked "unverified" and not promoted as a resul
 Primary setup and folders are in `research/README.md`.
 Package baseline is in `research/requirements.txt`.
 Reading program and project ideas are in `research/books-and-ideas.md`.
+Lean toolchain (installed):
+- `/Users/arivero/.elan/bin/lean`
+- `/Users/arivero/.elan/bin/lake`
 
 ## Mandatory Hidden Notes Preload
 
@@ -104,8 +114,14 @@ At session start (or after a context reset), read in this order:
 4. `research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 5. `research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 6. `research/workspace/notes/theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md`
-7. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
-8. `research/workspace/notes/README.md`
+7. `research/workspace/notes/theorems/2026-02-09-claim1-d4-lift-obstruction-sheet.md`
+8. `research/workspace/notes/theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md`
+9. `research/workspace/notes/theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
+10. `research/workspace/notes/theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
+11. `research/workspace/notes/theorems/2026-02-09-claim1-lean-formalization-status.md`
+12. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
+13. `research/workspace/notes/README.md`
+14. `research/workspace/proofs/README.md`
 
 Minimum extraction requirement:
 
@@ -113,5 +129,6 @@ Minimum extraction requirement:
 2. current Claim 1 status/score and open gap,
 3. glossary definitions for `c-invariant`, `tau_mu`, and `de-regularization`,
 4. current field-level dimension ladder (`d=2`, `d=3`, `d=4` frontier) and next AN deliverable from the field roadmap note.
+5. current Lean proof status and next Lean target from the Lean formalization status note.
 
 If any of these files are not read, mark output as incomplete and do not start new theorem work.
