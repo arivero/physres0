@@ -32,6 +32,7 @@ and connect that emergence to geometric descriptions of forces.
 - Follow-up completed (Phase AI): consolidated lecture manuscript "Newton -> action -> path integral" with explicit dependency graph.
 - Priority 3 completed (Phase AJ): tangent-groupoid/\(\tau_\mu\)/Schwinger-Dyson dependency sheet.
 - Integration completed (Phase AK): \(c\)-invariance dependency logic wired into the scoped Claim 1 manuscript.
+- Frontier step completed (Phase AL): first explicit continuum-limit theorem candidate using the \(c\)-invariance backbone.
 
 ## De-Prioritized Unless Supporting North Star
 

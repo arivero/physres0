@@ -58,6 +58,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-multimode-quartic-dereg-eta0.md`
 - `theorems/2026-02-09-foundational-action-reduction-unification.md`
 - `theorems/2026-02-09-claim1-groupoid-tau-sd-dependency-sheet.md`
+- `theorems/2026-02-09-claim1-continuum-c-invariance-candidate.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -102,6 +103,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_multimode_quartic_dereg_eta0_check.py`
 - `../simulations/foundation_action_reduction_unification_check.py`
 - `../simulations/claim1_groupoid_tau_sd_dependency_check.py`
+- `../simulations/claim1_continuum_c_invariant_sd_candidate_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
