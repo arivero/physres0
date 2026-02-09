@@ -151,8 +151,18 @@ across scales forces nontrivial structure (a surviving finite deformation parame
 \label{sec:aim}
 
 \subsection{Goal 1 as a Three-Level Program}
-\textbf{Primary articulation.}
-Goal~1 was locked in \path{research/workspace/notes/theorems/2026-02-09-claim1-three-level-program.md}:
+Goal~1 is the foundational target of this repository. It is intentionally framed as a three-level escalation
+because the same conceptual object changes character as the ambient dimension changes:
+in statics we can literally write down distributions like \(\delta(f')\); in mechanics we can discretize time
+to obtain honest finite-dimensional deltas \(\delta(\nabla S_N)\); in fields we have to confront a genuinely
+infinite-dimensional limit problem with dimension-dependent existence and renormalization behavior.
+
+The program is pinned to \path{research/workspace/notes/theorems/2026-02-09-claim1-three-level-program.md}.
+The level separation is not rhetorical; it is the main mechanism for preventing over-claims.
+\emph{Half-density language is optional at every level:} it is structurally useful for composition statements,
+but it is not accepted as a substitute for the dynamical work needed to pass to continuum limits.
+
+The three levels are:
 \begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
 \item \textbf{Statics (0D action):}
   prototype object \(\delta(f'(x))\), and stationary-phase control of the halved amplitude
@@ -172,21 +182,30 @@ Goal~1 was locked in \path{research/workspace/notes/theorems/2026-02-09-claim1-t
 \end{enumerate}
 
 \subsection{Dimension-Gated Field Existence Ladder}
-\textbf{Roadmap lock.}
-Field-level work is dimension-indexed by design:
+The field-level part of the program is explicitly dimension-gated. This is not just ``because physics is \(3+1\)'',
+but because the analytic existence theory is dimension-sensitive: the same local interaction can be benign in one
+dimension and critical or ill-behaved in another. The repository therefore treats \(d\) as a first-class index in
+every field-level statement, and it separates three notions of ``existence'' (regulated, continuum, reconstruction)
+before any claim is allowed to upgrade to ``field-level closure''.
+
+The roadmap is pinned to \path{research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md}.
+In that roadmap, field-level work is dimension-indexed by design:
 \begin{itemize}[leftmargin=1.4em]
 \item \(d=2\): strongest closure candidate; we closed an interacting ultralocal \(\phi^4\) field-indexed theorem (AP).
 \item \(d=3\): intermediate bridge rung; candidate theorem stated with explicit proof obligations B1--B5 (AS).
 \item \(d=4\): physically central frontier; explicit lift-obstruction sheet enumerates missing inputs (AQ).
 \end{itemize}
 
-\textbf{Existence notions.}
 At the field level, we separate:
 \begin{enumerate}[label=(\roman*),leftmargin=1.8em]
 \item regulated existence (finite cutoff objects),
 \item continuum existence (regulator removal with nontrivial limit),
 \item physical reconstruction (Euclidean-to-Minkowski, or equivalent).
 \end{enumerate}
+
+The main pragmatic consequence is that \(d=2\) results are treated as a closure target for the \emph{logic} of Claim~1
+in an interacting class, \(d=3\) results are treated as the next bridge rung where local propagation is reintroduced,
+and \(d=4\) results are treated as a frontier where one must explicitly account for renormalization and nontriviality.
 
 \section{What We Expect to Prove (Proof Targets and Success Criteria)}
 \label{sec:targets}
