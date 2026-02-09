@@ -24,6 +24,7 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-derivative-bound.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-increment-bound.md`
 
 ## North Star
 
@@ -76,10 +77,11 @@ and connect that emergence to geometric descriptions of forces.
 - Lean finite-model derivative bridge completed (Phase BC): finite exponential-family parameter-derivative lemmas machine-checked (`N'=-A`, `Z'=-B`) to discharge AN-7 derivative hypotheses in a concrete scoped class.
 - Lean finite-model representation bridge completed (Phase BD): centered covariance representation for the finite exponential-family ratio state machine-checked in weighted and normalized-weight forms.
 - Lean finite-model derivative bound completed (Phase BE): model-internal \(|\omega'|\) bounds machine-checked from BD representation without external representation hypotheses.
+- Lean finite-model increment bound completed (Phase BF): AN-10-style interval `Cκ` theorem machine-checked for the finite exponential family under explicit uniform interval assumptions.
 
 ## Next Active Target
 
-- Phase BF (AN-17): formalize an interval-increment corollary specialized to the finite exponential family, using BE derivative bounds under explicit uniform-on-interval assumptions.
+- Phase BG (AN-18): formalize automatic regularity assumptions for the finite exponential family (global differentiability and non-vanishing `Z`) so BF hypotheses collapse to minimal model-data bounds.
 
 ## De-Prioritized Unless Supporting North Star
 

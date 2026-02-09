@@ -10,3 +10,4 @@ import Claim1lean.RatioStateIncrementBound
 import Claim1lean.FiniteExponentialFamilyDeriv
 import Claim1lean.FiniteExponentialRepresentation
 import Claim1lean.FiniteExponentialDerivativeBound
+import Claim1lean.FiniteExponentialIncrementBound

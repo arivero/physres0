@@ -29,6 +29,9 @@ Provide a compact module-level map from Lean results (AU→BA) to the \(d=3\) B5
      \((A/Z)-\omega(B/Z)\).
 9. `Claim1lean/FiniteExponentialDerivativeBound.lean` (BE)
    - finite exponential-family model-internal derivative bounds for \(\omega=N/Z\).
+10. `Claim1lean/FiniteExponentialIncrementBound.lean` (BF)
+   - finite exponential-family AN-10-style interval `Cκ` theorem under explicit
+     uniform interval assumptions.
 
 ## Mapping to B5 Obligations (Phase AS)
 
@@ -44,14 +47,15 @@ Lean coverage now:
 3. boundary/interior technical glue for interval domain: covered (AZ/BA),
 4. derivative hypotheses from concrete finite exponential models: covered (BC),
 5. centered representation side from concrete finite exponential models: covered (BD),
-6. model-specific derivative bound corollaries from concrete finite exponential models: covered (BE).
+6. model-specific derivative bound corollaries from concrete finite exponential models: covered (BE),
+7. model-specific interval-increment `Cκ` corollary from concrete finite exponential models: covered (BF).
 
 ## Next Missing Machine-Checked Ingredient
 
 Still missing for direct B5 closure in a field-like class:
 
-1. a Lean interval-increment corollary specialized to the finite exponential
-   class that imports BE derivative control over \([0,\kappa]\) into AN-10-style
-   `Cκ` bounds (AN-17 target).
+1. Lean closure of BF side-assumptions from intrinsic finite-model structure
+   (automatic differentiability and `Z` non-vanishing), so only core centered
+   and moment controls remain (AN-18 target).
 
 This is the next formal target.

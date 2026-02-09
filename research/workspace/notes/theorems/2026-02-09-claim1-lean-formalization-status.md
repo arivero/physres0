@@ -50,6 +50,9 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
 9. `Claim1lean/FiniteExponentialDerivativeBound.lean`
    - combines AN-14 derivative bridge and AN-15 centered representation in a concrete model class,
    - proves model-internal \(|\omega'|\) bounds (general weighted-absolute and centered-\(K\) forms).
+10. `Claim1lean/FiniteExponentialIncrementBound.lean`
+   - combines AN-16 derivative control with AN-10 interval machinery,
+   - proves finite exponential-family `Cκ` interval-increment control under explicit uniform interval assumptions.
 
 ## Relation to Current Claim 1 Queue
 
@@ -59,11 +62,12 @@ These formalizations support:
 2. the AN-5 B5-prototype inequality pattern (small-\(\kappa\) Lipschitz step),
 3. the AN-14 finite-dimensional derivative-under-sum bridge from concrete model assumptions to AN-7 hypotheses,
 4. the AN-15 finite-dimensional centered-representation bridge from concrete model assumptions to AN-9 representation side,
-5. the AN-16 model-internal derivative-bound corollary for the finite exponential family.
+5. the AN-16 model-internal derivative-bound corollary for the finite exponential family,
+6. the AN-17 model-internal interval-increment `Cκ` corollary for the finite exponential family.
 
 ## Next Lean Target (Queued)
 
-AN-17: formalize an interval-increment corollary specialized to the finite exponential family, lifting AN-16 derivative bounds into AN-10-style `Cκ` control under explicit uniform-on-interval hypotheses.
+AN-18: formalize automatic regularity assumptions for the finite exponential family (global differentiability and non-vanishing `Z`) so AN-17 hypotheses reduce to minimal model-data bounds.
 
 ## Validation Priority (Locked)
 
@@ -86,4 +90,5 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialFamilyDeriv
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialRepresentation
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialDerivativeBound
+/Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialIncrementBound
 ```
