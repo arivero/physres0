@@ -16,7 +16,12 @@ subclass; AN-24 removes the hard cutoff in a local-renormalized channel, and
 AN-26 plus AN-26B close SD test-side \(C_b^1\) extension with explicit
 tail-control and insertion-moment verification in-branch. AN-27 then transfers
 the widened local class to the oscillatory/de-regularized branch under
-explicit non-vanishing and contour-envelope hypotheses.
+explicit non-vanishing and contour-envelope hypotheses. AN-28 extends that
+branch to disconnected nonlocal cylinders, and AN-29 adds explicit
+refinement-Cauchy rates plus denominator bookkeeping for their continuum
+extraction in the same scoped lane. AN-30 extends this further to finite
+graph-indexed multi-block families with explicit combinatorial constants and
+projective-consistency closure.
 
 ## Scope
 
@@ -105,6 +110,11 @@ local-renormalized compact-support channel.
 AN-25 closes observable-side widening \(C_c\to C_b\).
 AN-26 + AN-26B close SD test-side widening \(C_c^1\to C_b^1\) by combining the
 Holder/Markov tail criterion with an explicit \(q=4/3\) insertion-moment bound.
+AN-27 transfers this widened class to the oscillatory/de-regularized branch.
+AN-28/AN-29 then extend to disconnected nonlocal cylinders with explicit
+refinement-Cauchy and denominator-rate control in that same scoped branch.
+AN-30 upgrades this to finite graph-indexed multi-block families with explicit
+combinatorial rates and projective consistency in the refinement limit.
 
 ## Literature Anchors
 
@@ -117,9 +127,10 @@ Holder/Markov tail criterion with an explicit \(q=4/3\) insertion-moment bound.
 
 ## Immediate Next Scientific Step
 
-1. extend AN-27 from strictly local blocks to a first nonlocal-cylinder
-   observable family (AN-28) in the same \(d=3\) channel,
-2. keep non-vanishing/envelope assumptions explicit while widening this scope.
+1. extend AN-30 from finite graph-indexed families to uniformly locally finite
+   exhaustion families (AN-31),
+2. keep summability-weighted combinatorial constants explicit while preserving
+   projective-consistency bookkeeping across exhaustion levels.
 
 ## Validation Contract
 
@@ -139,12 +150,17 @@ Holder/Markov tail criterion with an explicit \(q=4/3\) insertion-moment bound.
      - `python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an26_tail_insertion_control_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an26b_insertion_lq_moment_check.py`,
-     - `python3.12 research/workspace/simulations/claim1_d3_an27_oscillatory_dereg_transfer_check.py`.
+     - `python3.12 research/workspace/simulations/claim1_d3_an27_oscillatory_dereg_transfer_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an28_nonlocal_cylinder_transfer_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an29_nonlocal_continuum_cauchy_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an30_multiblock_projective_consistency_check.py`.
 4. **Confidence statement:** this is a theorem-program with scoped \(d=3\)
    closure plus hard-cutoff lift and AN-25/AN-26/AN-26B class-extension closure
    in a scoped Euclidean branch; AN-27 closes oscillatory/de-regularized
-   transfer in that scoped branch under explicit assumptions. Full nonlocal and
-   global continuum interacting closure remains open.
+   transfer, AN-28/AN-29 extend this to disconnected nonlocal cylinders with
+   explicit refinement-Cauchy bookkeeping, and AN-30 extends further to finite
+   graph-indexed multi-block projective consistency with explicit combinatorial
+   constants. Full global continuum interacting closure remains open.
 
 ## Reproducibility Metadata
 

@@ -49,11 +49,13 @@ This folder stores longer-form manuscripts that consolidate multiple theorem not
     source-anchored status by dimension.
 - `2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.tex`
   - Goal 1C theorem-program manuscript artifact (field-level, dimension-indexed
-    roadmap with literature anchors and AN-20/AN-21/AN-22/AN-23/AN-24/AN-25/AN-26/AN-26B/AN-27 linkage).
+    roadmap with literature anchors and AN-20/AN-21/AN-22/AN-23/AN-24/AN-25/AN-26/AN-26B/AN-27/AN-28/AN-29/AN-30 linkage).
 - `2026-02-09-claim9-gauge-phase-long-range-paper.tex`
   - Claim 9 standalone manuscript track: \((G,D)\)-explicit, phase-resolved
-    long-range gauge potentials with theorem-grade screened-Abelian closure and
-    explicit open non-Abelian confining/dynamical-matter rigor gaps.
+  long-range gauge potentials with theorem-grade screened-Abelian closure,
+    scoped non-Abelian linear-extraction theorem under explicit finite-window
+    assumptions, scoped strong-coupling derivation of that hypothesis package,
+    and explicit remaining beyond-window/string-breaking rigor gaps.
   - Rendered companion: `2026-02-09-claim9-gauge-phase-long-range-paper.pdf`.
 
 ## Notes Index

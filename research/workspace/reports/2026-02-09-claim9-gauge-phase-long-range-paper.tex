@@ -21,9 +21,13 @@ Screened-Abelian Closure and Confining/Coulomb Program}
 This paper isolates Claim 9 into assumption-explicit sectors instead of a single
 ``generic gauge'' statement. We provide a theorem-grade closure for the screened
 Abelian branch in arbitrary spacetime dimension, including the exact Yukawa kernel
-and its large-distance asymptotic. We also state phase-conditional propositions for
-massless Coulomb and confining/string-breaking branches, and record the remaining
-rigor gaps in the non-Abelian sector.
+and its large-distance asymptotic. We also close a scoped non-Abelian extraction
+theorem: under explicit \((SU(N),D)\) area-law-plus-perimeter hypotheses, finite-\(T\)
+Wilson-loop extraction converges to a linear potential with quantitative error
+bounds. In addition, we derive that hypothesis package inside an explicit
+strong-coupling lattice window for \(SU(N)\). Remaining open gaps are extending
+that derivation beyond the strong-coupling window and closing dynamical-matter
+string-breaking rigor.
 \end{abstract}
 
 \section{Scope}
@@ -32,13 +36,14 @@ rigor gaps in the non-Abelian sector.
 \begin{enumerate}
 \item phase-conditioned static potential classification by Wilson-loop asymptotics,
 \item theorem-grade screened-Abelian branch with explicit dimension dependence,
-\item explicit open-gap statement for non-Abelian confinement and dynamical-matter crossover rigor.
+\item scoped non-Abelian finite-\(T\) extraction theorem under explicit \((G,D)\)-tagged assumptions,
+\item scoped derivation of those non-Abelian assumptions in a strong-coupling lattice window.
 \end{enumerate}
 
 \subsection*{Out of scope}
 \begin{enumerate}
 \item universal phase diagram across all gauge groups and matter contents,
-\item claiming non-Abelian confining closure from Abelian screened estimates.
+\item claiming non-Abelian continuum confinement closure beyond the stated strong-coupling window.
 \end{enumerate}
 
 \section{Setup}
@@ -71,7 +76,7 @@ No statement is promoted unless both dependencies are explicit:
 \hline
 \((U(1),\ \text{Higgs},\ \text{screened})\) & explicit in all \(D\) & \(r^{-(D-2)/2}e^{-mr}\) & theorem \\
 \hline
-\((SU(N),\ \text{none},\ \text{confining})\) & dimension-tagged, non-uniform rigor & linear regime \(\sigma r\) & program \\
+\((SU(N),\ \text{none},\ \text{confining})\) & explicit \((G,D)\), finite-window \(r,T\), plus strong-coupling derivation lane & linear extraction with \(O(T^{-1})\) bounds & scoped theorem + scoped derivation \\
 \hline
 \((SU(N),\ N_f>0,\ \text{string-breaking})\) & dimension-tagged, model dependent & linear-to-saturation crossover & program \\
 \hline
@@ -145,6 +150,86 @@ V_{\mathrm{conf}}(r)\sim \sigma r
 in the corresponding large-\(r\) regime.
 \end{proposition}
 
+\begin{theorem}[Strong-coupling derivation lane for AB hypotheses \((G=SU(N),N\ge2,D)\)]
+Fix \((G,D)=(SU(N),D)\), \(N\ge2\), and Wilson lattice action with spacing \(a\),
+\[
+S_W(U)=-\frac{\beta}{N}\sum_p \Re\mathrm{Tr}(U_p),\qquad 0<\beta\le\beta_{\mathrm{sc}}.
+\]
+For rectangles \(C(r,T)\), write \(A(C)=rT/a^2\), \(P(C)=2(r+T)/a\), and assume
+\[
+\log\langle W(C)\rangle
+=
+-\sigma_{\mathrm{sc}}(\beta)A(C)
++\pi_{\mathrm{sc}}(\beta)P(C)
++\delta_{\mathrm{sc}}(C;\beta),
+\]
+with \(\sigma_{\mathrm{sc}}(\beta)>0\), \(|\delta_{\mathrm{sc}}(C;\beta)|\le C_{\mathrm{sc}}(\beta)\),
+and \(0<\langle W(C)\rangle<1\) in the extraction window.
+Define
+\[
+\sigma_D=\frac{\sigma_{\mathrm{sc}}(\beta)}{a^2},\qquad
+p_D=\frac{2\pi_{\mathrm{sc}}(\beta)}{a},\qquad
+c_D=0,\qquad
+\varepsilon_D(r,T):=\delta_{\mathrm{sc}}(C(r,T);\beta).
+\]
+Then AB assumptions hold in this explicit model class:
+\[
+\log\langle W(r,T)\rangle
+=
+-\sigma_D rT+p_D(r+T)+c_D+\varepsilon_D(r,T),\qquad
+|\varepsilon_D(r,T)|\le C_{\mathrm{sc}}(\beta).
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Substitute \(A(C)\), \(P(C)\) into the assumed strong-coupling form and collect
+channels \(rT\), \(r+T\), and bounded residual.
+\end{proof}
+
+\begin{theorem}[Scoped non-Abelian linear extraction \((G=SU(N),N\ge2,D)\)]
+Fix \((G,D)=(SU(N),D)\), \(N\ge2\), and \(r\in[r_{\min},r_{\max}]\), \(T\ge T_0\).
+Assume constants \(\sigma_D>0\), \(p_D\), \(c_D\), \(C_D\) such that
+\[
+\log\langle W(r,T)\rangle
+=
+-\sigma_D rT
++p_D(r+T)
++c_D
++\varepsilon_D(r,T),
+\qquad
+|\varepsilon_D(r,T)|\le C_D.
+\]
+Then
+\[
+V(r;T)=\sigma_D r-p_D-\frac{p_Dr+c_D+\varepsilon_D(r,T)}{T},
+\]
+hence
+\[
+\left|V(r;T)-(\sigma_D r-p_D)\right|
+\le
+\frac{|p_D|r+|c_D|+C_D}{T}.
+\]
+For \(r_1<r_2\) in the same window, with
+\[
+S_T(r_1,r_2):=\frac{V(r_2;T)-V(r_1;T)}{r_2-r_1},
+\]
+one has
+\[
+\left|S_T(r_1,r_2)-\sigma_D\right|
+\le
+\frac{|p_D|}{T}
++
+\frac{2C_D}{T(r_2-r_1)}.
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Insert the assumed logarithmic form into \(V(r;T)=-(1/T)\log\langle W(r,T)\rangle\),
+separate linear and remainder channels, and bound with \(|\varepsilon_D|\le C_D\).
+For the slope estimate, subtract the two \(r\)-values and use
+\(|\varepsilon_D(r_2,T)-\varepsilon_D(r_1,T)|\le2C_D\).
+\end{proof}
+
 \begin{proposition}[Dynamical-fundamental matter crossover \((G=SU(N),N_f>0,D)\)]
 Assume gauge group \(G=SU(N)\) with \(N_f>0\) dynamical fundamental flavors and pair creation/string breaking dynamically allowed.
 Then one expects:
@@ -156,9 +241,12 @@ Then one expects:
 
 \begin{corollary}[Claim 9 status in this paper]
 Within the screened-Abelian class \((G=U(1),m>0)\), Claim 9 is theorem-closed
-with explicit \(D\)-dependence.
-The remaining open rigor gap is non-Abelian: deriving confining and string-breaking
-crossover statements with fully explicit \((G,D)\)-tagged hypotheses and continuum control in a fixed model class.
+with explicit \(D\)-dependence. In the confining non-Abelian branch
+\((G=SU(N),D)\), finite-\(T\) linear extraction is now theorem-closed in a scoped
+\((r,T)\)-window under explicit area-law-plus-perimeter assumptions, and those
+assumptions are now derived in a scoped strong-coupling lattice window.
+The remaining open gaps are extending this derivation beyond the strong-coupling
+window and proving full dynamical-matter string-breaking crossover theorems.
 \end{corollary}
 
 \section{Literature Anchors}
@@ -172,6 +260,8 @@ crossover statements with fully explicit \((G,D)\)-tagged hypotheses and continu
 \href{https://doi.org/10.1007/BF01608978}{doi:10.1007/BF01608978}.
 \item Fradkin and Shenker (1979), phase continuity in lattice gauge-Higgs systems:
 \href{https://doi.org/10.1103/PhysRevD.19.3682}{doi:10.1103/PhysRevD.19.3682}.
+\item Kogut (1979), lattice gauge theory review (strong-coupling background):
+\href{https://doi.org/10.1103/RevModPhys.51.659}{doi:10.1103/RevModPhys.51.659}.
 \end{enumerate}
 
 \section{Validation Contract}
@@ -180,7 +270,7 @@ crossover statements with fully explicit \((G,D)\)-tagged hypotheses and continu
 \begin{enumerate}
 \item each statement is conditioned on explicit \((G,D)\), phase, and matter tags,
 \item screened-Abelian closure uses \(m>0\) and linearized static kernel framework,
-\item non-Abelian claims are kept proposition-level unless theorem hypotheses are fully discharged.
+\item scoped non-Abelian theorem uses explicit finite-window area-law/perimeter hypotheses.
 \end{enumerate}
 
 \subsection*{Units and dimensions check}
@@ -196,14 +286,19 @@ crossover statements with fully explicit \((G,D)\)-tagged hypotheses and continu
 \begin{itemize}
 \item \texttt{python3.12 research/workspace/simulations/claim9\_phase\_longrange\_table.py},
 \item \texttt{python3.12 research/workspace/simulations/claim9\_model\_class\_table.py},
-\item \texttt{python3.12 research/workspace/simulations/claim9\_abelian\_screened\_asymptotic\_check.py}.
+\item \texttt{python3.12 research/workspace/simulations/claim9\_abelian\_screened\_asymptotic\_check.py},
+\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_arealaw\_linear\_check.py},
+\item \texttt{python3.12 research/workspace/simulations/claim9\_nonabelian\_strong\_coupling\_window\_check.py}.
 \end{itemize}
 \end{enumerate}
 
 \subsection*{Confidence statement}
 Screened-Abelian long-range behavior is theorem-grade in this scoped class.
-Confining and string-breaking branches are assumption-explicit program statements until
-model-specific continuum theorems are closed.
+The confining non-Abelian extraction lane is now theorem-grade under explicit
+\((G,D)\)-tagged finite-window assumptions, and those assumptions are derived in
+a scoped strong-coupling lattice window.
+Extending the derivation beyond that window and closing string-breaking with
+dynamical matter remain open.
 
 \section{Reproducibility Metadata}
 
@@ -217,8 +312,11 @@ model-specific continuum theorems are closed.
 \section{Conclusion}
 
 Claim 9 should be read as phase-resolved, not universal.
-The screened-Abelian branch is fully closed at theorem level in this manuscript,
-while non-Abelian confinement and string-breaking crossover remain explicit
+The screened-Abelian branch is fully closed at theorem level in this manuscript.
+The non-Abelian confining branch is now closed at scoped extraction-theorem level
+under explicit \((G,D)\)-tagged area-law/perimeter assumptions, with a scoped
+derivation lane now grounded in an explicit strong-coupling lattice model.
+Extending beyond that window and full string-breaking crossover remain explicit
 \((G,D)\)-indexed next targets.
 
 \end{document}

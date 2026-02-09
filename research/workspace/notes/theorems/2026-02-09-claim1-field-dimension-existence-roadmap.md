@@ -86,7 +86,9 @@ Program stance:
 15. **AN-26B (done):** verified AN-26 insertion \(L^q\)-moment hypothesis (with explicit \(q=4/3\) bound) in `research/workspace/notes/theorems/2026-02-09-claim1-d3-insertion-lq-moment-verification.md`.
 16. **AN-27 (done):** transferred the widened local class to oscillatory/de-regularized branch in the same \(d=3\) lane in `research/workspace/notes/theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`.
 17. **AN-28 (done):** extended the AN-27 branch from strictly local blocks to a first nonlocal-cylinder observable family in `research/workspace/notes/theorems/2026-02-09-claim1-d3-an28-nonlocal-cylinder-transfer.md`.
-18. **AN-29 (next):** extract continuum/refinement control for AN-28 nonlocal cylinders with explicit Cauchy rates and denominator bookkeeping across scales.
+18. **AN-29 (done):** extracted continuum/refinement control for AN-28 nonlocal cylinders with explicit Cauchy rates and denominator bookkeeping across scales in `research/workspace/notes/theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`.
+19. **AN-30 (done):** extended AN-29 from fixed two-block families to finite graph-indexed multi-block nonlocal cylinders with explicit combinatorial constants and projective-consistency bookkeeping in `research/workspace/notes/theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`.
+20. **AN-31 (next):** extend AN-30 from finite graph-indexed families to uniformly locally finite exhaustion families with summability-weighted combinatorial constants.
 
 ## Non-Drift Rule
 
