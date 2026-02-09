@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Last updated: 2026-02-08 (US date)
+Last updated: 2026-02-09 (US date)
 
 ## Mission
 
@@ -91,3 +91,22 @@ If any check fails, the claim is marked "unverified" and not promoted as a resul
 Primary setup and folders are in `research/README.md`.
 Package baseline is in `research/requirements.txt`.
 Reading program and project ideas are in `research/books-and-ideas.md`.
+
+## Mandatory Hidden Notes Preload
+
+These notes are easy to miss and must be loaded before nontrivial work.
+
+At session start (or after a context reset), read in this order:
+
+1. `research/workspace/notes/2026-02-09-core-goal-compass.md`
+2. `research/workspace/notes/2026-02-09-foundational-glossary.md`
+3. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
+4. `research/workspace/notes/README.md`
+
+Minimum extraction requirement:
+
+1. current `next` item in the audit plan,
+2. current Claim 1 status/score and open gap,
+3. glossary definitions for `c-invariant`, `tau_mu`, and `de-regularization`.
+
+If any of these files are not read, mark output as incomplete and do not start new theorem work.

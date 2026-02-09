@@ -11,6 +11,15 @@ Depends on:
 
 Provide a first explicit continuum-limit theorem candidate (beyond finite-dimensional truncations) that uses the \(c\)-invariance backbone.
 
+## Terminology
+
+In this note, `c-invariant` means:
+any quantity unchanged when \((\kappa,\eta,h)\) are changed with
+\[
+c=(\eta-i/h)\kappa
+\]
+held fixed (equivalently unchanged along a \(\tau_\mu\)-orbit).
+
 ## Candidate Framework
 
 Let

@@ -15,6 +15,17 @@ This note gives a single technical storyline for the corpus:
 
 The target is a first-month QFT companion narrative with explicit mathematical dependencies.
 
+### Quick Definitions
+
+1. `c-parameter`:
+   \[
+   c=(\eta-i/h)\kappa.
+   \]
+2. `c-invariant`:
+   unchanged under parameter changes that keep \(c\) fixed (equivalently, constant on a \(\tau_\mu\)-orbit).
+3. `de-regularization`:
+   the one-sided limit \(\eta\to0^+\) from damped oscillatory kernels.
+
 ## 1. Newton’s Seed: Finite-Step Invariant Before the Limit
 
 For central-force polygonal evolution (equal time steps \(\Delta t\)), equal swept triangles are exact at the discrete level.  

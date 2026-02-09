@@ -2,6 +2,10 @@
 
 Date: 2026-02-09
 
+Terminology companion:
+
+- `2026-02-09-foundational-glossary.md`
+
 ## North Star
 
 Understand, rigorously, how quantum formalism appears when variational mechanics is made distributionally consistent across:
