@@ -43,6 +43,10 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
    - formalizes a concrete finite-sum exponential-family model class,
    - proves `HasDerivAt` bridges `N'=-A` and `Z'=-B` in that class,
    - discharges the AN-7 derivative-shape assumptions from explicit model data.
+8. `Claim1lean/FiniteExponentialRepresentation.lean`
+   - formalizes a centered representation bridge for the same finite exponential family,
+   - rewrites \((A/Z)-\omega(B/Z)\) as weighted centered sums (raw and normalized-weight forms),
+   - discharges the AN-13 missing representation ingredient in concrete finite models.
 
 ## Relation to Current Claim 1 Queue
 
@@ -50,11 +54,12 @@ These formalizations support:
 
 1. the \(c\)-invariance backbone used in AL/AP/AQ notes,
 2. the AN-5 B5-prototype inequality pattern (small-\(\kappa\) Lipschitz step),
-3. the AN-14 finite-dimensional derivative-under-sum bridge from concrete model assumptions to AN-7 hypotheses.
+3. the AN-14 finite-dimensional derivative-under-sum bridge from concrete model assumptions to AN-7 hypotheses,
+4. the AN-15 finite-dimensional centered-representation bridge from concrete model assumptions to AN-9 representation side.
 
 ## Next Lean Target (Queued)
 
-AN-15: formalize the missing representation bridge (centered/covariance form for the finite exponential-family ratio state), so AN-14 assumptions feed AN-9/AN-10 without extra manual representation hypotheses.
+AN-16: formalize a finite exponential-family derivative-bound corollary using AN-15 centered representation and inequality templates, reducing assumptions for AN-10 interval-increment control.
 
 ## Validation Priority (Locked)
 
@@ -75,4 +80,5 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.RatioStateDerivativeBound
 /Users/arivero/.elan/bin/lake build Claim1lean.RatioStateIncrementBound
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialFamilyDeriv
+/Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialRepresentation
 ```

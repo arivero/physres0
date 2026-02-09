@@ -93,6 +93,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-lean-onesided-boundary-bridge.md`
 - `theorems/2026-02-09-claim1-lean-dependency-spine.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -179,6 +180,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../proofs/Claim1lean/RatioStateDerivativeBound.lean`
 - `../proofs/Claim1lean/RatioStateIncrementBound.lean`
 - `../proofs/Claim1lean/FiniteExponentialFamilyDeriv.lean`
+- `../proofs/Claim1lean/FiniteExponentialRepresentation.lean`
 
 ## Supplemental Audit Notes
 
@@ -205,3 +207,4 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-lean-onesided-boundary-bridge.md`
 - `theorems/2026-02-09-claim1-lean-dependency-spine.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`

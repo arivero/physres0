@@ -30,6 +30,7 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.RatioStateDerivativeBound
 /Users/arivero/.elan/bin/lake build Claim1lean.RatioStateIncrementBound
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialFamilyDeriv
+/Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialRepresentation
 ```
 
 ## Current formalized modules
@@ -48,3 +49,5 @@ cd research/workspace/proofs
   interval increment bound from derivative templates (`Cκ` control).
 - `Claim1lean/FiniteExponentialFamilyDeriv.lean`:
   finite-sum exponential-family derivative bridge (`N'=-A`, `Z'=-B`).
+- `Claim1lean/FiniteExponentialRepresentation.lean`:
+  finite-sum centered representation bridge for \((A/Z)-\omega(B/Z)\).

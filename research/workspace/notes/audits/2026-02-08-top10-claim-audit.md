@@ -134,4 +134,5 @@ Scoring rule:
 64. [done] Executed AN-12: one-sided boundary derivative-control template formalized in Lean (`Icc`↔`Ici` bridge at \(t=0\), \(\kappa>0\)).
 65. [done] Executed AN-13: added compact Lean dependency spine AU→BA mapped to B5 obligations with explicit missing ingredient.
 66. [done] Executed AN-14: formalized a finite-dimensional integral-differentiation bridge lemma in Lean (`FiniteExponentialFamilyDeriv.lean`) for exponential-family finite sums, proving the concrete derivative hypotheses \(N'=-A\), \(Z'=-B\) used by AN-7.
-67. [next] Execute AN-15: formalize a finite-model representation bridge in Lean (covariance/centered representation for the exponential-family ratio state) to connect AN-14 model assumptions directly to AN-9/AN-10 bounds.
+67. [done] Executed AN-15: formalized a finite-model centered representation bridge in Lean (`FiniteExponentialRepresentation.lean`), rewriting \((A/Z)-\omega(B/Z)\) as weighted centered sums in exponential-family form.
+68. [next] Execute AN-16: formalize a finite exponential-family derivative-bound corollary (BD representation + inequality template) to reduce assumptions for AN-10-style increment control.

@@ -21,6 +21,8 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-lean-interior-derivwithin-bridge.md`
 - `theorems/2026-02-09-claim1-lean-onesided-boundary-bridge.md`
 - `theorems/2026-02-09-claim1-lean-dependency-spine.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-deriv-bridge.md`
+- `theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`
 
 ## North Star
 
@@ -71,10 +73,11 @@ and connect that emergence to geometric descriptions of forces.
 - Lean one-sided boundary reduction completed (Phase BA): \(t=0\) `Icc`↔`Ici` derivative bridge and one-sided boundary variant of centered-average increment bound.
 - Lean dependency map completed (Phase BB): module-level spine from AU→BA to B5 obligations with explicit next missing formal ingredient.
 - Lean finite-model derivative bridge completed (Phase BC): finite exponential-family parameter-derivative lemmas machine-checked (`N'=-A`, `Z'=-B`) to discharge AN-7 derivative hypotheses in a concrete scoped class.
+- Lean finite-model representation bridge completed (Phase BD): centered covariance representation for the finite exponential-family ratio state machine-checked in weighted and normalized-weight forms.
 
 ## Next Active Target
 
-- Phase BD (AN-15): formalize the missing representation bridge in Lean for the same finite exponential family, so AN-14 model assumptions can feed the AN-9/AN-10 bound pipeline without manual representation hypotheses.
+- Phase BE (AN-16): formalize a finite exponential-family derivative-bound corollary (from BD representation plus inequality templates) that feeds AN-10 increment control with minimal extra assumptions.
 
 ## De-Prioritized Unless Supporting North Star
 

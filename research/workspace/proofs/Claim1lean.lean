@@ -8,3 +8,4 @@ import Claim1lean.FiniteCovarianceBound
 import Claim1lean.RatioStateDerivativeBound
 import Claim1lean.RatioStateIncrementBound
 import Claim1lean.FiniteExponentialFamilyDeriv
+import Claim1lean.FiniteExponentialRepresentation
