@@ -182,7 +182,26 @@ Static variational distribution δ(f')
                        -> finite-g nonperturbative + η->0+ closures
 ```
 
-## 8. Minimal “What Is Forced” Statement
+## 8. Groupoid/\(\tau_\mu\)/Schwinger-Dyson Unified Sheet
+
+The dependency requested on the foundational queue is now formalized in:
+
+- `research/workspace/notes/theorems/2026-02-09-claim1-groupoid-tau-sd-dependency-sheet.md`
+
+Core fixed-parameter identity:
+\[
+c=(\eta-i/h)\kappa
+\]
+is preserved by
+\[
+\tau_\mu:(\kappa,\eta,h)\mapsto(\mu\kappa,\eta/\mu,\mu h),
+\]
+and Schwinger-Dyson Eq.(11)-type identities are invariant because they depend on the kernel only through \(c\).
+
+This closes the conceptual link:
+groupoid scaling intuition \(\leftrightarrow\) dressed flow covariance \(\leftrightarrow\) SD closures.
+
+## 9. Minimal “What Is Forced” Statement
 
 In this program, path-integral-type oscillatory weighting is not introduced as optional aesthetics; it is the structurally stable way to combine:
 
@@ -192,7 +211,7 @@ In this program, path-integral-type oscillatory weighting is not introduced as o
 
 That is the precise sense in which quantum weighting appears as the consistent correction/completion of naive classical refinement.
 
-## 9. Reproducibility Index
+## 10. Reproducibility Index
 
 Core diagnostic scripts:
 
@@ -201,13 +220,8 @@ Core diagnostic scripts:
 3. `python3.12 research/workspace/simulations/claim1_multimode_quartic_nonperturbative_oscillatory_check.py`
 4. `python3.12 research/workspace/simulations/claim6_schwarzschild_interval_scan.py`
 5. `python3.12 research/workspace/simulations/claim3_coulomb_classification_scan.py`
+6. `python3.12 research/workspace/simulations/claim1_groupoid_tau_sd_dependency_check.py`
 
-## 10. Next Formal Target
+## 11. Next Formal Target
 
-Integrate this lecture synthesis with an explicit tangent-groupoid scale map linking:
-
-1. near-diagonal scaling,
-2. \(\tau_\mu\)-flow invariance,
-3. Schwinger-Dyson identities,
-
-in one theorem-style dependency sheet suitable for direct inclusion in the scoped Claim 1 manuscript.
+Integrate the new dependency sheet directly into the scoped Claim 1 theorem manuscript so the same \(c\)-invariance logic is explicit in the main paper chain.

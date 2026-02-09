@@ -39,7 +39,7 @@ It further closes:
 (vi) genuinely large-$N$ mode-coupled lifts, including an explicit Gaussian-tail rate, a non-factorized quadratic-mixing determinant class, and a non-factorized quartic-tail class under log-derivative summability,
 (vii) explicit non-vanishing lower bounds for normalized oscillatory partition factors,
 (viii) extension of observables from Gaussian-exponential test families to Schwartz and weighted Sobolev classes,
-and (ix) finite-dimensional Schwinger-Dyson identities and exact $\tau_\mu$-type scale-flow covariance.
+and (ix) finite-dimensional Schwinger-Dyson identities and exact $\tau_\mu$-type scale-flow covariance, unified by an invariant kernel parameter.
 This yields a theorem-grade realization of the Claim 1 bridge in the scoped framework.
 \end{abstract}
 
@@ -1009,6 +1009,24 @@ Directly,
 Hence numerator and denominator kernels are unchanged.
 \end{proof}
 
+\begin{proposition}[Kernel-parameter unification of \texorpdfstring{$\tau_\mu$}{tau_mu} and Schwinger-Dyson]
+\label{prop:c-unify}
+Set
+\[
+c:=(\eta-i/h)\kappa.
+\]
+Then:
+\begin{enumerate}[label=(\roman*),leftmargin=1.6em]
+\item \(\tau_\mu\) preserves \(c\),
+\item the Schwinger-Dyson identity in Theorem \ref{thm:sd} depends only on \(c\).
+\end{enumerate}
+Hence two parameter triples on the same \(\tau_\mu\)-orbit define identical Schwinger-Dyson relations for all admissible observables.
+\end{proposition}
+
+\begin{proof}
+Part (i) is exactly the computation in Theorem \ref{thm:tau}. For part (ii), Theorem \ref{thm:sd} is written purely in terms of \(\mathcal I_c(\cdot)\), hence only through \(c\). Therefore \(\tau_\mu\)-related parameter triples yield the same SD equations.
+\end{proof}
+
 \section{Dependency Chain}
 
 The proofs in this manuscript now close in the following order:
@@ -1017,7 +1035,7 @@ The proofs in this manuscript now close in the following order:
 \item Theorems \ref{thm:largen-coupled}, \ref{thm:quadratic-mixing}, \ref{thm:quartic-tail}, and Corollary \ref{cor:quartic-intrinsic}: large-$N$ coupled extensions (Gaussian-tail rate, non-factorized quadratic-mixing determinant class, non-factorized quartic-tail class, and intrinsic moment-based sufficient conditions).
 \item Theorem \ref{thm:nonvanish}: explicit non-vanishing criteria for partition factors.
 \item Theorem \ref{thm:observable-extension}: observable-class extension to Schwartz/Sobolev.
-\item Theorems \ref{thm:sd} and \ref{thm:tau}: Schwinger-Dyson identities and exact scale-flow covariance.
+\item Theorems \ref{thm:sd}, \ref{thm:tau}, and Proposition \ref{prop:c-unify}: Schwinger-Dyson identities, exact scale-flow covariance, and their shared invariant kernel parameter.
 \end{enumerate}
 
 \section{Conclusion}
@@ -1029,7 +1047,7 @@ This manuscript now gives a theorem-grade chain from the static/finite-dimension
 \item large-$N$ mode-coupled convergence with quantitative tail control (Gaussian-tail, non-factorized quadratic-mixing, and non-factorized quartic-tail classes), with intrinsic moment criteria for quartic-tail hypotheses,
 \item non-vanishing control for normalization factors,
 \item extension to large observable classes,
-\item Schwinger-Dyson identities and scale-flow covariance.
+\item Schwinger-Dyson identities and scale-flow covariance with a shared \(c\)-invariance structure.
 \end{enumerate}
 
 Open frontier (outside this closure): full interacting, non-factorized, genuinely field-theoretic continuum limits with uniform renormalization control beyond the scoped polynomial block-tail class.

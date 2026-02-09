@@ -114,4 +114,6 @@ Scoring rule:
 44. [done] Closed de-regularization \(\eta\to0^+\) for the finite-\(g\) non-perturbative multi-mode quartic sector.
 45. [done] Wrote a synthesis theorem note for the shared action-reduction mechanism across SR/GR/gauge force descriptions.
 46. [done] Integrated the foundational synthesis into a single "Newton -> action -> path integral" lecture manuscript with explicit dependency graph.
-47. [next] Build the tangent-groupoid/\(\tau_\mu\)/Schwinger-Dyson unified dependency theorem sheet and wire it into the lecture manuscript.
+47. [done] Built the tangent-groupoid/\(\tau_\mu\)/Schwinger-Dyson unified dependency theorem sheet and wired it into the lecture manuscript.
+48. [done] Integrated the \(c\)-invariance dependency sheet into the scoped Claim 1 manuscript dependency chain.
+49. [next] Build a first explicit continuum-limit theorem candidate that uses the new \(c\)-invariance backbone beyond finite-dimensional truncations.
