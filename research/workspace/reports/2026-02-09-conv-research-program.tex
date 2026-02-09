@@ -31,25 +31,30 @@ Foundational Goals, Proof Targets, Work Done, and Next Steps}
 \maketitle
 
 \begin{abstract}
-\textbf{Abstract (scheme).}
-\begin{itemize}[leftmargin=1.4em]
-\item \path{conv\_patched.md} proposed a foundational slogan:
-  representing ``classical solutions'' as Dirac-type localization on extrema,
-  and demanding compatibility with refinement/composition, naturally produces
-  complex exponential weights and a ``halved'' amplitude whose modulus-square
-  yields the concentrating distribution (half-density viewpoint).
-\item We turned that conversation into a concrete research program:
-  a three-level escalation (statics $\to$ mechanics-in-time $\to$ field theory),
-  with explicit dimension gates at the field level (\(d=2\) first, \(d=3\) next,
-  \(d=4\) frontier).
-\item We then executed a long audit and proved a large scoped subclass of Claim 1:
-  exact projective cylinder stability and nontrivial interacting de-regularization
-  in a projective oscillatory class, plus a reusable Lean-checked spine of
-  algebraic/analytic lemmas supporting small-parameter continuity bounds.
-\item What remains open is the global field-level continuum existence bridge in
-  genuinely local \(d=3\) and \(d=4\) interacting models, with explicit proof
-  obligations stated and partially mechanized sub-lemmas in place.
-\end{itemize}
+This report is the canonical ``what we are doing'' document for the
+\path{conv\_patched.md} conversation and the research produced afterwards in this repository.
+The source conversation proposed a foundational slogan:
+representing ``classical solutions'' as Dirac-type localization on extrema, and then insisting
+that this localization be compatible with refinement and composition, naturally generates
+complex exponential weights \(\e^{\frac{i}{\hbar}S}\) and a ``halved'' object that behaves like an
+amplitude (or half-density) whose modulus-square yields the concentrating distribution.
+
+We turned that slogan into a concrete, dimension-aware research program:
+a three-level escalation (statics $\to$ mechanics-in-time $\to$ field theory), with half-density
+as an \emph{optional} formalism at each level, and with explicit gates for field-level existence
+by spacetime dimension (\(d=2\) first, \(d=3\) next, \(d=4\) frontier).
+
+On the theorem side, we proved a large scoped subclass of Claim~1:
+exact projective stability for cylinder observables, constructive counterterm repair, rigorous
+Schwinger--Dyson and scale-flow (\(\tau_\mu\)) structure, and nontrivial de-regularization
+\(\eta\to0^+\) in a projective oscillatory class.
+On the formal side, we built a Lean-checked spine of reusable lemmas (quotient-derivative covariance
+form, centered bounds, and small-parameter increment control) and specialized that spine to a
+concrete finite exponential-family model.
+
+What remains open is the genuinely local field-level bridge in interacting models beyond ultralocality:
+in \(d=3\), a precise candidate theorem is stated with explicit obligations; in \(d=4\), we have an
+explicit obstruction sheet explaining why naive lifts fail without renormalization and nontriviality input.
 \end{abstract}
 
 \tableofcontents
@@ -58,21 +63,28 @@ Foundational Goals, Proof Targets, Work Done, and Next Steps}
 \label{sec:reading}
 
 \subsection{Source of Truth and Index Files}
+The primary source is \path{conv\_patched.md}, with a rendered companion \path{conv\_patched.pdf}.
+All claims, program decisions, and anchors in this report should be traced back either to that source
+conversation or to one of the theorem-grade artifacts produced in this workspace.
+
+The minimal entry points are:
 \begin{itemize}[leftmargin=1.4em]
-\item Primary source: \path{conv\_patched.md} and its rendered companion \path{conv\_patched.pdf}.
-\item Research compass: \path{research/workspace/notes/2026-02-09-core-goal-compass.md}.
-\item Top-10 claim audit: \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
-\item Claim 1 scoped proof report: \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}.
-\item Lean proof workspace: \path{research/workspace/proofs/} (build via \path{/Users/arivero/.elan/bin/lake}).
+\item \path{research/workspace/notes/2026-02-09-core-goal-compass.md} (program compass and ``north star''),
+\item \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md} (current audit labels and the next queue item),
+\item \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex} (the main scoped Claim~1 proof report),
+\item \path{research/workspace/proofs/} (Lean formalization workspace, built with \path{/Users/arivero/.elan/bin/lake}).
 \end{itemize}
 
-\subsection{How to Use This Report (Scheme)}
+\subsection{How to Use This Report}
+This report is meant to support two readers:
+humans who want a narrative of what is known and what is not, and future agents/models that need a
+compact, unambiguous summary of the proof targets and the current state of the work tree.
+The recommended path is:
 \begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
-\item Read \S\ref{sec:conv} to recover what the conversation asserted and why it matters.
-\item Read \S\ref{sec:aim}--\S\ref{sec:targets} to see the intended theorem targets and the
-  ``success criteria'' for promoting a statement from heuristic to proved.
-\item Read \S\ref{sec:done}--\S\ref{sec:status} to see what is already closed and what is still open.
-\item Read \S\ref{sec:roadmap} to see the next queue items and why they connect to Goal~1.
+\item Read \S\ref{sec:conv} to recover the \emph{problem statement} as it appeared in the conversation.
+\item Read \S\ref{sec:aim}--\S\ref{sec:targets} to see the \emph{research program} and the proof standards used here.
+\item Read \S\ref{sec:done}--\S\ref{sec:status} to see the \emph{executed results} (what is theorem-grade today).
+\item Read \S\ref{sec:roadmap} to see the \emph{next targets} and the explicit gaps that motivate them.
 \end{enumerate}
 
 \section{The Source Conversation: What Was Known and What Was Claimed}
