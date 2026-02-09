@@ -211,8 +211,10 @@ and \(d=4\) results are treated as a frontier where one must explicitly account 
 \label{sec:targets}
 
 \subsection{Claim 1 (Foundational Claim)}
-\textbf{Core slogan (scheme).}
-Claim~1 is the bridge:
+Claim~1 is the foundational bridge that motivated the entire work tree.
+It starts from a static distributional fact (\(\delta(f')\) localizes on extrema) and escalates it to mechanics
+and fields by replacing \(f\) with an action functional \(S\).
+The slogan can be stated compactly as:
 \[
 \text{``halved'' amplitude / half-density}
 \quad\leadsto\quad
@@ -221,25 +223,36 @@ Claim~1 is the bridge:
 \delta\!\left(\frac{\delta S}{\delta \phi}\right)\ \text{(QM/QFT)}.
 \]
 
-\textbf{Scoped proof target.}
-In this repository, Claim~1 is treated as a hierarchy:
+The ``halved'' object is important because it is the compositional object: it behaves like an amplitude or
+half-density under convolution/composition (this is the groupoid-kernel intuition), while the squaring step produces
+the density-level object that concentrates on classical solutions.
+In finite dimensions this is standard stationary phase; the research challenge is to make the limit/refinement
+procedures honest across the time and field escalations.
+
+To prevent ambiguity, this repository treats Claim~1 as a hierarchy of increasingly strong targets:
 \begin{enumerate}[label=(\roman*),leftmargin=1.8em]
-\item \emph{finite-dimensional theorem-grade}: explicit stationary phase / distributional localization;
-\item \emph{regulated infinite family theorem-grade}: projective cylinder stability, SD closure, and de-regularization in a specified class;
-\item \emph{field-level theorem-grade}: dimension-indexed continuum existence with SD pass-through and \(c\)-invariance, plus reconstruction where applicable.
+\item \emph{Finite-dimensional theorem-grade:} explicit stationary phase / distributional localization statements.
+\item \emph{Regulated infinite family theorem-grade:} a specified projective/cylinder family of normalized oscillatory
+  states with exact stability, explicit control of renormalization/counterterms, SD closure, and de-regularization
+  \(\eta\to0^+\) in that class.
+\item \emph{Field-level theorem-grade:} dimension-indexed continuum existence with SD pass-through and \(c\)-invariance,
+  and, when pursuing that branch, a reconstruction step connecting Euclidean correlators to a Minkowski theory.
 \end{enumerate}
 
-\textbf{Current status label.}
-The top-10 audit keeps Claim~1 labelled \texttt{heuristic}, while recording that a large scoped core is proved
-(\path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}).
+The audit keeps Claim~1 labelled \texttt{heuristic} at the global level, because the full bridge to a unique local
+interacting continuum field theory is not yet proved. However, a large scoped core is now theorem-grade and recorded
+in \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}.
 
 \subsection{Auxiliary Claims (2--10)}
-\textbf{Role.}
 Claims 2--10 are the ``geometry-of-force'' and model-taxonomy support.
 They ensure the action-reduction mechanism is explicit and correct in concrete SR/GR/gauge settings.
 
-\textbf{Current theorem-grade closure (scheme).}
-Per the top-10 audit, the following are \texttt{proved} as theorem notes:
+They also play a practical role: they provide regression targets and sanity checks.
+If the foundational track produces a formalism that contradicts known orbit classifications (e.g.\ SR Coulomb
+precession regimes or Schwarzschild separatrices), that is immediate evidence of a mis-specified definition or
+an incorrect scaling assumption.
+
+Per the top-10 audit, the following are \texttt{proved} as theorem notes (with explicit derivations and cross-checks):
 \begin{itemize}[leftmargin=1.4em]
 \item SR center-access trichotomy (Claim~2) and SR Coulomb phase portrait (Claim~3),
 \item Duffing-type \(n=3\) reduction (Claim~4),
@@ -250,7 +263,10 @@ Per the top-10 audit, the following are \texttt{proved} as theorem notes:
 \end{itemize}
 
 \subsection{What Counts as a Proof Here}
-\textbf{Validation contract (scheme).}
+This repository uses an explicit validation contract. The intention is to prevent subtle drift:
+no statement is upgraded to ``proved'' unless it states its assumptions and passes at least one independent
+verification route (formal proof when feasible; otherwise symbolic or numerical checks).
+
 Every upgraded statement is expected to include:
 \begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
 \item explicit assumptions (model, regime, approximations),
@@ -261,8 +277,13 @@ Every upgraded statement is expected to include:
 \item a confidence/uncertainty note,
 \item reproducibility metadata (commands, versions).
 \end{enumerate}
-\textbf{Rule of thumb.} Half-density/groupoid composition is \emph{kinematic};
-continuum-limit existence is \emph{dynamical} and requires separate analytic gates.
+
+The key rule of thumb is the kinematic/dynamical split:
+half-density and groupoid convolution statements certify \emph{kinematic} consistency of composition laws at fixed
+regulator, but they do not certify \emph{dynamical} convergence as the regulator is removed.
+Continuum-limit claims require separate analytic gates (tightness, non-vanishing normalization, and closure of SD
+identities in the limit). This split is spelled out in
+\path{research/workspace/notes/theorems/2026-02-09-claim1-halfdensity-kinematic-dynamic-split.md}.
 
 \section{What Has Been Done So Far (Artifacts and Results)}
 \label{sec:done}
