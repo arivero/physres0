@@ -372,8 +372,15 @@ Representative examples include:
 \label{sec:status}
 
 \subsection{The Scoped Complete Proof and Its Scope}
-\textbf{Scoped closure (scheme).}
-\path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex} proves, in a projective cylinder class:
+The main theorem-grade closure for Claim~1 in this repository is the scoped report
+\path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}.
+It proves Claim~1 in a specified but nontrivial projective/cylinder class of oscillatory states.
+At a high level, the closure consists of two parts:
+(i) \emph{exact projective stability} for cylinder observables (a discrete analogue of refinement invariance),
+and (ii) \emph{analytic control} sufficient to justify de-regularization and the persistence of SD/\(\tau_\mu\)
+structure in that class.
+
+Concretely, within the stated block-tail and interacting extensions, the report proves:
 \begin{itemize}[leftmargin=1.4em]
 \item exact projective stability on cylinder observables,
 \item a well-defined continuum state on cylinder observables,
@@ -383,7 +390,7 @@ Representative examples include:
 \item explicit large-\(N\) lifts and non-factorized interacting extensions under stated conditions.
 \end{itemize}
 
-\textbf{What it does not claim (scheme).}
+It is equally important to record what the scoped report does \emph{not} claim:
 \begin{itemize}[leftmargin=1.4em]
 \item it does not claim a full continuum local QFT construction in \(d=4\),
 \item it does not identify a unique interacting continuum field theory beyond the cylinder/regulated scope,
@@ -391,7 +398,8 @@ Representative examples include:
 \end{itemize}
 
 \subsection{Statics and Dynamics: Where the Delta-of-Variation Logic Is Theorem-Grade}
-\textbf{Static level (scheme).}
+At the static level, the delta-of-variation logic is theorem-grade under standard nondegeneracy hypotheses.
+The core facts are:
 \begin{itemize}[leftmargin=1.4em]
 \item In finite dimensions, stationary phase yields \(|A_\varepsilon|^2\to 2\pi\langle \delta(f'),|O|^2\rangle\)
   in nondegenerate regimes.
@@ -399,21 +407,39 @@ Representative examples include:
   to a finite measure supported on critical points (amenable to formal proof assistants).
 \end{itemize}
 
-\textbf{Dynamics level (scheme).}
+At the dynamics level (mechanics on a time line), the correct way to keep the logic honest is to time-slice:
+at fixed discretization, the variational localization object is an ordinary finite-dimensional Dirac delta.
+The open work is the controlled refinement limit under which these finite-dimensional statements produce a stable
+continuum object.
+In this repository, that refinement control is represented by the projective/cylinder framework and the scale-control
+invariants (SD and \(\tau_\mu\)-type covariance).
 \begin{itemize}[leftmargin=1.4em]
 \item time-slicing makes \(\delta(\delta S/\delta q)\) exact as \(\delta(\nabla S_N)\) at fixed discretization,
 \item continuum claims require limit control under refinement, tracked by projective/cylinder programs and scale-flow constraints.
 \end{itemize}
 
 \subsection{Field Level: \(d=2\) Closure, \(d=3\) Bridge, \(d=4\) Obstruction}
-\textbf{\(d=2\) closure (scheme).}
+At the field level, Claim~1 becomes dimension-sensitive and must be treated as a dimension-gated existence program.
+The current status by dimension is:
+
+\paragraph{\(d=2\) closure.}
+We proved a fully explicit interacting field-indexed closure in an ultralocal \(\phi^4\) class
+(\path{research/workspace/notes/theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md}).
+Because the action is sitewise additive, cylinder expectations become exactly scale-independent once the cylinder sites
+are distinct, and the continuum limit exists without renormalization. In that model we also obtain a field-level SD
+identity by one-dimensional integration by parts and exact \(c\)-invariance along \(\tau_\mu\)-orbits.
 \begin{itemize}[leftmargin=1.4em]
 \item \(d=2\) ultralocal interacting \(\phi^4\) model: exact cylinder stabilization and continuum existence,
   field-level SD identity, and exact \(c\)-invariance along \(\tau_\mu\)-orbits.
 \item interpretation: this is non-Gaussian but ultralocal, serving as a controlled baseline rather than full local QFT.
 \end{itemize}
 
-\textbf{\(d=3\) bridge candidate (scheme).}
+\paragraph{\(d=3\) bridge candidate.}
+The next rung is \(d=3\) with local propagation reintroduced by a nearest-neighbor gradient term.
+We stated a precise candidate theorem in \path{research/workspace/notes/theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md}
+and made the closure obligations explicit (B1--B5). The most important point is that the \(d=2\) proof does not even
+begin to lift until one has moment/tightness and denominator control uniformly in \((a,L)\), and a quantitative
+small-\(\kappa\) continuity bound for local cylinders.
 \begin{itemize}[leftmargin=1.4em]
 \item add nearest-neighbor gradient coupling \(\kappa\ge 0\) and seek a small-\(\kappa\) regime \([0,\kappa_*]\),
   with explicit proof obligations:
@@ -422,7 +448,12 @@ Representative examples include:
   the field-level model bridge remains open.
 \end{itemize}
 
-\textbf{\(d=4\) obstruction sheet (scheme).}
+\paragraph{\(d=4\) obstruction sheet.}
+The obstruction sheet \path{research/workspace/notes/theorems/2026-02-09-claim1-d4-lift-obstruction-sheet.md}
+records why naive lifts fail once local propagation and regulator removal are taken seriously:
+loss of product structure, non-closed SD hierarchies, and renormalization dependence. In \(d=4\) one must add
+explicit renormalization flow control and a nontriviality criterion; otherwise one can at best obtain a theorem-grade
+scoped statement (regulated and/or cylinder-level) without a claim of a nontrivial interacting continuum theory.
 \begin{itemize}[leftmargin=1.4em]
 \item restoring local propagation destroys product structure and exact cylinder decoupling;
   SD hierarchy is no longer one-site closed.
