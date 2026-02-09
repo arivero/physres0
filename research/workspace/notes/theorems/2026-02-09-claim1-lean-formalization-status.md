@@ -25,6 +25,9 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
 2. `Claim1lean/SmallKappaLipschitz.lean`
    - proves derivative-bound implies \(O(\kappa)\) increment on \([0,\kappa]\),
    - provides unit-interval specialization.
+3. `Claim1lean/CovarianceDerivative.lean`
+   - proves quotient-derivative identity in covariance form for \(\omega=N/Z\),
+   - gives both expanded and factored forms used in AN-5 reasoning.
 
 ## Relation to Current Claim 1 Queue
 
@@ -47,4 +50,5 @@ For new Claim 1 theorem upgrades:
 cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.CInvariant
 /Users/arivero/.elan/bin/lake build Claim1lean.SmallKappaLipschitz
+/Users/arivero/.elan/bin/lake build Claim1lean.CovarianceDerivative
 ```

@@ -3,3 +3,4 @@
 import Claim1lean.Basic
 import Claim1lean.CInvariant
 import Claim1lean.SmallKappaLipschitz
+import Claim1lean.CovarianceDerivative

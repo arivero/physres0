@@ -126,4 +126,5 @@ Scoring rule:
 56. [done] Executed AN-4: built a \(d=3\) beyond-ultralocal bridge candidate with explicit B1-B5 proof obligations and a weak-coupling toy scan.
 57. [done] Executed AN-5: proved a quantitative small-\(\kappa\) Lipschitz-type bound in the finite-dimensional surrogate and mapped it to B5 in the \(d=3\) bridge note.
 58. [done] Executed AN-6: Lean + mathlib workspace added; \(c\)-invariance and small-\(\kappa\) prototype core formalized in machine-checked modules.
-59. [next] Execute AN-7: prove a Lean lemma matching the covariance-derivative control pattern used in AN-5 (an abstract finite-probability inequality bridge toward measure-level control).
+59. [done] Executed AN-7: Lean covariance-derivative bridge lemma for \(\omega=N/Z\) quotient evolution (expanded and factored forms).
+60. [next] Execute AN-8: formalize a finite-support covariance inequality in Lean (or equivalent abstract bound) to connect the AV identity to a machine-checked small-\(\kappa\) control bound.

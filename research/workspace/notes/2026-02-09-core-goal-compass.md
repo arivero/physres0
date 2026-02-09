@@ -14,6 +14,7 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
+- `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 
 ## North Star
 
@@ -56,6 +57,7 @@ and connect that emergence to geometric descriptions of forces.
 - Intermediate rung drafted (Phase AS): \(d=3\) beyond-ultralocal bridge candidate with explicit closure obligations B1-B5.
 - Quantitative bridge step completed (Phase AT): proved a small-\(\kappa\) Lipschitz prototype estimate (B5 surrogate) for a nearest-neighbor finite-dimensional model.
 - Formal verification ramp completed (Phase AU): Lean workspace with mathlib integrated; \(c\)-invariance and small-\(\kappa\) Lipschitz core lemmas are machine-checked.
+- Lean bridge extension completed (Phase AV): quotient-derivative covariance-form lemma formalized in Lean for the AN-5 derivative-control backbone.
 
 ## De-Prioritized Unless Supporting North Star
 

@@ -119,9 +119,10 @@ At session start (or after a context reset), read in this order:
 9. `research/workspace/notes/theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md`
 10. `research/workspace/notes/theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
 11. `research/workspace/notes/theorems/2026-02-09-claim1-lean-formalization-status.md`
-12. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
-13. `research/workspace/notes/README.md`
-14. `research/workspace/proofs/README.md`
+12. `research/workspace/notes/theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
+13. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
+14. `research/workspace/notes/README.md`
+15. `research/workspace/proofs/README.md`
 
 Minimum extraction requirement:
 
