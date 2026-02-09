@@ -31,15 +31,25 @@ Foundational Goals, Proof Targets, Work Done, and Next Steps}
 \maketitle
 
 \begin{abstract}
-\TODO{Write a 10--15 line abstract once the article is filled.}
-This report is the canonical ``what we are doing'' document for the
-\path{conv\_patched.md} conversation and the subsequent research carried out in this repository.
-It explains:
-(i) what was already known in the source conversation,
-(ii) what we aimed to research,
-(iii) what we expect to prove (and what counts as a proof here),
-(iv) what has been done so far (theorem notes, Lean proofs, scripts, and reports),
-and (v) how we intend to continue.
+\textbf{Abstract (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item \path{conv\_patched.md} proposed a foundational slogan:
+  representing ``classical solutions'' as Dirac-type localization on extrema,
+  and demanding compatibility with refinement/composition, naturally produces
+  complex exponential weights and a ``halved'' amplitude whose modulus-square
+  yields the concentrating distribution (half-density viewpoint).
+\item We turned that conversation into a concrete research program:
+  a three-level escalation (statics $\to$ mechanics-in-time $\to$ field theory),
+  with explicit dimension gates at the field level (\(d=2\) first, \(d=3\) next,
+  \(d=4\) frontier).
+\item We then executed a long audit and proved a large scoped subclass of Claim 1:
+  exact projective cylinder stability and nontrivial interacting de-regularization
+  in a projective oscillatory class, plus a reusable Lean-checked spine of
+  algebraic/analytic lemmas supporting small-parameter continuity bounds.
+\item What remains open is the global field-level continuum existence bridge in
+  genuinely local \(d=3\) and \(d=4\) interacting models, with explicit proof
+  obligations stated and partially mechanized sub-lemmas in place.
+\end{itemize}
 \end{abstract}
 
 \tableofcontents
@@ -47,6 +57,7 @@ and (v) how we intend to continue.
 \section{Reading Instructions (for Humans and Future Agents)}
 \label{sec:reading}
 
+\subsection{Source of Truth and Index Files}
 \begin{itemize}[leftmargin=1.4em]
 \item Primary source: \path{conv\_patched.md} and its rendered companion \path{conv\_patched.pdf}.
 \item Research compass: \path{research/workspace/notes/2026-02-09-core-goal-compass.md}.
@@ -55,95 +66,359 @@ and (v) how we intend to continue.
 \item Lean proof workspace: \path{research/workspace/proofs/} (build via \path{/Users/arivero/.elan/bin/lake}).
 \end{itemize}
 
-\TODO{Add a short ``how to use this report'' paragraph after the rest is written.}
+\subsection{How to Use This Report (Scheme)}
+\begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
+\item Read \S\ref{sec:conv} to recover what the conversation asserted and why it matters.
+\item Read \S\ref{sec:aim}--\S\ref{sec:targets} to see the intended theorem targets and the
+  ``success criteria'' for promoting a statement from heuristic to proved.
+\item Read \S\ref{sec:done}--\S\ref{sec:status} to see what is already closed and what is still open.
+\item Read \S\ref{sec:roadmap} to see the next queue items and why they connect to Goal~1.
+\end{enumerate}
 
 \section{The Source Conversation: What Was Known and What Was Claimed}
 \label{sec:conv}
 
 \subsection{Conversation Inventory}
-\TODO{Summarize the major themes in \path{conv\_patched.md}:}
 \begin{itemize}[leftmargin=1.4em]
-\item action reduction and geometry-of-force: SR/GR/gauge central-force taxonomy,
-\item variational/distribution core: $\delta(\nabla S)$, ``delta of first variation'', and scaling channels,
-\item half-density / ``halved amplitude'' viewpoint and tangent-groupoid composition intuition,
-\item scale/refinement control: \(\tau_\mu\), Schwinger--Dyson identities, and de-regularization \(\eta\to0^+\).
+\item \textbf{Input target:} transcribe and formalize the paper \path{9803035.pdf} (cited in the conversation)
+  ``first for the static case, then with quantum mechanics (action on a time line), then for field theory in \(D=4\),''
+  and connect the ``halved expression'' to the literature and to tangent-groupoid ideas.
+\item \textbf{Geometry-of-force:} central-force orbit taxonomy across:
+  special relativity (SR) power-law forces, Schwarzschild (and higher-$D$ generalizations),
+  and gauge potential long-range phases.
+\item \textbf{Variational-distribution core:} ``delta of first variation'' as
+  \(\delta(f'(x))\) in statics and \(\delta(\delta S/\delta\phi)\) in mechanics/fields.
+  Emphasis: this is \emph{not} the derivative distribution \(\delta'\), but a pullback/composition by the map \(f'\).
+\item \textbf{Halved/half-density viewpoint:} a square-root object (amplitude)
+  is more compositional than a density; modulus-square yields the concentrating density.
+  Groupoid convolution is naturally formulated for half-densities.
+\item \textbf{Scale/refinement control:} the limit \(\varepsilon\to0\) is only sensible
+  if the refinement/composition law is compatible across scales.
+  This motivated:
+  (i) explicit scale flows (\(\tau_\mu\)),
+  (ii) Schwinger--Dyson (integration-by-parts) identities as invariant structure,
+  (iii) de-regularization \(\eta\to0^+\) to pass from damped oscillatory weights to purely oscillatory ones.
 \end{itemize}
 
 \subsection{Canonical Anchors in \path{conv\_patched.md}}
-\TODO{Insert the most important line references used in later sections.}
+\textbf{Static variational/distribution seed.}
+\begin{itemize}[leftmargin=1.4em]
+\item \(\delta(f'(x))\) is identified as the ``obvious'' answer (lines \(\sim 688\)).
+\item The halved amplitude is introduced (lines \(\sim 707\)).
+\item Tangent groupoid is proposed as a clean conceptual formulation (line \(\sim 814\)).
+\item The nondegenerate decomposition \(\delta(f')=\sum \delta(x-x_i)/|f''(x_i)|\) is stated (lines \(\sim 857\)--\(871\)).
+\end{itemize}
+
+\textbf{Near-diagonal scaling and half-density interpretation.}
+\begin{itemize}[leftmargin=1.4em]
+\item ``Near diagonal only'' scaling and why it matters for \(\varepsilon\to0\) (line \(\sim 928\)).
+\item Explicit half-density/operator-kernel viewpoint for groupoid convolution (line \(\sim 967\)).
+\end{itemize}
+
+\textbf{Escalation to QM and QFT.}
+\begin{itemize}[leftmargin=1.4em]
+\item Functional delta analogue \(\delta(\delta S/\delta\phi)\) in time-sliced mechanics (lines \(\sim 1149\)--\(1157\)).
+\item ``Halved expression becomes propagator amplitude'' viewpoint (lines \(\sim 1122\)--\(1124\)).
+\item Synthesis slogan: quantization as refinement-compatible localization (line \(\sim 1209\)).
+\end{itemize}
 
 \section{Research Aims (North Star)}
 \label{sec:aim}
 
 \subsection{Goal 1 as a Three-Level Program}
-\TODO{Explain the three levels, and that half-density is optional at each level:}
+\textbf{Primary articulation.}
+Goal~1 was locked in \path{research/workspace/notes/theorems/2026-02-09-claim1-three-level-program.md}:
 \begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
-\item statics (``0D action''): finite-dimensional oscillatory integrals and distributional localization,
-\item dynamics (QM): action integrated over a time coordinate \(t\) and discrete-time limits,
-\item fields (QFT): action integrated over spacetime coordinates with dimension-dependent existence gates.
+\item \textbf{Statics (0D action):}
+  prototype object \(\delta(f'(x))\), and stationary-phase control of the halved amplitude
+  \[
+  A_\varepsilon(O)=\varepsilon^{-1/2}\int_{\R} \e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx,
+  \qquad
+  |A_\varepsilon(O)|^2\to 2\pi\langle\delta(f'),|O|^2\rangle
+  \]
+  under nondegenerate hypotheses.
+\item \textbf{Dynamics (0+1D action):}
+  action on time histories \(S[q]=\int L(q,\dot q,t)\,dt\) and variational localization target
+  \(\delta(\delta S/\delta q)\), made exact at finite time-slicing as \(\delta(\nabla S_N)\).
+\item \textbf{Fields (\(d\)-D action):}
+  action \(S[\Phi]=\int \mathcal{L}(\Phi,\partial\Phi,\dots)\,d^dx\),
+  formal localization \(\delta(\delta S/\delta \Phi)\),
+  and a dimension-gated existence program for regulator removal and reconstruction.
 \end{enumerate}
 
 \subsection{Dimension-Gated Field Existence Ladder}
-\TODO{Explain why \(d=2\) is tractable, \(d=3\) is a bridge target, and \(d=4\) is the frontier.}
+\textbf{Roadmap lock.}
+Field-level work is dimension-indexed by design:
+\begin{itemize}[leftmargin=1.4em]
+\item \(d=2\): strongest closure candidate; we closed an interacting ultralocal \(\phi^4\) field-indexed theorem (AP).
+\item \(d=3\): intermediate bridge rung; candidate theorem stated with explicit proof obligations B1--B5 (AS).
+\item \(d=4\): physically central frontier; explicit lift-obstruction sheet enumerates missing inputs (AQ).
+\end{itemize}
+
+\textbf{Existence notions.}
+At the field level, we separate:
+\begin{enumerate}[label=(\roman*),leftmargin=1.8em]
+\item regulated existence (finite cutoff objects),
+\item continuum existence (regulator removal with nontrivial limit),
+\item physical reconstruction (Euclidean-to-Minkowski, or equivalent).
+\end{enumerate}
 
 \section{What We Expect to Prove (Proof Targets and Success Criteria)}
 \label{sec:targets}
 
 \subsection{Claim 1 (Foundational Claim)}
-\TODO{State the core Claim 1 hypothesis/claim in repository language, with a clear notion of ``proved'' vs ``scoped proof'' vs ``heuristic''.}
+\textbf{Core slogan (scheme).}
+Claim~1 is the bridge:
+\[
+\text{``halved'' amplitude / half-density}
+\quad\leadsto\quad
+\text{density-level localization on extrema}
+\quad\leadsto\quad
+\delta\!\left(\frac{\delta S}{\delta \phi}\right)\ \text{(QM/QFT)}.
+\]
+
+\textbf{Scoped proof target.}
+In this repository, Claim~1 is treated as a hierarchy:
+\begin{enumerate}[label=(\roman*),leftmargin=1.8em]
+\item \emph{finite-dimensional theorem-grade}: explicit stationary phase / distributional localization;
+\item \emph{regulated infinite family theorem-grade}: projective cylinder stability, SD closure, and de-regularization in a specified class;
+\item \emph{field-level theorem-grade}: dimension-indexed continuum existence with SD pass-through and \(c\)-invariance, plus reconstruction where applicable.
+\end{enumerate}
+
+\textbf{Current status label.}
+The top-10 audit keeps Claim~1 labelled \texttt{heuristic}, while recording that a large scoped core is proved
+(\path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}).
 
 \subsection{Auxiliary Claims (2--10)}
-\TODO{State which non-Claim-1 results are now theorem-grade and why they matter to the narrative.}
+\textbf{Role.}
+Claims 2--10 are the ``geometry-of-force'' and model-taxonomy support.
+They ensure the action-reduction mechanism is explicit and correct in concrete SR/GR/gauge settings.
+
+\textbf{Current theorem-grade closure (scheme).}
+Per the top-10 audit, the following are \texttt{proved} as theorem notes:
+\begin{itemize}[leftmargin=1.4em]
+\item SR center-access trichotomy (Claim~2) and SR Coulomb phase portrait (Claim~3),
+\item Duffing-type \(n=3\) reduction (Claim~4),
+\item \(D\)-dimensional GR matching (Claim~5),
+\item Schwarzschild bound-orbit interval and ISCO framing (Claims~6--7),
+\item selected higher-$D$ GR and gauge taxonomy branches (Claims~8--9) are partially closed; remaining global branches are tracked as open,
+\item SR circular-orbit benchmark inequalities (Claim~10) are formalized as regression identities.
+\end{itemize}
 
 \subsection{What Counts as a Proof Here}
-\TODO{Explain the validation contract: assumptions, units, symmetry, and independent cross-check paths (Lean/symbolic/numeric).}
+\textbf{Validation contract (scheme).}
+Every upgraded statement is expected to include:
+\begin{enumerate}[label=(\arabic*),leftmargin=1.8em]
+\item explicit assumptions (model, regime, approximations),
+\item units/dimensions check (where relevant),
+\item symmetry/conservation checks (where relevant),
+\item at least one independent cross-check path:
+  Lean proof or symbolic derivation or numerical diagnostics,
+\item a confidence/uncertainty note,
+\item reproducibility metadata (commands, versions).
+\end{enumerate}
+\textbf{Rule of thumb.} Half-density/groupoid composition is \emph{kinematic};
+continuum-limit existence is \emph{dynamical} and requires separate analytic gates.
 
 \section{What Has Been Done So Far (Artifacts and Results)}
 \label{sec:done}
 
 \subsection{Audit Results}
-\TODO{Summarize the current top-10 audit table and the current ``next'' item.}
+\textbf{Top-10 audit lock.}
+The canonical audit is \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
+
+\textbf{Key audit outcomes (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item Claim~1 remains the highest-novelty, highest-risk item, but has a nontrivial scoped proof closure report.
+\item Claims~2--7 and Claim~10 are \texttt{proved} in dedicated theorem notes; Claims~8--9 are partially closed with explicit open sectors.
+\item The audit enforces a non-drift filter: new work must strengthen
+  (i) variational-distribution core, (ii) geometry-of-force bridge, or (iii) scale-control core.
+\end{itemize}
+
+\textbf{Current ``next'' audit item (scheme).}
+As of the latest update, the next queued Lean target is AN-18:
+reduce finite exponential-family increment hypotheses by proving automatic regularity and non-vanishing conditions.
 
 \subsection{Theorem Notes and Reports}
-\TODO{Curate the most important \path{research/workspace/notes/theorems/*.md} and \path{research/workspace/reports/*} artifacts.}
+\textbf{Core reports (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item \path{research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex}:
+  static $\to$ QM $\to$ QFT ladder and \(\delta(\partial S)\) viewpoint.
+\item \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}:
+  scoped complete proof in a projective oscillatory class (projective stability, counterterms, de-regularization, SD, \(\tau_\mu\)).
+\item \path{research/workspace/reports/2026-02-09-newton-action-path-integral-lecture.md}:
+  Newton $\to$ action reduction $\to$ oscillatory localization lecture narrative.
+\end{itemize}
+
+\textbf{Field-level dimension notes (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item \path{research/workspace/notes/theorems/2026-02-09-claim1-d2-ultralocal-phi4-closure.md}:
+  theorem-grade field-indexed closure in \(d=2\) ultralocal interacting class.
+\item \path{research/workspace/notes/theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md}:
+  \(d=3\) bridge candidate with proof obligations B1--B5.
+\item \path{research/workspace/notes/theorems/2026-02-09-claim1-d4-lift-obstruction-sheet.md}:
+  explicit failure points for naive \(d=2\to d=4\) lift in local interacting models.
+\end{itemize}
 
 \subsection{Lean Formalization (Machine-Checked Spine)}
-\TODO{Summarize the Lean modules and the logical chain they support.}
+\textbf{Lean workspace.}
+The Lean project lives in \path{research/workspace/proofs/}.
+
+\textbf{Machine-checked modules (scheme).}
+As recorded in \path{research/workspace/notes/theorems/2026-02-09-claim1-lean-formalization-status.md},
+the current Lean spine includes:
+\begin{itemize}[leftmargin=1.4em]
+\item \(c\)-invariance under \(\tau_\mu\) scaling and composition laws,
+\item quotient-derivative covariance form for \(\omega=N/Z\),
+\item finite-average covariance inequality templates,
+\item derivative-bound and interval-increment templates for ratio states,
+\item finite exponential-family bridges:
+  derivative-under-sum, centered representation, derivative bounds, and a model-internal \(C\kappa\) increment bound.
+\end{itemize}
 
 \subsection{Simulation and Symbolic Checks}
-\TODO{Summarize the Python scripts used as diagnostics and cross-checks.}
+\textbf{Scope.}
+Python scripts are used as \emph{diagnostics}, not as proof substitutes.
+The index is kept in \path{research/workspace/notes/README.md}.
+
+\textbf{Examples (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item \(d=2\) ultralocal closure diagnostic:
+  \path{research/workspace/simulations/claim1_d2_ultralocal_phi4_closure_check.py}.
+\item half-density kinematic vs dynamical counterexample diagnostic:
+  \path{research/workspace/simulations/claim1_halfdensity_kinematic_dynamic_split_check.py}.
+\item \(d=3\) bridge toy scan:
+  \path{research/workspace/simulations/claim1_d3_bridge_toy_coupling_scan.py}.
+\end{itemize}
 
 \section{Current Status of Claim 1 (Closed Pieces, Open Gaps)}
 \label{sec:status}
 
 \subsection{The Scoped Complete Proof and Its Scope}
-\TODO{Explain what \path{2026-02-09-claim1-scoped-complete-proof.tex} proves and what it does not.}
+\textbf{Scoped closure (scheme).}
+\path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex} proves, in a projective cylinder class:
+\begin{itemize}[leftmargin=1.4em]
+\item exact projective stability on cylinder observables,
+\item a well-defined continuum state on cylinder observables,
+\item constructive counterterm repair mechanisms,
+\item de-regularization \(\eta\to0^+\) in several interacting families,
+\item Schwinger--Dyson identities and exact \(\tau_\mu\)-type scale-flow covariance,
+\item explicit large-\(N\) lifts and non-factorized interacting extensions under stated conditions.
+\end{itemize}
+
+\textbf{What it does not claim (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item it does not claim a full continuum local QFT construction in \(d=4\),
+\item it does not identify a unique interacting continuum field theory beyond the cylinder/regulated scope,
+\item it does not bypass the dimension-gated existence and reconstruction obligations.
+\end{itemize}
 
 \subsection{Statics and Dynamics: Where the Delta-of-Variation Logic Is Theorem-Grade}
-\TODO{Summarize what is proved at static and discrete-time levels, and what is conjectural in the continuum.}
+\textbf{Static level (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item In finite dimensions, stationary phase yields \(|A_\varepsilon|^2\to 2\pi\langle \delta(f'),|O|^2\rangle\)
+  in nondegenerate regimes.
+\item The distributional identity \(\delta(f')=\sum \delta_{x_i}/|f''(x_i)|\) reduces the limiting object
+  to a finite measure supported on critical points (amenable to formal proof assistants).
+\end{itemize}
+
+\textbf{Dynamics level (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item time-slicing makes \(\delta(\delta S/\delta q)\) exact as \(\delta(\nabla S_N)\) at fixed discretization,
+\item continuum claims require limit control under refinement, tracked by projective/cylinder programs and scale-flow constraints.
+\end{itemize}
 
 \subsection{Field Level: \(d=2\) Closure, \(d=3\) Bridge, \(d=4\) Obstruction}
-\TODO{Summarize \path{claim1-d2-ultralocal-phi4-closure.md}, \path{claim1-d3-intermediate-bridge-candidate.md}, and \path{claim1-d4-lift-obstruction-sheet.md}.}
+\textbf{\(d=2\) closure (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item \(d=2\) ultralocal interacting \(\phi^4\) model: exact cylinder stabilization and continuum existence,
+  field-level SD identity, and exact \(c\)-invariance along \(\tau_\mu\)-orbits.
+\item interpretation: this is non-Gaussian but ultralocal, serving as a controlled baseline rather than full local QFT.
+\end{itemize}
+
+\textbf{\(d=3\) bridge candidate (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item add nearest-neighbor gradient coupling \(\kappa\ge 0\) and seek a small-\(\kappa\) regime \([0,\kappa_*]\),
+  with explicit proof obligations:
+  B1 moments, B2 tightness, B3 non-vanishing denominator, B4 SD insertion control, B5 \(\kappa\)-continuity.
+\item Lean work mechanizes B5-shaped increment bounds in abstract and in a finite exponential-family toy class;
+  the field-level model bridge remains open.
+\end{itemize}
+
+\textbf{\(d=4\) obstruction sheet (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item restoring local propagation destroys product structure and exact cylinder decoupling;
+  SD hierarchy is no longer one-site closed.
+\item regulator removal requires explicit renormalization flow control and nontriviality criteria.
+\item half-density statements must be split into kinematic vs dynamical (AR note).
+\end{itemize}
 
 \section{How We Continue (Roadmap)}
 \label{sec:roadmap}
 
 \subsection{Immediate Next Targets}
-\TODO{List the next research targets in the AN queue, and how they tie back to Goal 1.}
+\textbf{Immediate queue (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item AN-18 (Lean): reduce finite exponential-family increment hypotheses by proving automatic regularity and non-vanishing conditions.
+\item Field-level: close at least one genuine beyond-ultralocal \(d=3\) statement by addressing B1--B5 systematically.
+\item Cross-level: keep half-density composition results separate from continuum existence, and ensure every ``lift'' names its missing analytic gates.
+\end{itemize}
 
 \subsection{Longer-Horizon Conjectures and Risks}
-\TODO{List key missing ingredients (tightness, reconstruction, renormalization, dimension-dependent breakdowns).}
+\textbf{Core missing analytic ingredients (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item tightness/precompactness mechanisms for cylinder marginals in local interacting field models,
+\item robust non-vanishing control for oscillatory partition normalizations on complex parameter domains,
+\item SD pass-through with gradient terms (control of insertions and boundary terms),
+\item \(d=4\) renormalization flow control and nontriviality criteria,
+\item reconstruction to Minkowski (when pursuing that branch).
+\end{itemize}
 
 \section{Appendices}
 \label{sec:appendix}
 
 \subsection{Glossary}
-\TODO{Copy/adapt the core glossary (\path{research/workspace/notes/2026-02-09-foundational-glossary.md}) into TeX form.}
+\textbf{Core glossary (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item \(c\)-parameter:
+  \(c := (\eta - i/h)\kappa\).
+\item \(c\)-invariant:
+  invariant under parameter changes that keep \(c\) fixed; constant on \(\tau_\mu\)-orbits.
+\item \(\tau_\mu\) flow:
+  \(\tau_\mu:(\kappa,\eta,h)\mapsto(\mu\kappa,\eta/\mu,\mu h)\), \(\mu>0\).
+\item de-regularization:
+  one-sided limit \(\eta\to0^+\) from damped oscillatory weights to purely oscillatory ones.
+\item SD identity (scoped finite form):
+  \(\langle \partial_i\psi\rangle_c = c\,\langle \psi\,\partial_i S\rangle_c\).
+\item half-density (here):
+  amplitude-level object whose modulus-square yields density-level quantities; natural for groupoid convolution kernels.
+\end{itemize}
 
 \subsection{Reproducibility (Commands and Entry Points)}
-\TODO{Write the minimal commands to build Lean and run key scripts.}
+\textbf{Lean build (scheme).}
+\begin{verbatim}
+cd research/workspace/proofs
+/Users/arivero/.elan/bin/lake update
+/Users/arivero/.elan/bin/lake build Claim1lean
+\end{verbatim}
+
+\textbf{Selected diagnostics (scheme).}
+\begin{verbatim}
+python3.12 research/workspace/simulations/claim1_d2_ultralocal_phi4_closure_check.py
+python3.12 research/workspace/simulations/claim1_halfdensity_kinematic_dynamic_split_check.py
+\end{verbatim}
 
 \subsection{File Map}
-\TODO{Provide a curated index of the most important files produced so far.}
+\textbf{Curated index (scheme).}
+\begin{itemize}[leftmargin=1.4em]
+\item source: \path{conv\_patched.md}, \path{conv\_patched.pdf}.
+\item audit: \path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
+\item compass: \path{research/workspace/notes/2026-02-09-core-goal-compass.md}.
+\item Claim~1 reports: \path{research/workspace/reports/2026-02-08-claim1-variational-delta-note.tex},
+  \path{research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex}.
+\item synthesis report: \path{research/workspace/reports/2026-02-09-newton-action-path-integral-lecture.md}.
+\item Lean: \path{research/workspace/proofs/Claim1lean.lean} and \path{research/workspace/proofs/Claim1lean/}.
+\item theorem notes index: \path{research/workspace/notes/README.md}.
+\end{itemize}
 
 \end{document}
