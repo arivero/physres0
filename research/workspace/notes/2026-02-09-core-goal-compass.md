@@ -29,6 +29,7 @@ and connect that emergence to geometric descriptions of forces.
 
 - Priority 1 completed (Phase AG): \(\eta\to0^+\) de-regularization note for finite-\(g\) multi-mode quartic sector.
 - Priority 2 completed (Phase AH): unified action-reduction synthesis note across SR/GR/gauge.
+- Follow-up completed (Phase AI): consolidated lecture manuscript "Newton -> action -> path integral" with explicit dependency graph.
 - Priority 3 remains next on this compass.
 
 ## De-Prioritized Unless Supporting North Star

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2026-02-09-newton-action-path-integral-lecture</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<h1
+id="from-newton-to-the-path-integral-a-foundational-lecture-note">From
+Newton to the Path Integral: A Foundational Lecture Note</h1>
+<p>Date: 2026-02-09<br />
+Status: Working manuscript (foundational synthesis)</p>
+<h2 id="aim">0. Aim</h2>
+<p>This note gives a single technical storyline for the corpus:</p>
+<ol type="1">
+<li>Newton’s finite-step geometric conservation law,</li>
+<li>action-based reduction and discriminant orbit structure,</li>
+<li>distributional/oscillatory emergence of amplitude weighting,</li>
+<li>controlled refinement ((h), (_), Schwinger-Dyson),</li>
+<li>field-theoretic extension.</li>
+</ol>
+<p>The target is a first-month QFT companion narrative with explicit
+mathematical dependencies.</p>
+<h2 id="newtons-seed-finite-step-invariant-before-the-limit">1. Newton’s
+Seed: Finite-Step Invariant Before the Limit</h2>
+<p>For central-force polygonal evolution (equal time steps (t)), equal
+swept triangles are exact at the discrete level.<br />
+Angular momentum conservation is encoded geometrically: [ A_n= |r_nr_n|,
+=. ] Central impulse gives (r_np_n=0), so (A_n) is step-invariant.</p>
+<p>The continuum law is then a controlled refinement: [ t, A_n, . ] The
+important logic is: exact finite-step structure first, limit second.</p>
+<h2 id="action-reduction-as-common-mechanics">2. Action Reduction as
+Common Mechanics</h2>
+<p>For a Lagrangian action (S=L(q,q),d):</p>
+<ol type="1">
+<li>time-translation symmetry gives conserved (E),</li>
+<li>rotational symmetry gives conserved (L),</li>
+<li>cyclic elimination reduces to a 1D radial problem [ p_r^2=R(r;E,L,).
+]</li>
+</ol>
+<p>Orbit classes are read from turning-point geometry:</p>
+<ol type="1">
+<li>allowed region: (R(r)),</li>
+<li>bounded non-circular branch: two turning points,</li>
+<li>branch boundaries: double root [ R(r_)=0,R’(r_)=0. ]</li>
+</ol>
+<p>This is the same mechanism in:</p>
+<ol type="1">
+<li>SR Coulomb ((^2)-classified regimes),</li>
+<li>Schwarzschild fixed-energy interval and separatrix/ISCO,</li>
+<li>probe dynamics in gauge-defined static (V(r)).</li>
+</ol>
+<p>References in workspace:</p>
+<ul>
+<li><code>research/workspace/notes/theorems/2026-02-08-claim3-coulomb-phase-classification.md</code></li>
+<li><code>research/workspace/notes/theorems/2026-02-08-claim6-schwarzschild-fixed-energy-interval.md</code></li>
+<li><code>research/workspace/notes/theorems/2026-02-09-foundational-action-reduction-unification.md</code></li>
+</ul>
+<h2 id="static-variational-problem-as-distribution">3. Static
+Variational Problem as Distribution</h2>
+<p>For smooth (f), classical extrema are encoded by [ (f’(x)). ] Under
+nondegenerate critical points (x_i): [ (f’(x)) = _i . ]</p>
+<p>Fourier representation [ (u)=e^{izu},dz ] introduces oscillatory
+exponentials already at static level.</p>
+<p>The “halved expression” [ A_(O)=<sup>{-1/2}e</sup>{f(x)}O(x),dx ] has
+[ |A_(O)|^2 (f’),|O|^2 ] in the stationary-phase/nondegenerate
+setting.<br />
+This is the amplitude-to-density pattern and motivates half-density
+language.</p>
+<p>References in workspace:</p>
+<ul>
+<li><code>research/workspace/notes/theorems/2026-02-08-claim1-discrete-variational-delta-lemmas.md</code></li>
+<li><code>research/workspace/notes/theorems/2026-02-08-claim1-manifold-halfdensity-convolution.md</code></li>
+<li><code>research/workspace/notes/theorems/2026-02-08-claim1-groupoid-halfdensity-theorem-pack.md</code></li>
+</ul>
+<h2 id="from-static-to-time-histories">4. From Static to Time
+Histories</h2>
+<p>Replacing (f) by action (S[]), classical paths solve [ =0. ] The
+formal object [ !() ] is regularized via oscillatory weighting of
+histories, leading to path-integral form.</p>
+<p>Consistency of refinement/composition introduces a surviving scale
+parameter (h) (identified physically with () in standard QM/QFT usage),
+and scale-flow covariance: [ <em>: (,,h)(,/,h), ] with dressed-state
+invariance under (</em>) in the scoped framework.</p>
+<p>References in workspace:</p>
+<ul>
+<li><code>research/workspace/notes/theorems/2026-02-09-claim1-scale-flow-covariance.md</code></li>
+<li><code>research/workspace/notes/theorems/2026-02-09-claim1-fd-schwinger-dyson-identity.md</code></li>
+</ul>
+<h2 id="field-theoretic-lift-and-eq.11-type-structure">5.
+Field-Theoretic Lift and Eq.(11)-Type Structure</h2>
+<p>In field form, Euler-Lagrange structure lifts to Schwinger-Dyson
+identities by functional integration by parts.<br />
+In the scoped finite-dimensional model family, this is theoremized as: [
+_i!(e^{-cS})=0 ;; _i = c,_i S. ] This is the rigorous version of the
+Eq.(11)-type closure thread in the corpus.</p>
+<h2 id="current-claim-1-closure-boundary">6. Current Claim 1 Closure
+Boundary</h2>
+<p>The scoped bridge now includes:</p>
+<ol type="1">
+<li>exact projective cylinder consistency,</li>
+<li>(^+) de-regularization in several interacting classes,</li>
+<li>large-(N) non-factorized quadratic and quartic tails,</li>
+<li>finite-(g) non-perturbative multi-mode quartic control (Euclidean
+and oscillatory regularized),</li>
+<li>(^+) closure for that multi-mode quartic sector.</li>
+</ol>
+<p>Primary artifacts:</p>
+<ul>
+<li><code>research/workspace/reports/2026-02-09-claim1-scoped-complete-proof.tex</code></li>
+<li><code>research/workspace/notes/theorems/2026-02-09-claim1-multimode-quartic-dereg-eta0.md</code></li>
+</ul>
+<p>Remaining frontier:</p>
+<ol type="1">
+<li>full continuum/global interacting equivalence beyond scoped
+classes,</li>
+<li>uniform renormalization/channel control in truly field-theoretic
+limits.</li>
+</ol>
+<h2 id="dependency-graph-explicit">7. Dependency Graph (Explicit)</h2>
+<pre class="text"><code>Newton finite-step area invariance
+  -&gt; action additivity + symmetry charges (E, L)
+     -&gt; 1D radial reduction p_r^2 = R(r)
+        -&gt; double-root boundaries (circular/separatrix/threshold)
+           -&gt; SR Coulomb regimes (Claim 3)
+           -&gt; Schwarzschild intervals + ISCO (Claims 6,7)
+           -&gt; gauge-phase static probe branches (Claim 9 map)
+
+Static variational distribution δ(f&#39;)
+  -&gt; Fourier/oscillatory representation
+     -&gt; halved amplitude |A|^2 structure
+        -&gt; half-density/groupoid formulation
+           -&gt; path-time slicing + RG-style control (tau flow)
+              -&gt; Schwinger-Dyson lifted equations
+                 -&gt; scoped Claim 1 theorem chain
+                    -&gt; large-N non-factorized interacting tails
+                       -&gt; finite-g nonperturbative + η-&gt;0+ closures</code></pre>
+<h2 id="minimal-what-is-forced-statement">8. Minimal “What Is Forced”
+Statement</h2>
+<p>In this program, path-integral-type oscillatory weighting is not
+introduced as optional aesthetics; it is the structurally stable way to
+combine:</p>
+<ol type="1">
+<li>localization on variational extrema (distributional viewpoint),</li>
+<li>multiplicative composition under slicing (action additivity),</li>
+<li>controlled refinement with a surviving scale parameter.</li>
+</ol>
+<p>That is the precise sense in which quantum weighting appears as the
+consistent correction/completion of naive classical refinement.</p>
+<h2 id="reproducibility-index">9. Reproducibility Index</h2>
+<p>Core diagnostic scripts:</p>
+<ol type="1">
+<li><code>python3.12 research/workspace/simulations/foundation_action_reduction_unification_check.py</code></li>
+<li><code>python3.12 research/workspace/simulations/claim1_multimode_quartic_dereg_eta0_check.py</code></li>
+<li><code>python3.12 research/workspace/simulations/claim1_multimode_quartic_nonperturbative_oscillatory_check.py</code></li>
+<li><code>python3.12 research/workspace/simulations/claim6_schwarzschild_interval_scan.py</code></li>
+<li><code>python3.12 research/workspace/simulations/claim3_coulomb_classification_scan.py</code></li>
+</ol>
+<h2 id="next-formal-target">10. Next Formal Target</h2>
+<p>Integrate this lecture synthesis with an explicit tangent-groupoid
+scale map linking:</p>
+<ol type="1">
+<li>near-diagonal scaling,</li>
+<li>(_)-flow invariance,</li>
+<li>Schwinger-Dyson identities,</li>
+</ol>
+<p>in one theorem-style dependency sheet suitable for direct inclusion
+in the scoped Claim 1 manuscript.</p>
+</body>
+</html>

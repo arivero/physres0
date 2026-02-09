@@ -113,4 +113,5 @@ Scoring rule:
 43. [done] Extended finite-\(g\) non-perturbative multi-mode quartic control from Euclidean regularization to oscillatory \(c=\eta-i/\varepsilon\) (\(\eta>0\)).
 44. [done] Closed de-regularization \(\eta\to0^+\) for the finite-\(g\) non-perturbative multi-mode quartic sector.
 45. [done] Wrote a synthesis theorem note for the shared action-reduction mechanism across SR/GR/gauge force descriptions.
-46. [next] Integrate the new foundational synthesis into a single "Newton -> action -> path integral" lecture manuscript with explicit dependency graph.
+46. [done] Integrated the foundational synthesis into a single "Newton -> action -> path integral" lecture manuscript with explicit dependency graph.
+47. [next] Build the tangent-groupoid/\(\tau_\mu\)/Schwinger-Dyson unified dependency theorem sheet and wire it into the lecture manuscript.

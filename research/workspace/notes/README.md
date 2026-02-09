@@ -123,6 +123,9 @@ This folder stores analysis artifacts derived from source documents.
 - `../reports/2026-02-09-claim1-scoped-complete-proof.tex`
 - `../reports/2026-02-09-claim1-scoped-complete-proof.html`
 - `../reports/2026-02-09-claim1-scoped-complete-proof.pdf`
+- `../reports/2026-02-09-newton-action-path-integral-lecture.md`
+- `../reports/2026-02-09-newton-action-path-integral-lecture.html`
+- `../reports/2026-02-09-newton-action-path-integral-lecture.pdf`
 
 ## Supplemental Audit Notes
 
