@@ -101,6 +101,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-scoped-continuum-branch-candidate.md`
 - `theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`
 - `theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`
+- `theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -168,6 +169,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_d3_an22_continuum_branch_proxy_check.py`
 - `../simulations/claim1_d3_an23_compact_spin_closure_check.py`
 - `../simulations/claim1_d3_an24_cutoff_lift_check.py`
+- `../simulations/claim1_d3_an25_class_extension_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -233,6 +235,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-scoped-continuum-branch-candidate.md`
 - `theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`
 - `theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`
+- `theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`

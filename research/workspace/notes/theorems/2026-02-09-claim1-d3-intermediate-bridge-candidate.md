@@ -209,6 +209,24 @@ Implication:
 2. next bridge lift is extension from compact-support local classes to wider
    local classes and then oscillatory/de-regularized branch transfer.
 
+## AN-25 Update (Class-Extension Lane Started)
+
+AN-25 now starts in:
+
+- `research/workspace/notes/theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`
+
+Output of AN-25 (current):
+
+1. observable-side local extension \(C_c\to C_b\) is closed with explicit
+   \(O(R^{-2})\)-type tail control from renormalized moments,
+2. SD test-side extension \(C_c^1\to C_b^1\) is formulated with an explicit
+   tail insertion-control condition and remains open.
+
+Implication:
+
+1. AN-25 is active and partially closed,
+2. next concrete target is AN-26 tail insertion-control closure for SD tests.
+
 ## Why \(d=3\) Here
 
 \(d=3\) is the intended intermediate rung:
@@ -228,6 +246,7 @@ python3.12 research/workspace/simulations/claim1_d3_renormalized_moment_channel_
 python3.12 research/workspace/simulations/claim1_d3_an22_continuum_branch_proxy_check.py
 python3.12 research/workspace/simulations/claim1_d3_an23_compact_spin_closure_check.py
 python3.12 research/workspace/simulations/claim1_d3_an24_cutoff_lift_check.py
+python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py
 ```
 
 The first script gives a nearest-neighbor toy weak-coupling scan.
@@ -236,3 +255,4 @@ The third script checks AN-21 renormalized moment bounds across \(a\).
 The fourth script gives AN-22 continuum-branch proxy diagnostics.
 The fifth script checks AN-23 compact-spin B1-B4 closure diagnostics.
 The sixth script checks AN-24 hard-cutoff lift diagnostics across \(R\).
+The seventh script checks AN-25 observable-class extension and SD-test residual diagnostics.

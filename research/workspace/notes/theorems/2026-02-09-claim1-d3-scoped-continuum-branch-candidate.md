@@ -96,6 +96,13 @@ AN-24 update:
 2. this AN-22 template is now realized as scoped closure in a lifted
    (no-hard-cutoff) Euclidean local-renormalized channel.
 
+AN-25 update:
+
+1. class-extension lane started in
+   `research/workspace/notes/theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`,
+2. observable-side local extension \(C_c\to C_b\) is closed,
+3. SD test-side \(C_b^1\) extension remains the active tail-control gap.
+
 ## Validation Contract
 
 ### Assumptions
@@ -120,6 +127,7 @@ Run:
 ```bash
 python3.12 research/workspace/simulations/claim1_d3_an22_continuum_branch_proxy_check.py
 python3.12 research/workspace/simulations/claim1_d3_an24_cutoff_lift_check.py
+python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py
 ```
 
 The script provides finite-volume diagnostics for:
@@ -128,11 +136,13 @@ The script provides finite-volume diagnostics for:
 2. small-\(\kappa\) increment scaling proxies for local observables,
 3. coarse Cauchy-style drift checks across spacing refinements.
 4. hard-cutoff lift stabilization and SD residual checks across \(R\).
+5. observable-class extension error decay and noncompact SD-probe residual behavior.
 
 ### Confidence statement
 
 The dependency integration is theorem-grade, and a concrete AN-23/AN-24
-subclass realization is now closed in the stated Euclidean local-renormalized channel.
+subclass realization is closed in the Euclidean local-renormalized channel.
+AN-25 class extension is active with observable-side closure and SD-test side still open.
 
 ### Reproducibility metadata
 

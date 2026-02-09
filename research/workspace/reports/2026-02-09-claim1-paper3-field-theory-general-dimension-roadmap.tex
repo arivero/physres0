@@ -25,7 +25,7 @@ Current progress includes an explicit \(d=2\) interacting closure in an ultraloc
 plus a \(d=3\) local-interaction scoped closure in a compact-spin Euclidean subclass.
 AN-24 removes the hard cutoff in that same branch inside a local-renormalized channel.
 The immediate next theorem step is to widen that channel from compact-support local
-classes to broader local classes.
+classes to broader local classes; this AN-25 lane is now active.
 \end{abstract}
 
 \section{Scope}
@@ -150,7 +150,8 @@ interacting Euclidean subclass:
 Thus the AN-22 candidate is upgraded to scoped closure in that subclass.
 AN-24 then removes the hard compact-spin cutoff \(R\to\infty\) while keeping
 B1-B4 in the local-renormalized compact-support channel.
-What remains open is widening that channel to broader local classes.
+AN-25 now starts this widening: observable-side \(C_c\to C_b\) local extension
+is closed, while SD test-side \(C_b^1\) extension remains open.
 
 \section{Literature Anchors for the Dimension Ladder}
 
@@ -186,8 +187,8 @@ What remains open is widening that channel to broader local classes.
 
 The next theorem target is:
 \begin{enumerate}
-\item extend the AN-24 compact-support local observable/test classes to broader local classes while preserving B1-B4 controls,
-\item keep the same renormalized \(d=3\) SD pass-through channel during that class extension.
+\item complete AN-25 by closing SD test-side \(C_b^1\) extension (tail insertion-control) in the same \(d=3\) channel,
+\item then transfer the widened local class to the oscillatory/de-regularized branch.
 \end{enumerate}
 
 \section{Validation Contract}
@@ -218,12 +219,14 @@ The next theorem target is:
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an23\_compact\_spin\_closure\_check.py}.
 \item AN-24 hard-cutoff lift diagnostics:
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an24\_cutoff\_lift\_check.py}.
+\item AN-25 local class-extension diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an25\_class\_extension\_check.py}.
 \end{enumerate}
 
 \subsection*{Confidence statement}
 This document is a theorem-program and source-anchored roadmap.
-It now includes scoped \(d=3\) closure with hard-cutoff lift in a local-renormalized channel,
-but it is not yet a full broad-class unbounded-field closure report.
+It now includes scoped \(d=3\) closure with hard-cutoff lift and an active AN-25
+class-extension lane; full broad-class unbounded-field closure is not yet complete.
 
 \section{Reproducibility Metadata}
 

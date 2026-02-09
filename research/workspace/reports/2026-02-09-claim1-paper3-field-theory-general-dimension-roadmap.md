@@ -14,7 +14,7 @@ not claim full interacting closure in all dimensions. Current progress
 establishes a scoped \(d=3\) closure in one compact-spin interacting Euclidean
 subclass; AN-24 then removes the hard cutoff in a local-renormalized channel.
 The next scientific step is to widen that channel from compact-support local
-classes to broader local classes.
+classes to broader local classes, and this AN-25 lane is now active.
 
 ## Scope
 
@@ -100,7 +100,8 @@ AN-23 closes B1--B4 in a concrete interacting compact-spin Euclidean subclass:
 This upgrades the AN-22 candidate to scoped closure in that subclass.
 AN-24 now removes hard-cutoff \(R\to\infty\) with B1-B4 preserved in a
 local-renormalized compact-support channel.
-The remaining open step is class-widening beyond compact-support local classes.
+AN-25 now starts this class-widening: observable-side \(C_c\to C_b\) extension
+is closed, while SD test-side \(C_b^1\) extension remains open.
 
 ## Literature Anchors
 
@@ -113,9 +114,9 @@ The remaining open step is class-widening beyond compact-support local classes.
 
 ## Immediate Next Scientific Step
 
-1. widen AN-24 compact-support local observable/test classes to broader local
-   classes while preserving B1-B4 controls,
-2. keep the same renormalized local SD channel through that class extension.
+1. complete AN-25 by closing SD test-side \(C_b^1\) extension (tail
+   insertion-control) in the same \(d=3\) channel,
+2. then transfer the widened local class to oscillatory/de-regularized branch.
 
 ## Validation Contract
 
@@ -131,10 +132,11 @@ The remaining open step is class-widening beyond compact-support local classes.
      - `python3.12 research/workspace/simulations/claim1_d3_renormalized_moment_channel_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an22_continuum_branch_proxy_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an23_compact_spin_closure_check.py`,
-     - `python3.12 research/workspace/simulations/claim1_d3_an24_cutoff_lift_check.py`.
+     - `python3.12 research/workspace/simulations/claim1_d3_an24_cutoff_lift_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an25_class_extension_check.py`.
 4. **Confidence statement:** this is a theorem-program with scoped \(d=3\)
-   closure plus hard-cutoff lift in one local-renormalized subclass, not yet a
-   full broad-class unbounded-field closure.
+   closure plus hard-cutoff lift and an active AN-25 class-extension lane, not
+   yet a full broad-class unbounded-field closure.
 
 ## Reproducibility Metadata
 

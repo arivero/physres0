@@ -17,6 +17,7 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-d3-small-kappa-lipschitz-prototype.md`
 - `theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`
 - `theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`
+- `theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -91,6 +92,7 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) scoped continuum-branch candidate completed (Phase BN / AN-22): AN-21 renormalized B5b input integrated with B1-B4 into an explicit scoped continuum theorem candidate, synced into Paper 3 + bridge note.
 - \(d=3\) concrete B1-B4 closure completed (Phase BO / AN-23): compact-spin interacting Euclidean subclass closes B1-B4 (tightness, \(Z>0\), SD pass-through) and upgrades the AN-22 candidate to scoped closure in that subclass.
 - \(d=3\) hard-cutoff lift completed (Phase BP / AN-24): removed \(R\to\infty\) artifact in the AN-23 branch with B1-B4 preserved in the Euclidean local-renormalized channel.
+- \(d=3\) class-extension lane started (Phase BQ / AN-25): observable-side compact-support \(\to\) bounded-continuous local extension is closed; full \(C_b^1\) SD-test extension remains open.
 
 ## Next Active Target
 
@@ -103,7 +105,8 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BN (completed): AN-22 scoped continuum-branch theorem candidate delivered and integrated into Goal 1C track.
 - Phase BO (completed): AN-23 compact-spin \(d=3\) B1-B4 closure delivered and integrated into the bridge lane.
 - Phase BP (completed): AN-24 hard-cutoff lift \(R\to\infty\) delivered in the AN-23 branch.
-- Active support lane (AN-25): extend AN-24 compact-support local classes to wider local classes before oscillatory/de-regularized transfer.
+- Phase BQ (active): AN-25 class-extension started with observable-side closure.
+- Active support lane (AN-26): finish SD-test \(C_b^1\) tail control and then transfer to oscillatory/de-regularized branch.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

@@ -81,7 +81,8 @@ Program stance:
 10. **AN-23 (done):** discharged B1-B4 in an explicit interacting compact-spin \(d=3\) subclass (tightness + denominator non-vanishing + SD insertion pass-through) in `research/workspace/notes/theorems/2026-02-09-claim1-d3-compact-spin-b1-b4-closure.md`.
 11. **Goal 1C paper track (done):** started a general-dimension field manuscript with explicit closure gates and literature anchors (`research/workspace/reports/2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.tex`).
 12. **AN-24 (done):** removed hard cutoff \(R\to\infty\) in the AN-23 Euclidean branch while preserving B1-B4 in the local-renormalized channel (`research/workspace/notes/theorems/2026-02-09-claim1-d3-cutoff-lift-closure.md`).
-13. **AN-25 (next):** extend AN-24 from compact-support local observable/test classes to a wider local class in the same \(d=3\) branch before oscillatory/de-regularized lift.
+13. **AN-25 (active):** started AN-24 class extension in `research/workspace/notes/theorems/2026-02-09-claim1-d3-class-extension-local-cb-channel.md`; observable-side \(C_c\to C_b\) extension is closed, while full SD test-side \(C_b^1\) extension is still open.
+14. **AN-26 (next):** complete AN-25 by discharging tail insertion-control for \(C_b^1\) SD tests, then begin oscillatory/de-regularized transfer in the same \(d=3\) branch.
 
 ## Non-Drift Rule
 
