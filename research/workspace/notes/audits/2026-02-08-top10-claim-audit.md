@@ -117,4 +117,7 @@ Scoring rule:
 47. [done] Built the tangent-groupoid/\(\tau_\mu\)/Schwinger-Dyson unified dependency theorem sheet and wired it into the lecture manuscript.
 48. [done] Integrated the \(c\)-invariance dependency sheet into the scoped Claim 1 manuscript dependency chain.
 49. [done] Built a first explicit continuum-limit theorem candidate using the \(c\)-invariance backbone beyond finite-dimensional truncations.
-50. [next] Promote the continuum candidate to a closed theorem in one interacting non-Gaussian class with fully verified assumptions.
+50. [done] Reframed Goal 1 as a three-level program (statics, dynamics, fields) with half-density-optional branches and field-level dimension-dependent existence map.
+51. [done] Added a dedicated field-level dimension-gated existence roadmap (regulated/continuum/reconstruction split plus \(d=2\to d=3\to d=4\) escalation).
+52. [done] Drafted AN-1 \(d=2\) field-indexed cylinder theorem candidate with explicit \(d=4\) obstruction checklist (`research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`).
+53. [next] Upgrade the AN-1 \(d=2\) candidate from assumption-level theorem shape to a closed theorem in one explicit interacting class with verified assumptions.

@@ -5,6 +5,9 @@ Date: 2026-02-09
 Terminology companion:
 
 - `2026-02-09-foundational-glossary.md`
+- `theorems/2026-02-09-claim1-three-level-program.md`
+- `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
+- `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 
 ## North Star
 
@@ -25,9 +28,9 @@ and connect that emergence to geometric descriptions of forces.
 
 ## Immediate Execution Priorities
 
-1. Close Claim 1 frontier: non-perturbative multi-mode quartic de-regularization \(\eta\to0^+\) with large-\(N\) control.
-2. Produce a single synthesis theorem note: action reduction as the common mechanism for SR/GR/gauge force descriptions.
-3. Tie Schwinger-Dyson/\(\tau\)-flow statements back to tangent-groupoid scale language in one formal dependency map.
+1. Keep Goal 1 explicitly three-level: statics \(\to\) dynamics \(\to\) fields, with half-density optional at each level and assumptions stated branchwise.
+2. For field level, enforce a dimension-indexed existence program (\(d=2\), then \(d=3\), then \(d=4\) frontier) instead of a dimension-blind continuum claim.
+3. Promote the Claim 1 continuum candidate to a closed non-Gaussian theorem in one field-compatible class, with explicit statement of why the same proof does or does not lift to \(d=4\).
 
 ## Progress (This Pass)
 
@@ -37,6 +40,9 @@ and connect that emergence to geometric descriptions of forces.
 - Priority 3 completed (Phase AJ): tangent-groupoid/\(\tau_\mu\)/Schwinger-Dyson dependency sheet.
 - Integration completed (Phase AK): \(c\)-invariance dependency logic wired into the scoped Claim 1 manuscript.
 - Frontier step completed (Phase AL): first explicit continuum-limit theorem candidate using the \(c\)-invariance backbone.
+- New structure lock completed (Phase AM): Goal 1 reorganized as a three-level program with explicit field-level dimension-dependent existence ladder.
+- Field execution map completed (Phase AN): dimension-gated field existence roadmap with concrete next deliverables (AN-1/AN-2/AN-3).
+- Field bridge draft completed (Phase AO): first \(d=2\) field-indexed Claim 1 candidate with explicit \(d=4\) obstruction checklist.
 
 ## De-Prioritized Unless Supporting North Star
 

@@ -100,13 +100,17 @@ At session start (or after a context reset), read in this order:
 
 1. `research/workspace/notes/2026-02-09-core-goal-compass.md`
 2. `research/workspace/notes/2026-02-09-foundational-glossary.md`
-3. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
-4. `research/workspace/notes/README.md`
+3. `research/workspace/notes/theorems/2026-02-09-claim1-three-level-program.md`
+4. `research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
+5. `research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
+6. `research/workspace/notes/audits/2026-02-08-top10-claim-audit.md`
+7. `research/workspace/notes/README.md`
 
 Minimum extraction requirement:
 
 1. current `next` item in the audit plan,
 2. current Claim 1 status/score and open gap,
-3. glossary definitions for `c-invariant`, `tau_mu`, and `de-regularization`.
+3. glossary definitions for `c-invariant`, `tau_mu`, and `de-regularization`,
+4. current field-level dimension ladder (`d=2`, `d=3`, `d=4` frontier) and next AN deliverable from the field roadmap note.
 
 If any of these files are not read, mark output as incomplete and do not start new theorem work.

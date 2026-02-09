@@ -59,6 +59,9 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-foundational-action-reduction-unification.md`
 - `theorems/2026-02-09-claim1-groupoid-tau-sd-dependency-sheet.md`
 - `theorems/2026-02-09-claim1-continuum-c-invariance-candidate.md`
+- `theorems/2026-02-09-claim1-three-level-program.md`
+- `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
+- `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -139,3 +142,6 @@ This folder stores analysis artifacts derived from source documents.
 
 - `2026-02-09-core-goal-compass.md`
 - `2026-02-09-foundational-glossary.md`
+- `theorems/2026-02-09-claim1-three-level-program.md`
+- `theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
+- `theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`

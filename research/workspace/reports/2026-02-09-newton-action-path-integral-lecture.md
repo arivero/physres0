@@ -151,6 +151,15 @@ c\left\langle \psi\,\partial_i S\right\rangle.
 \]
 This is the rigorous version of the Eq.(11)-type closure thread in the corpus.
 
+Field-level existence is dimension-dependent and should be tracked explicitly:
+
+1. \(d=2\): strongest constructive continuum control in many classes (first closure target).
+2. \(d=3\): substantial control for superrenormalizable branches (second closure target).
+3. \(d=4\): physically central but hardest/open in key interacting cases (frontier with explicit hypotheses).
+4. \(d>4\): typically EFT/nonrenormalizable branch for generic local interactions.
+
+So the Claim 1 field program should escalate \(d=2\to d=3\to d=4\), rather than claim one-shot dimension-independent closure.
+
 ## 6. Current Claim 1 Closure Boundary
 
 The scoped bridge now includes:
@@ -170,6 +179,12 @@ Remaining frontier:
 
 1. full continuum/global interacting equivalence beyond scoped classes,
 2. uniform renormalization/channel control in truly field-theoretic limits.
+
+Execution notes for this frontier:
+
+- `research/workspace/notes/theorems/2026-02-09-claim1-three-level-program.md`
+- `research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
+- `research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 
 ## 7. Dependency Graph (Explicit)
 
