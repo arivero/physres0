@@ -25,6 +25,12 @@ and connect that emergence to geometric descriptions of forces.
 2. Produce a single synthesis theorem note: action reduction as the common mechanism for SR/GR/gauge force descriptions.
 3. Tie Schwinger-Dyson/\(\tau\)-flow statements back to tangent-groupoid scale language in one formal dependency map.
 
+## Progress (This Pass)
+
+- Priority 1 completed (Phase AG): \(\eta\to0^+\) de-regularization note for finite-\(g\) multi-mode quartic sector.
+- Priority 2 completed (Phase AH): unified action-reduction synthesis note across SR/GR/gauge.
+- Priority 3 remains next on this compass.
+
 ## De-Prioritized Unless Supporting North Star
 
 - Additional rotating-black-hole taxonomy refinements.
