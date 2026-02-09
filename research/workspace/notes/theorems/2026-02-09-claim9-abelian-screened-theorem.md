@@ -10,7 +10,7 @@ the static screened potential in a massive Abelian class, uniformly across spati
 
 ## Framework
 
-Let \(n=D-1\ge 1\) be spatial dimension and \(m>0\).  
+Fix gauge group \(G=U(1)\). Let \(n=D-1\ge 1\) be spatial dimension and \(m>0\).  
 In the static linearized screened class, the Green kernel \(G_{n,m}\) is defined by
 \[
 (-\Delta + m^2)G_{n,m}=\delta_0
@@ -71,7 +71,7 @@ Energy saturation follows by writing total energy as
 
 ## Corollary (Claim 9 Upgrade, Scoped)
 
-Within the screened Abelian class, the long-range statement is theorem-closed:
+Within the screened Abelian class \((G=U(1),D)\), the long-range statement is theorem-closed:
 the asymptotic tail is Yukawa in every dimension, not Coulombic.
 
 This removes one major model-dependence branch from Claim 9; remaining open branches are confining non-Abelian rigor and full dynamical-matter crossover theorems.

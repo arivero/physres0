@@ -1,0 +1,189 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{upquote}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\title{Static Variational Consistency via Probability Amplitudes\\
+and Equivalence to Quantum Mechanics Without Time Evolution}
+\author{}
+\date{2026-02-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper establishes a static variational-consistency theorem in a stationary-phase regime.
+The core result is that, for a nondegenerate critical set, the oscillatory probability amplitude
+\[
+A_\varepsilon(O)=\varepsilon^{-1/2}\int e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx
+\]
+admits a stationary-phase expansion. In the single-critical-point case (or after an explicit averaging that removes interference between distinct critical points), the modulus-square recovers the variational localization measure:
+\[
+|A_\varepsilon(O)|^2 \to 2\pi\langle \delta(f'),|O|^2\rangle.
+\]
+This establishes a static equivalence to the measurement layer of quantum mechanics (Born-type map) without invoking time evolution. Geometric \(1/2\)-density language is included as an optional kernel-level representation, not as a replacement for analytic control.
+\end{abstract}
+
+\section{Scope and Claim}
+
+\subsection*{In-scope claim}
+Static variational localization and static quantum measurement are equivalent at the level of:
+\begin{enumerate}
+\item amplitude-to-density map,
+\item critical-point weighting,
+\item static expectation assignment.
+\end{enumerate}
+
+\subsection*{Out of scope}
+\begin{enumerate}
+\item dynamics on time histories,
+\item interacting continuum field-theory existence,
+\item scattering and unitary real-time evolution.
+\end{enumerate}
+
+\section{Setup}
+
+Let \(f\in C^\infty(\mathbb R)\) and \(O\in C_c^\infty(\mathbb R)\). Define
+\[
+A_\varepsilon(O):=\varepsilon^{-1/2}\int_{\mathbb R} e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx,\qquad \varepsilon>0.
+\]
+
+The static localization object is \(\delta(f')\), interpreted as a pullback of Dirac mass by \(f'\), not as \(\delta'\).
+
+\section{Main theorem package}
+
+\begin{theorem}[Critical-point decomposition]
+Assume \(f'\) has isolated simple zeros \(\{x_i\}_{i=1}^N\), i.e.\ \(f'(x_i)=0\) and \(f''(x_i)\neq 0\). Then
+\[
+\delta(f')=\sum_{i=1}^N\frac{\delta(x-x_i)}{|f''(x_i)|}
+\]
+as distributions.
+\end{theorem}
+
+\begin{theorem}[Diagonal Born recovery (with interference caveat)]
+Assume each \(x_i\) above is nondegenerate and \(O\) is admissible for stationary phase.
+\begin{enumerate}
+\item \textbf{Single critical point in support.}
+If exactly one \(x_0\) lies in \(\mathrm{supp}(O)\), then as \(\varepsilon\to0^+\),
+\[
+|A_\varepsilon(O)|^2
+\longrightarrow
+2\pi\,\frac{|O(x_0)|^2}{|f''(x_0)|}
+=
+2\pi\langle\delta(f'),|O|^2\rangle,
+\]
+up to Fourier normalization convention.
+\item \textbf{Multiple critical points (averaged sense).}
+In general, the leading stationary-phase term is a finite sum of oscillatory phases, hence \(|A_\varepsilon(O)|^2\) contains an explicit bounded interference sum over \(i\neq j\) and need not converge pointwise as \(\varepsilon\to0^+\).
+However, the diagonal contribution is always
+\[
+2\pi\sum_{i=1}^N \frac{|O(x_i)|^2}{|f''(x_i)|}
+=
+2\pi\langle\delta(f'),|O|^2\rangle,
+\]
+and if all contributing critical values are pairwise distinct
+\(\big(f(x_i)\neq f(x_j)\) for \(i\neq j\) with \(O(x_i)O(x_j)\neq 0\big)\),
+the interference terms vanish under a simple coarse-graining, e.g.\ the Ces\`aro average in \(t=1/\varepsilon\):
+\[
+\lim_{T\to\infty}\frac{1}{T}\int_{1}^{T}\left|A_{1/t}(O)\right|^2\,dt.
+\]
+If some critical values coincide, those coherent same-phase cross terms persist and must be grouped as a single phase block before averaging.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Apply stationary phase to each nondegenerate critical point:
+\[
+\int e^{\frac{i}{\varepsilon}f(x)}O(x)\,dx
+\sim
+\sum_i e^{\frac{i}{\varepsilon}f(x_i)}e^{i\frac{\pi}{4}\mathrm{sgn}(f''(x_i))}
+\sqrt{\frac{2\pi\varepsilon}{|f''(x_i)|}}\,O(x_i).
+\]
+Multiply by \(\varepsilon^{-1/2}\), then square modulus. The diagonal sum gives the weighted \(\delta(f')\) pairing. If a unique critical point lies in \(\mathrm{supp}(O)\), there are no cross terms. Otherwise cross terms are explicit oscillatory phases; they are bounded and average out under coarse-graining in \(t=1/\varepsilon\).
+\end{proof}
+
+\begin{corollary}[Static QM equivalence (measurement layer)]
+Define
+\[
+\mathcal B_f(O):=\lim_{\varepsilon\to0^+}|A_\varepsilon(O)|^2
+\]
+in the single-critical-point case, and otherwise define \(\mathcal B_f(O)\) by an explicit coarse-graining in the nonresonant critical-value case, e.g.
+\[
+\mathcal B_f(O):=\lim_{T\to\infty}\frac{1}{T}\int_{1}^{T}\left|A_{1/t}(O)\right|^2\,dt.
+\]
+Then
+\[
+\mathcal B_f(O)=2\pi\langle\delta(f'),|O|^2\rangle
+\]
+is exactly a Born-type static probability assignment over classical critical configurations. No time-evolution operator is required.
+\end{corollary}
+
+\section{Geometric representation note}
+
+For kernel composition on manifolds/groupoids, the same amplitude object can be represented as a geometric \(1/2\)-density (or half-form in geometric-quantization contexts). This representation is kinematic and coordinate-free for convolution, but does not by itself prove continuum-limit convergence.
+
+\section{Validation contract (Goal 1A)}
+
+\subsection*{Assumptions}
+\begin{enumerate}
+\item finite nondegenerate critical set,
+\item observable class fixed (compact support/Schwartz-class branch),
+\item one-sided regularization branch \(\varepsilon\to0^+\),
+\item for pointwise \(\varepsilon\to0^+\) limits of \(|A_\varepsilon|^2\): unique critical point in \(\mathrm{supp}(O)\); otherwise use an explicit coarse-graining prescription.
+\item in the multiple-critical-point averaged branch, either nonresonant critical-value gaps hold, or coherent equal-phase blocks are handled explicitly.
+\end{enumerate}
+
+\subsection*{Units and dimensions check}
+\begin{enumerate}
+\item phase \(f/\varepsilon\) dimensionless,
+\item normalization \(\varepsilon^{-1/2}\) is the 1D stationary-phase scaling.
+\end{enumerate}
+
+\subsection*{Symmetry checks}
+\begin{enumerate}
+\item \(f\mapsto f+\mathrm{const}\) leaves \(|A_\varepsilon|^2\) invariant,
+\item geometric \(1/2\)-density representation preserves coordinate-free kernel composition.
+\end{enumerate}
+
+\subsection*{Independent cross-check paths}
+\begin{enumerate}
+\item analytic stationary-phase derivation (this manuscript),
+\item symbolic/numeric sanity scripts:
+\begin{itemize}
+\item \texttt{python3.12 research/workspace/simulations/claim1\_halfdensity\_static\_check.py},
+\item \texttt{python3.12 research/workspace/simulations/claim1\_point\_supported\_scaling\_modes.py},
+\item \texttt{python3.12 research/workspace/simulations/claim1\_pair\_groupoid\_convolution\_check.py}.
+\end{itemize}
+\item optional formal-companion finite-model increment template:
+\begin{itemize}
+\item \texttt{research/workspace/proofs/Claim1lean/FiniteExponentialIncrementBound.lean},
+\item \texttt{research/workspace/proofs/Claim1lean/FiniteExponentialRegularity.lean}.
+\end{itemize}
+\end{enumerate}
+
+\subsection*{Confidence statement}
+The result is theorem-grade in the scoped static/nondegenerate regime. Any extension to dynamics or full interacting continuum fields remains separate and must be marked unverified until its own convergence gates are discharged.
+
+\section{Reproducibility metadata}
+
+\begin{itemize}
+\item TeX engine tested in this workspace: \texttt{/Library/TeX/texbin/pdflatex} (TeX Live 2025),
+\item safe build workflow: \texttt{\textasciitilde/.codex/skills/pdflatex-safe-build/scripts/build\_pdflatex\_safe.sh},
+\item date anchor: 2026-02-09 (US).
+\end{itemize}
+
+\section{Conclusion}
+
+Static variational consistency is proved in a self-contained theorem chain:
+critical-point decomposition, diagonal/averaged Born recovery, and static measurement-layer equivalence.
+The geometric \(1/2\)-density discussion is retained as a kinematic representation layer, separate from
+dynamical or field-level convergence claims. As of 2026-02-09 (US date), this static component is locked
+at theorem-grade scope; dynamic and field components are handled independently in Paper 2 and Paper 3.
+
+\end{document}

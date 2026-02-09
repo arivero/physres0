@@ -51,9 +51,9 @@ This folder stores longer-form manuscripts that consolidate multiple theorem not
   - Goal 1C theorem-program manuscript artifact (field-level, dimension-indexed
     roadmap with literature anchors and AN-20/AN-21/AN-22/AN-23/AN-24/AN-25/AN-26/AN-26B/AN-27 linkage).
 - `2026-02-09-claim9-gauge-phase-long-range-paper.tex`
-  - Claim 9 standalone manuscript track: phase-resolved long-range gauge
-    potentials with theorem-grade screened-Abelian closure and explicit
-    open confining/dynamical-matter rigor gaps.
+  - Claim 9 standalone manuscript track: \((G,D)\)-explicit, phase-resolved
+    long-range gauge potentials with theorem-grade screened-Abelian closure and
+    explicit open non-Abelian confining/dynamical-matter rigor gaps.
   - Rendered companion: `2026-02-09-claim9-gauge-phase-long-range-paper.pdf`.
 
 ## Notes Index

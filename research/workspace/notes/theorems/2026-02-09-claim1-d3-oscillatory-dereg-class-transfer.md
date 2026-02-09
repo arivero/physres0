@@ -168,8 +168,10 @@ branch under explicit non-vanishing and contour-envelope assumptions:
 2. same classes persist through de-regularization \(\eta\to0^+\),
 3. SD identity persists for bounded local \(C_b^1\) tests at \(\eta=0\).
 
-Next target (AN-28): first nonlocal-cylinder extension in the same
-oscillatory/de-regularized \(d=3\) channel (beyond strictly local blocks).
+AN-28 now closes first nonlocal-cylinder extension in:
+`research/workspace/notes/theorems/2026-02-09-claim1-d3-an28-nonlocal-cylinder-transfer.md`.
+Next target (AN-29): continuum extraction for those nonlocal cylinders with
+explicit refinement-Cauchy control in the same branch.
 
 ## Validation Contract
 

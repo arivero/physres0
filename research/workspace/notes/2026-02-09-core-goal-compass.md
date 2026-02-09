@@ -21,6 +21,7 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-d3-cb1-tail-insertion-closure.md`
 - `theorems/2026-02-09-claim1-d3-insertion-lq-moment-verification.md`
 - `theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`
+- `theorems/2026-02-09-claim1-d3-an28-nonlocal-cylinder-transfer.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -99,6 +100,7 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) SD test-side tail insertion closure completed (Phase BR / AN-26): \(C_c^1\to C_b^1\) extension is closed in-branch.
 - \(d=3\) insertion-moment gate verification completed (Phase BS / AN-26B): explicit uniform insertion \(L^{4/3}\)-moment bound discharges AN-26 hypotheses in the scoped Euclidean branch.
 - \(d=3\) oscillatory/de-regularized class transfer completed (Phase BT / AN-27): widened local classes and SD-test extension now pass to \(c_\eta=\eta-i/h\) and \(\eta\to0^+\) in the scoped branch under explicit non-vanishing/envelope hypotheses.
+- \(d=3\) first nonlocal-cylinder transfer completed (Phase BU / AN-28): disconnected two-block bounded cylinders and \(C_b^1\) SD-test extension now persist in the same oscillatory/de-regularized branch under explicit denominator/moment assumptions.
 
 ## Next Active Target
 
@@ -115,7 +117,8 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BR (completed): AN-26 SD-test tail-control theorem delivered.
 - Phase BS (completed): AN-26B insertion-moment verification delivered.
 - Phase BT (completed): AN-27 oscillatory/de-regularized class-transfer note delivered.
-- Active support lane (AN-28): extend the same branch from local classes to first nonlocal-cylinder observables.
+- Phase BU (completed): AN-28 first nonlocal-cylinder transfer note delivered.
+- Active support lane (AN-29): continuum extraction for AN-28 nonlocal cylinders with explicit refinement-Cauchy control.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

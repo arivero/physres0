@@ -9,15 +9,21 @@ Replace a single broad long-range claim by explicit phase-split propositions wit
 
 ## Setup
 
-Let \(D\) be spacetime dimension and \(n=D-1\) spatial dimension.  
+Let \(G\) be gauge group, \(D\) spacetime dimension, and \(n=D-1\) spatial dimension.  
 Define static inter-source potential from a large rectangular Wilson loop:
 \[
 \langle W(r,T)\rangle \sim e^{-V(r)T},\qquad T\to\infty.
 \]
 
-## Proposition 1 (Coulomb Phase, Massless Gauge Mode)
+Dependency declaration:
+\[
+\mathrm{Goal9}=\mathrm{Goal9}(G,D;\text{phase},\text{matter}).
+\]
+Every statement below is tagged by both \(G\) and \(D\).
 
-Assume a Coulomb phase with massless gauge propagation and no IR mass gap for the gauge field.  
+## Proposition 1 (Coulomb Phase, Massless Gauge Mode; \(G=U(1)\), \(D\))
+
+Assume \(G=U(1)\), Coulomb phase, massless gauge propagation, and no IR mass gap.  
 Then static kernel is the Laplacian Green function:
 \[
 \nabla^2\Phi_n(\mathbf x)=-\delta^{(n)}(\mathbf x),
@@ -45,9 +51,9 @@ r^{3-D}, & D\ge 4.
 \end{cases}
 \]
 
-## Proposition 2 (Screened/Higgs Phase)
+## Proposition 2 (Screened/Higgs Phase; \(G=U(1)\), \(D\))
 
-Assume an effective gauge mass scale \(m_{\mathrm{scr}}>0\).  
+Assume \(G=U(1)\) with effective gauge mass scale \(m_{\mathrm{scr}}>0\).  
 Then static kernel is Yukawa-type:
 \[
 (\nabla^2-m_{\mathrm{scr}}^2)G=-\delta,
@@ -58,9 +64,9 @@ G(r)\sim r^{-(n-1)/2}e^{-m_{\mathrm{scr}}r}.
 \]
 Therefore the long-range potential is exponentially suppressed and approaches a constant at large separation (up to convention-dependent additive constants).
 
-## Proposition 3 (Confining Phase, Area Law Sector)
+## Proposition 3 (Confining Phase, Area Law Sector; \(G=SU(N)\), \(D\))
 
-Assume an area law for large Wilson loops:
+Assume \(G=SU(N)\), \(N\ge2\), and an area law for large Wilson loops:
 \[
 \langle W(r,T)\rangle \sim e^{-\sigma rT},
 \]
@@ -70,20 +76,23 @@ V_{\text{conf}}(r)\sim \sigma r
 \]
 at intermediate/large \(r\) in the pure-gauge sector.
 
-With dynamical fundamental matter, string breaking can occur, and the asymptotic \(r\to\infty\) potential crosses over to saturation rather than strict linear growth.
+With dynamical fundamental matter (\(N_f>0\)), string breaking can occur and
+the asymptotic \(r\to\infty\) potential crosses over to saturation rather than
+strict linear growth.
 
 ## Corollary (Claim 9 Upgrade)
 
 The long-range term is phase-dependent, not a single universal power law:
 
-1. Coulomb phase: Green-function power/log/linear by \(D\).
-2. Screened/Higgs phase: exponential suppression and saturation.
-3. Confining area-law sector: linear regime (with possible string breaking in full dynamical-matter theories).
+1. \((G=U(1),D)\) Coulomb phase: Green-function power/log/linear by \(D\).
+2. \((G=U(1),D)\) screened/Higgs phase: exponential suppression and saturation.
+3. \((G=SU(N),D)\) confining area-law sector: linear regime (with possible
+   string breaking for \(N_f>0\)).
 
 ## Scope Notes
 
 - This classification is asymptotic and phase-conditional.
-- It does not claim a universal phase diagram across all gauge groups/matter contents/dimensions.
+- It does not claim a universal phase diagram across all \((G,D)\) choices.
 
 ## Reproducibility Check
 
@@ -93,7 +102,7 @@ Run:
 python3.12 research/workspace/simulations/claim9_phase_longrange_table.py
 ```
 
-The script prints the asymptotic form table by \((D,\text{phase})\).
+The script prints the asymptotic form table by \((G,D,\text{phase})\).
 
 ## Companion Model-Class Note
 

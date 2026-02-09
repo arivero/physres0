@@ -15,11 +15,24 @@ For static sources at separation \(r\), define
 \]
 Long-range classification is about the asymptotic behavior of \(V(r)\).
 
+Dependency declaration:
+\[
+\mathrm{Goal9}=\mathrm{Goal9}(G,D;\text{phase},\text{matter}).
+\]
+All propositions below are explicit in both \(G\) and \(D\).
+
+## Dependency Matrix (Model Class vs Dimension)
+
+1. \((G=U(1),\text{massless},D)\): Coulomb kernel branch.
+2. \((G=U(1),m_V>0,D)\): screened/Yukawa branch.
+3. \((G=SU(N),N\ge2,N_f=0,D)\): pure YM confining branch.
+4. \((G=SU(N),N\ge2,N_f>0,D)\): string-breaking crossover branch.
+
 ## Proposition A (Massless Abelian / Coulomb-Class Sector)
 
 Assumptions:
 
-1. effective low-energy gauge sector is massless and unscreened,
+1. gauge group is \(G=U(1)\) in a massless unscreened sector,
 2. static kernel is Laplacian Green function in \(n=D-1\) space dimensions.
 
 Conclusion:
@@ -36,7 +49,7 @@ r^{3-D}, & D\ge4.
 
 Assumptions:
 
-1. gauge boson acquires mass \(m_V>0\) (Higgs mechanism),
+1. gauge group is \(G=U(1)\) with gauge boson mass \(m_V>0\) (Higgs mechanism),
 2. static kernel is Yukawa-type Green function.
 
 Conclusion:
@@ -49,7 +62,7 @@ up to constants, hence saturation at very large \(r\).
 
 Assumptions:
 
-1. pure-gauge confining regime with Wilson-loop area law
+1. gauge group is \(G=SU(N)\), \(N\ge2\), pure-gauge confining regime with Wilson-loop area law
    \(\langle W\rangle\sim e^{-\sigma rT}\),
 2. no dynamical fundamental matter capable of string breaking.
 
@@ -63,8 +76,9 @@ at large separation.
 
 Assumptions:
 
-1. confining-like flux tube forms at intermediate scales,
-2. pair creation/string breaking is dynamically allowed.
+1. gauge group is \(G=SU(N)\), \(N\ge2\), with \(N_f>0\) dynamical fundamentals,
+2. confining-like flux tube forms at intermediate scales,
+3. pair creation/string breaking is dynamically allowed.
 
 Conclusion:
 
@@ -75,7 +89,8 @@ Conclusion:
 
 Claim 9 is now split into assumption-explicit model classes.  
 Remaining non-theorem gap is not conceptual but model-specific rigor:
-for each class, one still needs precise hypotheses and theorem-level existence statements in chosen dimension/regularization framework.
+for each \((G,D)\)-class, one still needs precise hypotheses and theorem-level
+existence statements in chosen regularization framework.
 
 ## Reproducibility Check
 
@@ -85,7 +100,7 @@ Run:
 python3.12 research/workspace/simulations/claim9_model_class_table.py
 ```
 
-This prints the model-class assumption/outcome table.
+This prints the model-class assumption/outcome table by \((G,D)\).
 
 ## Companion Theorem (Scoped Closure)
 

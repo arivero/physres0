@@ -17,22 +17,22 @@ def coulomb_form(D: int) -> str:
 
 
 def main() -> None:
-    print("Model A: massless Abelian / Coulomb class")
+    print("Model A: (G=U(1), D) massless Abelian / Coulomb class")
     for D in [2, 3, 4, 5]:
-        print(f"  D={D}: {coulomb_form(D)}")
+        print(f"  (G=U(1), D={D}): {coulomb_form(D)}")
     print()
 
-    print("Model B: Abelian Higgs / screened")
-    print("  V ~ r^{-(D-2)/2} exp(-m_V r)  -> saturation")
+    print("Model B: (G=U(1), D) Abelian Higgs / screened")
+    print("  (G=U(1), D): V ~ r^{-(D-2)/2} exp(-m_V r)  -> saturation")
     print()
 
-    print("Model C: pure YM confining (area law)")
-    print("  V ~ sigma r  (asymptotic linear)")
+    print("Model C: (G=SU(N), N>=2, N_f=0, D) pure YM confining")
+    print("  (G=SU(N), D): V ~ sigma r  (asymptotic linear)")
     print()
 
-    print("Model D: YM + dynamical fundamental matter")
-    print("  intermediate: V ~ sigma r")
-    print("  asymptotic : string breaking -> saturation")
+    print("Model D: (G=SU(N), N>=2, N_f>0, D) YM + dynamical fundamentals")
+    print("  (G=SU(N), D): intermediate V ~ sigma r")
+    print("  (G=SU(N), D): asymptotic string breaking -> saturation")
 
 
 if __name__ == "__main__":

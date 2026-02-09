@@ -1,0 +1,224 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{upquote}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\title{Phase-Resolved Long-Range Gauge Potentials:\\
+Screened-Abelian Closure and Confining/Coulomb Program}
+\author{}
+\date{2026-02-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper isolates Claim 9 into assumption-explicit sectors instead of a single
+``generic gauge'' statement. We provide a theorem-grade closure for the screened
+Abelian branch in arbitrary spacetime dimension, including the exact Yukawa kernel
+and its large-distance asymptotic. We also state phase-conditional propositions for
+massless Coulomb and confining/string-breaking branches, and record the remaining
+rigor gaps in the non-Abelian sector.
+\end{abstract}
+
+\section{Scope}
+
+\subsection*{In-scope claim}
+\begin{enumerate}
+\item phase-conditioned static potential classification by Wilson-loop asymptotics,
+\item theorem-grade screened-Abelian branch with explicit dimension dependence,
+\item explicit open-gap statement for non-Abelian confinement and dynamical-matter crossover rigor.
+\end{enumerate}
+
+\subsection*{Out of scope}
+\begin{enumerate}
+\item universal phase diagram across all gauge groups and matter contents,
+\item claiming non-Abelian confining closure from Abelian screened estimates.
+\end{enumerate}
+
+\section{Setup}
+
+Let \(G\) be the gauge group, \(D\) spacetime dimension, and \(n=D-1\) spatial dimension.
+Define static potential by rectangular Wilson loops:
+\[
+\langle W(r,T)\rangle \sim e^{-V(r)T},\qquad T\to\infty.
+\]
+Long-range classification concerns asymptotics of \(V(r)\) as \(r\to\infty\).
+
+\subsection*{Goal-9 Dependency Declaration}
+We treat Claim 9 as
+\[
+\mathrm{Goal9}(G,D;\text{phase},\text{matter}).
+\]
+No statement is promoted unless both dependencies are explicit:
+\begin{enumerate}
+\item gauge-group/model dependency \(G\) (for example \(U(1)\), \(SU(N)\), \(SU(N)\)+fundamental matter),
+\item spacetime-dimension dependency \(D\).
+\end{enumerate}
+
+\subsection*{Dependency Matrix (Current Program State)}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\((G,\text{matter},\text{phase})\) & \(D\)-dependence & Asymptotic claim & Status \\
+\hline
+\((U(1),\ \text{none},\ \text{Coulomb})\) & explicit in all \(D\) & \(r,\log r,r^{3-D}\) & proposition \\
+\hline
+\((U(1),\ \text{Higgs},\ \text{screened})\) & explicit in all \(D\) & \(r^{-(D-2)/2}e^{-mr}\) & theorem \\
+\hline
+\((SU(N),\ \text{none},\ \text{confining})\) & dimension-tagged, non-uniform rigor & linear regime \(\sigma r\) & program \\
+\hline
+\((SU(N),\ N_f>0,\ \text{string-breaking})\) & dimension-tagged, model dependent & linear-to-saturation crossover & program \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Phase-Conditioned Statements}
+
+\begin{proposition}[Massless Coulomb-class sector \((G=U(1),D)\)]
+Assume gauge group \(G=U(1)\), Coulomb phase, and a massless unscreened gauge mode in \(n\) dimensions.
+Then
+\[
+V_{\mathrm{Coul}}(r)\propto g^2 C\,\Phi_n(r),
+\]
+where \(\Phi_n\) is the Laplacian Green kernel and
+\[
+\Phi_n(r)\sim
+\begin{cases}
+r, & n=1\ (D=2),\\
+\log r, & n=2\ (D=3),\\
+r^{2-n}, & n>2\ (D\ge4).
+\end{cases}
+\]
+\end{proposition}
+
+\begin{theorem}[Screened-Abelian Yukawa branch \((G=U(1),m>0,D)\)]
+Let \(G=U(1)\), \(m>0\), \(n=D-1\ge1\), and
+\[
+(-\Delta+m^2)G_{n,m}=\delta_0
+\]
+in \(\mathbb{R}^n\), with \(G_{n,m}(r)\to0\) as \(r\to\infty\). Then
+\[
+G_{n,m}(r)=\frac{1}{(2\pi)^{n/2}}\left(\frac{m}{r}\right)^\nu K_\nu(mr),
+\qquad
+\nu=\frac n2-1,
+\]
+and as \(r\to\infty\),
+\[
+G_{n,m}(r)=
+\frac{1}{2(2\pi)^{(n-1)/2}}
+m^{(n-3)/2}r^{-(n-1)/2}e^{-mr}
+\left(1+O(r^{-1})\right).
+\]
+For static charges \(q_1,q_2\), \(V(r)=q_1q_2G_{n,m}(r)\), hence
+\[
+V(r)\sim r^{-(D-2)/2}e^{-mr},
+\]
+so the inter-source term decays exponentially and the large-\(r\) energy saturates
+to an \(r\)-independent baseline.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Use Fourier representation
+\[
+G_{n,m}(x)=\frac{1}{(2\pi)^n}\int_{\mathbb R^n}\frac{e^{ik\cdot x}}{|k|^2+m^2}\,dk,
+\]
+radial reduction, and the standard Hankel/Bessel identity to obtain the exact kernel.
+Then apply \(K_\nu(z)\sim \sqrt{\pi/(2z)}\,e^{-z}(1+O(z^{-1}))\) as \(z\to+\infty\).
+The exponential factor yields saturation of the interaction contribution.
+\end{proof}
+
+\begin{proposition}[Confining area-law sector \((G=SU(N),N\ge2,D)\)]
+Assume gauge group \(G=SU(N)\) with \(N\ge2\), in a pure-gauge confining regime with
+\[
+\langle W(r,T)\rangle \sim e^{-\sigma rT},\qquad \sigma>0.
+\]
+Then the static potential obeys
+\[
+V_{\mathrm{conf}}(r)\sim \sigma r
+\]
+in the corresponding large-\(r\) regime.
+\end{proposition}
+
+\begin{proposition}[Dynamical-fundamental matter crossover \((G=SU(N),N_f>0,D)\)]
+Assume gauge group \(G=SU(N)\) with \(N_f>0\) dynamical fundamental flavors and pair creation/string breaking dynamically allowed.
+Then one expects:
+\begin{enumerate}
+\item approximately linear behavior \(V(r)\sim \sigma r\) at intermediate \(r\),
+\item crossover to saturation at sufficiently large \(r\).
+\end{enumerate}
+\end{proposition}
+
+\begin{corollary}[Claim 9 status in this paper]
+Within the screened-Abelian class \((G=U(1),m>0)\), Claim 9 is theorem-closed
+with explicit \(D\)-dependence.
+The remaining open rigor gap is non-Abelian: deriving confining and string-breaking
+crossover statements with fully explicit \((G,D)\)-tagged hypotheses and continuum control in a fixed model class.
+\end{corollary}
+
+\section{Literature Anchors}
+
+\begin{enumerate}
+\item Wilson and Kogut (1974), RG/phase framing:
+\href{https://doi.org/10.1016/0370-1573(74)90023-4}{doi:10.1016/0370-1573(74)90023-4}.
+\item Osterwalder and Schrader I (1973), Euclidean axioms:
+\href{https://doi.org/10.1007/BF01645738}{doi:10.1007/BF01645738}.
+\item Osterwalder and Schrader II (1975), reconstruction:
+\href{https://doi.org/10.1007/BF01608978}{doi:10.1007/BF01608978}.
+\item Fradkin and Shenker (1979), phase continuity in lattice gauge-Higgs systems:
+\href{https://doi.org/10.1103/PhysRevD.19.3682}{doi:10.1103/PhysRevD.19.3682}.
+\end{enumerate}
+
+\section{Validation Contract}
+
+\subsection*{Assumptions}
+\begin{enumerate}
+\item each statement is conditioned on explicit \((G,D)\), phase, and matter tags,
+\item screened-Abelian closure uses \(m>0\) and linearized static kernel framework,
+\item non-Abelian claims are kept proposition-level unless theorem hypotheses are fully discharged.
+\end{enumerate}
+
+\subsection*{Units and dimensions check}
+\begin{enumerate}
+\item \(mr\) is dimensionless in Yukawa factors,
+\item dimensional prefactors in \(G_{n,m}\) match the \(n=D-1\) Green-kernel scaling.
+\end{enumerate}
+
+\subsection*{Independent cross-check paths}
+\begin{enumerate}
+\item analytic Green-kernel and asymptotic derivation (this paper),
+\item executable checks:
+\begin{itemize}
+\item \texttt{python3.12 research/workspace/simulations/claim9\_phase\_longrange\_table.py},
+\item \texttt{python3.12 research/workspace/simulations/claim9\_model\_class\_table.py},
+\item \texttt{python3.12 research/workspace/simulations/claim9\_abelian\_screened\_asymptotic\_check.py}.
+\end{itemize}
+\end{enumerate}
+
+\subsection*{Confidence statement}
+Screened-Abelian long-range behavior is theorem-grade in this scoped class.
+Confining and string-breaking branches are assumption-explicit program statements until
+model-specific continuum theorems are closed.
+
+\section{Reproducibility Metadata}
+
+\begin{itemize}
+\item date anchor: 2026-02-09 (US),
+\item build toolchain tested here: \texttt{/Library/TeX/texbin/pdflatex} (TeX Live 2025),
+\item safe build script:
+\texttt{\textasciitilde/.codex/skills/pdflatex-safe-build/scripts/build\_pdflatex\_safe.sh}.
+\end{itemize}
+
+\section{Conclusion}
+
+Claim 9 should be read as phase-resolved, not universal.
+The screened-Abelian branch is fully closed at theorem level in this manuscript,
+while non-Abelian confinement and string-breaking crossover remain explicit
+\((G,D)\)-indexed next targets.
+
+\end{document}

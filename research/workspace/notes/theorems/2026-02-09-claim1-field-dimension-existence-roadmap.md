@@ -85,7 +85,8 @@ Program stance:
 14. **AN-26 (done):** SD test-side tail insertion-control theorem delivered in `research/workspace/notes/theorems/2026-02-09-claim1-d3-cb1-tail-insertion-closure.md`.
 15. **AN-26B (done):** verified AN-26 insertion \(L^q\)-moment hypothesis (with explicit \(q=4/3\) bound) in `research/workspace/notes/theorems/2026-02-09-claim1-d3-insertion-lq-moment-verification.md`.
 16. **AN-27 (done):** transferred the widened local class to oscillatory/de-regularized branch in the same \(d=3\) lane in `research/workspace/notes/theorems/2026-02-09-claim1-d3-oscillatory-dereg-class-transfer.md`.
-17. **AN-28 (next):** extend the AN-27 branch from strictly local blocks to a first nonlocal-cylinder observable family with explicit denominator/non-vanishing bookkeeping.
+17. **AN-28 (done):** extended the AN-27 branch from strictly local blocks to a first nonlocal-cylinder observable family in `research/workspace/notes/theorems/2026-02-09-claim1-d3-an28-nonlocal-cylinder-transfer.md`.
+18. **AN-29 (next):** extract continuum/refinement control for AN-28 nonlocal cylinders with explicit Cauchy rates and denominator bookkeeping across scales.
 
 ## Non-Drift Rule
 

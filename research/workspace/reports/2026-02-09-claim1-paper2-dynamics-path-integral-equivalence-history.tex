@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{upquote}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\title{Dynamic Variational Consistency and Scoped Equivalence to the Path Integral\\
+with Historical Discussion}
+\author{}
+\date{2026-02-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper develops a dynamic consistency chain for \(0+1\)-dimensional actions:
+time-sliced transition amplitudes induce normalized cylinder states that are stable under refinement, admit \(\eta\to0^+\) de-regularization, satisfy Schwinger--Dyson identities, and are invariant under the \(c\)-preserving flow \(\tau_\mu\).
+Under explicit assumptions, these statements imply scoped equivalence to the path-integral formalism for the same model class and boundary data.
+A dedicated historical section records the Dirac (1933) \(\to\) Feynman (1948) \(\to\) Wilson--Kogut (1974) lineage.
+\end{abstract}
+
+\section{Scope}
+
+\subsection*{In-scope claim}
+The claim proved here is scoped dynamic equivalence:
+\begin{enumerate}
+\item construction of a consistent continuum cylinder state from time slicing,
+\item persistence of Schwinger--Dyson structure in the limit,
+\item invariance along \(c\)-preserving reparameterizations,
+\item identification of that limit with the path-integral functional in the same scoped class.
+\end{enumerate}
+
+\subsection*{Out of scope}
+\begin{enumerate}
+\item full interacting field-theory closure in \(d=4\),
+\item model-independent nonperturbative global path-integral existence,
+\item scattering/unitarity claims beyond the scoped construction.
+\end{enumerate}
+
+\section{Dynamic setup}
+
+Let
+\[
+S[q]=\int_{t_i}^{t_f}L(q,\dot q,t)\,dt.
+\]
+At time-slicing resolution \(N\), write the discretized action \(S_N\) and define a regularized transition-amplitude channel
+\(x_0,x_N\) fixed boundary data and \(N-1\) interior integrations:
+\[
+\mathcal A_{\varepsilon,\varepsilon_0,N}(O)
+:=
+\int_{\mathbb R^{N-1}} \varepsilon^{-(N-1)/2}
+\exp\!\left(\frac{i}{\varepsilon}\varepsilon_0\sum_{k=0}^{N-1}L_{\varepsilon_0}\!\left[x_k,\frac{x_{k+1}-x_k}{\varepsilon_0}\right]\right)
+O[x_\bullet]\prod_{k=1}^{N-1}dx_k.
+\]
+
+For the normalized state channel in the dressed notation, use
+\[
+\omega_{c,N}(F):=
+\frac{\int_{\mathbb R^N}e^{-cS_N(x)}F(x)\,dx}
+{\int_{\mathbb R^N}e^{-cS_N(x)}\,dx},
+\qquad c=(\eta-i/h)\kappa,\quad \Re c>0.
+\]
+
+\section{Dynamic consistency theorem chain}
+
+\subsection*{Assumptions}
+Assume the following on a compact \(c\)-domain \(K\):
+\begin{enumerate}
+\item[(D1)] \textbf{Projective compatibility}: cylinder observables are consistently lifted along \(N\mapsto N+1\).
+\item[(D2)] \textbf{Denominator non-vanishing}: \(\int e^{-cS_N}\neq 0\) for all large \(N\), uniformly in \(c\in K\).
+\item[(D3)] \textbf{Uniform Cauchy tail}: for each cylinder \(F_m\),
+\[
+|\omega_{c,N'}(F_m)-\omega_{c,N}(F_m)|\le C_{F_m,K}\tau_N,\qquad \tau_N\to0.
+\]
+\item[(D4)] \textbf{Finite-\(N\) Schwinger--Dyson identity}: for admissible \(\psi\),
+\[
+\omega_{c,N}(\partial_i\psi)=c\,\omega_{c,N}(\psi\,\partial_iS_N).
+\]
+\item[(D5)] \textbf{\(c\)-invariance along \(\tau_\mu\)}:
+\[
+\tau_\mu:(\kappa,\eta,h)\mapsto(\mu\kappa,\eta/\mu,\mu h),\quad \mu>0,
+\]
+preserves \(c\), hence preserves the finite-\(N\) kernels.
+\item[(D6)] \textbf{De-regularization pass-through}: for observables in the working class, the one-sided limit \(\eta\to0^+\) exists and commutes with the \(N\to\infty\) limit in the stated channel.
+\end{enumerate}
+
+\begin{theorem}[Scoped dynamic consistency]
+Under \((D1)\)--\((D6)\):
+\begin{enumerate}
+\item \(\omega_{c,N}(F_m)\to\omega_c(F_m)\) for each cylinder \(F_m\), uniformly on compact \(K\subset\{c:\Re c>0\}\).
+\item \(\omega_c\) is invariant along \(\tau_\mu\)-orbits (depends on parameters only through \(c\)).
+\item Schwinger--Dyson identities pass to the limit:
+\[
+\omega_c(\partial_i\psi)=c\,\omega_c(\psi\,G_i),
+\]
+where \(G_i\) is the cylinder-pairing limit of \(\partial_iS_N\).
+\item The de-regularized state \(\omega_{-i\kappa/h}\) exists (at fixed \(\kappa\)) in the scoped observable class.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+\begin{enumerate}
+\item (D3) + (D2) give convergence of normalized cylinder expectations.
+\item (D5) gives exact finite-\(N\) kernel invariance; pass to \(N\to\infty\).
+\item (D4) + uniform pairing control imply SD pass-through in the limit.
+\item (D6) gives existence/commutation of the \(\eta\to0^+\) channel in scope.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[Scoped path-integral equivalence]
+Define the scoped path-integral functional by the refinement limit of the normalized time-sliced transition-amplitude channel under \((D1)\)--\((D6)\). Then this functional equals \(\omega_c\) on the scoped cylinder observable class.
+\end{corollary}
+
+\begin{remark}
+The corollary is an equivalence \emph{in the scoped class} where all convergence and non-vanishing gates are discharged. It is not a claim of global interacting QFT closure.
+\end{remark}
+
+\section{Historical discussion (required)}
+
+\subsection*{Dirac (1933)}
+Dirac's 1933 analysis emphasized the role of an exponential phase factor in quantum transitions, providing the conceptual seed for amplitude-level composition rules.
+
+\subsection*{Feynman (1948)}
+Feynman recast quantum mechanics via time slicing and action-phase summation over histories, making transition-amplitude composition over intermediate configurations explicit.
+
+\subsection*{Wilson--Kogut (1974)}
+Wilson--Kogut RG language reframed refinement as scale-flow control, clarifying why continuum claims require explicit fixed-point and convergence gates rather than formal passage to finer slices.
+
+\subsection*{Current theoretical framing}
+The present program combines these threads:
+\begin{enumerate}
+\item transition-amplitude composition at finite slicing,
+\item explicit convergence/non-vanishing gates,
+\item \(c\)-invariant scale-flow covariance and Schwinger--Dyson persistence,
+\item geometric \(1/2\)-density language only where kernel-bundle structure is explicit.
+\end{enumerate}
+
+\section{Validation contract (Goal 1B)}
+
+\subsection*{Assumptions}
+Model class, boundary data, regulator net, observable class, and normalization domain are explicit in \((D1)\)--\((D6)\).
+
+\subsection*{Units and dimensions check}
+\begin{enumerate}
+\item each action contribution has action dimensions,
+\item phase \(S/\varepsilon\) is dimensionless,
+\item slicing normalization factors are tracked at each \(N\).
+\end{enumerate}
+
+\subsection*{Symmetry and conservation checks}
+\begin{enumerate}
+\item boundary-condition consistency under slicing/refinement,
+\item finite-\(N\) variational symmetry identities used before continuum passage,
+\item conservation-law checks in scoped model channels where relevant.
+\end{enumerate}
+
+\subsection*{Independent cross-check paths}
+\begin{enumerate}
+\item analytic finite-dimensional SD and scale-flow covariance derivation channels,
+\item numerical diagnostics:
+\begin{itemize}
+\item \texttt{python3.12 research/workspace/simulations/claim1\_cylinder\_gaussian\_toy.py},
+\item \texttt{python3.12 research/workspace/simulations/claim1\_continuum\_cauchy\_diagnostics.py},
+\item \texttt{python3.12 research/workspace/simulations/claim1\_fd\_schwinger\_dyson\_check.py},
+\item \texttt{python3.12 research/workspace/simulations/claim1\_scale\_flow\_covariance\_check.py},
+\item \texttt{python3.12 research/workspace/simulations/claim1\_groupoid\_tau\_sd\_dependency\_check.py}.
+\end{itemize}
+\item optional formal-companion modules (inequality/derivative backbone):
+\begin{itemize}
+\item \texttt{research/workspace/proofs/Claim1lean/CovarianceDerivative.lean},
+\item \texttt{research/workspace/proofs/Claim1lean/RatioStateDerivativeBound.lean},
+\item \texttt{research/workspace/proofs/Claim1lean/RatioStateIncrementBound.lean},
+\item \texttt{research/workspace/proofs/Claim1lean/FiniteExponentialIncrementBound.lean},
+\item \texttt{research/workspace/proofs/Claim1lean/FiniteExponentialRegularity.lean}.
+\end{itemize}
+\end{enumerate}
+
+\subsection*{Confidence statement}
+The result is theorem-grade in the scoped dynamic class under \((D1)\)--\((D6)\). Any statement outside those gates must be marked unverified.
+
+\section{Reproducibility metadata}
+
+\begin{itemize}
+\item build toolchain tested here: \texttt{/Library/TeX/texbin/pdflatex} (TeX Live 2025),
+\item safe build script:
+\texttt{\textasciitilde/.codex/skills/pdflatex-safe-build/scripts/build\_pdflatex\_safe.sh},
+\item date anchor: 2026-02-09 (US).
+\end{itemize}
+
+\section{Conclusion}
+
+Dynamic variational consistency is presented here as a self-contained theorem chain:
+refinement stability, denominator control, SD persistence, and de-regularization control.
+Within those assumptions, scoped equivalence to the path-integral formalism is explicit and historically motivated.
+As of 2026-02-09 (US date), this dynamic component is locked at scoped theorem-grade level,
+while field-level closure remains an independent Gate G2/G3 program handled in Paper 3.
+
+\end{document}
