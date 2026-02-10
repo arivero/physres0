@@ -37,6 +37,13 @@ p_{v}(0)=\frac{1}{\sqrt{2\pi v}},
 
 in the exact mathlib normalization (`gaussianPDFReal`) for `v : ℝ≥0`.
 
+`Claim1lean.gaussianPDFReal_zero_at_zero_factor` additionally rewrites this as the explicit
+square-root factorization
+\[
+p_v(0)=\frac{1}{\sqrt{2\pi}}\cdot\frac{1}{\sqrt v},
+\]
+making the `v^{-1/2}` scaling transparent.
+
 This is the 1D instance of the `t^{-d/2}` scaling theme:
 in higher dimensions, product structure gives the exponent `d/2`.
 
@@ -71,4 +78,3 @@ naturally live at the amplitude/half-density level.
 2. Lift from 1D to `d` dimensions, recording the `t^{-d/2}` prefactor explicitly.
 3. Connect the Gaussian prefactor to the Van Vleck / mixed-Hessian determinant lane
    via the Schur-complement elimination template.
-

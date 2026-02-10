@@ -31,6 +31,20 @@ lemma gaussianPDFReal_zero_at_zero (v : ℝ≥0) :
   -- At `x = μ`, the exponential term is `exp 0 = 1`, leaving only the prefactor.
   simp [ProbabilityTheory.gaussianPDFReal]
 
+lemma gaussianPDFReal_zero_at_zero_factor (v : ℝ≥0) :
+    ProbabilityTheory.gaussianPDFReal (0 : ℝ) v (0 : ℝ)
+      = (Real.sqrt (2 * Real.pi))⁻¹ * (Real.sqrt (v : ℝ))⁻¹ := by
+  have hx : 0 ≤ (2 * (Real.pi : ℝ)) := by
+    positivity
+  calc
+    ProbabilityTheory.gaussianPDFReal (0 : ℝ) v (0 : ℝ) = (Real.sqrt ((2 * Real.pi) * (v : ℝ)))⁻¹ := by
+      simpa [mul_assoc] using gaussianPDFReal_zero_at_zero (v := v)
+    _ = (Real.sqrt (2 * Real.pi) * Real.sqrt (v : ℝ))⁻¹ := by
+      rw [Real.sqrt_mul hx (v : ℝ)]
+    _ = (Real.sqrt (2 * Real.pi))⁻¹ * (Real.sqrt (v : ℝ))⁻¹ := by
+      -- Move from the inverse of a product to a product of inverses (commutativity of `ℝ`).
+      simp [mul_inv_rev, mul_comm, mul_left_comm]
+
 lemma integral_gaussianPDFReal_eq_one_zero_mean {v : ℝ≥0} (hv : v ≠ 0) :
     (∫ x, ProbabilityTheory.gaussianPDFReal (0 : ℝ) v x) = 1 := by
   simpa using (ProbabilityTheory.integral_gaussianPDFReal_eq_one (μ := (0 : ℝ)) (v := v) hv)
