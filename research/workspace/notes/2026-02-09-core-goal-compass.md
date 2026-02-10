@@ -50,6 +50,15 @@ Understand, rigorously, how quantum formalism appears when variational mechanics
 
 and connect that emergence to geometric descriptions of forces.
 
+## Long Thinking Question (Newton Limit Paradox)
+
+What is the precise mathematical paradox/inconsistency that makes the naive
+"Newton-only" limit unrigorous and forces quantum structure (amplitudes /
+half-densities / phases) to restore consistency, in analogy with how calculus
+resolves Zeno-style limit paradoxes?
+
+Working note: `research/workspace/notes/2026-02-10-newton-limit-paradox-quantum-necessity.md`.
+
 ## Canonical Source Anchors (`conv_patched.md`)
 
 - Variational/distribution seed: `conv_patched.md:681`, `conv_patched.md:684`, `conv_patched.md:733`, `conv_patched.md:1085`.

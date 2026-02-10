@@ -258,6 +258,7 @@ This folder stores analysis artifacts derived from source documents.
 ## Strategy Compass
 
 - `2026-02-09-core-goal-compass.md`
+- `2026-02-10-newton-limit-paradox-quantum-necessity.md`
 - `2026-02-09-foundational-glossary.md`
 - `2026-02-09-terminology-map-amplitude-halfform-halfdensity.md`
 - `2026-02-09-wikipedia-baseline-definitions-and-skepticism.md`
