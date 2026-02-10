@@ -1,4 +1,4 @@
-# Claim 1 Phase BY-L/CB-L (AN-32L/AN-33L/AN-34L): Lean Weighted-Local and Graph-Decay Bridge
+# Claim 1 Phase BY-L/CB-L/CC-L (AN-32L/AN-33L/AN-34L): Lean Weighted-Local and Graph-Decay Bridge
 
 Date: 2026-02-10 (US)  
 Lean module: `research/workspace/proofs/Claim1lean/WeightedLocalGraphDecay.lean`
@@ -13,7 +13,8 @@ AN-33/AN-34 nonlocal weighted-local extension:
 2. graph-decay nonlocal channel bounds,
 3. denominator-rate ratio bookkeeping,
 4. first-principles shell-tail to pairwise-rate transmutation,
-5. field-facing transfer to AN-31-style exhaustion bookkeeping.
+5. field-facing transfer to AN-31-style exhaustion bookkeeping,
+6. projective-defect/de-regularization transfer wrappers (AN-33L-B).
 
 ## Formalized Objects
 
@@ -89,6 +90,17 @@ For finite index classes:
 12. `pairwise_ratio_rate_of_exhaustion_envelopes`:
     one-sided numerator/denominator tail envelopes plus denominator floor imply
     pairwise ratio-rate bounds for \(N_n/D_n\) with explicit AN-34 constants.
+13. `abs_le_add_of_abs_sub_le`:
+    transports bounds from a reference channel to a target channel.
+14. `projective_defect_transfer_of_regularization`:
+    regularized projective-defect envelope + mismatch bound implies de-regularized
+    projective-defect envelope.
+15. `pairwise_transfer_bound_of_regularization`:
+    pairwise regularized tail-rate bound transfers to de-regularized channel with
+    explicit additive mismatch penalty \(2Be\).
+16. `pairwise_transfer_bound_between_regularizations`:
+    pairwise bound transfer between two regularization levels \(\eta,\eta'\)
+    through a common reference channel.
 
 ## Why It Matters for AN-31/AN-33/AN-34
 
@@ -98,7 +110,9 @@ These lemmas give a machine-checked finite backbone for:
 2. explicit denominator-rate propagation in normalized state differences,
 3. AN-34A first-principles tail-to-rate transmutation in the scoped \(d=3\) lane,
 4. direct transfer of those rates to AN-31-style exhaustion-indexed pairwise
-   bookkeeping (AN-33L/AN-34L continuation target).
+   bookkeeping (AN-33L/AN-34L-A),
+5. projective-defect and de-regularization transfer with explicit additive
+   mismatch terms (AN-33L-B).
 
 ## Build Check
 

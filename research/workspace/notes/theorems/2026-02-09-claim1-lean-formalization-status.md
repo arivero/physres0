@@ -70,7 +70,8 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
     - proves a graph-decay weighted operator inequality from column-decay hypotheses for finite nonlocal channels,
     - proves denominator-rate bookkeeping bounds for ratio-state perturbations (`|1/D-1/D'|` and resulting ratio-difference estimates),
     - adds shell-tail-to-limit wrappers (`abs_sub_le_of_tail_to_limit`, `ratio_diff_bound_of_limit_tail_rates`) that convert one-sided first-principles tail envelopes into pairwise ratio-rate bounds,
-    - adds exhaustion-indexed transfer wrappers (`pairwise_tail_rate_of_exhaustion_envelope`, `pairwise_add_rate_of_exhaustion_envelopes`, `pairwise_ratio_rate_of_exhaustion_envelopes`) for AN-31-style projective bookkeeping.
+    - adds exhaustion-indexed transfer wrappers (`pairwise_tail_rate_of_exhaustion_envelope`, `pairwise_add_rate_of_exhaustion_envelopes`, `pairwise_ratio_rate_of_exhaustion_envelopes`) for AN-31-style projective bookkeeping,
+    - adds AN-33L-B transfer lemmas (`projective_defect_transfer_of_regularization`, `pairwise_transfer_bound_of_regularization`, `pairwise_transfer_bound_between_regularizations`) to propagate projective/pairwise rates across regularization channels.
 
 ## Relation to Current Claim 1 Queue
 
@@ -85,13 +86,14 @@ These formalizations support:
 7. the AN-18 automatic-regularity collapse from BF hypotheses to minimal model-data bounds,
 8. the AN-32 weighted-local truncation and denominator-rate bookkeeping lane needed before AN-33 nonlocal graph-decay uplift,
 9. the AN-34A first-principles tail-rate transmutation lane (shell envelopes \(\Rightarrow\) pairwise ratio bounds) in the same weighted-local finite surrogate,
-10. the AN-33L bridge from finite wrappers to exhaustion-indexed pairwise rates feeding AN-31 projective/tail bookkeeping.
+10. the AN-33L bridge from finite wrappers to exhaustion-indexed pairwise rates feeding AN-31 projective/tail bookkeeping,
+11. the AN-33L-B projective-defect/de-regularization transfer lane with explicit mismatch penalties.
 
 ## Next Lean Target (Queued)
 
-AN-33L-B (Lean support lane): package the new exhaustion-indexed pairwise
-wrappers into explicit projective-defect/de-regularization transfer lemmas so
-AN-31/AN-34 field-side assumptions are discharged with minimal extra input.
+AN-33L-C (Lean support lane): package an explicit commuting-limit wrapper
+(exhaustion/projective + \(\eta\to0^+\)) on top of AN-33L-B transfer lemmas
+with minimal additional side assumptions.
 
 ## Validation Priority (Locked)
 

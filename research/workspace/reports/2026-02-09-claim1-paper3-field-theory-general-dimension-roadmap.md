@@ -31,7 +31,9 @@ closes that lane in the same scoped branch. AN-34A then replaces AN-33
 denominator/numerator rate postulates by first-principles shell-tail
 transmutation bounds in the same scoped branch. AN-33L/AN-34L-A then lifts
 those one-sided envelopes to exhaustion-indexed pairwise transfer wrappers used
-directly by AN-31 Cauchy/projective bookkeeping.
+directly by AN-31 Cauchy/projective bookkeeping. AN-33L-B then adds explicit
+projective-defect and de-regularization transfer wrappers with mismatch
+penalties in the same Lean support lane.
 
 ## Scope
 
@@ -133,7 +135,9 @@ nonlocal weighted-local channels with explicit denominator-rate normalized-state
 bookkeeping. AN-34A then derives those denominator/numerator rate bounds from
 first-principles shell-tail envelopes, preserving explicit normalized ratio
 Cauchy rates. AN-33L/AN-34L-A now lifts these to exhaustion-indexed pairwise
-rate wrappers (including additive/projective splitting form) in Lean.
+rate wrappers (including additive/projective splitting form) in Lean. AN-33L-B
+adds channel-transfer wrappers for projective defects and pairwise rates across
+regularization levels.
 
 ## Literature Anchors
 
@@ -146,8 +150,8 @@ rate wrappers (including additive/projective splitting form) in Lean.
 
 ## Immediate Next Scientific Step
 
-1. package projective-defect and de-regularization transfer lemmas on top of
-   AN-33L/AN-34L-A exhaustion pairwise wrappers (AN-33L-B),
+1. package explicit commuting-limit wrappers (exhaustion/projective +
+   \(\eta\to0^+\)) on top of AN-33L-B transfer lemmas (AN-33L-C),
 2. tighten reconstruction-facing interfaces by separating scoped proven rates
    from remaining G3 inputs in the \(d=3\to d=4\) frontier transition.
 
@@ -189,8 +193,9 @@ rate wrappers (including additive/projective splitting form) in Lean.
    denominator-rate bookkeeping in the same scoped branch, and AN-34A upgrades
    that lane by deriving rates from first-principles shell-tail envelopes.
    AN-33L/AN-34L-A lifts those bounds to exhaustion-indexed pairwise transfer
-   wrappers aligned with AN-31 bookkeeping. Full global continuum interacting
-   closure remains open.
+   wrappers aligned with AN-31 bookkeeping, and AN-33L-B adds explicit
+   projective-defect/de-regularization transfer lemmas with mismatch penalties.
+   Full global continuum interacting closure remains open.
 
 ## Reproducibility Metadata
 

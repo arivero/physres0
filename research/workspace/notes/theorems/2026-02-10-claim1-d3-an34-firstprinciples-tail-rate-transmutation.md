@@ -101,6 +101,10 @@ In `research/workspace/proofs/Claim1lean/WeightedLocalGraphDecay.lean`:
 4. `ratio_diff_bound_of_limit_tail_rates`.
 
 These convert shell-limit envelopes directly into ratio-tail bounds.
+AN-33L-B subsequently adds transfer wrappers for projective-defect and
+de-regularization channels (`projective_defect_transfer_of_regularization`,
+`pairwise_transfer_bound_of_regularization`,
+`pairwise_transfer_bound_between_regularizations`) in the same module.
 
 ## Validation Contract
 

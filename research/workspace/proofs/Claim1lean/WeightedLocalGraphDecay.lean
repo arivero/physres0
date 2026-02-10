@@ -321,6 +321,86 @@ theorem pairwise_ratio_rate_of_exhaustion_envelopes
     hd0 (hDfloor n) (hDfloor m)
     (hNtail n) (hNtail m) (hDtail n) (hDtail m) (hNbound m)
 
+theorem abs_le_add_of_abs_sub_le
+    {x y ex ey : ℝ}
+    (hxy : |x - y| ≤ ex)
+    (hy : |y| ≤ ey) :
+    |x| ≤ ex + ey := by
+  have hsplit : x = (x - y) + y := by linarith
+  have habs : |x| = |(x - y) + y| := congrArg abs hsplit
+  calc
+    |x| = |(x - y) + y| := habs
+    _ ≤ |x - y| + |y| := by
+          simpa [Real.norm_eq_abs] using norm_add_le (x - y) y
+    _ ≤ ex + ey := add_le_add hxy hy
+
+theorem projective_defect_transfer_of_regularization
+    {δ0 δη t : Nat → ℝ} {A B e : ℝ}
+    (hClose : ∀ n, |δ0 n - δη n| ≤ B * e)
+    (hEtaDefect : ∀ n, |δη n| ≤ A * t n) :
+    ∀ n, |δ0 n| ≤ A * t n + B * e := by
+  intro n
+  have hbase :=
+    abs_le_add_of_abs_sub_le
+      (x := δ0 n) (y := δη n)
+      (ex := B * e) (ey := A * t n)
+      (hClose n) (hEtaDefect n)
+  calc
+    |δ0 n| ≤ B * e + A * t n := hbase
+    _ = A * t n + B * e := by ring
+
+theorem pairwise_transfer_bound_of_regularization
+    {u0 uη t : Nat → ℝ} {A B e : ℝ}
+    (hReg : ∀ n, |u0 n - uη n| ≤ B * e)
+    (hPairη : ∀ n m, |uη n - uη m| ≤ A * (t n + t m)) :
+    ∀ n m, |u0 n - u0 m| ≤ A * (t n + t m) + 2 * (B * e) := by
+  intro n m
+  have hsplit :
+      u0 n - u0 m
+        = (u0 n - uη n) + (uη n - uη m) + (uη m - u0 m) := by
+    ring
+  calc
+    |u0 n - u0 m|
+        = |(u0 n - uη n) + (uη n - uη m) + (uη m - u0 m)| := by rw [hsplit]
+    _ ≤ |(u0 n - uη n) + (uη n - uη m)| + |uη m - u0 m| := by
+          simpa [Real.norm_eq_abs] using
+            norm_add_le ((u0 n - uη n) + (uη n - uη m)) (uη m - u0 m)
+    _ ≤ (|u0 n - uη n| + |uη n - uη m|) + |uη m - u0 m| := by
+          refine add_le_add ?_ (le_rfl)
+          simpa [Real.norm_eq_abs] using norm_add_le (u0 n - uη n) (uη n - uη m)
+    _ ≤ (B * e + A * (t n + t m)) + B * e := by
+          refine add_le_add ?_ ?_
+          · exact add_le_add (hReg n) (hPairη n m)
+          · simpa [abs_sub_comm] using hReg m
+    _ = A * (t n + t m) + 2 * (B * e) := by ring
+
+theorem pairwise_transfer_bound_between_regularizations
+    {uη uη' uref t : Nat → ℝ} {A B eη eη' : ℝ}
+    (hη : ∀ n, |uη n - uref n| ≤ B * eη)
+    (hη' : ∀ n, |uη' n - uref n| ≤ B * eη')
+    (hPairRef : ∀ n m, |uref n - uref m| ≤ A * (t n + t m)) :
+    ∀ n m, |uη n - uη' m| ≤ A * (t n + t m) + B * eη + B * eη' := by
+  intro n m
+  have hsplit :
+      uη n - uη' m
+        = (uη n - uref n) + (uref n - uref m) + (uref m - uη' m) := by
+    ring
+  calc
+    |uη n - uη' m|
+        = |(uη n - uref n) + (uref n - uref m) + (uref m - uη' m)| := by
+            rw [hsplit]
+    _ ≤ |(uη n - uref n) + (uref n - uref m)| + |uref m - uη' m| := by
+          simpa [Real.norm_eq_abs] using
+            norm_add_le ((uη n - uref n) + (uref n - uref m)) (uref m - uη' m)
+    _ ≤ (|uη n - uref n| + |uref n - uref m|) + |uref m - uη' m| := by
+          refine add_le_add ?_ (le_rfl)
+          simpa [Real.norm_eq_abs] using norm_add_le (uη n - uref n) (uref n - uref m)
+    _ ≤ (B * eη + A * (t n + t m)) + B * eη' := by
+          refine add_le_add ?_ ?_
+          · exact add_le_add (hη n) (hPairRef n m)
+          · simpa [abs_sub_comm] using hη' m
+    _ = A * (t n + t m) + B * eη + B * eη' := by ring
+
 end
 
 end Claim1lean

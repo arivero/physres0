@@ -94,7 +94,8 @@ Program stance:
 23. **AN-33B (done):** closed the AN-33 skeleton hypotheses in-branch (graph-decay transfer + denominator-rate bookkeeping + SD nonlocal insertion tails) in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`.
 24. **AN-34A (done):** replaced AN-33 denominator/numerator rate postulates by first-principles shell-tail transmutation bounds in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an34-firstprinciples-tail-rate-transmutation.md`.
 25. **AN-33L/AN-34L-A (done):** lifted AN-34 one-sided tail envelopes to exhaustion-indexed pairwise transfer wrappers in Lean and mapped them to AN-31 Cauchy/projective bookkeeping in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an33l-an34l-exhaustion-transfer-lean-bridge.md`.
-26. **AN-33L-B (next Lean support lane):** package projective-defect and de-regularization transfer lemmas with minimal field-side assumptions, using the AN-33L/AN-34L-A wrappers as the base layer.
+26. **AN-33L-B (done):** packaged projective-defect and de-regularization transfer lemmas with explicit mismatch penalties in Lean and mapped them to AN-31/AN-34 interfaces in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an33l-b-projective-dereg-transfer-lean.md`.
+27. **AN-33L-C (next Lean support lane):** package explicit commuting-limit wrappers (exhaustion/projective plus \(\eta\to0^+\)) with minimal side assumptions on top of AN-33L-B.
 
 ## Non-Drift Rule
 

@@ -25,6 +25,8 @@ Terminology companion:
 - `theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
 - `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
+- `theorems/2026-02-10-claim1-d3-an33l-an34l-exhaustion-transfer-lean-bridge.md`
+- `theorems/2026-02-10-claim1-d3-an33l-b-projective-dereg-transfer-lean.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -111,6 +113,7 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) graph-decay nonlocal weighted-local closure completed (Phase BZ / AN-33): AN-32 now extends to graph-decay nonlocal weighted-local channels with explicit denominator-rate normalized bookkeeping and SD pass-through closure in the same scoped branch, synchronized with diagnostics script (`claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`).
 - \(d=3\) first-principles tail-rate transmutation completed (Phase CA / AN-34A): AN-33 denominator/numerator rate assumptions are replaced by explicit shell-tail-derived bounds with Lean support wrappers and diagnostics script (`claim1_d3_an34_firstprinciples_tail_rate_check.py`).
 - \(d=3\) exhaustion-level Lean transfer bridge completed (Phase CB / AN-33L/AN-34L-A): one-sided tail envelopes now map to AN-31-style pairwise Cauchy/projective-rate bookkeeping via machine-checked wrappers in `Claim1lean/WeightedLocalGraphDecay.lean`.
+- \(d=3\) projective-defect/de-regularization Lean transfer completed (Phase CC / AN-33L-B): AN-31/AN-34 field-side transfer now has machine-checked mismatch-penalty wrappers for projective defects and pairwise exhaustion rates.
 
 ## Next Active Target
 
@@ -135,7 +138,8 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BZ (completed): AN-33 graph-decay nonlocal weighted-local closure delivered.
 - Phase CA (completed): AN-34A first-principles tail-rate transmutation delivered.
 - Phase CB (completed): AN-33L/AN-34L-A exhaustion-level Lean transfer wrappers delivered.
-- Active support lane (AN-33L-B continuation): package projective-defect/de-regularization transfer lemmas with minimal field-side assumptions and tighten reconstruction-facing interfaces.
+- Phase CC (completed): AN-33L-B projective-defect/de-regularization transfer lemmas delivered.
+- Active support lane (AN-33L-C continuation): package explicit commuting-limit wrappers (exhaustion/projective + \(\eta\to0^+\)) with minimal field-side assumptions and tighten reconstruction-facing interfaces.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 
