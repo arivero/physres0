@@ -12,3 +12,4 @@ import Claim1lean.FiniteExponentialRepresentation
 import Claim1lean.FiniteExponentialDerivativeBound
 import Claim1lean.FiniteExponentialRegularity
 import Claim1lean.FiniteExponentialIncrementBound
+import Claim1lean.WeightedLocalGraphDecay

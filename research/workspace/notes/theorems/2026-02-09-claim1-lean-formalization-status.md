@@ -62,9 +62,13 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
    - discharges BF regularity side-assumptions (`hDiff`, `hwithin`, `hZ`) from intrinsic finite-model structure,
    - reduces hypotheses to nonnegativity plus centered and moment controls.
 13. `Claim1lean/FiniteExponentialIncrementBound.lean` (AN-22 wrapper)
-   - adds `omegaExp_increment_bound_of_uniform_centered_control_auto_renormalizedScale`,
-   - injects \(a^3\)-rescaled (renormalized) moment channels directly into the AN-18 increment shape,
-   - keeps the increment theorem form unchanged while moving scaling choices into the `s`-channel map.
+    - adds `omegaExp_increment_bound_of_uniform_centered_control_auto_renormalizedScale`,
+    - injects \(a^3\)-rescaled (renormalized) moment channels directly into the AN-18 increment shape,
+    - keeps the increment theorem form unchanged while moving scaling choices into the `s`-channel map.
+14. `Claim1lean/WeightedLocalGraphDecay.lean` (AN-32L support closure)
+    - formalizes weighted-local seminorms (`weightedL1`, `weightedTailL1`) and truncation tail control under uniform local bounds,
+    - proves a graph-decay weighted operator inequality from column-decay hypotheses for finite nonlocal channels,
+    - proves denominator-rate bookkeeping bounds for ratio-state perturbations (`|1/D-1/D'|` and resulting ratio-difference estimates).
 
 ## Relation to Current Claim 1 Queue
 
@@ -76,13 +80,14 @@ These formalizations support:
 4. the AN-15 finite-dimensional centered-representation bridge from concrete model assumptions to AN-9 representation side,
 5. the AN-16 model-internal derivative-bound corollary for the finite exponential family,
 6. the AN-17 model-internal interval-increment `Cκ` corollary for the finite exponential family,
-7. the AN-18 automatic-regularity collapse from BF hypotheses to minimal model-data bounds.
+7. the AN-18 automatic-regularity collapse from BF hypotheses to minimal model-data bounds,
+8. the AN-32 weighted-local truncation and denominator-rate bookkeeping lane needed before AN-33 nonlocal graph-decay uplift.
 
 ## Next Lean Target (Queued)
 
-AN-32L (Lean support lane): formalize the AN-32 weighted-local SD-test lift
-(exhaustion-uniform insertion-tail bookkeeping and weighted-local truncation
-bridges) in a machine-checked finite surrogate chain.
+AN-33L (Lean support lane): lift AN-32L weighted-local/graph-decay finite
+surrogate bounds to exhaustion-indexed projective families and align them with
+AN-33 nonlocal denominator-rate bookkeeping targets.
 
 ## Validation Priority (Locked)
 
@@ -107,4 +112,5 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialDerivativeBound
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialRegularity
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialIncrementBound
+/Users/arivero/.elan/bin/lake build Claim1lean.WeightedLocalGraphDecay
 ```

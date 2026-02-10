@@ -33,6 +33,7 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialRepresentation
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialDerivativeBound
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialIncrementBound
+/Users/arivero/.elan/bin/lake build Claim1lean.WeightedLocalGraphDecay
 ```
 
 ## Current formalized modules
@@ -57,3 +58,5 @@ cd research/workspace/proofs
   finite-sum model-internal derivative bounds for \(\omega=N/Z\).
 - `Claim1lean/FiniteExponentialIncrementBound.lean`:
   finite-sum model-internal interval `Cκ` bound for \(\omega=N/Z\).
+- `Claim1lean/WeightedLocalGraphDecay.lean`:
+  weighted-local truncation, graph-decay operator, and denominator-rate ratio bounds.

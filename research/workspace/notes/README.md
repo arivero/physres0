@@ -114,6 +114,8 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
 - `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
 - `theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`
+- `theorems/2026-02-10-claim1-d3-an33-graph-decay-nonlocal-weighted-local.md`
+- `theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -126,6 +128,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-derivative-bound.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-increment-bound.md`
+- `theorems/2026-02-10-claim1-lean-weighted-local-graph-decay-bridge.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
@@ -195,6 +198,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_d3_an30_multiblock_projective_consistency_check.py`
 - `../simulations/claim1_d3_an31_exhaustion_summability_check.py`
 - `../simulations/claim1_d3_an32_weighted_local_sdtest_check.py`
+- `../simulations/claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -241,6 +245,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../proofs/Claim1lean/FiniteExponentialRepresentation.lean`
 - `../proofs/Claim1lean/FiniteExponentialDerivativeBound.lean`
 - `../proofs/Claim1lean/FiniteExponentialIncrementBound.lean`
+- `../proofs/Claim1lean/WeightedLocalGraphDecay.lean`
 
 ## Supplemental Audit Notes
 
@@ -274,6 +279,8 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
 - `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
 - `theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`
+- `theorems/2026-02-10-claim1-d3-an33-graph-decay-nonlocal-weighted-local.md`
+- `theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -286,3 +293,4 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-lean-finite-exponential-representation-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-derivative-bound.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-increment-bound.md`
+- `theorems/2026-02-10-claim1-lean-weighted-local-graph-decay-bridge.md`
