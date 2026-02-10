@@ -72,6 +72,7 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
     - adds shell-tail-to-limit wrappers (`abs_sub_le_of_tail_to_limit`, `ratio_diff_bound_of_limit_tail_rates`) that convert one-sided first-principles tail envelopes into pairwise ratio-rate bounds,
     - adds exhaustion-indexed transfer wrappers (`pairwise_tail_rate_of_exhaustion_envelope`, `pairwise_add_rate_of_exhaustion_envelopes`, `pairwise_ratio_rate_of_exhaustion_envelopes`) for AN-31-style projective bookkeeping,
     - adds AN-33L-B transfer lemmas (`projective_defect_transfer_of_regularization`, `pairwise_transfer_bound_of_regularization`, `pairwise_transfer_bound_between_regularizations`) to propagate projective/pairwise rates across regularization channels.
+    - adds AN-33L-C commuting-limit wrapper `commuting_limit_of_exhaustion_and_regularization_envelopes` packaging exhaustion tail envelopes plus regularization proxy Cauchy envelopes into a single joint convergence lemma.
 
 ## Relation to Current Claim 1 Queue
 
@@ -88,12 +89,14 @@ These formalizations support:
 9. the AN-34A first-principles tail-rate transmutation lane (shell envelopes \(\Rightarrow\) pairwise ratio bounds) in the same weighted-local finite surrogate,
 10. the AN-33L bridge from finite wrappers to exhaustion-indexed pairwise rates feeding AN-31 projective/tail bookkeeping,
 11. the AN-33L-B projective-defect/de-regularization transfer lane with explicit mismatch penalties.
+12. the AN-33L-C commuting-limit wrapper lane (exhaustion + de-regularization) packaging envelopes into joint convergence.
 
 ## Next Lean Target (Queued)
 
-AN-33L-C (Lean support lane): package an explicit commuting-limit wrapper
-(exhaustion/projective + \(\eta\to0^+\)) on top of AN-33L-B transfer lemmas
-with minimal additional side assumptions.
+Next Lean target (post AN-33L-C): formalize one of the "Newton limit paradox"
+support claims as a theorem-grade semigroup/normalization statement (Gaussian
+kernel `t^{-d/2}` normalization or semigroup→generator lemma), then link it to
+the half-density/amplitude necessity framing.
 
 ## Validation Priority (Locked)
 

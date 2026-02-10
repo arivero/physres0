@@ -100,9 +100,9 @@ cd research/workspace/proofs
 ### Confidence statement
 
 AN-33L-B is machine-checked and closes the requested projective-defect and
-de-regularization transfer step at the support-lane level. Remaining work is to
-package an explicit commuting-limit wrapper with minimal \(\eta\to0^+\) side
-assumptions (AN-33L-C).
+de-regularization transfer step at the support-lane level. The commuting-limit
+wrapper is now closed in AN-33L-C (see
+`research/workspace/notes/theorems/2026-02-10-claim1-d3-an33l-c-commuting-limit-wrapper-lean.md`).
 
 ### Reproducibility metadata
 

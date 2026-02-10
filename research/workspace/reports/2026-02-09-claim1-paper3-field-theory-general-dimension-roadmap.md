@@ -33,7 +33,9 @@ transmutation bounds in the same scoped branch. AN-33L/AN-34L-A then lifts
 those one-sided envelopes to exhaustion-indexed pairwise transfer wrappers used
 directly by AN-31 Cauchy/projective bookkeeping. AN-33L-B then adds explicit
 projective-defect and de-regularization transfer wrappers with mismatch
-penalties in the same Lean support lane.
+penalties in the same Lean support lane. AN-33L-C then packages a commuting-limit
+wrapper (exhaustion tail envelopes + regularization proxy Cauchy envelopes ⇒
+joint convergence) aligning the AN-31/AN-34 interface.
 
 ## Scope
 
@@ -137,7 +139,8 @@ first-principles shell-tail envelopes, preserving explicit normalized ratio
 Cauchy rates. AN-33L/AN-34L-A now lifts these to exhaustion-indexed pairwise
 rate wrappers (including additive/projective splitting form) in Lean. AN-33L-B
 adds channel-transfer wrappers for projective defects and pairwise rates across
-regularization levels.
+regularization levels. AN-33L-C then packages a commuting-limit wrapper turning
+explicit envelopes into a unique joint limit as \((k,n)\to\infty\).
 
 ## Literature Anchors
 
@@ -150,10 +153,13 @@ regularization levels.
 
 ## Immediate Next Scientific Step
 
-1. package explicit commuting-limit wrappers (exhaustion/projective +
-   \(\eta\to0^+\)) on top of AN-33L-B transfer lemmas (AN-33L-C),
+1. exhibit the concrete exhaustion/regularization envelopes (`t n`, `e k`) for
+   the weighted-local graph-decay nonlocal channels and feed them into the
+   AN-33L-C commuting-limit wrapper,
 2. tighten reconstruction-facing interfaces by separating scoped proven rates
-   from remaining G3 inputs in the \(d=3\to d=4\) frontier transition.
+   from remaining G3 inputs in the \(d=3\to d=4\) frontier transition,
+3. pursue Newton-limit paradox support theorems (semigroup normalization and
+   Van Vleck/Schur-complement prefactors) as narrative and structural anchors.
 
 ## Validation Contract
 
@@ -195,7 +201,9 @@ regularization levels.
    AN-33L/AN-34L-A lifts those bounds to exhaustion-indexed pairwise transfer
    wrappers aligned with AN-31 bookkeeping, and AN-33L-B adds explicit
    projective-defect/de-regularization transfer lemmas with mismatch penalties.
-   Full global continuum interacting closure remains open.
+   AN-33L-C then packages the commuting-limit wrapper for exhaustion vs
+   de-regularization in the same scoped lane. Full global continuum interacting
+   closure remains open.
 
 ## Reproducibility Metadata
 

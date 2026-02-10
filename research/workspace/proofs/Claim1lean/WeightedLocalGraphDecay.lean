@@ -401,6 +401,90 @@ theorem pairwise_transfer_bound_between_regularizations
           · simpa [abs_sub_comm] using hη' m
     _ = A * (t n + t m) + B * eη + B * eη' := by ring
 
+open Filter
+
+theorem commuting_limit_of_exhaustion_and_regularization_envelopes
+    {u : Nat → Nat → ℝ} {Lk t e : Nat → ℝ} {A B : ℝ}
+    (hA : 0 ≤ A)
+    (hB : 0 ≤ B)
+    (ht0 : Tendsto t atTop (nhds 0))
+    (he0 : Tendsto e atTop (nhds 0))
+    (ht_nonneg : ∀ n, 0 ≤ t n)
+    (he_nonneg : ∀ k, 0 ≤ e k)
+    (huTail : ∀ k n, |u k n - Lk k| ≤ A * t n)
+    (hLpair : ∀ k k', |Lk k - Lk k'| ≤ B * (e k + e k')) :
+    ∃ L, Tendsto Lk atTop (nhds L) ∧ Tendsto (fun p : Nat × Nat => u p.1 p.2) atTop (nhds L) := by
+  have htA : Tendsto (fun n => A * t n) atTop (nhds 0) := by
+    simpa [mul_zero] using (Filter.Tendsto.const_mul A ht0)
+  have heB : Tendsto (fun k => B * e k) atTop (nhds 0) := by
+    simpa [mul_zero] using (Filter.Tendsto.const_mul B he0)
+
+  have hCauchyLk : CauchySeq Lk := by
+    refine (Metric.cauchySeq_iff).2 ?_
+    intro ε hε
+    have hε2 : 0 < ε / 2 := by linarith
+    obtain ⟨K, hK⟩ := (Metric.tendsto_atTop).1 heB (ε / 2) hε2
+    refine ⟨K, ?_⟩
+    intro k hk k' hk'
+    have hkDist : dist (B * e k) 0 < ε / 2 := hK k hk
+    have hk'Dist : dist (B * e k') 0 < ε / 2 := hK k' hk'
+    have hkBound : B * e k < ε / 2 := by
+      have hnonneg : 0 ≤ B * e k := mul_nonneg hB (he_nonneg k)
+      have habs : |B * e k| < ε / 2 := by
+        simpa [Real.dist_eq, sub_zero] using hkDist
+      simpa [abs_of_nonneg hnonneg] using habs
+    have hk'Bound : B * e k' < ε / 2 := by
+      have hnonneg : 0 ≤ B * e k' := mul_nonneg hB (he_nonneg k')
+      have habs : |B * e k'| < ε / 2 := by
+        simpa [Real.dist_eq, sub_zero] using hk'Dist
+      simpa [abs_of_nonneg hnonneg] using habs
+    have hrhs_lt : B * (e k + e k') < ε := by
+      have hsum : B * e k + B * e k' < ε := by linarith
+      simpa [mul_add] using hsum
+    have hdiff_lt : |Lk k - Lk k'| < ε :=
+      lt_of_le_of_lt (hLpair k k') hrhs_lt
+    simpa [Real.dist_eq] using hdiff_lt
+
+  obtain ⟨L, hLtendsto⟩ := cauchySeq_tendsto_of_complete hCauchyLk
+  refine ⟨L, hLtendsto, ?_⟩
+
+  refine (Metric.tendsto_atTop).2 ?_
+  intro ε hε
+  have hε2 : 0 < ε / 2 := by linarith
+  obtain ⟨N, hN⟩ := (Metric.tendsto_atTop).1 htA (ε / 2) hε2
+  obtain ⟨K, hK⟩ := (Metric.tendsto_atTop).1 hLtendsto (ε / 2) hε2
+  refine ⟨(K, N), ?_⟩
+  intro p hp
+  have hk : K ≤ p.1 := hp.1
+  have hn : N ≤ p.2 := hp.2
+  have hdistAt : dist (A * t p.2) 0 < ε / 2 := hN p.2 hn
+  have hdistLk : dist (Lk p.1) L < ε / 2 := hK p.1 hk
+  have htBound : A * t p.2 < ε / 2 := by
+    have hnonneg : 0 ≤ A * t p.2 := mul_nonneg hA (ht_nonneg (p.2))
+    have habs : |A * t p.2| < ε / 2 := by
+      simpa [Real.dist_eq, sub_zero] using hdistAt
+    simpa [abs_of_nonneg hnonneg] using habs
+  have hLkBound : |Lk p.1 - L| < ε / 2 := by
+    simpa [Real.dist_eq] using hdistLk
+  have huBound :
+      |u p.1 p.2 - L| ≤ A * t p.2 + |Lk p.1 - L| := by
+    have hsplit : u p.1 p.2 - L = (u p.1 p.2 - Lk p.1) + (Lk p.1 - L) := by
+      ring
+    have habs_triangle :
+        |u p.1 p.2 - L| ≤ |u p.1 p.2 - Lk p.1| + |Lk p.1 - L| := by
+      calc
+        |u p.1 p.2 - L|
+            = |(u p.1 p.2 - Lk p.1) + (Lk p.1 - L)| := by
+                rw [hsplit]
+        _ ≤ |u p.1 p.2 - Lk p.1| + |Lk p.1 - L| := by
+              simpa [Real.norm_eq_abs] using norm_add_le (u p.1 p.2 - Lk p.1) (Lk p.1 - L)
+    have htail : |u p.1 p.2 - Lk p.1| ≤ A * t p.2 := by
+      simpa [abs_sub_comm] using huTail p.1 p.2
+    exact le_trans habs_triangle (add_le_add htail (le_rfl))
+  have hsum_lt : A * t p.2 + |Lk p.1 - L| < ε := by linarith
+  have hfinal : |u p.1 p.2 - L| < ε := lt_of_le_of_lt huBound hsum_lt
+  simpa [Real.dist_eq] using hfinal
+
 end
 
 end Claim1lean

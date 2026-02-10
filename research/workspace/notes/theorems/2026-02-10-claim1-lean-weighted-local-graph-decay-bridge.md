@@ -1,4 +1,4 @@
-# Claim 1 Phase BY-L/CB-L/CC-L (AN-32L/AN-33L/AN-34L): Lean Weighted-Local and Graph-Decay Bridge
+# Claim 1 Phase BY-L/CB-L/CC-L/CD-L (AN-32L/AN-33L/AN-34L): Lean Weighted-Local and Graph-Decay Bridge
 
 Date: 2026-02-10 (US)  
 Lean module: `research/workspace/proofs/Claim1lean/WeightedLocalGraphDecay.lean`
@@ -15,6 +15,7 @@ AN-33/AN-34 nonlocal weighted-local extension:
 4. first-principles shell-tail to pairwise-rate transmutation,
 5. field-facing transfer to AN-31-style exhaustion bookkeeping,
 6. projective-defect/de-regularization transfer wrappers (AN-33L-B).
+7. commuting-limit wrapper (AN-33L-C).
 
 ## Formalized Objects
 
@@ -101,6 +102,11 @@ For finite index classes:
 16. `pairwise_transfer_bound_between_regularizations`:
     pairwise bound transfer between two regularization levels \(\eta,\eta'\)
     through a common reference channel.
+17. `commuting_limit_of_exhaustion_and_regularization_envelopes`:
+    a single abstract wrapper that combines:
+    - exhaustion tail-to-limit envelopes,
+    - regularization-limit proxy Cauchy envelopes,
+    into joint convergence \((k,n)\to\infty\) (exhaustion + de-regularization).
 
 ## Why It Matters for AN-31/AN-33/AN-34
 
@@ -112,7 +118,8 @@ These lemmas give a machine-checked finite backbone for:
 4. direct transfer of those rates to AN-31-style exhaustion-indexed pairwise
    bookkeeping (AN-33L/AN-34L-A),
 5. projective-defect and de-regularization transfer with explicit additive
-   mismatch terms (AN-33L-B).
+   mismatch terms (AN-33L-B),
+6. commuting-limit control for exhaustion vs de-regularization (AN-33L-C).
 
 ## Build Check
 
