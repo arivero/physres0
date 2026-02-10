@@ -117,6 +117,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-10-claim1-d3-an33-graph-decay-nonlocal-weighted-local.md`
 - `theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`
 - `theorems/2026-02-10-claim1-d3-an34-firstprinciples-tail-rate-transmutation.md`
+- `theorems/2026-02-10-claim1-d3-an33l-an34l-exhaustion-transfer-lean-bridge.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -284,6 +285,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-10-claim1-d3-an33-graph-decay-nonlocal-weighted-local.md`
 - `theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`
 - `theorems/2026-02-10-claim1-d3-an34-firstprinciples-tail-rate-transmutation.md`
+- `theorems/2026-02-10-claim1-d3-an33l-an34l-exhaustion-transfer-lean-bridge.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`

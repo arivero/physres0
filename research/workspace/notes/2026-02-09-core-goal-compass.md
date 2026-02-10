@@ -110,6 +110,7 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) weighted-local SD-test lift completed (Phase BY / AN-32): AN-31 now extends from cylinder classes to weighted-local observable/SD-test classes with explicit exhaustion-uniform insertion tail estimates, synchronized into Paper 3 and diagnostics script (`claim1_d3_an32_weighted_local_sdtest_check.py`).
 - \(d=3\) graph-decay nonlocal weighted-local closure completed (Phase BZ / AN-33): AN-32 now extends to graph-decay nonlocal weighted-local channels with explicit denominator-rate normalized bookkeeping and SD pass-through closure in the same scoped branch, synchronized with diagnostics script (`claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`).
 - \(d=3\) first-principles tail-rate transmutation completed (Phase CA / AN-34A): AN-33 denominator/numerator rate assumptions are replaced by explicit shell-tail-derived bounds with Lean support wrappers and diagnostics script (`claim1_d3_an34_firstprinciples_tail_rate_check.py`).
+- \(d=3\) exhaustion-level Lean transfer bridge completed (Phase CB / AN-33L/AN-34L-A): one-sided tail envelopes now map to AN-31-style pairwise Cauchy/projective-rate bookkeeping via machine-checked wrappers in `Claim1lean/WeightedLocalGraphDecay.lean`.
 
 ## Next Active Target
 
@@ -133,7 +134,8 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BY (completed): AN-32 weighted-local SD-test lift delivered.
 - Phase BZ (completed): AN-33 graph-decay nonlocal weighted-local closure delivered.
 - Phase CA (completed): AN-34A first-principles tail-rate transmutation delivered.
-- Active support lane (AN-33L/AN-34L continuation): lift weighted-local graph-decay/tail-rate finite lemmas to exhaustion-indexed projective families and tighten reconstruction-facing interfaces.
+- Phase CB (completed): AN-33L/AN-34L-A exhaustion-level Lean transfer wrappers delivered.
+- Active support lane (AN-33L-B continuation): package projective-defect/de-regularization transfer lemmas with minimal field-side assumptions and tighten reconstruction-facing interfaces.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

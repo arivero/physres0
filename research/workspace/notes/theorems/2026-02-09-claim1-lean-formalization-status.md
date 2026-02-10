@@ -65,11 +65,12 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
     - adds `omegaExp_increment_bound_of_uniform_centered_control_auto_renormalizedScale`,
     - injects \(a^3\)-rescaled (renormalized) moment channels directly into the AN-18 increment shape,
     - keeps the increment theorem form unchanged while moving scaling choices into the `s`-channel map.
-14. `Claim1lean/WeightedLocalGraphDecay.lean` (AN-32L/AN-34L support closure)
+14. `Claim1lean/WeightedLocalGraphDecay.lean` (AN-32L/AN-33L/AN-34L support closure)
     - formalizes weighted-local seminorms (`weightedL1`, `weightedTailL1`) and truncation tail control under uniform local bounds,
     - proves a graph-decay weighted operator inequality from column-decay hypotheses for finite nonlocal channels,
     - proves denominator-rate bookkeeping bounds for ratio-state perturbations (`|1/D-1/D'|` and resulting ratio-difference estimates),
-    - adds shell-tail-to-limit wrappers (`abs_sub_le_of_tail_to_limit`, `ratio_diff_bound_of_limit_tail_rates`) that convert one-sided first-principles tail envelopes into pairwise ratio-rate bounds.
+    - adds shell-tail-to-limit wrappers (`abs_sub_le_of_tail_to_limit`, `ratio_diff_bound_of_limit_tail_rates`) that convert one-sided first-principles tail envelopes into pairwise ratio-rate bounds,
+    - adds exhaustion-indexed transfer wrappers (`pairwise_tail_rate_of_exhaustion_envelope`, `pairwise_add_rate_of_exhaustion_envelopes`, `pairwise_ratio_rate_of_exhaustion_envelopes`) for AN-31-style projective bookkeeping.
 
 ## Relation to Current Claim 1 Queue
 
@@ -83,13 +84,14 @@ These formalizations support:
 6. the AN-17 model-internal interval-increment `Cκ` corollary for the finite exponential family,
 7. the AN-18 automatic-regularity collapse from BF hypotheses to minimal model-data bounds,
 8. the AN-32 weighted-local truncation and denominator-rate bookkeeping lane needed before AN-33 nonlocal graph-decay uplift,
-9. the AN-34A first-principles tail-rate transmutation lane (shell envelopes \(\Rightarrow\) pairwise ratio bounds) in the same weighted-local finite surrogate.
+9. the AN-34A first-principles tail-rate transmutation lane (shell envelopes \(\Rightarrow\) pairwise ratio bounds) in the same weighted-local finite surrogate,
+10. the AN-33L bridge from finite wrappers to exhaustion-indexed pairwise rates feeding AN-31 projective/tail bookkeeping.
 
 ## Next Lean Target (Queued)
 
-AN-33L (Lean support lane): lift AN-32L/AN-34L weighted-local, graph-decay,
-and tail-to-rate finite surrogate bounds to exhaustion-indexed projective
-families and align them with AN-33/AN-34 nonlocal bookkeeping targets.
+AN-33L-B (Lean support lane): package the new exhaustion-indexed pairwise
+wrappers into explicit projective-defect/de-regularization transfer lemmas so
+AN-31/AN-34 field-side assumptions are discharged with minimal extra input.
 
 ## Validation Priority (Locked)
 

@@ -29,7 +29,9 @@ adds a drafted graph-decay nonlocal weighted-local theorem skeleton with an
 explicit Lean-obligation map for denominator-rate bookkeeping, and AN-33B
 closes that lane in the same scoped branch. AN-34A then replaces AN-33
 denominator/numerator rate postulates by first-principles shell-tail
-transmutation bounds in the same scoped branch.
+transmutation bounds in the same scoped branch. AN-33L/AN-34L-A then lifts
+those one-sided envelopes to exhaustion-indexed pairwise transfer wrappers used
+directly by AN-31 Cauchy/projective bookkeeping.
 
 ## Scope
 
@@ -130,7 +132,8 @@ weighted coefficient tails. AN-33A/AN-33B then extend this to graph-decay
 nonlocal weighted-local channels with explicit denominator-rate normalized-state
 bookkeeping. AN-34A then derives those denominator/numerator rate bounds from
 first-principles shell-tail envelopes, preserving explicit normalized ratio
-Cauchy rates.
+Cauchy rates. AN-33L/AN-34L-A now lifts these to exhaustion-indexed pairwise
+rate wrappers (including additive/projective splitting form) in Lean.
 
 ## Literature Anchors
 
@@ -143,8 +146,8 @@ Cauchy rates.
 
 ## Immediate Next Scientific Step
 
-1. lift the AN-34A first-principles tail-to-rate finite wrappers to
-   exhaustion-indexed/projective-family bookkeeping (AN-33L/AN-34L continuation),
+1. package projective-defect and de-regularization transfer lemmas on top of
+   AN-33L/AN-34L-A exhaustion pairwise wrappers (AN-33L-B),
 2. tighten reconstruction-facing interfaces by separating scoped proven rates
    from remaining G3 inputs in the \(d=3\to d=4\) frontier transition.
 
@@ -185,7 +188,9 @@ Cauchy rates.
    insertion-tail envelopes. AN-33 closes graph-decay nonlocal weighted-local
    denominator-rate bookkeeping in the same scoped branch, and AN-34A upgrades
    that lane by deriving rates from first-principles shell-tail envelopes.
-   Full global continuum interacting closure remains open.
+   AN-33L/AN-34L-A lifts those bounds to exhaustion-indexed pairwise transfer
+   wrappers aligned with AN-31 bookkeeping. Full global continuum interacting
+   closure remains open.
 
 ## Reproducibility Metadata
 

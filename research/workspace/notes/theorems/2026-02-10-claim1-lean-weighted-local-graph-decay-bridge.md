@@ -1,18 +1,19 @@
-# Claim 1 Phase BY-L (AN-32L): Lean Weighted-Local and Graph-Decay Bridge
+# Claim 1 Phase BY-L/CB-L (AN-32L/AN-33L/AN-34L): Lean Weighted-Local and Graph-Decay Bridge
 
 Date: 2026-02-10 (US)  
 Lean module: `research/workspace/proofs/Claim1lean/WeightedLocalGraphDecay.lean`
 
 ## Goal
 
-Close the AN-32 Lean support lane (and AN-34 Lean follow-up wrappers) with
-finite surrogate lemmas that directly support the AN-33/AN-34 nonlocal
-weighted-local extension:
+Close the AN-32 Lean support lane (and AN-33L/AN-34L follow-up wrappers) with
+finite and exhaustion-indexed surrogate lemmas that directly support the
+AN-33/AN-34 nonlocal weighted-local extension:
 
 1. weighted-local truncation tails,
 2. graph-decay nonlocal channel bounds,
 3. denominator-rate ratio bookkeeping,
-4. first-principles shell-tail to pairwise-rate transmutation.
+4. first-principles shell-tail to pairwise-rate transmutation,
+5. field-facing transfer to AN-31-style exhaustion bookkeeping.
 
 ## Formalized Objects
 
@@ -26,6 +27,11 @@ For finite index classes:
    \[
    \|x\|_{w,\mathrm{tail}(\chi)}:=\sum_i (1-\chi_i)|w_i|\,|x_i|.
    \]
+3. exhaustion-indexed channels:
+   \[
+   u_n,\ N_n,\ D_n,\ t_n,\qquad n\in\mathbb N,
+   \]
+   used to transport one-sided tail envelopes to pairwise projective-rate bounds.
 
 ## Machine-Checked Results
 
@@ -68,15 +74,31 @@ For finite index classes:
 9. `ratio_diff_bound_of_limit_tail_rates`:
    one-sided tail-to-limit envelopes are converted directly into pairwise
    ratio-rate bounds through item 7 and item 8.
+10. `pairwise_tail_rate_of_exhaustion_envelope`:
+    if
+    \[
+    |u_n-u_\infty|\le A\,t_n,
+    \]
+    then
+    \[
+    |u_n-u_m|\le A\,(t_n+t_m).
+    \]
+11. `pairwise_add_rate_of_exhaustion_envelopes`:
+    two one-sided envelopes for \(u_n\) and \(v_n\) imply an additive
+    pairwise-rate envelope for \(u_n+v_n\), with constant \(A_u+A_v\).
+12. `pairwise_ratio_rate_of_exhaustion_envelopes`:
+    one-sided numerator/denominator tail envelopes plus denominator floor imply
+    pairwise ratio-rate bounds for \(N_n/D_n\) with explicit AN-34 constants.
 
-## Why It Matters for AN-33
+## Why It Matters for AN-31/AN-33/AN-34
 
 These lemmas give a machine-checked finite backbone for:
 
 1. nonlocal weighted-local graph-decay estimates (AN-33 observable channel),
 2. explicit denominator-rate propagation in normalized state differences,
 3. AN-34A first-principles tail-to-rate transmutation in the scoped \(d=3\) lane,
-4. the next uplift to exhaustion/projective families (AN-33L target).
+4. direct transfer of those rates to AN-31-style exhaustion-indexed pairwise
+   bookkeeping (AN-33L/AN-34L continuation target).
 
 ## Build Check
 

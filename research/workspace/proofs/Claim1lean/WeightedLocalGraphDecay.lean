@@ -268,6 +268,59 @@ theorem ratio_diff_bound_of_limit_tail_rates
     (t := tn + tm) (AN := AN) (AD := AD) (d0 := d0) (B := B)
     hd0 hDn hDm hNpair hDpair hB
 
+theorem pairwise_tail_rate_of_exhaustion_envelope
+    {u t : Nat → ℝ} {ulim A : ℝ}
+    (huTail : ∀ n, |u n - ulim| ≤ A * t n) :
+    ∀ n m, |u n - u m| ≤ A * (t n + t m) := by
+  intro n m
+  exact abs_sub_le_of_tail_to_limit
+    (x := u n) (y := u m) (c := ulim)
+    (A := A) (tx := t n) (ty := t m)
+    (huTail n) (huTail m)
+
+theorem pairwise_add_rate_of_exhaustion_envelopes
+    {u v t : Nat → ℝ} {ulim vlim Au Av : ℝ}
+    (huTail : ∀ n, |u n - ulim| ≤ Au * t n)
+    (hvTail : ∀ n, |v n - vlim| ≤ Av * t n) :
+    ∀ n m, |(u n + v n) - (u m + v m)| ≤ (Au + Av) * (t n + t m) := by
+  intro n m
+  have huPair :
+      |u n - u m| ≤ Au * (t n + t m) :=
+    pairwise_tail_rate_of_exhaustion_envelope
+      (u := u) (t := t) (ulim := ulim) (A := Au) huTail n m
+  have hvPair :
+      |v n - v m| ≤ Av * (t n + t m) :=
+    pairwise_tail_rate_of_exhaustion_envelope
+      (u := v) (t := t) (ulim := vlim) (A := Av) hvTail n m
+  have hsplit :
+      (u n + v n) - (u m + v m) = (u n - u m) + (v n - v m) := by
+    ring
+  calc
+    |(u n + v n) - (u m + v m)|
+        = |(u n - u m) + (v n - v m)| := by rw [hsplit]
+    _ ≤ |u n - u m| + |v n - v m| := by
+          simpa [Real.norm_eq_abs] using norm_add_le (u n - u m) (v n - v m)
+    _ ≤ Au * (t n + t m) + Av * (t n + t m) := add_le_add huPair hvPair
+    _ = (Au + Av) * (t n + t m) := by ring
+
+theorem pairwise_ratio_rate_of_exhaustion_envelopes
+    {N D t : Nat → ℝ} {Nlim Dlim AN AD d0 B : ℝ}
+    (hd0 : 0 < d0)
+    (hDfloor : ∀ n, d0 ≤ |D n|)
+    (hNtail : ∀ n, |N n - Nlim| ≤ AN * t n)
+    (hDtail : ∀ n, |D n - Dlim| ≤ AD * t n)
+    (hNbound : ∀ n, |N n| ≤ B) :
+    ∀ n m, |N n / D n - N m / D m|
+      ≤ (AN / d0 + B * (AD / (d0 * d0))) * (t n + t m) := by
+  intro n m
+  exact ratio_diff_bound_of_limit_tail_rates
+    (Nn := N n) (Nm := N m) (Dn := D n) (Dm := D m)
+    (Nlim := Nlim) (Dlim := Dlim)
+    (tn := t n) (tm := t m)
+    (AN := AN) (AD := AD) (d0 := d0) (B := B)
+    hd0 (hDfloor n) (hDfloor m)
+    (hNtail n) (hNtail m) (hDtail n) (hDtail m) (hNbound m)
+
 end
 
 end Claim1lean
