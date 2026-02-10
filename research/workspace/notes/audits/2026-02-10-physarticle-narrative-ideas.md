@@ -128,7 +128,8 @@ Rigorization hook:
 1. [done (Lean, minimal)] Semigroup→generator lemma: `Claim1lean/SemigroupGenerator.lean` with note `research/workspace/notes/theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`.
 2. Formalize L² half-density scalarization equivalence as a unitary map (reference half-density change).
 3. Promote the Gaussian kernel semigroup normalization (`t^{-d/2}`) to a theorem with stated analytic conditions (Euclidean or `i0`).
-4. Package the Schur-complement + determinant prefactor template and link it to Van Vleck/mixed Hessians.
+4. [in progress] Package the Schur-complement + determinant prefactor template and link it to Van Vleck/mixed Hessians.
+   Lean status: determinant prefactor identity is now machine-checked in `Claim1lean/SchurComplementDeterminant.lean` (next: add the matching “completion of squares” quadratic-form identity).
 5. Formalize point-splitting limit `(δ(·+ε)−δ)/ε → δ'` and record sign conventions once.
 6. If Planck-area lane is kept: formalize the hypothesis ladder and the “dimension sieve” constraints with explicit coupling admissibility rule.
 

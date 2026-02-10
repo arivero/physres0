@@ -77,6 +77,10 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
     - formalizes a minimal semigroup→generator lemma:
       right-derivative at `0` + semigroup composition implies a beta-function generator
       and a right-derivative ODE for orbits (`orbit_hasDerivWithinAt_Ici`).
+16. `Claim1lean/SchurComplementDeterminant.lean` (Van Vleck / Schur-complement template)
+    - wraps mathlib block-matrix determinant identities:
+      `det [A B; C D] = det A * det(D - C A⁻¹ B)` and the `D`-pivot analogue,
+    - includes invertibility ↔ Schur-complement invertibility wrappers.
 
 ## Relation to Current Claim 1 Queue
 
@@ -94,6 +98,7 @@ These formalizations support:
 10. the AN-33L bridge from finite wrappers to exhaustion-indexed pairwise rates feeding AN-31 projective/tail bookkeeping,
 11. the AN-33L-B projective-defect/de-regularization transfer lane with explicit mismatch penalties.
 12. the AN-33L-C commuting-limit wrapper lane (exhaustion + de-regularization) packaging envelopes into joint convergence.
+13. the Schur-complement determinant prefactor template needed for the Van Vleck / Gaussian-elimination normalization lane.
 
 ## Next Lean Target (Queued)
 
@@ -127,4 +132,5 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialIncrementBound
 /Users/arivero/.elan/bin/lake build Claim1lean.WeightedLocalGraphDecay
 /Users/arivero/.elan/bin/lake build Claim1lean.SemigroupGenerator
+/Users/arivero/.elan/bin/lake build Claim1lean.SchurComplementDeterminant
 ```

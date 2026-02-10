@@ -14,3 +14,4 @@ import Claim1lean.FiniteExponentialRegularity
 import Claim1lean.FiniteExponentialIncrementBound
 import Claim1lean.WeightedLocalGraphDecay
 import Claim1lean.SemigroupGenerator
+import Claim1lean.SchurComplementDeterminant

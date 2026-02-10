@@ -35,6 +35,7 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialIncrementBound
 /Users/arivero/.elan/bin/lake build Claim1lean.WeightedLocalGraphDecay
 /Users/arivero/.elan/bin/lake build Claim1lean.SemigroupGenerator
+/Users/arivero/.elan/bin/lake build Claim1lean.SchurComplementDeterminant
 ```
 
 ## Current formalized modules
@@ -63,3 +64,5 @@ cd research/workspace/proofs
   weighted-local truncation, graph-decay operator, and denominator-rate ratio bounds.
 - `Claim1lean/SemigroupGenerator.lean`:
   semigroup→generator lemma (right-derivative ODE for semigroup orbits).
+- `Claim1lean/SchurComplementDeterminant.lean`:
+  Schur-complement determinant prefactor template for 2×2 block matrices.

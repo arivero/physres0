@@ -91,6 +91,10 @@ Internal pointer:
   lemma: right-derivative at `0` + semigroup composition implies a beta-function
   generator and a right-derivative ODE for orbits; see
   `research/workspace/notes/theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`.
+- New Lean support work (2026-02-10) also provides a Schur-complement determinant
+  prefactor template for 2×2 block matrices (Van Vleck / Gaussian-elimination
+  backbone); see
+  `research/workspace/notes/theorems/2026-02-10-claim1-lean-schur-complement-determinant-template.md`.
 
 ## Actionable Next Steps (Short List)
 

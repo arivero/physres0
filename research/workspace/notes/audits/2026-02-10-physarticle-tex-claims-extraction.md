@@ -137,6 +137,7 @@ Taxonomy used in that paper: `Proposition` (intended math-valid under stated ass
 **P1.5 (Semigroup property as associativity of integration)** (`rg-fundamental/main.tex:665`)
 - Claim: coarse-graining by integrating out variables satisfies semigroup property by Fubini; in quadratic models corresponds to nested Schur complements.
 - Rigorization: theorem-grade given integrability/positivity assumptions; in the Gaussian case can be proven explicitly.
+- Lean status: the determinant/Schur-complement prefactor identity is now machine-checked in `Claim1lean/SchurComplementDeterminant.lean` (algebraic part; no integration yet).
 
 **P1.6 (Canonical dimension of the delta coupling)** (`rg-fundamental/main.tex:442`)
 - Claim: in `d` spatial dimensions, `g δ^{(d)}(x)` has `[g]=length^{d-2}` in `ℏ=c=1` units.
