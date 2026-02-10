@@ -81,6 +81,9 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
     - wraps mathlib block-matrix determinant identities:
       `det [A B; C D] = det A * det(D - C A⁻¹ B)` and the `D`-pivot analogue,
     - includes invertibility ↔ Schur-complement invertibility wrappers.
+17. `Claim1lean/GaussianSemigroupNormalization.lean` (Gaussian semigroup + prefactor anchor)
+    - proves the mean-zero Gaussian convolution semigroup (variance adds),
+    - records the 1D diagonal prefactor `1/sqrt(2*pi*v)` in the mathlib normalization.
 
 ## Relation to Current Claim 1 Queue
 
@@ -99,13 +102,16 @@ These formalizations support:
 11. the AN-33L-B projective-defect/de-regularization transfer lane with explicit mismatch penalties.
 12. the AN-33L-C commuting-limit wrapper lane (exhaustion + de-regularization) packaging envelopes into joint convergence.
 13. the Schur-complement determinant prefactor template needed for the Van Vleck / Gaussian-elimination normalization lane.
+14. the Gaussian semigroup + prefactor anchor needed for the `t^{-d/2}` normalization lane.
 
 ## Next Lean Target (Queued)
 
 Next Lean target: continue the "Newton limit paradox" support lane by formalizing
 the semigroup/normalization constraint behind Gaussian/Van-Vleck prefactors
-(the `t^{-d/2}` normalization lane). The semigroup→generator lemma is now
-machine-checked in `Claim1lean/SemigroupGenerator.lean`.
+(the `t^{-d/2}` normalization lane). A 1D Gaussian semigroup + diagonal prefactor
+anchor is now machine-checked in `Claim1lean/GaussianSemigroupNormalization.lean`;
+next upgrade is to lift this to an explicit kernel-level `t^{-d/2}` statement in `d` dimensions
+and connect it to the Van Vleck determinant lane.
 
 ## Validation Priority (Locked)
 
@@ -133,4 +139,5 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.WeightedLocalGraphDecay
 /Users/arivero/.elan/bin/lake build Claim1lean.SemigroupGenerator
 /Users/arivero/.elan/bin/lake build Claim1lean.SchurComplementDeterminant
+/Users/arivero/.elan/bin/lake build Claim1lean.GaussianSemigroupNormalization
 ```

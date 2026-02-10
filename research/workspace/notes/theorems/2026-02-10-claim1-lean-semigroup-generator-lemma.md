@@ -56,8 +56,8 @@ This lemma is a clean "consistency axiom ⇒ generator" bridge:
 ## Next Tightening Targets
 
 1. Connect this semigroup-generator lemma to a concrete normalization/semigroup constraint
-   in a Gaussian model (the `t^{-d/2}` prefactor lane).
+   in a Gaussian model (the `t^{-d/2}` prefactor lane). Partial Lean anchor:
+   `research/workspace/notes/theorems/2026-02-10-claim1-lean-gaussian-semigroup-normalization.md`.
 2. Upgrade to a setting closer to the field-side objects (e.g. maps acting on a space of
    couplings or states), with explicit regularity hypotheses clearly separated from the
    semigroup axiom.
-

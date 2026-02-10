@@ -95,12 +95,14 @@ Internal pointer:
   prefactor template for 2×2 block matrices (Van Vleck / Gaussian-elimination
   backbone); see
   `research/workspace/notes/theorems/2026-02-10-claim1-lean-schur-complement-determinant-template.md`.
+- New Lean support work (2026-02-10) also adds a 1D Gaussian semigroup + diagonal prefactor
+  anchor (variance-addition semigroup; `1/sqrt(2*pi*v)` at the diagonal); see
+  `research/workspace/notes/theorems/2026-02-10-claim1-lean-gaussian-semigroup-normalization.md`.
 
 ## Actionable Next Steps (Short List)
 
-1. Write a standalone note that states the semigroup-normalization claim as an
-   explicit theorem statement in a finite-dimensional Gaussian model class, with
-   hypotheses that can be ported to Lean.
+1. [partial] Semigroup-normalization lane: a 1D Gaussian semigroup + diagonal prefactor anchor
+   is now machine-checked; next is a full `t^{-d/2}` kernel statement in `d` dimensions.
 2. [done] In Lean: build a minimal "commuting-limit wrapper" lemma (AN-33L-C) on top of
    the AN-33L-B transfer bounds.
 3. [done] In Lean: formalize a minimal semigroup→generator lemma for coarse-graining maps

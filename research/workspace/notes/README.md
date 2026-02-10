@@ -135,6 +135,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-10-claim1-lean-weighted-local-graph-decay-bridge.md`
 - `theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`
 - `theorems/2026-02-10-claim1-lean-schur-complement-determinant-template.md`
+- `theorems/2026-02-10-claim1-lean-gaussian-semigroup-normalization.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`

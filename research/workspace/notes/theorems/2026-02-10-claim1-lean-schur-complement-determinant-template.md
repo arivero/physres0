@@ -58,5 +58,5 @@ It is intended to be cited when connecting:
 1. Add a “completion of squares” quadratic-form identity on block matrices (still algebraic),
    matching the Schur-complement reduction at the exponent level.
 2. Use the algebraic elimination + a separate analytic Gaussian-integral lemma to finish the
-   semigroup-normalization (`t^{-d/2}`) theorem lane.
-
+   semigroup-normalization (`t^{-d/2}`) theorem lane. Current Lean anchor on the Gaussian side:
+   `research/workspace/notes/theorems/2026-02-10-claim1-lean-gaussian-semigroup-normalization.md`.

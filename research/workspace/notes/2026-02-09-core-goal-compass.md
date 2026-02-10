@@ -30,6 +30,7 @@ Terminology companion:
 - `theorems/2026-02-10-claim1-d3-an33l-c-commuting-limit-wrapper-lean.md`
 - `theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`
 - `theorems/2026-02-10-claim1-lean-schur-complement-determinant-template.md`
+- `theorems/2026-02-10-claim1-lean-gaussian-semigroup-normalization.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`

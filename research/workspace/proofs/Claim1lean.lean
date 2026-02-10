@@ -15,3 +15,4 @@ import Claim1lean.FiniteExponentialIncrementBound
 import Claim1lean.WeightedLocalGraphDecay
 import Claim1lean.SemigroupGenerator
 import Claim1lean.SchurComplementDeterminant
+import Claim1lean.GaussianSemigroupNormalization

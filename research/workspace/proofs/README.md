@@ -36,6 +36,7 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.WeightedLocalGraphDecay
 /Users/arivero/.elan/bin/lake build Claim1lean.SemigroupGenerator
 /Users/arivero/.elan/bin/lake build Claim1lean.SchurComplementDeterminant
+/Users/arivero/.elan/bin/lake build Claim1lean.GaussianSemigroupNormalization
 ```
 
 ## Current formalized modules
@@ -66,3 +67,5 @@ cd research/workspace/proofs
   semigroup→generator lemma (right-derivative ODE for semigroup orbits).
 - `Claim1lean/SchurComplementDeterminant.lean`:
   Schur-complement determinant prefactor template for 2×2 block matrices.
+- `Claim1lean/GaussianSemigroupNormalization.lean`:
+  Gaussian convolution semigroup (variance adds) + 1D diagonal prefactor anchor.

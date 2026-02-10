@@ -151,6 +151,7 @@ Taxonomy used in that paper: `Proposition` (intended math-valid under stated ass
    this is a precise, short, and reusable lemma; can be formalized as an `L^2` isometry.
 3. **Gaussian kernel semigroup normalization** (derivation `paper/main.tex:D4.1a`):
    promote to a theorem: convolution semigroup + quadratic phase ⇒ `t^{-d/2}` scaling, with explicit conditions (Euclidean time or `i0` regularization).
+   - Lean status (partial): a 1D Gaussian convolution semigroup + diagonal prefactor anchor is now machine-checked in `Claim1lean/GaussianSemigroupNormalization.lean`; full `d`-dimensional kernel statement remains open.
 4. **2D delta dimensional transmutation** (`paper/main.tex:P11.1` / `rg-fundamental/main.tex:P1.2`):
    either cite a standard reference carefully or write a self-contained proof with clear regulator + subtraction scheme and error control.
 
