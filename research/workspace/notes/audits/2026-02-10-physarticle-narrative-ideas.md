@@ -125,7 +125,7 @@ Rigorization hook:
 
 ## Suggested additions to physbook task queue (actionable, not yet executed)
 
-1. Formalize (Lean-friendly) semigroup→generator lemma for smooth finite-dimensional `W_{Λ→μ}`.
+1. [done (Lean, minimal)] Semigroup→generator lemma: `Claim1lean/SemigroupGenerator.lean` with note `research/workspace/notes/theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`.
 2. Formalize L² half-density scalarization equivalence as a unitary map (reference half-density change).
 3. Promote the Gaussian kernel semigroup normalization (`t^{-d/2}`) to a theorem with stated analytic conditions (Euclidean or `i0`).
 4. Package the Schur-complement + determinant prefactor template and link it to Van Vleck/mixed Hessians.
@@ -162,4 +162,3 @@ High confidence the bullets reflect text present in the read sources; medium con
 2. scanned repo: `/Users/arivero/physarticle`
 3. shell: `zsh`
 4. date anchor: 2026-02-10 (US)
-

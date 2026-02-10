@@ -35,6 +35,31 @@ This is the programmatic shape already visible in the static core:
 Primary internal anchor:
 `research/workspace/notes/theorems/2026-02-08-claim1-scoped-bridge-statement.md`.
 
+## Candidate Obstruction: No Canonical Lebesgue Measure on Path Space
+
+One precise obstruction to a naive "Newton-only" refinement slogan
+
+> "time-slice, integrate over trajectories, and send `Δt → 0`"
+
+is that a literal translation-invariant Lebesgue/Haar-type measure on an
+infinite-dimensional path space does not exist in the sense needed for
+"refine and integrate" to be a canonical limit statement.
+
+Standard formulation (informal):
+in an infinite-dimensional separable Banach space `X`, there is no nontrivial
+translation-invariant Borel measure that is finite on a nonempty open set.
+
+Operational moral for this workspace:
+`Dq` in a path integral is not an ordinary countably additive Lebesgue measure;
+refinement limits are *constructions* that must specify normalization and
+regulator/subtraction compatibility data. Semigroup structure and generator
+lemmas (beta functions) are the natural consistency language for these
+constructions.
+
+Internal pointer:
+`../physarticle/blackboards/2026-02-10-no-lebesgue-measure-in-infinite-dim.md`
+(standard proof sketch via packing disjoint translates).
+
 ## Concrete "Rigorous Targets" Suggested by This Question
 
 1. **Composition forces normalization (semigroup constraint):**
