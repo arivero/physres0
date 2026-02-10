@@ -12,6 +12,12 @@ This folder stores analysis artifacts derived from source documents.
 - `audits/`: claim audits, rigor labels, and validation plans.
 - `theorems/`: theorem-style upgrades of selected claims.
 
+## Research Pool (Queued Themes)
+
+- `audits/2026-02-10-research-pool-themes.md`
+- `2026-02-10-theme-action-angle-undeterminacy-central-potentials.md`
+- `2026-02-10-theme-fermionic-mediation-central-potential.md`
+
 ## Conventions
 
 - Every audit should include:
