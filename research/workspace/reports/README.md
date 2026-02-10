@@ -9,6 +9,12 @@ This folder stores longer-form manuscripts that consolidate multiple theorem not
 
 ## Key Reports
 
+- `2026-02-10-foundations-refinement-compatibility.tex`
+  - Foundations submission draft: refinement compatibility principle (RCP),
+    oscillatory amplitudes as compositionally forced objects, semigroup-imposed
+    short-time normalization (`t^{-d/2}`), and RG as limit control, with scoped
+    theorem-grade exemplars pulled from the Claim 1/9 tracks.
+  - Rendered companion: `2026-02-10-foundations-refinement-compatibility.pdf`.
 - `2026-02-08-claim1-variational-delta-note.tex`
   - First statement of Goal 1 as a three-level ladder (statics, QM, QFT) and the
     "delta of first variation" viewpoint.

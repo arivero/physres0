@@ -1,0 +1,347 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\e}{\mathrm{e}}
+
+\title{Refinement Compatibility from Newton to Renormalization:\\
+Why Composition Forces Oscillatory Amplitudes}
+\author{}
+\date{2026-02-10}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Many ``continuum'' constructions in physics are operational limits of iterative refinement:
+polygonal approximations in mechanics, time slicing in quantum mechanics, lattice and cutoff
+procedures in field theory. The central theme of this paper is a compatibility requirement:
+refinements should compose consistently and yield stable observable assignments.
+We argue that this requirement makes two structures hard to avoid. First, if weights compose
+multiplicatively under cutting while the underlying functional is additive, then exponential
+weighting is forced; the oscillatory weight \(\e^{\tfrac{i}{\hbar}S}\) is the canonical instance.
+Second, semigroup composition at short times forces rigid normalization exponents (the
+universal \(t^{-d/2}\) scaling in \(d\) dimensions). These ``square-root'' normalization laws are
+naturally expressed at the amplitude/half-density level and become visible already in finite
+dimensions through stationary phase.
+
+The paper is expository but theorem-facing: we state four representative theorem-grade
+packages in explicitly scoped settings (static stationary phase, time-sliced consistency under
+explicit gates, Gaussian semigroup normalization, and a screened-Abelian Yukawa kernel
+example). We also summarize the current boundary between proved scoped results and open global
+gates (continuum existence and reconstruction in interacting local QFT, and first-principles
+transfer control in non-Abelian confinement).
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+The phrase ``take the limit as the refinement parameter goes to zero'' hides a genuine
+mathematical issue: the limit need not exist, need not be unique, and may depend on
+normalization or subtraction conventions. This is not a pathology of quantum theory alone.
+Newton's polygonal method in central-force motion is already a refinement construction:
+one first proves an exact finite-step invariant and only then defines the smooth statement
+as a controlled refinement limit.
+
+This paper proposes a unifying viewpoint:
+
+\begin{quote}
+\emph{A physical law is an assignment of observables that is stable under controlled
+refinement and compatible with composition.}
+\end{quote}
+
+In this view, quantization and renormalization are not treated as unrelated ``add-ons''. They
+are two distinct mechanisms for making refinement limits stable when naive limits fail:
+\begin{enumerate}
+\item \textbf{Oscillatory amplitudes} stabilize composition rules that localize on variational
+extrema in a distributional sense.
+\item \textbf{Renormalization group (RG) flow} stabilizes divergent refinement procedures by
+explicit regulator dependence plus regulator-independent observables.
+\end{enumerate}
+
+To avoid over-claiming, we maintain an explicit scope discipline:
+\begin{itemize}
+\item We do \emph{not} claim a complete interacting continuum construction in \(d=4\).
+\item We do \emph{not} treat geometric half-density language as a substitute for analytic
+convergence gates.
+\item When a statement depends on a model class or on dimension, we tag that dependency
+explicitly.
+\end{itemize}
+
+\section{Refinement compatibility and composition}
+\label{sec:rcp}
+
+\begin{definition}[Refinement compatibility principle (RCP)]
+Fix a family of finite-resolution descriptions indexed by a refinement parameter \(\Lambda\)
+(for example, a time slicing step, a lattice spacing, or a cutoff scale), together with
+refinement maps \(\rho_{\Lambda\to\Lambda'}\) for \(\Lambda'\succcurlyeq \Lambda\).
+An observable assignment \(\mathcal O_\Lambda\mapsto \langle \mathcal O_\Lambda\rangle_\Lambda\)
+is \emph{refinement compatible} if:
+\begin{enumerate}
+\item \textbf{Projective consistency:} \(\langle \mathcal O_\Lambda\rangle_\Lambda
+=\langle \rho_{\Lambda\to\Lambda'}\mathcal O_\Lambda\rangle_{\Lambda'}\) whenever both sides are defined.
+\item \textbf{Stability:} for each \(\mathcal O\) in a specified observable class, the refinement
+limit exists in a specified topology:
+\(\langle \mathcal O_\Lambda\rangle_\Lambda \to \langle \mathcal O\rangle\) as \(\Lambda\to\infty\)
+(or \(\Lambda\to0\), depending on convention).
+\end{enumerate}
+\end{definition}
+
+RCP is intentionally minimal: it does not assume an ontological ``continuum''.
+It is a compatibility requirement for \emph{how} we define objects by refinement.
+
+\paragraph{Why exponentials appear.}
+Suppose a history weight \(W\) composes multiplicatively under cutting while the underlying
+functional \(S\) composes additively (as actions do under concatenation):
+\[
+W(\text{piece}_1\circ \text{piece}_2)=W(\text{piece}_1)\,W(\text{piece}_2),
+\qquad
+S(\text{piece}_1\circ \text{piece}_2)=S(\text{piece}_1)+S(\text{piece}_2).
+\]
+Under mild regularity assumptions, this forces \(W\propto \exp(c_0 S)\) with \(c_0\) of
+dimension \(1/\text{action}\). Dirac's phase-weighting and Feynman's time slicing are the
+best-known instances \cite{Dirac1933,Feynman1948}.
+
+\section{Newton's polygonal refinement (finite invariants first)}
+\label{sec:newton}
+
+In Newton's central-force polygonal construction, the key point is methodological:
+one proves a \emph{finite-step invariant} (equal swept areas per equal time step under a
+central impulse) and then defines the smooth areal-velocity law by a refinement limit.
+In modern language, this is a template for how to keep refinement-to-zero statements honest.
+See \cite{Newton1687} for the original and any standard mechanics text for the torque/areal
+velocity identity.
+
+\section{Static prototype: oscillatory amplitude and localization}
+\label{sec:static}
+
+The static prototype is finite-dimensional and theorem-grade under standard hypotheses.
+
+\begin{theorem}[Static localization from oscillatory amplitude (scoped)]
+\label{thm:static-born}
+Let \(f\in C^\infty(\R)\) and \(O\in C_c^\infty(\R)\). Define the oscillatory amplitude
+\[
+A_\eps(O):=\eps^{-1/2}\int_{\R}\e^{\tfrac{i}{\eps}f(x)}\,O(x)\,dx,\qquad \eps>0.
+\]
+Assume \(f'\) has a unique simple zero \(x_0\in \mathrm{supp}(O)\), i.e.\ \(f'(x_0)=0\) and
+\(f''(x_0)\neq 0\). Then, as \(\eps\to0^+\),
+\[
+|A_\eps(O)|^2\longrightarrow 2\pi\,\frac{|O(x_0)|^2}{|f''(x_0)|}
+=2\pi\langle \delta(f'),|O|^2\rangle,
+\]
+up to Fourier-normalization convention.
+\end{theorem}
+
+\begin{remark}[Multi-critical interference and averaging]
+If several critical points contribute, stationary phase produces a finite sum of oscillatory
+phases, and \(|A_\eps(O)|^2\) generally contains nonconvergent interference terms.
+In nonresonant settings (pairwise distinct critical values), these cross terms vanish under
+explicit coarse graining (e.g.\ a Ces\`aro average in \(t=1/\eps\)).
+When critical values coincide, coherent blocks must be grouped explicitly before averaging.
+\end{remark}
+
+Theorem~\ref{thm:static-born} can be viewed as a toy witness for a broader pattern:
+an \emph{amplitude}-level object is the compositionally natural one, while a squaring step
+produces a \emph{density}-level object localized on classical extrema.
+
+\section{Dynamics prototype: time slicing and scoped consistency}
+\label{sec:dynamics}
+
+For actions on time histories, the variational localization target is formally
+\(\delta(\delta S/\delta q)\). Time slicing turns this into an exact finite-dimensional
+object \(\delta(\nabla S_N)\) at fixed resolution. The remaining work is to control the
+refinement limit.
+
+\begin{theorem}[Scoped dynamic consistency (gate-form statement)]
+\label{thm:dynamic-gates}
+Consider normalized finite-\(N\) states of the schematic form
+\[
+\omega_{c,N}(F):=\frac{\int_{\R^N}\e^{-cS_N(x)}F(x)\,dx}{\int_{\R^N}\e^{-cS_N(x)}\,dx},
+\qquad c\in\C,\ \Re c>0,
+\]
+on an explicit cylinder observable class.
+Assume the following gates on compact \(c\)-domains:
+\begin{enumerate}
+\item projective compatibility under refinement \(N\mapsto N'\),
+\item uniform non-vanishing of denominators,
+\item uniform Cauchy control for cylinder expectations,
+\item finite-\(N\) Schwinger--Dyson identities,
+\item \(c\)-invariance under a \(c\)-preserving reparameterization flow,
+\item controlled de-regularization (a one-sided \(\eta\to0^+\) limit in an admissible class)
+commuting with the refinement limit.
+\end{enumerate}
+Then \(\omega_{c,N}(F)\to\omega_c(F)\) on cylinders, Schwinger--Dyson identities pass to the
+limit in the same scope, and the refinement limit of the normalized time-sliced transition
+amplitude agrees with \(\omega_c\) on the same observable class.
+\end{theorem}
+
+Theorem~\ref{thm:dynamic-gates} is deliberately formulated as a gate checklist: it is a
+precise \emph{proof target}. The foundational point is that time slicing does not by itself
+provide a continuum object; it provides a finite-resolution object to which RCP can be
+applied.
+
+\section{Newton-limit paradox support: semigroup normalization forces \(t^{-d/2}\)}
+\label{sec:td2}
+
+One concrete place where refinement compatibility becomes rigid is short-time kernel
+composition. In Euclidean signature, the heat kernel is the standard example; here we
+highlight the abstract mechanism:
+\emph{semigroup composition fixes the normalization exponent.}
+
+\begin{theorem}[Gaussian semigroup normalization exponent (Euclidean, kernel-level)]
+\label{thm:td2}
+Let \(d\in\mathbb{N}\). Consider translation-invariant kernels \(K_t:\R^d\to\R\) of the Gaussian form
+\[
+K_t(x)=a(t)\,\exp\!\left(-\frac{|x|^2}{4\,b(t)}\right),
+\qquad t>0,
+\]
+with \(a(t)>0\), \(b(t)>0\), and assume \(b\) is continuous on \((0,\infty)\). Assume further that:
+\begin{enumerate}
+\item \textbf{Semigroup (convolution) composition:}
+\(\displaystyle K_{t+s}=K_t\ast K_s\) for all \(t,s>0\).
+\item \textbf{Mass normalization:} \(\displaystyle \int_{\R^d}K_t(x)\,dx=1\) for all \(t>0\).
+\end{enumerate}
+Then \(b(t)\) is additive (\(b(t+s)=b(t)+b(s)\)), hence \(b(t)=\sigma t\) for some \(\sigma>0\), and
+\[
+a(t)=\big(4\pi b(t)\big)^{-d/2}\propto t^{-d/2}.
+\]
+In particular, the diagonal normalization exhibits the universal exponent:
+\(\displaystyle K_t(0)\propto t^{-d/2}\).
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Semigroup composition of Gaussians forces additivity of the variance parameter \(b(t)\)
+(already visible in one dimension by explicit convolution). With \(b(t)=\sigma t\), mass
+normalization fixes \(a(t)\) by a direct Gaussian integral:
+\(\int_{\R^d}\exp(-|x|^2/(4b))dx=(4\pi b)^{d/2}\).
+\end{proof}
+
+Theorem~\ref{thm:td2} is a minimal formal witness for the ``square-root Jacobian'' theme:
+composition fixes a half-power exponent (\(d/2\)) that is naturally attached to an amplitude
+kernel rather than to a probability density. In semiclassical settings, the same rigidity
+reappears through mixed-Hessian determinant prefactors (Van Vleck type formulas), where
+eliminating intermediate variables produces Schur-complement determinants.
+
+\section{Renormalization as limit control}
+\label{sec:rg}
+
+In interacting field models, refinement limits may diverge.
+Renormalization is the disciplined version of the following template:
+\begin{quote}
+regulate \(\to\) subtract divergence \(\to\) fix finite ambiguity by a normalization condition
+\(\to\) take the limit.
+\end{quote}
+The RG expresses the requirement that changing the intermediate scale does not change
+physical observables; in operational terms, it is a compatibility condition for a family of
+regulated descriptions \cite{WilsonKogut1974}.
+
+The key foundational separation is:
+\begin{itemize}
+\item \textbf{Kinematic coherence:} composition rules and coordinate invariances at fixed
+regulator (often expressible in geometric kernel language).
+\item \textbf{Dynamical convergence:} existence of regulator-removed limits in an explicit
+topology, plus persistence of identities (e.g.\ Schwinger--Dyson) under the limit.
+\end{itemize}
+
+\section{Example: screened Abelian long-range behavior (dimension-explicit)}
+\label{sec:yukawa}
+
+To illustrate the ``tag dependencies explicitly'' rule, consider a screened Abelian
+(\(U(1)\)) sector with a mass gap \(m>0\) in spatial dimension \(n=d\) (spacetime
+dimension \(D=n+1\)).
+
+\begin{theorem}[Yukawa kernel and asymptotic (screened Abelian, all \(D\))]
+\label{thm:yukawa}
+Let \(n\ge 1\) and \(m>0\). The unique decaying fundamental solution of
+\((-\Delta+m^2)G_{n,m}=\delta_0\) on \(\R^n\) satisfies
+\[
+G_{n,m}(r)=\frac{1}{(2\pi)^{n/2}}\left(\frac{m}{r}\right)^\nu K_\nu(mr),
+\qquad \nu=\frac n2-1,
+\]
+and as \(r\to\infty\),
+\[
+G_{n,m}(r)=C_{n,m}\,r^{-(n-1)/2}\e^{-mr}\big(1+O(r^{-1})\big),
+\]
+hence the inter-source interaction contribution decays exponentially.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Use the Fourier representation \(\widehat{G}(k)=(|k|^2+m^2)^{-1}\), reduce radially, and
+apply the standard Hankel/Bessel identity to obtain the modified Bessel \(K_\nu\) form; then
+use \(K_\nu(z)\sim \sqrt{\pi/(2z)}\,\e^{-z}\) as \(z\to+\infty\).
+\end{proof}
+
+\section{Status and open problems (date-anchored)}
+\label{sec:status}
+
+We close with a compact program scorecard as of 2026-02-10.
+Scores are internal maturity markers (0--10) used to prioritize proof work:
+\begin{itemize}
+\item \(10\): theorem-grade closure in intended global scope,
+\item \(7\)–\(9\): theorem-grade closure in a strong scoped model with explicit remaining gaps,
+\item \(0\)–\(6\): substantial structure but missing key closures.
+\end{itemize}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|c|c|p{0.70\linewidth}|}
+\hline
+Track & Score & Closure boundary (scoped) and open gap \\
+\hline
+Static amplitude localization & 9 & Theorem~\ref{thm:static-born} is theorem-grade under nondegeneracy; multi-critical interference requires explicit averaging prescriptions. \\
+\hline
+Time-slicing consistency & 8 & Gate-form closure (Theorem~\ref{thm:dynamic-gates}); model-dependent discharge of denominator/tail/de-regularization gates remains the real frontier. \\
+\hline
+Kernel normalization lane & 8 & Semigroup normalization forces \(t^{-d/2}\) in Gaussian settings (Theorem~\ref{thm:td2}); extension to oscillatory kernels requires explicit regularization/analytic-continuation gates. \\
+\hline
+Gauge long-range taxonomy & 8 & Screened Abelian branch is theorem-closed (Theorem~\ref{thm:yukawa}); non-Abelian confinement beyond strong-coupling windows requires first-principles transfer control and dynamical-matter string-breaking theorems. \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Open problems (selected).}
+\begin{enumerate}
+\item Close interacting local field-theory continuum existence and reconstruction gates in \(d=4\) in a
+theorem-grade framework.
+\item Replace scoped transfer assumptions in non-Abelian confinement lanes by first-principles bounds and
+treat dynamical-matter crossover rigorously.
+\item Make the relationship between amplitude-level half-density calculus and dynamical convergence gates
+fully explicit in representative models (beyond Gaussian witnesses).
+\end{enumerate}
+
+\begin{thebibliography}{99}
+
+\bibitem{Newton1687}
+I. Newton, \emph{Philosophi\ae{} Naturalis Principia Mathematica} (1687).
+
+\bibitem{Dirac1933}
+P. A. M. Dirac, ``The Lagrangian in Quantum Mechanics,'' \emph{Physikalische Zeitschrift der Sowjetunion}
+\textbf{3} (1933), 64--72.
+
+\bibitem{Feynman1948}
+R. P. Feynman, ``Space-Time Approach to Non-Relativistic Quantum Mechanics,''
+\emph{Reviews of Modern Physics} \textbf{20} (1948), 367--387.
+
+\bibitem{WilsonKogut1974}
+K. G. Wilson and J. Kogut, ``The Renormalization Group and the \(\eps\) Expansion,''
+\emph{Physics Reports} \textbf{12} (1974), 75--200.
+
+\bibitem{Horman}
+L. H\"ormander, \emph{The Analysis of Linear Partial Differential Operators I} (Springer, 1983).
+
+\bibitem{WatsonBessel}
+G. N. Watson, \emph{A Treatise on the Theory of Bessel Functions} (Cambridge University Press, 1922).
+
+\end{thebibliography}
+
+\end{document}

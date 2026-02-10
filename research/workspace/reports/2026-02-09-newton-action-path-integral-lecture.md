@@ -77,6 +77,7 @@ References in workspace:
 
 - `research/workspace/notes/theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `research/workspace/notes/theorems/2026-02-08-claim6-schwarzschild-fixed-energy-interval.md`
+- `research/workspace/reports/2026-02-09-claim9-gauge-phase-long-range-paper.tex`
 - `research/workspace/notes/theorems/2026-02-09-foundational-action-reduction-unification.md`
 
 ## 3. Static Variational Problem as Distribution
@@ -188,6 +189,24 @@ Execution notes for this frontier:
 - `research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md`
 - `research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md`
 
+### Claim maturity snapshot (audit, 2026-02-10 US)
+
+The canonical score table lives in:
+`research/workspace/notes/audits/2026-02-08-top10-claim-audit.md` (Section “Claim Maturity Scores (0-10)”).
+
+| Claim | Score | Closure boundary (date-anchored summary) |
+|---:|---:|---|
+| 1 | 9.6 | Scoped theorem-grade closure in a nontrivial oscillatory/projective class (statics/dynamics plus a dimension-gated \(d=2\to d=3\) field branch), with explicit remaining global interacting and reconstruction gaps. |
+| 2 | 9.0 | Local asymptotic theorem closure is strong; global phase-space completion remains open. |
+| 3 | 8.9 | SR Coulomb phase portrait and global/asymptotic time structure are theorem-closed in the scoped model. |
+| 4 | 9.0 | \(n=3\) Duffing reduction and global-time/topology classification are theorem-grade in scoped model. |
+| 5 | 9.0 | D-dimensional GR matching is closed in the conventions used. |
+| 6 | 9.5 | Fixed-energy Schwarzschild bound-orbit interval and separatrix structure are fully explicit and cross-checked. |
+| 7 | 9.5 | ISCO threshold statement is canonical and correctly framed with unit conventions. |
+| 8 | 7.8 | Static baseline and rotating regime maps exist with explicit unresolved sectors (especially in multi-spin \(D\ge 6\) lanes). |
+| 9 | 8.2 | Screened-Abelian Yukawa branch is theorem-closed; non-Abelian confining branch is closed at scoped extraction-theorem level with strong-coupling derivation and a \(\beta\)-transfer lane; first-principles transfer control and dynamical-matter string-breaking remain open. |
+| 10 | 9.5 | Benchmark inequalities and threshold regimes are explicit and validated. |
+
 ## 7. Dependency Graph (Explicit)
 
 ```text
@@ -252,4 +271,4 @@ Core diagnostic scripts:
 
 ## 11. Next Formal Target
 
-Integrate the new dependency sheet directly into the scoped Claim 1 theorem manuscript so the same \(c\)-invariance logic is explicit in the main paper chain.
+Finish the current foundations-facing closure loop by (i) wiring the concrete exhaustion/regularization envelopes into the AN-33L-C commuting-limit wrapper on the field side (so the Lean wrapper can be invoked without hidden hypotheses), and (ii) continuing the Newton-limit paradox support lane (kernel-level \(t^{-d/2}\) semigroup normalization and Van Vleck/Schur prefactor links).

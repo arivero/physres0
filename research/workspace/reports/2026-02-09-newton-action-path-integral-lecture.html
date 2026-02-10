@@ -194,6 +194,9 @@ mathematical dependencies.</p>
 keep (c) fixed (equivalently, constant on a (_)-orbit).</li>
 <li><code>de-regularization</code>: the one-sided limit (^+) from damped
 oscillatory kernels.</li>
+<li><code>terminology guardrail</code>: use probability/transition
+amplitude as default physics language; reserve geometric (1/2)-density
+for explicit kernel-bundle statements.</li>
 </ol>
 <h2 id="newtons-seed-finite-step-invariant-before-the-limit">1. Newton’s
 Seed: Finite-Step Invariant Before the Limit</h2>
@@ -228,6 +231,7 @@ Common Mechanics</h2>
 <ul>
 <li><code>research/workspace/notes/theorems/2026-02-08-claim3-coulomb-phase-classification.md</code></li>
 <li><code>research/workspace/notes/theorems/2026-02-08-claim6-schwarzschild-fixed-energy-interval.md</code></li>
+<li><code>research/workspace/reports/2026-02-09-claim9-gauge-phase-long-range-paper.tex</code></li>
 <li><code>research/workspace/notes/theorems/2026-02-09-foundational-action-reduction-unification.md</code></li>
 </ul>
 <h2 id="static-variational-problem-as-distribution">3. Static
@@ -236,11 +240,12 @@ Variational Problem as Distribution</h2>
 nondegenerate critical points (x_i): [ (f’(x)) = _i . ]</p>
 <p>Fourier representation [ (u)=e^{izu},dz ] introduces oscillatory
 exponentials already at static level.</p>
-<p>The “halved expression” [ A_(O)=<sup>{-1/2}e</sup>{f(x)}O(x),dx ] has
-[ |A_(O)|^2 (f’),|O|^2 ] in the stationary-phase/nondegenerate
-setting.<br />
-This is the amplitude-to-density pattern and motivates half-density
-language.</p>
+<p>The oscillatory amplitude expression [
+A_(O)=<sup>{-1/2}e</sup>{f(x)}O(x),dx ] has [ |A_(O)|^2 (f’),|O|^2 ] in
+the stationary-phase/nondegenerate setting.<br />
+This is the amplitude-to-density pattern and motivates
+probability-amplitude language; in geometric kernel calculus the same
+object is represented as a geometric (1/2)-density.</p>
 <p>References in workspace:</p>
 <ul>
 <li><code>research/workspace/notes/theorems/2026-02-08-claim1-discrete-variational-delta-lemmas.md</code></li>
@@ -311,6 +316,89 @@ limits.</li>
 <li><code>research/workspace/notes/theorems/2026-02-09-claim1-field-dimension-existence-roadmap.md</code></li>
 <li><code>research/workspace/notes/theorems/2026-02-09-claim1-d2-field-cylinder-candidate.md</code></li>
 </ul>
+<h3 id="claim-maturity-snapshot-audit-2026-02-10-us">Claim maturity
+snapshot (audit, 2026-02-10 US)</h3>
+<p>The canonical score table lives in:
+<code>research/workspace/notes/audits/2026-02-08-top10-claim-audit.md</code>
+(Section “Claim Maturity Scores (0-10)”).</p>
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 36%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;">Claim</th>
+<th style="text-align: right;">Score</th>
+<th>Closure boundary (date-anchored summary)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">9.6</td>
+<td>Scoped theorem-grade closure in a nontrivial oscillatory/projective
+class (statics/dynamics plus a dimension-gated (d=2d=3) field branch),
+with explicit remaining global interacting and reconstruction gaps.</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9.0</td>
+<td>Local asymptotic theorem closure is strong; global phase-space
+completion remains open.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8.9</td>
+<td>SR Coulomb phase portrait and global/asymptotic time structure are
+theorem-closed in the scoped model.</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9.0</td>
+<td>(n=3) Duffing reduction and global-time/topology classification are
+theorem-grade in scoped model.</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9.0</td>
+<td>D-dimensional GR matching is closed in the conventions used.</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9.5</td>
+<td>Fixed-energy Schwarzschild bound-orbit interval and separatrix
+structure are fully explicit and cross-checked.</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9.5</td>
+<td>ISCO threshold statement is canonical and correctly framed with unit
+conventions.</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">7.8</td>
+<td>Static baseline and rotating regime maps exist with explicit
+unresolved sectors (especially in multi-spin (D) lanes).</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">8.2</td>
+<td>Screened-Abelian Yukawa branch is theorem-closed; non-Abelian
+confining branch is closed at scoped extraction-theorem level with
+strong-coupling derivation and a ()-transfer lane; first-principles
+transfer control and dynamical-matter string-breaking remain open.</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9.5</td>
+<td>Benchmark inequalities and threshold regimes are explicit and
+validated.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="dependency-graph-explicit">7. Dependency Graph (Explicit)</h2>
 <pre class="text"><code>Newton finite-step area invariance
   -&gt; action additivity + symmetry charges (E, L)
@@ -322,8 +410,8 @@ limits.</li>
 
 Static variational distribution δ(f&#39;)
   -&gt; Fourier/oscillatory representation
-     -&gt; halved amplitude |A|^2 structure
-        -&gt; half-density/groupoid formulation
+     -&gt; oscillatory amplitude |A|^2 structure
+        -&gt; geometric 1/2-density/groupoid formulation
            -&gt; path-time slicing + RG-style control (tau flow)
               -&gt; Schwinger-Dyson lifted equations
                  -&gt; scoped Claim 1 theorem chain
@@ -364,8 +452,11 @@ consistent correction/completion of naive classical refinement.</p>
 <li><code>python3.12 research/workspace/simulations/claim1_groupoid_tau_sd_dependency_check.py</code></li>
 </ol>
 <h2 id="next-formal-target">11. Next Formal Target</h2>
-<p>Integrate the new dependency sheet directly into the scoped Claim 1
-theorem manuscript so the same (c)-invariance logic is explicit in the
-main paper chain.</p>
+<p>Finish the current foundations-facing closure loop by (i) wiring the
+concrete exhaustion/regularization envelopes into the AN-33L-C
+commuting-limit wrapper on the field side (so the Lean wrapper can be
+invoked without hidden hypotheses), and (ii) continuing the Newton-limit
+paradox support lane (kernel-level (t^{-d/2}) semigroup normalization
+and Van Vleck/Schur prefactor links).</p>
 </body>
 </html>

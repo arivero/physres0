@@ -359,7 +359,7 @@ Per the top-10 audit, the following are \texttt{proved} as theorem notes (with e
 \item Duffing-type \(n=3\) reduction (Claim~4),
 \item \(D\)-dimensional GR matching (Claim~5),
 \item Schwarzschild bound-orbit interval and ISCO framing (Claims~6--7),
-\item selected higher-$D$ GR and gauge taxonomy branches (Claims~8--9) are partially closed; remaining global branches are tracked as open,
+\item selected higher-$D$ GR (Claim~8) and gauge taxonomy (Claim~9) branches have theorem-grade closure in scoped sectors; explicit open sectors are tracked in the audit and claim manuscripts,
 \item SR circular-orbit benchmark inequalities (Claim~10) are formalized as regression identities.
 \end{itemize}
 
@@ -407,6 +407,42 @@ The most important audit outcomes so far are:
   (i) variational-distribution core, (ii) geometry-of-force bridge, or (iii) scale-control core.
 \end{itemize}
 
+The audit also assigns a lightweight maturity score (0--10) to each claim for prioritization.
+Table~\ref{tab:claim-maturity} records the current snapshot (as of 2026-02-10 US), extracted from
+\path{research/workspace/notes/audits/2026-02-08-top10-claim-audit.md}.
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|c|c|p{0.72\linewidth}|}
+\hline
+Claim & Score & Closure boundary (date-anchored summary) \\
+\hline
+1 & 9.6 & Scoped theorem-grade closure in a nontrivial oscillatory/projective class (statics/dynamics plus a dimension-gated \(d=2\to d=3\) field branch), with explicit remaining global interacting and reconstruction gaps. \\
+\hline
+2 & 9.0 & Local asymptotic theorem closure is strong; global phase-space completion remains open. \\
+\hline
+3 & 8.9 & SR Coulomb phase portrait and global/asymptotic time structure are theorem-closed in the scoped model. \\
+\hline
+4 & 9.0 & \(n=3\) Duffing reduction and global-time/topology classification are theorem-grade in scoped model. \\
+\hline
+5 & 9.0 & D-dimensional GR matching is closed in the conventions used. \\
+\hline
+6 & 9.5 & Fixed-energy Schwarzschild bound-orbit interval and separatrix structure are fully explicit and cross-checked. \\
+\hline
+7 & 9.5 & ISCO threshold statement is canonical and correctly framed with unit conventions. \\
+\hline
+8 & 7.8 & Static baseline and rotating regime maps exist with explicit unresolved sectors (especially in multi-spin \(D\ge 6\) lanes). \\
+\hline
+9 & 8.2 & Screened-Abelian Yukawa branch is theorem-closed; non-Abelian confining branch is closed at scoped extraction-theorem level with strong-coupling derivation and a \(\beta\)-transfer lane; first-principles transfer control and dynamical-matter string-breaking remain open. \\
+\hline
+10 & 9.5 & Benchmark inequalities and threshold regimes are explicit and validated. \\
+\hline
+\end{tabular}
+\caption{Claim maturity scores (0--10) used for prioritization, as recorded in the canonical audit sheet.}
+\label{tab:claim-maturity}
+\end{table}
+
 As of the latest update, the finite-model Lean hygiene steps are already landed
 (including automatic regularity and renormalized-scale wrapper support in the increment chain).
 The current queued formal target is to package those templates for direct use in the \(d=3\) bridge closure lane
@@ -431,6 +467,8 @@ The current core reports are:
   standalone dynamics manuscript (scoped path-integral equivalence plus historical thread).
 \item \path{research/workspace/reports/2026-02-09-claim1-paper3-field-theory-general-dimension-roadmap.tex}:
   standalone field-theory manuscript track (dimension-gated closure program, current \(d=3\) candidate status).
+\item \path{research/workspace/reports/2026-02-09-claim9-gauge-phase-long-range-paper.tex}:
+  standalone Claim~9 manuscript track (phase-resolved long-range gauge potentials with screened-Abelian closure and scoped non-Abelian extraction lanes).
 \item \path{research/workspace/reports/2026-02-09-newton-action-path-integral-lecture.md}:
   Newton $\to$ action reduction $\to$ oscillatory localization lecture narrative.
 \end{itemize}
@@ -546,15 +584,27 @@ identity by one-dimensional integration by parts and exact \(c\)-invariance alon
 \paragraph{\(d=3\) bridge candidate.}
 The next rung is \(d=3\) with local propagation reintroduced by a nearest-neighbor gradient term.
 We stated a precise candidate theorem in \path{research/workspace/notes/theorems/2026-02-09-claim1-d3-intermediate-bridge-candidate.md}
-and made the closure obligations explicit (B1--B5). The most important point is that the \(d=2\) proof does not even
-begin to lift until one has moment/tightness and denominator control uniformly in \((a,L)\), and a quantitative
-small-\(\kappa\) continuity bound for local cylinders.
+and made the closure obligations explicit (B1--B5). The \(d=2\) proof does not even begin to lift until one has
+moment/tightness and denominator control uniformly in \((a,L)\), and a quantitative small-\(\kappa\) continuity bound
+for local cylinders. In the current scoped branch, these obligations are now discharged in a concrete interacting
+lane and lifted through successive observable/test-class and nonlocal extensions.
 \begin{itemize}
 \item add nearest-neighbor gradient coupling \(\kappa\ge 0\) and seek a small-\(\kappa\) regime \([0,\kappa_*]\),
   with explicit proof obligations:
   B1 moments, B2 tightness, B3 non-vanishing denominator, B4 SD insertion control, B5 \(\kappa\)-continuity.
-\item a renormalized finite-volume moment channel and a scoped continuum-branch candidate are now explicit,
-  but full closure still requires concrete discharge of B1--B4 in one interacting \(d=3\) subclass.
+\item B1--B4 are discharged in a compact-spin interacting Euclidean subclass (AN-23), with hard-cutoff lift
+  \(R\to\infty\) in a local-renormalized channel (AN-24), and observable/test-class widening to \(C_b\) and \(C_b^1\)
+  via explicit tail/insertion control (AN-25/AN-26/AN-26B).
+\item the widened local class is transferred to the oscillatory/de-regularized branch (AN-27), then extended to
+  disconnected nonlocal cylinders with refinement-Cauchy bookkeeping and explicit denominator rates (AN-28/AN-29),
+  finite graph-indexed multiblock families (AN-30), and exhaustion families (AN-31).
+\item the exhaustion-family lane is lifted to weighted-local observable/SD-test classes (AN-32) and then to
+  graph-decay nonlocal weighted-local channels with explicit denominator-rate bookkeeping (AN-33); AN-34A replaces
+  those rate postulates by first-principles shell-tail envelopes. Lean wrappers (AN-33L/AN-34L) package the
+  exhaustion/regularization commuting-limit interface.
+\item remaining gap: make the exhaustion/regularization envelopes explicit in the field-side statements (so the Lean
+  commuting-limit wrapper can be invoked without hidden hypotheses), and tighten the reconstruction-facing interface
+  (Gate G3) in the \(d=3\to d=4\) frontier transition.
 \end{itemize}
 
 \paragraph{\(d=4\) obstruction sheet.}
@@ -580,14 +630,16 @@ particular \(d=4\) upgrade is blocked.
 
 Immediate targets:
 \begin{itemize}
-\item \textbf{\(d=3\) closure package (current priority):} discharge B1--B4 in one concrete interacting subclass
-  (tightness, denominator non-vanishing, SD insertion control, and topology/observable compatibility) to upgrade
-  the current scoped candidate to a scoped closure theorem.
-\item \textbf{Lean packaging for the same lane:} keep finite-model formal wrappers aligned with the \(d=3\) closure
-  constants so that formal support remains assumption-transparent.
-\item \textbf{\(d=3\) bridge closure work:} close at least one beyond-ultralocal \(d=3\) theorem fragment by addressing
-  B1--B5 systematically (moments, tightness, denominator control, SD insertion control, and \(\kappa\)-continuity).
-  The goal is not an all-at-once \(d=3\) continuum construction, but a sequence of honest theorems that reduce the gap.
+\item \textbf{\(d=3\) field packaging (current priority):} exhibit the concrete exhaustion/regularization envelopes
+  (\texttt{t n}, \texttt{e k}) for the weighted-local graph-decay nonlocal channels and wire them into the
+  AN-33L-C commuting-limit wrapper, then synchronize Paper~3 and the corresponding field-side theorem notes.
+\item \textbf{Lean alignment for the same lane:} keep the finite surrogate wrappers and the field-side envelope
+  definitions synchronized so the commuting-limit invocation is assumption-transparent.
+\item \textbf{Newton-limit paradox support lane:} upgrade the current Lean-checked 1D Gaussian semigroup + diagonal
+  prefactor anchor to an explicit kernel-level \(t^{-d/2}\) normalization theorem in \(d\) dimensions and connect it
+  to the Van Vleck/Schur-complement determinant prefactor lane.
+\item \textbf{Claim 9 beyond-window gap:} replace scoped non-Abelian transfer assumptions with first-principles
+  control and tighten dynamical-matter string-breaking crossover rigor.
 \item \textbf{Cross-level hygiene:} keep geometric \(1/2\)-density composition results separate from continuum existence statements,
   and require every claimed ``lift'' (e.g.\ from \(d=2\) to \(d=4\)) to list its missing analytic gates explicitly.
 \end{itemize}
@@ -600,10 +652,10 @@ control (tightness, renormalization, and reconstruction).
 
 The core missing analytic ingredients are:
 \begin{itemize}
-\item tightness/precompactness mechanisms for cylinder marginals in local interacting field models,
-\item robust non-vanishing control for oscillatory partition normalizations on complex parameter domains,
-\item SD pass-through with gradient terms (control of insertions and boundary terms),
-\item \(d=4\) renormalization flow control and nontriviality criteria,
+\item tightness/precompactness mechanisms for cylinder marginals in local interacting field models (especially in \(d=4\)),
+\item robust non-vanishing control for oscillatory partition normalizations on complex parameter domains in local interacting classes,
+\item SD pass-through with gradient terms (control of insertions and boundary terms) beyond the current scoped lanes,
+\item \(d=4\) renormalization flow control and nontriviality criteria (and, if pursued, reconstruction to Minkowski),
 \item reconstruction to Minkowski (when pursuing that branch).
 \end{itemize}
 
