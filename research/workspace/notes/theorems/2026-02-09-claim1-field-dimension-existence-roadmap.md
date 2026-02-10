@@ -89,7 +89,8 @@ Program stance:
 18. **AN-29 (done):** extracted continuum/refinement control for AN-28 nonlocal cylinders with explicit Cauchy rates and denominator bookkeeping across scales in `research/workspace/notes/theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`.
 19. **AN-30 (done):** extended AN-29 from fixed two-block families to finite graph-indexed multi-block nonlocal cylinders with explicit combinatorial constants and projective-consistency bookkeeping in `research/workspace/notes/theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`.
 20. **AN-31 (done):** extended AN-30 to uniformly locally finite exhaustion families with summability-weighted tail/combinatorial control in `research/workspace/notes/theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`.
-21. **AN-32 (next):** extend AN-31 from cylinder observables to weighted-local SD-test classes with explicit exhaustion-uniform insertion estimates.
+21. **AN-32 (done):** extended AN-31 from cylinder observables to weighted-local SD-test classes with explicit exhaustion-uniform insertion estimates in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`.
+22. **AN-33 (next):** extend AN-32 weighted-local classes to graph-decay nonlocal weighted-local channels with explicit denominator-rate bookkeeping in the same scoped branch.
 
 ## Non-Drift Rule
 

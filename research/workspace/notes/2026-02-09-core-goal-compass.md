@@ -107,6 +107,7 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) nonlocal refinement-Cauchy closure completed (Phase BV / AN-29): explicit numerator/denominator scale-rate bookkeeping now yields refinement Cauchy bounds and SD pass-through for AN-28 nonlocal cylinders in the same scoped branch.
 - \(d=3\) multiblock projective-consistency closure completed (Phase BW / AN-30): finite graph-indexed nonlocal families now carry explicit combinatorial Cauchy constants and projective-consistent refinement limits.
 - \(d=3\) exhaustion-summability lift completed (Phase BX / AN-31): AN-30 now extends to uniformly locally finite exhaustion families with explicit tail-summability Cauchy/projective control.
+- \(d=3\) weighted-local SD-test lift completed (Phase BY / AN-32): AN-31 now extends from cylinder classes to weighted-local observable/SD-test classes with explicit exhaustion-uniform insertion tail estimates, synchronized into Paper 3 and diagnostics script (`claim1_d3_an32_weighted_local_sdtest_check.py`).
 
 ## Next Active Target
 
@@ -127,7 +128,8 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BV (completed): AN-29 refinement-Cauchy nonlocal-cylinder continuum extraction delivered.
 - Phase BW (completed): AN-30 finite graph-indexed multiblock/projective-consistency closure delivered.
 - Phase BX (completed): AN-31 exhaustion-family summability lift delivered.
-- Active support lane (AN-32): extend AN-31 to weighted-local SD-test classes with explicit exhaustion-uniform insertion estimates.
+- Phase BY (completed): AN-32 weighted-local SD-test lift delivered.
+- Active support lane (AN-33): extend AN-32 weighted-local classes to graph-decay nonlocal weighted-local channels with explicit denominator-rate bookkeeping.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

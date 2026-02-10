@@ -22,7 +22,9 @@ refinement-Cauchy rates plus denominator bookkeeping for their continuum
 extraction in the same scoped lane. AN-30 extends this further to finite
 graph-indexed multi-block families with explicit combinatorial constants and
 projective-consistency closure. AN-31 then lifts AN-30 to uniformly locally
-finite exhaustion families with summability-weighted tail control.
+finite exhaustion families with summability-weighted tail control. AN-32
+extends AN-31 from cylinder classes to weighted-local observable/SD-test
+classes with explicit exhaustion-uniform insertion-tail estimates.
 
 ## Scope
 
@@ -117,7 +119,9 @@ refinement-Cauchy and denominator-rate control in that same scoped branch.
 AN-30 upgrades this to finite graph-indexed multi-block families with explicit
 combinatorial rates and projective consistency in the refinement limit.
 AN-31 lifts this to exhaustion families with explicit summable-tail Cauchy and
-projective-defect control.
+projective-defect control. AN-32 then lifts AN-31 to weighted-local
+observable/SD-test classes with explicit insertion-tail bounds proportional to
+weighted coefficient tails.
 
 ## Literature Anchors
 
@@ -130,8 +134,8 @@ projective-defect control.
 
 ## Immediate Next Scientific Step
 
-1. extend AN-31 from cylinder observables to weighted-local test classes with
-   explicit exhaustion-uniform insertion estimates (AN-32),
+1. extend AN-32 weighted-local classes to graph-decay nonlocal weighted-local
+   channels with explicit denominator-rate bookkeeping (AN-33),
 2. keep summability-weighted constants explicit while preserving
    projective-consistency bookkeeping and de-regularization compatibility.
 
@@ -157,15 +161,18 @@ projective-defect control.
      - `python3.12 research/workspace/simulations/claim1_d3_an28_nonlocal_cylinder_transfer_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an29_nonlocal_continuum_cauchy_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an30_multiblock_projective_consistency_check.py`,
-     - `python3.12 research/workspace/simulations/claim1_d3_an31_exhaustion_summability_check.py`.
+     - `python3.12 research/workspace/simulations/claim1_d3_an31_exhaustion_summability_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an32_weighted_local_sdtest_check.py`.
 4. **Confidence statement:** this is a theorem-program with scoped \(d=3\)
    closure plus hard-cutoff lift and AN-25/AN-26/AN-26B class-extension closure
    in a scoped Euclidean branch; AN-27 closes oscillatory/de-regularized
    transfer, AN-28/AN-29 extend this to disconnected nonlocal cylinders with
    explicit refinement-Cauchy bookkeeping, and AN-30 extends further to finite
    graph-indexed multi-block projective consistency with explicit combinatorial
-   constants. AN-31 lifts this to exhaustion-family summability control. Full
-   global continuum interacting closure remains open.
+   constants. AN-31 lifts this to exhaustion-family summability control, and
+   AN-32 lifts AN-31 to weighted-local observable/SD-test classes with explicit
+   insertion-tail envelopes. Full global continuum interacting closure remains
+   open.
 
 ## Reproducibility Metadata
 

@@ -80,9 +80,9 @@ These formalizations support:
 
 ## Next Lean Target (Queued)
 
-AN-32 (Lean support lane): lift AN-31 exhaustion packaging from cylinder
-observables to weighted-local SD-test classes with explicit insertion-moment
-bookkeeping uniform in exhaustion level.
+AN-32L (Lean support lane): formalize the AN-32 weighted-local SD-test lift
+(exhaustion-uniform insertion-tail bookkeeping and weighted-local truncation
+bridges) in a machine-checked finite surrogate chain.
 
 ## Validation Priority (Locked)
 

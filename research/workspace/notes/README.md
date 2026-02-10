@@ -113,6 +113,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
 - `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
+- `theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -193,6 +194,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_d3_an29_nonlocal_continuum_cauchy_check.py`
 - `../simulations/claim1_d3_an30_multiblock_projective_consistency_check.py`
 - `../simulations/claim1_d3_an31_exhaustion_summability_check.py`
+- `../simulations/claim1_d3_an32_weighted_local_sdtest_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -271,6 +273,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-d3-an29-nonlocal-continuum-cauchy.md`
 - `theorems/2026-02-09-claim1-d3-an30-multiblock-projective-consistency.md`
 - `theorems/2026-02-09-claim1-d3-an31-exhaustion-summability-lift.md`
+- `theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`

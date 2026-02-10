@@ -100,8 +100,8 @@ AN-31 upgrades Claim 1 from finite-family AN-30 control to exhaustion families:
 2. explicit quantitative control is now expressed in \(W_n^{\mathrm{tail}}\),
 3. de-regularization compatibility is retained in this lifted scoped lane.
 
-Next target (AN-32): promote AN-31 from cylinder observables to weighted-local
-test classes with explicit exhaustion-uniform insertion estimates.
+Next target (AN-33): extend the AN-32 weighted-local lift to graph-decay
+nonlocal weighted-local channels with explicit denominator-rate bookkeeping.
 
 ## Validation Contract
 
