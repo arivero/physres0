@@ -92,7 +92,8 @@ Program stance:
 21. **AN-32 (done):** extended AN-31 from cylinder observables to weighted-local SD-test classes with explicit exhaustion-uniform insertion estimates in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`.
 22. **AN-33A (done, draft skeleton):** drafted AN-33 theorem skeleton with explicit Lean-obligation map in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an33-graph-decay-nonlocal-weighted-local.md`.
 23. **AN-33B (done):** closed the AN-33 skeleton hypotheses in-branch (graph-decay transfer + denominator-rate bookkeeping + SD nonlocal insertion tails) in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`.
-24. **AN-34 (next):** replace AN-33 denominator-rate assumptions with first-principles in-branch estimates and tighten the reconstruction-facing interface.
+24. **AN-34A (done):** replaced AN-33 denominator/numerator rate postulates by first-principles shell-tail transmutation bounds in `research/workspace/notes/theorems/2026-02-10-claim1-d3-an34-firstprinciples-tail-rate-transmutation.md`.
+25. **AN-33L/AN-34L continuation (next Lean support lane):** lift finite weighted-local graph-decay and tail-to-rate wrappers to exhaustion-indexed projective families aligned with AN-31/AN-34 field bookkeeping.
 
 ## Non-Drift Rule
 

@@ -27,7 +27,9 @@ extends AN-31 from cylinder classes to weighted-local observable/SD-test
 classes with explicit exhaustion-uniform insertion-tail estimates. AN-33A now
 adds a drafted graph-decay nonlocal weighted-local theorem skeleton with an
 explicit Lean-obligation map for denominator-rate bookkeeping, and AN-33B
-closes that lane in the same scoped branch.
+closes that lane in the same scoped branch. AN-34A then replaces AN-33
+denominator/numerator rate postulates by first-principles shell-tail
+transmutation bounds in the same scoped branch.
 
 ## Scope
 
@@ -126,7 +128,9 @@ projective-defect control. AN-32 then lifts AN-31 to weighted-local
 observable/SD-test classes with explicit insertion-tail bounds proportional to
 weighted coefficient tails. AN-33A/AN-33B then extend this to graph-decay
 nonlocal weighted-local channels with explicit denominator-rate normalized-state
-bookkeeping.
+bookkeeping. AN-34A then derives those denominator/numerator rate bounds from
+first-principles shell-tail envelopes, preserving explicit normalized ratio
+Cauchy rates.
 
 ## Literature Anchors
 
@@ -139,10 +143,10 @@ bookkeeping.
 
 ## Immediate Next Scientific Step
 
-1. replace AN-33 denominator-rate assumptions with first-principles in-branch
-   bounds while preserving the AN-33 graph-decay/nonlocal weighted-local class,
-2. keep summability-weighted constants explicit while preserving
-   projective-consistency bookkeeping and de-regularization compatibility.
+1. lift the AN-34A first-principles tail-to-rate finite wrappers to
+   exhaustion-indexed/projective-family bookkeeping (AN-33L/AN-34L continuation),
+2. tighten reconstruction-facing interfaces by separating scoped proven rates
+   from remaining G3 inputs in the \(d=3\to d=4\) frontier transition.
 
 ## Validation Contract
 
@@ -168,7 +172,8 @@ bookkeeping.
      - `python3.12 research/workspace/simulations/claim1_d3_an30_multiblock_projective_consistency_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an31_exhaustion_summability_check.py`,
      - `python3.12 research/workspace/simulations/claim1_d3_an32_weighted_local_sdtest_check.py`,
-     - `python3.12 research/workspace/simulations/claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`.
+     - `python3.12 research/workspace/simulations/claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`,
+     - `python3.12 research/workspace/simulations/claim1_d3_an34_firstprinciples_tail_rate_check.py`.
 4. **Confidence statement:** this is a theorem-program with scoped \(d=3\)
    closure plus hard-cutoff lift and AN-25/AN-26/AN-26B class-extension closure
    in a scoped Euclidean branch; AN-27 closes oscillatory/de-regularized
@@ -178,8 +183,9 @@ bookkeeping.
    constants. AN-31 lifts this to exhaustion-family summability control, and
    AN-32 lifts AN-31 to weighted-local observable/SD-test classes with explicit
    insertion-tail envelopes. AN-33 closes graph-decay nonlocal weighted-local
-   denominator-rate bookkeeping in the same scoped branch. Full global
-   continuum interacting closure remains open.
+   denominator-rate bookkeeping in the same scoped branch, and AN-34A upgrades
+   that lane by deriving rates from first-principles shell-tail envelopes.
+   Full global continuum interacting closure remains open.
 
 ## Reproducibility Metadata
 

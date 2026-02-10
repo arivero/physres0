@@ -116,6 +116,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`
 - `theorems/2026-02-10-claim1-d3-an33-graph-decay-nonlocal-weighted-local.md`
 - `theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`
+- `theorems/2026-02-10-claim1-d3-an34-firstprinciples-tail-rate-transmutation.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -199,6 +200,7 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_d3_an31_exhaustion_summability_check.py`
 - `../simulations/claim1_d3_an32_weighted_local_sdtest_check.py`
 - `../simulations/claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`
+- `../simulations/claim1_d3_an34_firstprinciples_tail_rate_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
@@ -281,6 +283,7 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-10-claim1-d3-an32-weighted-local-sdtest-lift.md`
 - `theorems/2026-02-10-claim1-d3-an33-graph-decay-nonlocal-weighted-local.md`
 - `theorems/2026-02-10-claim1-d3-an33b-graph-decay-denominator-closure.md`
+- `theorems/2026-02-10-claim1-d3-an34-firstprinciples-tail-rate-transmutation.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`

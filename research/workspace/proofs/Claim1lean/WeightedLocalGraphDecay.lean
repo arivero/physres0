@@ -194,6 +194,80 @@ theorem ratio_diff_bound_of_denominator_rates
     (εN := εN) (εInv := εD / (d0 * d0)) (d0 := d0) (B := B)
     hd0 hD hN hInv hB
 
+theorem ratio_diff_bound_of_tail_rates
+    {N N' D D' t AN AD d0 B : ℝ}
+    (hd0 : 0 < d0)
+    (hD : d0 ≤ |D|)
+    (hD' : d0 ≤ |D'|)
+    (hN : |N - N'| ≤ AN * t)
+    (hDerr : |D - D'| ≤ AD * t)
+    (hB : |N'| ≤ B) :
+    |N / D - N' / D'|
+      ≤ (AN / d0 + B * (AD / (d0 * d0))) * t := by
+  have hbase :=
+    ratio_diff_bound_of_denominator_rates
+      (N := N) (N' := N') (D := D) (D' := D')
+      (εN := AN * t) (εD := AD * t) (d0 := d0) (B := B)
+      hd0 hD hD' hN hDerr hB
+  calc
+    |N / D - N' / D'|
+        ≤ (AN * t) / d0 + B * ((AD * t) / (d0 * d0)) := hbase
+    _ = (AN / d0 + B * (AD / (d0 * d0))) * t := by ring
+
+theorem abs_sub_le_add_of_dist_to_center
+    {x y c ex ey : ℝ}
+    (hx : |x - c| ≤ ex)
+    (hy : |y - c| ≤ ey) :
+    |x - y| ≤ ex + ey := by
+  have hsplit : x - y = (x - c) + (c - y) := by ring
+  calc
+    |x - y|
+        = |(x - c) + (c - y)| := by rw [hsplit]
+    _ ≤ |x - c| + |c - y| := by
+          simpa [Real.norm_eq_abs] using norm_add_le (x - c) (c - y)
+    _ = |x - c| + |y - c| := by
+          simp [abs_sub_comm]
+    _ ≤ ex + ey := add_le_add hx hy
+
+theorem abs_sub_le_of_tail_to_limit
+    {x y c A tx ty : ℝ}
+    (hx : |x - c| ≤ A * tx)
+    (hy : |y - c| ≤ A * ty) :
+    |x - y| ≤ A * (tx + ty) := by
+  have hbase :=
+    abs_sub_le_add_of_dist_to_center
+      (x := x) (y := y) (c := c)
+      (ex := A * tx) (ey := A * ty) hx hy
+  calc
+    |x - y|
+        ≤ A * tx + A * ty := hbase
+    _ = A * (tx + ty) := by ring
+
+theorem ratio_diff_bound_of_limit_tail_rates
+    {Nn Nm Dn Dm Nlim Dlim tn tm AN AD d0 B : ℝ}
+    (hd0 : 0 < d0)
+    (hDn : d0 ≤ |Dn|)
+    (hDm : d0 ≤ |Dm|)
+    (hNn : |Nn - Nlim| ≤ AN * tn)
+    (hNm : |Nm - Nlim| ≤ AN * tm)
+    (hDnTail : |Dn - Dlim| ≤ AD * tn)
+    (hDmTail : |Dm - Dlim| ≤ AD * tm)
+    (hB : |Nm| ≤ B) :
+    |Nn / Dn - Nm / Dm|
+      ≤ (AN / d0 + B * (AD / (d0 * d0))) * (tn + tm) := by
+  have hNpair :
+      |Nn - Nm| ≤ AN * (tn + tm) :=
+    abs_sub_le_of_tail_to_limit
+      (x := Nn) (y := Nm) (c := Nlim) (A := AN) (tx := tn) (ty := tm) hNn hNm
+  have hDpair :
+      |Dn - Dm| ≤ AD * (tn + tm) :=
+    abs_sub_le_of_tail_to_limit
+      (x := Dn) (y := Dm) (c := Dlim) (A := AD) (tx := tn) (ty := tm) hDnTail hDmTail
+  exact ratio_diff_bound_of_tail_rates
+    (N := Nn) (N' := Nm) (D := Dn) (D' := Dm)
+    (t := tn + tm) (AN := AN) (AD := AD) (d0 := d0) (B := B)
+    hd0 hDn hDm hNpair hDpair hB
+
 end
 
 end Claim1lean

@@ -109,6 +109,7 @@ and connect that emergence to geometric descriptions of forces.
 - \(d=3\) exhaustion-summability lift completed (Phase BX / AN-31): AN-30 now extends to uniformly locally finite exhaustion families with explicit tail-summability Cauchy/projective control.
 - \(d=3\) weighted-local SD-test lift completed (Phase BY / AN-32): AN-31 now extends from cylinder classes to weighted-local observable/SD-test classes with explicit exhaustion-uniform insertion tail estimates, synchronized into Paper 3 and diagnostics script (`claim1_d3_an32_weighted_local_sdtest_check.py`).
 - \(d=3\) graph-decay nonlocal weighted-local closure completed (Phase BZ / AN-33): AN-32 now extends to graph-decay nonlocal weighted-local channels with explicit denominator-rate normalized bookkeeping and SD pass-through closure in the same scoped branch, synchronized with diagnostics script (`claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`).
+- \(d=3\) first-principles tail-rate transmutation completed (Phase CA / AN-34A): AN-33 denominator/numerator rate assumptions are replaced by explicit shell-tail-derived bounds with Lean support wrappers and diagnostics script (`claim1_d3_an34_firstprinciples_tail_rate_check.py`).
 
 ## Next Active Target
 
@@ -131,7 +132,8 @@ and connect that emergence to geometric descriptions of forces.
 - Phase BX (completed): AN-31 exhaustion-family summability lift delivered.
 - Phase BY (completed): AN-32 weighted-local SD-test lift delivered.
 - Phase BZ (completed): AN-33 graph-decay nonlocal weighted-local closure delivered.
-- Active support lane (AN-34): replace AN-33 denominator-rate assumptions by first-principles in-branch estimates and tighten reconstruction-facing interfaces.
+- Phase CA (completed): AN-34A first-principles tail-rate transmutation delivered.
+- Active support lane (AN-33L/AN-34L continuation): lift weighted-local graph-decay/tail-rate finite lemmas to exhaustion-indexed projective families and tighten reconstruction-facing interfaces.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

@@ -38,6 +38,10 @@ summability-weighted tail control.
 AN-32 extends AN-31 from cylinder classes to weighted-local
 observable/SD-test classes with explicit exhaustion-uniform insertion-tail
 estimates.
+AN-33 then extends AN-32 to graph-decay nonlocal weighted-local channels with
+explicit denominator-rate normalized-state bookkeeping.
+AN-34A replaces those AN-33 rate assumptions by first-principles shell-tail
+transmutation bounds in the same scoped branch.
 \end{abstract}
 
 \section{Scope}
@@ -118,6 +122,9 @@ AN-31 lifts this to exhaustion families with explicit summable-tail Cauchy and
 projective-defect control.
 AN-32 then lifts AN-31 to weighted-local observable/SD-test classes with
 explicit insertion-tail bounds proportional to weighted coefficient tails.
+AN-33 extends this to graph-decay nonlocal weighted-local channels with
+explicit denominator-rate normalized-state bookkeeping.
+AN-34A then derives those rates from first-principles shell-tail envelopes.
 \item \textbf{\(d=4\):} frontier branch; no full interacting closure claim is made here.
 \item \textbf{\(d>4\):} treated as EFT/triviality-guided unless a UV-complete model is fixed.
 \end{enumerate}
@@ -210,10 +217,11 @@ Holder/Markov tail criterion with an explicit \(q=4/3\) insertion-moment bound.
 
 The next theorem target is:
 \begin{enumerate}
-\item extend AN-32 weighted-local classes to graph-decay nonlocal
-weighted-local channels with explicit denominator-rate bookkeeping (AN-33),
-\item keep summability-weighted constants explicit while preserving
-projective-consistency bookkeeping and de-regularization compatibility.
+\item lift AN-34A first-principles tail-to-rate finite wrappers to
+exhaustion-indexed/projective-family bookkeeping
+(AN-33L/AN-34L continuation),
+\item tighten reconstruction-facing interfaces by separating scoped proven
+rates from remaining G3 inputs in the \(d=3\to d=4\) frontier transition.
 \end{enumerate}
 
 \section{Validation Contract}
@@ -262,6 +270,10 @@ projective-consistency bookkeeping and de-regularization compatibility.
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an31\_exhaustion\_summability\_check.py}.
 \item AN-32 weighted-local SD-test lift diagnostics:
 \texttt{python3.12 research/workspace/simulations/claim1\_d3\_an32\_weighted\_local\_sdtest\_check.py}.
+\item AN-33 graph-decay nonlocal weighted-local diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an33\_graph\_decay\_nonlocal\_weighted\_local\_check.py}.
+\item AN-34A first-principles tail-rate diagnostics:
+\texttt{python3.12 research/workspace/simulations/claim1\_d3\_an34\_firstprinciples\_tail\_rate\_check.py}.
 \end{enumerate}
 
 \subsection*{Confidence statement}
@@ -275,6 +287,9 @@ multi-block projective consistency with explicit combinatorial constants.
 AN-31 lifts this to exhaustion-family summability control.
 AN-32 lifts AN-31 to weighted-local observable/SD-test classes with explicit
 insertion-tail envelopes.
+AN-33 extends this to graph-decay nonlocal weighted-local denominator-rate
+bookkeeping, and AN-34A upgrades that lane by deriving the rates from
+first-principles shell-tail envelopes.
 Full global continuum interacting closure remains open.
 
 \section{Reproducibility Metadata}

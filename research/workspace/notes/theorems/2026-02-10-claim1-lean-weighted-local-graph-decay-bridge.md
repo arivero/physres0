@@ -5,12 +5,14 @@ Lean module: `research/workspace/proofs/Claim1lean/WeightedLocalGraphDecay.lean`
 
 ## Goal
 
-Close the AN-32 Lean support lane with finite surrogate lemmas that directly
-support the AN-33 nonlocal weighted-local extension:
+Close the AN-32 Lean support lane (and AN-34 Lean follow-up wrappers) with
+finite surrogate lemmas that directly support the AN-33/AN-34 nonlocal
+weighted-local extension:
 
 1. weighted-local truncation tails,
 2. graph-decay nonlocal channel bounds,
-3. denominator-rate ratio bookkeeping.
+3. denominator-rate ratio bookkeeping,
+4. first-principles shell-tail to pairwise-rate transmutation.
 
 ## Formalized Objects
 
@@ -57,6 +59,15 @@ For finite index classes:
    numerator and reciprocal-rate control imply ratio-difference control.
 5. `ratio_diff_bound_of_denominator_rates`:
    denominator-rate bookkeeping is propagated to ratio-state error bounds.
+6. `abs_sub_le_add_of_dist_to_center`:
+   pairwise difference is controlled by one-sided distances to a common center.
+7. `abs_sub_le_of_tail_to_limit`:
+   one-sided tail-to-limit bounds are converted into pairwise tail-rate bounds.
+8. `ratio_diff_bound_of_tail_rates`:
+   pairwise numerator/denominator tail-rate control yields ratio-rate bounds.
+9. `ratio_diff_bound_of_limit_tail_rates`:
+   one-sided tail-to-limit envelopes are converted directly into pairwise
+   ratio-rate bounds through item 7 and item 8.
 
 ## Why It Matters for AN-33
 
@@ -64,7 +75,8 @@ These lemmas give a machine-checked finite backbone for:
 
 1. nonlocal weighted-local graph-decay estimates (AN-33 observable channel),
 2. explicit denominator-rate propagation in normalized state differences,
-3. the next uplift to exhaustion/projective families (AN-33L target).
+3. AN-34A first-principles tail-to-rate transmutation in the scoped \(d=3\) lane,
+4. the next uplift to exhaustion/projective families (AN-33L target).
 
 ## Build Check
 
