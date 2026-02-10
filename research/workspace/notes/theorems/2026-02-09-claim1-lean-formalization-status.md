@@ -73,6 +73,10 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
     - adds exhaustion-indexed transfer wrappers (`pairwise_tail_rate_of_exhaustion_envelope`, `pairwise_add_rate_of_exhaustion_envelopes`, `pairwise_ratio_rate_of_exhaustion_envelopes`) for AN-31-style projective bookkeeping,
     - adds AN-33L-B transfer lemmas (`projective_defect_transfer_of_regularization`, `pairwise_transfer_bound_of_regularization`, `pairwise_transfer_bound_between_regularizations`) to propagate projective/pairwise rates across regularization channels.
     - adds AN-33L-C commuting-limit wrapper `commuting_limit_of_exhaustion_and_regularization_envelopes` packaging exhaustion tail envelopes plus regularization proxy Cauchy envelopes into a single joint convergence lemma.
+15. `Claim1lean/SemigroupGenerator.lean` (Newton-limit paradox support lane)
+    - formalizes a minimal semigroup→generator lemma:
+      right-derivative at `0` + semigroup composition implies a beta-function generator
+      and a right-derivative ODE for orbits (`orbit_hasDerivWithinAt_Ici`).
 
 ## Relation to Current Claim 1 Queue
 
@@ -93,10 +97,10 @@ These formalizations support:
 
 ## Next Lean Target (Queued)
 
-Next Lean target (post AN-33L-C): formalize one of the "Newton limit paradox"
-support claims as a theorem-grade semigroup/normalization statement (Gaussian
-kernel `t^{-d/2}` normalization or semigroup→generator lemma), then link it to
-the half-density/amplitude necessity framing.
+Next Lean target: continue the "Newton limit paradox" support lane by formalizing
+the semigroup/normalization constraint behind Gaussian/Van-Vleck prefactors
+(the `t^{-d/2}` normalization lane). The semigroup→generator lemma is now
+machine-checked in `Claim1lean/SemigroupGenerator.lean`.
 
 ## Validation Priority (Locked)
 
@@ -122,4 +126,5 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialRegularity
 /Users/arivero/.elan/bin/lake build Claim1lean.FiniteExponentialIncrementBound
 /Users/arivero/.elan/bin/lake build Claim1lean.WeightedLocalGraphDecay
+/Users/arivero/.elan/bin/lake build Claim1lean.SemigroupGenerator
 ```

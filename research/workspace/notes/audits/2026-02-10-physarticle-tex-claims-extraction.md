@@ -76,6 +76,7 @@ Taxonomy used in that paper: `Proposition` (intended math-valid under stated ass
 **P6.2 (Flow generator from refinement semigroup)** (`main.tex:1198`)
 - Claim: if the scale-change maps `W_{Λ→μ}` satisfy `id`, semigroup composition, and differentiability in `ln Λ`, then an infinitesimal generator (beta function vector field) exists.
 - Rigorization: make the parameter space and differentiability precise; then it’s standard semigroup-to-generator (ODE on finite-dimensional manifold) if `W` acts smoothly on a finite-dimensional coordinate chart.
+- Lean status: a minimal right-derivative semigroup→generator lemma is now machine-checked in `Claim1lean/SemigroupGenerator.lean`; see `research/workspace/notes/theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`.
 
 **P6.3 (Closure assumption for finite-parameter flow)** (`main.tex:1329`)
 - Claim: finite-dimensional RG flows are only exact after choosing a closed truncation/ansatz; omitted operators break exact closure.
@@ -144,7 +145,7 @@ Taxonomy used in that paper: `Proposition` (intended math-valid under stated ass
 ## Suggested Rigorization Targets (high value / low friction)
 
 1. **Semigroup → generator lemmas** (`paper/main.tex:P6.2`, `rg-fundamental/main.tex:P1.1`):
-   make a clean finite-dimensional “smooth semigroup of maps ⇒ ODE generator” lemma, suitable for Lean.
+   [done (Lean, minimal)] a right-derivative semigroup→generator lemma is formalized in `Claim1lean/SemigroupGenerator.lean`; note: `research/workspace/notes/theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`.
 2. **Half-density scalarization unitary equivalence** (`planck-area/main.tex:P1.3`):
    this is a precise, short, and reusable lemma; can be formalized as an `L^2` isometry.
 3. **Gaussian kernel semigroup normalization** (derivation `paper/main.tex:D4.1a`):
@@ -188,4 +189,3 @@ High confidence that the proposition IDs/titles are correctly extracted; medium 
 2. scanned repo: `/Users/arivero/physarticle`
 3. shell: `zsh`
 4. date anchor: 2026-02-10 (US)
-

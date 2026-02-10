@@ -28,6 +28,7 @@ Terminology companion:
 - `theorems/2026-02-10-claim1-d3-an33l-an34l-exhaustion-transfer-lean-bridge.md`
 - `theorems/2026-02-10-claim1-d3-an33l-b-projective-dereg-transfer-lean.md`
 - `theorems/2026-02-10-claim1-d3-an33l-c-commuting-limit-wrapper-lean.md`
+- `theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -151,7 +152,7 @@ Working note: `research/workspace/notes/2026-02-10-newton-limit-paradox-quantum-
 - Phase CB (completed): AN-33L/AN-34L-A exhaustion-level Lean transfer wrappers delivered.
 - Phase CC (completed): AN-33L-B projective-defect/de-regularization transfer lemmas delivered.
 - Phase CD (completed): AN-33L-C commuting-limit wrapper delivered.
-- Active support lane: formalize semigroup/normalization theorems supporting the Newton-limit paradox framing and tighten reconstruction-facing interfaces.
+- Active support lane: semigroup→generator lemma is now Lean-checked (`Claim1lean/SemigroupGenerator.lean`); next formalize semigroup/normalization theorems (Gaussian `t^{-d/2}` and Van Vleck-style prefactors) supporting the Newton-limit paradox framing and tighten reconstruction-facing interfaces.
 
 ### Paper Synchronization Trigger (Future Chain Rule)
 

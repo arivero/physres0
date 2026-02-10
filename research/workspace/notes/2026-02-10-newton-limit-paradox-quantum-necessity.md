@@ -62,15 +62,21 @@ Primary internal anchor:
 - Recent Lean support work (AN-33L/AN-34L) is directly relevant to item (4):
   it supplies explicit transfer and mismatch-penalty wrappers for swapping
   limits and transporting projective defects across regularizations.
+- New Lean support work (2026-02-10) provides a minimal semigroup→generator
+  lemma: right-derivative at `0` + semigroup composition implies a beta-function
+  generator and a right-derivative ODE for orbits; see
+  `research/workspace/notes/theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`.
 
 ## Actionable Next Steps (Short List)
 
 1. Write a standalone note that states the semigroup-normalization claim as an
    explicit theorem statement in a finite-dimensional Gaussian model class, with
    hypotheses that can be ported to Lean.
-2. In Lean: build a minimal "commuting-limit wrapper" lemma (AN-33L-C) on top of
+2. [done] In Lean: build a minimal "commuting-limit wrapper" lemma (AN-33L-C) on top of
    the AN-33L-B transfer bounds.
-3. Extract from `research/workspace/notes/audits/2026-02-10-physarticle-tex-claims-extraction.md`
+3. [done] In Lean: formalize a minimal semigroup→generator lemma for coarse-graining maps
+   (`Claim1lean/SemigroupGenerator.lean`).
+4. Extract from `research/workspace/notes/audits/2026-02-10-physarticle-tex-claims-extraction.md`
    the exact semigroup and Van Vleck templates to use as the narrative bridge.
 
 ## Confidence / Status
