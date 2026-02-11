@@ -133,6 +133,12 @@ prove those assumptions from first principles outside strong coupling; it
 provides the explicit bridge object needed for that next step.
 Phase AE now adds a concrete covariance-based sufficient criterion for those
 transfer assumptions in the same \((SU(N),D)\) lane.
+Phase AG further removes standalone `(TB-POS)` inside an explicit safe transfer
+subwindow by deriving positivity from anchor-margin and channel-budget control.
+Phase AH then widens that safe subwindow by replacing coarse triangle budgets by
+an adaptive derivative envelope in the same transfer lane.
+Phase AI adds a structured, analytically computable budget tightening layer
+between AH adaptive and AG coarse envelopes in the same transfer window.
 
 ### Reproducibility metadata
 

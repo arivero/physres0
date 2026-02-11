@@ -1,6 +1,6 @@
 # Claim 1 Phase AU: Lean Formalization Status and Priority Rule
 
-Date: 2026-02-09 (CET)
+Date: 2026-02-10 (US)
 
 ## Goal
 
@@ -84,6 +84,16 @@ Record the first machine-checked Lean formalization artifacts and lock validatio
 17. `Claim1lean/GaussianSemigroupNormalization.lean` (Gaussian semigroup + prefactor anchor)
     - proves the mean-zero Gaussian convolution semigroup (variance adds),
     - records the 1D diagonal prefactor `1/sqrt(2*pi*v)` in the mathlib normalization.
+18. `Claim1lean/GaussianSemigroupScalingRigidity.lean` (dimension-indexed rigidity lane)
+    - formalizes additive-semigroup multiplicativity rigidity on `ℕ`:
+      `F(0)=1`, `F(d₁+d₂)=F(d₁)F(d₂)` implies `F(d)=F(1)^d`,
+    - applies this to the Gaussian diagonal seed to get a unique
+      dimension-indexed prefactor family and explicit sqrt-form `v^{-d/2}` formulas,
+    - includes an explicit non-uniqueness counterexample when the `d=1` seed is not fixed.
+19. `Claim1lean/VanVleckPrefactorBridge.lean` (determinant-prefactor bridge)
+    - defines an algebraic `|det|^{-1/2}` prefactor proxy on finite real matrices,
+    - proves scalar `sqrt(|xy|)^{-1}` product splitting,
+    - proves Schur-complement-induced prefactor factorizations for both 11- and 22-pivot block eliminations.
 
 ## Relation to Current Claim 1 Queue
 
@@ -103,15 +113,18 @@ These formalizations support:
 12. the AN-33L-C commuting-limit wrapper lane (exhaustion + de-regularization) packaging envelopes into joint convergence.
 13. the Schur-complement determinant prefactor template needed for the Van Vleck / Gaussian-elimination normalization lane.
 14. the Gaussian semigroup + prefactor anchor needed for the `t^{-d/2}` normalization lane.
+15. a dimension-indexed rigidity closure for the Gaussian prefactor exponent lane.
+16. an explicit determinant-prefactor (Van Vleck proxy) factorization bridge aligned with Schur elimination.
 
 ## Next Lean Target (Queued)
 
-Next Lean target: continue the "Newton limit paradox" support lane by formalizing
-the semigroup/normalization constraint behind Gaussian/Van-Vleck prefactors
-(the `t^{-d/2}` normalization lane). A 1D Gaussian semigroup + diagonal prefactor
-anchor is now machine-checked in `Claim1lean/GaussianSemigroupNormalization.lean`;
-next upgrade is to lift this to an explicit kernel-level `t^{-d/2}` statement in `d` dimensions
-and connect it to the Van Vleck determinant lane.
+Next Lean target: move from algebraic prefactor factorization/rigidity to a kernel-level lane:
+
+1. package a finite-dimensional Gaussian kernel composition statement with explicit determinant
+   prefactor tracking,
+2. connect that package to the AN-33L/AN-34L commuting-limit wrapper interfaces (envelope-form
+   hypotheses/outputs),
+3. isolate the minimum hypotheses needed for an oscillatory `i0`-compatible prefactor statement.
 
 ## Validation Priority (Locked)
 
@@ -140,4 +153,6 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.SemigroupGenerator
 /Users/arivero/.elan/bin/lake build Claim1lean.SchurComplementDeterminant
 /Users/arivero/.elan/bin/lake build Claim1lean.GaussianSemigroupNormalization
+/Users/arivero/.elan/bin/lake build Claim1lean.GaussianSemigroupScalingRigidity
+/Users/arivero/.elan/bin/lake build Claim1lean.VanVleckPrefactorBridge
 ```

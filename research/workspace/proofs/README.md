@@ -37,6 +37,8 @@ cd research/workspace/proofs
 /Users/arivero/.elan/bin/lake build Claim1lean.SemigroupGenerator
 /Users/arivero/.elan/bin/lake build Claim1lean.SchurComplementDeterminant
 /Users/arivero/.elan/bin/lake build Claim1lean.GaussianSemigroupNormalization
+/Users/arivero/.elan/bin/lake build Claim1lean.GaussianSemigroupScalingRigidity
+/Users/arivero/.elan/bin/lake build Claim1lean.VanVleckPrefactorBridge
 ```
 
 ## Current formalized modules
@@ -67,5 +69,14 @@ cd research/workspace/proofs
   semigroup→generator lemma (right-derivative ODE for semigroup orbits).
 - `Claim1lean/SchurComplementDeterminant.lean`:
   Schur-complement determinant prefactor template for 2×2 block matrices.
+- `Claim1lean/SchurComplementElimination.lean`:
+  block-LDU elimination identity aligned with the Schur-complement template.
 - `Claim1lean/GaussianSemigroupNormalization.lean`:
   Gaussian convolution semigroup (variance adds) + 1D diagonal prefactor anchor.
+- `Claim1lean/GaussianSemigroupNormalizationNd.lean`:
+  dimension-indexed `d`-power prefactor formulas derived from the 1D anchor.
+- `Claim1lean/GaussianSemigroupScalingRigidity.lean`:
+  dimension-indexed rigidity: additive semigroup law + seed at `d=1` fixes Gaussian diagonal prefactor
+  as a unique `d`th-power family (`v^{-d/2}` structure in sqrt form).
+- `Claim1lean/VanVleckPrefactorBridge.lean`:
+  determinant-prefactor (`|det|^{-1/2}`) product identities induced by Schur-complement block elimination.

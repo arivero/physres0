@@ -71,10 +71,23 @@ This is intended to be paired with:
 to build the Newton-limit paradox story: composition + refinement forces prefactors that
 naturally live at the amplitude/half-density level.
 
+## Status Upgrade (2026-02-10)
+
+Two follow-up Lean modules now extend this 1D anchor:
+
+1. `Claim1lean/GaussianSemigroupScalingRigidity.lean`
+   - formalizes dimension-indexed rigidity on `ℕ`: additive-semigroup multiplicativity
+     plus a fixed `d=1` seed uniquely determines the full prefactor family.
+   - machine-checks explicit `d`-power formulas equivalent to sqrt-form `v^{-d/2}` scaling.
+2. `Claim1lean/VanVleckPrefactorBridge.lean`
+   - formalizes determinant-prefactor (`|det|^{-1/2}`) product identities derived from
+     Schur-complement block determinant formulas (11- and 22-pivot variants).
+
 ## Next Tightening Targets
 
 1. Upgrade from measure-level semigroup to an explicit *kernel* convolution identity
    (density-level), with hypotheses stated so the oscillatory `i0` branch can be treated.
-2. Lift from 1D to `d` dimensions, recording the `t^{-d/2}` prefactor explicitly.
-3. Connect the Gaussian prefactor to the Van Vleck / mixed-Hessian determinant lane
-   via the Schur-complement elimination template.
+2. Lift dimension-indexed (`d ∈ ℕ`) prefactor rigidity from product diagonal form
+   to a kernel-level statement where the exponent is coupled directly to semigroup scaling.
+3. Connect the determinant-prefactor bridge to a field-side finite-block elimination wrapper
+   that can compose with AN-33L/AN-34L envelope bookkeeping.

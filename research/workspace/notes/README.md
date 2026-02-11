@@ -15,6 +15,8 @@ This folder stores analysis artifacts derived from source documents.
 ## Research Pool (Queued Themes)
 
 - `audits/2026-02-10-research-pool-themes.md`
+- `audits/2026-02-10-weekly-score-portfolio.md`
+- `audits/2026-02-10-weekly-score-retro.md`
 - `2026-02-10-theme-action-angle-undeterminacy-central-potentials.md`
 - `2026-02-10-theme-fermionic-mediation-central-potential.md`
 
@@ -30,6 +32,18 @@ This folder stores analysis artifacts derived from source documents.
   - first Lean formalization when feasible,
   - then symbolic proof support,
   - numerical checks as fallback/complement.
+
+## Weekly Score Workflow
+
+- Default loop:
+  - objective: maximize average Claim Maturity Score,
+  - cadence: weekly micro-cycle,
+  - risk budget: 70% novelty / 30% closure.
+- Required weekly artifacts:
+  - `audits/YYYY-MM-DD-weekly-score-portfolio.md`
+  - `audits/YYYY-MM-DD-weekly-score-retro.md`
+- Deterministic score adjudication source:
+  - `audits/2026-02-08-top10-claim-audit.md`
 
 ## Lean Toolchain
 
@@ -126,6 +140,13 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-10-claim1-d3-an33l-an34l-exhaustion-transfer-lean-bridge.md`
 - `theorems/2026-02-10-claim1-d3-an33l-b-projective-dereg-transfer-lean.md`
 - `theorems/2026-02-10-claim1-d3-an33l-c-commuting-limit-wrapper-lean.md`
+- `theorems/2026-02-11-claim1-d3-an35-concrete-envelope-commuting-limit-integration.md`
+- `theorems/2026-02-11-claim1-d3-an36-explicit-epsilon-schedule-from-envelopes.md`
+- `theorems/2026-02-11-claim1-d3-an37-field-tail-calibrated-epsilon-schedule.md`
+- `theorems/2026-02-11-claim1-d3-an38-hybrid-robust-epsilon-schedule.md`
+- `theorems/2026-02-11-claim1-d3-an39-uncertainty-aware-schedule-band.md`
+- `theorems/2026-02-11-claim1-d3-an40-adaptive-update-termination.md`
+- `theorems/2026-02-11-claim1-d3-an41-nonmonotone-hysteresis-termination.md`
 - `theorems/2026-02-09-claim1-lean-formalization-status.md`
 - `theorems/2026-02-09-claim1-lean-covariance-derivative-bridge.md`
 - `theorems/2026-02-09-claim1-lean-finite-covariance-bound.md`
@@ -143,17 +164,27 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-10-claim1-lean-schur-complement-determinant-template.md`
 - `theorems/2026-02-10-claim1-lean-gaussian-semigroup-normalization.md`
 - `theorems/2026-02-08-claim2-center-access-trichotomy.md`
+- `theorems/2026-02-11-claim2-n2-global-turning-set-capture-map.md`
 - `theorems/2026-02-08-claim3-coulomb-phase-classification.md`
 - `theorems/2026-02-08-claim3-coulomb-global-time-classification.md`
 - `theorems/2026-02-09-claim3-collision-escape-asymptotic-time.md`
+- `theorems/2026-02-11-claim3-root-rotation-globaltime-consistency.md`
 - `theorems/2026-02-08-claim4-n3-duffing-phase-portrait.md`
 - `theorems/2026-02-08-claim4-n3-global-time-classification.md`
+- `theorems/2026-02-11-claim4-n3-time-asymptotics.md`
 - `theorems/2026-02-08-claim5-ddim-gr-matching.md`
+- `theorems/2026-02-11-claim5-d3-log-potential-branch.md`
 - `theorems/2026-02-08-claim6-schwarzschild-fixed-energy-interval.md`
+- `theorems/2026-02-11-claim6-null-schwarzschild-impact-threshold.md`
+- `theorems/2026-02-11-claim7-isco-unit-convention-crosswalk.md`
 - `theorems/2026-02-08-claim8-tangherlini-no-stable-circular.md`
 - `theorems/2026-02-08-claim8-beyond-tangherlini-asymptotic.md`
 - `theorems/2026-02-09-claim8-rotating-parameter-map.md`
 - `theorems/2026-02-09-claim8-multispin-dge6-regime-map.md`
+- `theorems/2026-02-11-claim8-d6-multispin-highspin-discriminant-nogo.md`
+- `theorems/2026-02-11-claim8-d6-multispin-regime-partition-tightening.md`
+- `theorems/2026-02-11-claim8-d6-multispin-discriminant-margin-robustness.md`
+- `theorems/2026-02-11-claim8-d6-outer-branch-horizon-robustness.md`
 - `theorems/2026-02-08-claim9-gauge-long-range-phase-split.md`
 - `theorems/2026-02-08-claim9-model-class-propositions.md`
 - `theorems/2026-02-09-claim9-abelian-screened-theorem.md`
@@ -162,7 +193,13 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim9-nonabelian-beyond-window-transfer-assumptions.md`
 - `theorems/2026-02-09-claim9-nonabelian-derivative-covariance-criterion.md`
 - `theorems/2026-02-09-claim9-nonabelian-firstprinciples-transfer-clustering.md`
+- `theorems/2026-02-11-claim9-nonabelian-transfer-positivity-window-criterion.md`
+- `theorems/2026-02-11-claim9-nonabelian-adaptive-transfer-budget-window.md`
+- `theorems/2026-02-11-claim9-nonabelian-structured-channel-budget-tightening.md`
+- `theorems/2026-02-11-claim9-segmented-transfer-window-cover.md`
+- `theorems/2026-02-11-claim9-segment-lipschitz-budget-bridge.md`
 - `theorems/2026-02-08-claim10-circular-threshold-benchmarks.md`
+- `theorems/2026-02-11-claim10-circular-threshold-regression-pack.md`
 
 ## Current Simulation Checks
 
@@ -213,18 +250,35 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim1_d3_an32_weighted_local_sdtest_check.py`
 - `../simulations/claim1_d3_an33_graph_decay_nonlocal_weighted_local_check.py`
 - `../simulations/claim1_d3_an34_firstprinciples_tail_rate_check.py`
+- `../simulations/claim1_d3_an35_concrete_envelope_commuting_limit_check.py`
+- `../simulations/claim1_d3_an36_explicit_epsilon_schedule_check.py`
+- `../simulations/claim1_d3_an37_field_tail_schedule_check.py`
+- `../simulations/claim1_d3_an38_hybrid_schedule_check.py`
+- `../simulations/claim1_d3_an39_uncertainty_schedule_band_check.py`
+- `../simulations/claim1_d3_an40_adaptive_update_termination_check.py`
+- `../simulations/claim1_d3_an41_nonmonotone_hysteresis_check.py`
 - `../simulations/claim2_trichotomy_scan.py`
+- `../simulations/claim2_n2_global_turning_set_scan.py`
 - `../simulations/claim3_coulomb_classification_scan.py`
 - `../simulations/claim3_global_time_classification_scan.py`
 - `../simulations/claim3_asymptotic_time_estimates_check.py`
+- `../simulations/claim3_root_rotation_consistency_check.py`
 - `../simulations/claim4_duffing_n3_portrait_check.py`
 - `../simulations/claim4_global_time_shell_scan.py`
+- `../simulations/claim4_n3_time_asymptotics_check.py`
 - `../simulations/claim5_ddim_prefactor_scan.py`
+- `../simulations/claim5_d3_log_branch_check.py`
 - `../simulations/claim6_schwarzschild_interval_scan.py`
+- `../simulations/claim6_null_schwarzschild_threshold_scan.py`
+- `../simulations/claim7_isco_unit_crosswalk_check.py`
 - `../simulations/claim8_tangherlini_stability_scan.py`
 - `../simulations/claim8_asymptotic_stability_sign.py`
 - `../simulations/claim8_rotating_parameter_map_table.py`
 - `../simulations/claim8_multispin_dge6_regime_map_table.py`
+- `../simulations/claim8_d6_multispin_highspin_discriminant_check.py`
+- `../simulations/claim8_d6_multispin_regime_partition_check.py`
+- `../simulations/claim8_d6_multispin_margin_robustness_check.py`
+- `../simulations/claim8_d6_outer_branch_horizon_robustness_check.py`
 - `../simulations/claim9_phase_longrange_table.py`
 - `../simulations/claim9_model_class_table.py`
 - `../simulations/claim9_abelian_screened_asymptotic_check.py`
@@ -233,6 +287,12 @@ This folder stores analysis artifacts derived from source documents.
 - `../simulations/claim9_nonabelian_beyond_window_transfer_check.py`
 - `../simulations/claim9_nonabelian_derivative_covariance_check.py`
 - `../simulations/claim9_nonabelian_first_principles_transfer_check.py`
+- `../simulations/claim9_nonabelian_transfer_positivity_window_check.py`
+- `../simulations/claim9_nonabelian_adaptive_transfer_window_check.py`
+- `../simulations/claim9_nonabelian_structured_budget_tightening_check.py`
+- `../simulations/claim9_nonabelian_segmented_transfer_cover_check.py`
+- `../simulations/claim9_nonabelian_segment_lipschitz_budget_check.py`
+- `../simulations/claim10_circular_threshold_benchmarks_check.py`
 
 ## Current Reports
 
@@ -262,6 +322,11 @@ This folder stores analysis artifacts derived from source documents.
 - `../proofs/Claim1lean/WeightedLocalGraphDecay.lean`
 - `../proofs/Claim1lean/SemigroupGenerator.lean`
 - `../proofs/Claim1lean/SchurComplementDeterminant.lean`
+- `../proofs/Claim1lean/SchurComplementElimination.lean`
+- `../proofs/Claim1lean/GaussianSemigroupNormalization.lean`
+- `../proofs/Claim1lean/GaussianSemigroupNormalizationNd.lean`
+- `../proofs/Claim1lean/GaussianSemigroupScalingRigidity.lean`
+- `../proofs/Claim1lean/VanVleckPrefactorBridge.lean`
 
 ## Supplemental Audit Notes
 
@@ -315,3 +380,8 @@ This folder stores analysis artifacts derived from source documents.
 - `theorems/2026-02-09-claim1-lean-finite-exponential-derivative-bound.md`
 - `theorems/2026-02-09-claim1-lean-finite-exponential-increment-bound.md`
 - `theorems/2026-02-10-claim1-lean-weighted-local-graph-decay-bridge.md`
+- `theorems/2026-02-10-claim1-lean-semigroup-generator-lemma.md`
+- `theorems/2026-02-10-claim1-lean-schur-complement-determinant-template.md`
+- `theorems/2026-02-10-claim1-lean-gaussian-semigroup-normalization.md`
+- `theorems/2026-02-10-claim1-lean-gaussian-scaling-rigidity.md`
+- `theorems/2026-02-10-claim1-lean-vanvleck-prefactor-bridge.md`

@@ -18,3 +18,5 @@ import Claim1lean.SchurComplementDeterminant
 import Claim1lean.SchurComplementElimination
 import Claim1lean.GaussianSemigroupNormalization
 import Claim1lean.GaussianSemigroupNormalizationNd
+import Claim1lean.GaussianSemigroupScalingRigidity
+import Claim1lean.VanVleckPrefactorBridge
