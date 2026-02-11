@@ -103,6 +103,11 @@ Lean toolchain (installed):
 - `/Users/arivero/.elan/bin/lean`
 - `/Users/arivero/.elan/bin/lake`
 
+**Lean execution policy**: Lean builds and proof checking are resource-intensive
+and slow. When available, Lean tasks should **always** be launched as background
+subagent activities (never blocking the main session). Use `run_in_background`
+for any Lean build, proof search, or `lake build` invocation.
+
 ## Mandatory Hidden Notes Preload
 
 These notes are easy to miss and must be loaded before nontrivial work.
