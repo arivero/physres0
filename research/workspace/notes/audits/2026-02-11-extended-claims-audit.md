@@ -205,3 +205,4 @@ Claims that directly support the foundational axis:
 
 1. Source: `conv_patched.md` and existing theorem notes,
 2. Date anchor: 2026-02-11 (US).
+3. Claim 13-17 verification scripts (2026-02-11): `python3.12 research/workspace/simulations/claim13_action_additivity_exp_kernel_check.py`, `python3.12 research/workspace/simulations/claim14_halfdensity_groupoid_born_rule_check.py`, `python3.12 research/workspace/simulations/claim15_democritean_refinement_check.py`, `python3.12 research/workspace/simulations/claim16_twobody_planck_area_sm_check.py`, `python3.12 research/workspace/simulations/claim17_sd_rg_invariant_check.py` (all checks passed).

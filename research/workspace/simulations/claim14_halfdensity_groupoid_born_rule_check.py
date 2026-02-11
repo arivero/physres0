@@ -28,7 +28,7 @@ def check_halfdensity_convolution_invariance() -> bool:
 
     Test: 1D diffeomorphism y -> y^3 on [0.1, 2].
     """
-    n_pts = 500
+    n_pts = 2000
 
     # Define test kernels as 1/2-densities
     def k1(x, y):
