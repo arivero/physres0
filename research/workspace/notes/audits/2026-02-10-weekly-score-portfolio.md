@@ -15,22 +15,27 @@ Primary baseline source: `research/workspace/notes/audits/2026-02-08-top10-claim
 
 From the current score table:
 
-| Claim | Score |
-|---|---:|
-| 1 | 9.6 |
-| 2 | 9.0 |
-| 3 | 8.9 |
-| 4 | 9.0 |
-| 5 | 9.0 |
-| 6 | 9.5 |
-| 7 | 9.5 |
-| 8 | 7.8 |
-| 9 | 8.2 |
-| 10 | 9.5 |
+| Claim | Score (baseline) | Score (current) |
+|---|---:|---:|
+| 1 | 9.6 | 9.80 |
+| 2 | 9.0 | 9.1 |
+| 3 | 8.9 | 9.0 |
+| 4 | 9.0 | 9.2 |
+| 5 | 9.0 | 9.2 |
+| 6 | 9.5 | 9.6 |
+| 7 | 9.5 | 9.65 |
+| 8 | 7.8 | 8.15 |
+| 9 | 8.2 | 8.55 |
+| 10 | 9.5 | 9.65 |
 
-Current mean score:
+Baseline mean score:
 \[
 \bar S_0 = 9.00.
+\]
+
+Current mean score (post-cycle):
+\[
+\bar S = 9.19.
 \]
 
 ## Portfolio Admissibility Rule

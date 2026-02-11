@@ -65,6 +65,26 @@ Record each completed artifact with file path and one-line result.
 46. `research/workspace/notes/theorems/2026-02-11-claim1-d3-an41-nonmonotone-hysteresis-termination.md`: AN-41 non-monotone noisy-update hysteresis termination theorem.
 47. `research/workspace/simulations/claim1_d3_an41_nonmonotone_hysteresis_check.py`: deterministic AN-41 check passed (`all_checks_pass=True`, finite hysteresis stop with post-stop stability).
 
+48. `research/workspace/notes/theorems/2026-02-11-claim1-d3-an42-stochastic-falsestop-error-budget.md`: AN-42 stochastic sub-Gaussian false-stop control with three-way error-budget decomposition.
+49. `research/workspace/simulations/claim1_d3_an42_stochastic_falsestop_check.py`: stochastic AN-42 check passed (`all_checks_pass=True`, 0/2000 empirical false-stops vs target 0.05).
+50. `research/workspace/notes/theorems/2026-02-11-claim8-d6-myersperry-effective-potential-channel.md`: AF Myers-Perry D=6 doubly-spinning effective-potential channel verification.
+51. `research/workspace/simulations/claim8_d6_myersperry_effective_potential_check.py`: AF check passed (`all_checks_pass=True`, 477/511 unstable, 34/511 narrow stable).
+52. `research/workspace/notes/theorems/2026-02-11-claim9-firstprinciples-transfer-deriv-control.md`: AL first-principles lattice plaquette-counting transfer control.
+53. `research/workspace/simulations/claim9_firstprinciples_transfer_deriv_check.py`: AL check passed (`all_checks_pass=True`, worst bound violation -1.89e-22).
+54. `research/workspace/notes/theorems/2026-02-11-claim3-consolidated-coulomb-phase-portrait.md`: Claim 3 consolidated manuscript note with 5-regime taxonomy.
+55. `research/workspace/simulations/claim3_consolidated_taxonomy_check.py`: consolidation check passed (`all_checks_pass=True`).
+56. `research/workspace/notes/theorems/2026-02-11-claim4-n3delta-robustness-windows.md`: Claim 4 robustness windows for n=3+delta.
+57. `research/workspace/simulations/claim4_n3delta_robustness_check.py`: robustness check passed (`all_checks_pass=True`, instability persists for |delta|<0.35).
+58. `research/workspace/notes/theorems/2026-02-11-claim5-d3-source-normalization-crosswalk.md`: D=3 source-normalization crosswalk.
+59. `research/workspace/simulations/claim5_d3_source_normalization_check.py`: normalization check passed (`all_checks_pass=True`).
+60. `research/workspace/notes/theorems/2026-02-11-theme1-action-angle-coulomb-ebk-crosscheck.md`: Theme 1 action-angle Coulomb EBK crosscheck.
+61. `research/workspace/simulations/theme1_coulomb_ebk_crosscheck.py`: EBK check passed (`all_checks_pass=True`).
+62. `research/workspace/notes/theorems/2026-02-11-theme2-fermionic-mediation-contact-crosscheck.md`: Theme 2 fermionic mediation contact crosscheck.
+63. `research/workspace/simulations/theme2_fermionic_contact_crosscheck.py`: fermionic contact check passed (`all_checks_pass=True`).
+64. `research/workspace/notes/audits/2026-02-11-extended-claims-audit.md`: extended claims audit (Claims 11-17) mined from conv_patched.md.
+65. `research/workspace/simulations/claim11_planck_area_dimension_check.py`: Claim 11 Planck area check passed (`all_checks_pass=True`).
+66. `research/workspace/simulations/claim12_uncertainty_inverse_square_check.py`: Claim 12 uncertainty inverse-square check passed (`all_checks_pass=True`).
+
 ## Task-by-Task Outcome
 
 ### Task A (Claim 1)
@@ -128,25 +148,24 @@ Record each completed artifact with file path and one-line result.
 
 ## Score Adjudication
 
-1. Claims with score updates (provisional, week-close pending):
-   - `Claim 1: +0.17`
-   - `Claim 2: +0.10`
-   - `Claim 3: +0.05`
-   - `Claim 4: +0.10`
-   - `Claim 5: +0.10`
-   - `Claim 6: +0.10`
-   - `Claim 7: +0.15`
-   - `Claim 8: +0.19`
-   - `Claim 9: +0.21`
-   - `Claim 10: +0.15`
+1. Claims with score updates (cumulative from baseline):
+   - `Claim 1: +0.20` (9.60 → 9.80; AN-35 through AN-42)
+   - `Claim 2: +0.10` (9.00 → 9.10)
+   - `Claim 3: +0.10` (8.90 → 9.00; consolidation)
+   - `Claim 4: +0.20` (9.00 → 9.20; timing + robustness windows)
+   - `Claim 5: +0.20` (9.00 → 9.20; log branch + normalization crosswalk)
+   - `Claim 6: +0.10` (9.50 → 9.60)
+   - `Claim 7: +0.15` (9.50 → 9.65)
+   - `Claim 8: +0.35` (7.80 → 8.15; AB-AE + AF effective-potential channel)
+   - `Claim 9: +0.35` (8.20 → 8.55; AG-AK + AL first-principles transfer)
+   - `Claim 10: +0.15` (9.50 → 9.65)
 2. Claims with no score change but option value gained: `none`.
-3. Net score deltas by claim: `all ten claims moved this cycle (see list above)`.
+3. Net score deltas by claim: `all ten claims moved this cycle (total +1.90)`.
 4. New mean score:
 \[
 \bar S_1 = \bar S_0 + \frac{\sum_i \Delta_i}{10}
-= 9.00 + \frac{1.32}{10}
-= 9.13
-\quad\text{(provisional)}.
+= 9.00 + \frac{1.90}{10}
+= 9.19.
 \]
 
 ## Failures and Obstructions
@@ -160,13 +179,17 @@ List failed novelty bets and exact blocking assumptions.
 
 Only include tasks with clear next action and acceptance gate.
 
-1. Claim 1 follow-up (AN-42): derive stochastic-noise false-stop/error-budget bounds on top of AN-41 hysteresis termination.
-2. Claim 9 follow-up: replace AJ/AK local-envelope assumptions by first-principles \(A_*,B_*,R_*\) controls while keeping segmented cover.
-3. Claim 8 follow-up: lift AE certified exterior candidates from surrogate discriminant/horizon lane into fuller Myers-Perry channels.
+1. [done] Claim 1 follow-up (AN-42): stochastic-noise false-stop/error-budget bounds delivered.
+2. [done] Claim 9 follow-up (AL): first-principles lattice plaquette-counting transfer control delivered.
+3. [done] Claim 8 follow-up (AF): Myers-Perry effective-potential channel verification delivered.
+4. Claim 1 next: lift AN-42 stochastic framework to broader interacting continuum lanes; connect error-budget decomposition to RG invariance.
+5. Claim 8 next: close the narrow \(D=6\) stable window (physical vs coordinate artifact) and extend to \(D\ge 7\).
+6. Claim 9 next: extend first-principles control to weak-coupling regime via cluster expansion; close string-breaking crossover lane.
+7. Claims 11-17: upgrade paths defined in extended claims audit; prioritize Claims 13 (action additivity) and 14 (half-density groupoid) for foundational axis alignment.
 
 ## Reproducibility Metadata
 
 1. Lean builds run: `none in this cycle segment (CPU-bound lane; no new Lean tasks launched)`.
 2. symbolic commands run: `none yet`.
-3. numeric checks run: `python3.12 research/workspace/simulations/claim1_d3_an35_concrete_envelope_commuting_limit_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an36_explicit_epsilon_schedule_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an37_field_tail_schedule_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an38_hybrid_schedule_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an39_uncertainty_schedule_band_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an40_adaptive_update_termination_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an41_nonmonotone_hysteresis_check.py`; `python3.12 research/workspace/simulations/claim2_n2_global_turning_set_scan.py`; `python3.12 research/workspace/simulations/claim3_root_rotation_consistency_check.py`; `python3.12 research/workspace/simulations/claim4_n3_time_asymptotics_check.py`; `python3.12 research/workspace/simulations/claim5_d3_log_branch_check.py`; `python3.12 research/workspace/simulations/claim6_null_schwarzschild_threshold_scan.py`; `python3.12 research/workspace/simulations/claim7_isco_unit_crosswalk_check.py`; `python3.12 research/workspace/simulations/claim8_d6_multispin_highspin_discriminant_check.py`; `python3.12 research/workspace/simulations/claim8_d6_multispin_regime_partition_check.py`; `python3.12 research/workspace/simulations/claim8_d6_multispin_margin_robustness_check.py`; `python3.12 research/workspace/simulations/claim8_d6_outer_branch_horizon_robustness_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_transfer_positivity_window_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_adaptive_transfer_window_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_structured_budget_tightening_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_segmented_transfer_cover_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_segment_lipschitz_budget_check.py`; `python3.12 research/workspace/simulations/claim10_circular_threshold_benchmarks_check.py`.
+3. numeric checks run: `python3.12 research/workspace/simulations/claim1_d3_an35_concrete_envelope_commuting_limit_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an36_explicit_epsilon_schedule_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an37_field_tail_schedule_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an38_hybrid_schedule_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an39_uncertainty_schedule_band_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an40_adaptive_update_termination_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an41_nonmonotone_hysteresis_check.py`; `python3.12 research/workspace/simulations/claim1_d3_an42_stochastic_falsestop_check.py`; `python3.12 research/workspace/simulations/claim2_n2_global_turning_set_scan.py`; `python3.12 research/workspace/simulations/claim3_root_rotation_consistency_check.py`; `python3.12 research/workspace/simulations/claim3_consolidated_taxonomy_check.py`; `python3.12 research/workspace/simulations/claim4_n3_time_asymptotics_check.py`; `python3.12 research/workspace/simulations/claim4_n3delta_robustness_check.py`; `python3.12 research/workspace/simulations/claim5_d3_log_branch_check.py`; `python3.12 research/workspace/simulations/claim5_d3_source_normalization_check.py`; `python3.12 research/workspace/simulations/claim6_null_schwarzschild_threshold_scan.py`; `python3.12 research/workspace/simulations/claim7_isco_unit_crosswalk_check.py`; `python3.12 research/workspace/simulations/claim8_d6_multispin_highspin_discriminant_check.py`; `python3.12 research/workspace/simulations/claim8_d6_multispin_regime_partition_check.py`; `python3.12 research/workspace/simulations/claim8_d6_multispin_margin_robustness_check.py`; `python3.12 research/workspace/simulations/claim8_d6_outer_branch_horizon_robustness_check.py`; `python3.12 research/workspace/simulations/claim8_d6_myersperry_effective_potential_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_transfer_positivity_window_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_adaptive_transfer_window_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_structured_budget_tightening_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_segmented_transfer_cover_check.py`; `python3.12 research/workspace/simulations/claim9_nonabelian_segment_lipschitz_budget_check.py`; `python3.12 research/workspace/simulations/claim9_firstprinciples_transfer_deriv_check.py`; `python3.12 research/workspace/simulations/claim10_circular_threshold_benchmarks_check.py`; `python3.12 research/workspace/simulations/claim11_planck_area_dimension_check.py`; `python3.12 research/workspace/simulations/claim12_uncertainty_inverse_square_check.py`; `python3.12 research/workspace/simulations/theme1_coulomb_ebk_crosscheck.py`; `python3.12 research/workspace/simulations/theme2_fermionic_contact_crosscheck.py`.
 4. environment/toolchain notes: repo root `/Users/arivero/physbook`, Python `python3.12`, deterministic seeds `2026021101` and `2026021102` where applicable, plus deterministic grid scans for Claim 8 AB/AC, Claim 1 AN-36/AN-37/AN-38, and Claim 9 AG/AH/AI.
