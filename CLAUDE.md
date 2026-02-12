@@ -21,3 +21,16 @@ build and type-check all Lean code on push and pull request. If you add or modif
 files, the CI pipeline will run automatically — no manual intervention is needed.
 
 Manual runs can be triggered via `workflow_dispatch` from the GitHub Actions UI.
+
+## Checking CI results after pushing Lean changes
+
+After pushing commits that touch Lean files, check the CI status with:
+
+```bash
+gh run list --branch <branch-name> --limit 3       # find the run
+gh run view <run-id>                                 # check status
+gh run view <run-id> --log-failed                    # on failure, read error logs
+```
+
+If the Lean CI run fails, read the failed logs, fix the `.lean` files locally,
+commit the fix, and push again. Do not merge a PR with a failing Lean CI check.
