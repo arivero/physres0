@@ -1,0 +1,30 @@
+name: Lean CI
+
+on:
+  push:
+    paths:
+      - 'research/workspace/proofs/**/*.lean'
+      - 'research/workspace/proofs/lakefile.toml'
+      - 'research/workspace/proofs/lean-toolchain'
+      - 'research/workspace/proofs/lake-manifest.json'
+  pull_request:
+    paths:
+      - 'research/workspace/proofs/**/*.lean'
+      - 'research/workspace/proofs/lakefile.toml'
+      - 'research/workspace/proofs/lean-toolchain'
+      - 'research/workspace/proofs/lake-manifest.json'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: research/workspace/proofs
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan and Lean
+        uses: leanprover/lean-action@v1
+        with:
+          build-args: '--jobs 4'
