@@ -69,7 +69,115 @@ The compactness of the angle variable is the root cause of the contact
 nature: the conjugate momentum (angular momentum / action) cannot be
 made arbitrarily small, so the virtual fermion cannot spread spatially.
 
-## II. The Spectral Function Proof (Quantitative)
+## II. The Partial-Wave Theorem (Rigorous)
+
+The qualitative argument of Section I becomes a theorem via partial-wave
+analysis of the fermion-antifermion pair.
+
+### Quantum numbers of a fermion-antifermion pair
+
+A $\bar\psi\psi$ pair with relative orbital angular momentum $L$ and
+total spin $S$ has:
+
+$$P = (-1)^{L+1}, \qquad C = (-1)^{L+S}, \qquad J \in \{|L-S|,\ldots,L+S\}.$$
+
+The factor $(-1)^{L+\mathbf{1}}$ (not $(-1)^L$) is the intrinsic parity
+of the fermion-antifermion system: fermion and antifermion have opposite
+intrinsic parity (a consequence of the Dirac equation).
+
+### Threshold behavior for partial waves
+
+Near the pair-production threshold ($\beta = \sqrt{1 - 4m_f^2/s} \to 0$),
+the partial-wave spectral function behaves as:
+
+$$\rho_J(s) \sim \beta^{2L+1}$$
+
+where $L$ is the orbital angular momentum.  This is the centrifugal
+barrier suppression: higher $L$ means the pair must overcome a steeper
+barrier, giving more powers of $\beta$ near threshold.
+
+### Theorem (Parity-forced centrifugal barrier)
+
+**Statement**: Let a scalar source ($J^P = 0^+$) couple to a
+fermion-antifermion pair.  The minimum orbital angular momentum of
+the pair, and hence the threshold behavior, depends on the Lorentz
+structure of the coupling:
+
+| Coupling | Bilinear $J^{PC}$ | Pair state | $L_{\min}$ | Threshold $\rho$ |
+|---|---|---|---|---|
+| $g\phi\bar\psi\psi$ (scalar) | $0^{++}$ | ${}^3P_0$ | 1 | $\sim\delta^{3/2}$ |
+| $g\phi\bar\psi\gamma^5\psi$ (pseudoscalar) | $0^{-+}$ | ${}^1S_0$ | 0 | $\sim\delta^{1/2}$ |
+
+**Proof**:
+
+*Case 1 (scalar coupling)*:
+The pair must have $J^{PC} = 0^{++}$.  From $P = (-1)^{L+1} = +1$,
+we need $L$ odd.  The minimum is $L = 1$.  For $J = 0$ with $L = 1$:
+$S = 1$ (spin triplet).  The pair state is ${}^3P_0$.
+
+The threshold behavior is $\rho \sim \beta^{2 \cdot 1 + 1} = \beta^3$.
+Since $\beta^2 = (s - 4m_f^2)/s$, this gives $\rho \sim \delta^{3/2}$.
+
+*Case 2 (pseudoscalar coupling)*:
+The pair must have $J^{PC} = 0^{-+}$.  From $P = (-1)^{L+1} = -1$,
+we need $L$ even.  The minimum is $L = 0$.  For $J = 0$ with $L = 0$:
+$S = 0$ (spin singlet).  The pair state is ${}^1S_0$.
+
+The threshold behavior is $\rho \sim \beta^{2 \cdot 0 + 1} = \beta$.
+This gives $\rho \sim \delta^{1/2}$.  $\square$
+
+### Corollary (Parity-forced range suppression)
+
+For scalar coupling to a fermion pair, the centrifugal barrier from
+$L = 1$ adds one full power of $\delta$ to the spectral function
+compared to S-wave.  By the Laplace-transform argument
+(Proposition 3 below), this translates to one extra power of $1/r$ in
+the position-space potential tail:
+
+| Coupling | $L$ | $\alpha$ | Tail |
+|---|---|---|---|
+| Scalar $\bar\psi\psi$ | 1 | 3/2 | $e^{-2m_f r}/r^{7/2}$ |
+| Pseudoscalar $\bar\psi\gamma^5\psi$ | 0 | 1/2 | $e^{-2m_f r}/r^{5/2}$ |
+| Scalar pair $|\chi|^2$ | 0 | 1/2 | $e^{-2mr}/r^{5/2}$ |
+
+**The extra suppression for scalar coupling is a direct consequence of
+the intrinsic parity of the fermion-antifermion system, which forces
+the pair into P-wave ($L = 1$), creating a centrifugal barrier absent
+for scalar pairs.**
+
+### Extension to vector and axial couplings
+
+The same analysis extends to other Lorentz structures:
+
+| Coupling | $J^{PC}$ | $L_{\min}$ | Pair state | Threshold |
+|---|---|---|---|---|
+| $\bar\psi\psi$ (scalar) | $0^{++}$ | 1 | ${}^3P_0$ | $\delta^{3/2}$ |
+| $\bar\psi\gamma^5\psi$ (pseudoscalar) | $0^{-+}$ | 0 | ${}^1S_0$ | $\delta^{1/2}$ |
+| $\bar\psi\gamma^\mu\psi$ (vector) | $1^{--}$ | 0 | ${}^3S_1$ | $\delta^{1/2}$ |
+| $\bar\psi\gamma^\mu\gamma^5\psi$ (axial) | $1^{++}$ | 1 | ${}^3P_1$ | $\delta^{3/2}$ |
+
+The pattern: couplings with **natural parity** ($P = (-1)^J$) force
+the pair into P-wave or higher; couplings with **unnatural parity**
+($P = (-1)^{J+1}$) allow S-wave.
+
+### Connection to the action-angle argument
+
+The partial-wave theorem gives the rigorous content behind the
+qualitative action-angle argument of Section I:
+
+1. The "compactness of the angle variable" → the pair's orbital angular
+   momentum $L$ is quantized and constrained by parity.
+2. The "angular-momentum cost" → the centrifugal barrier $\beta^{2L+1}$
+   at threshold.
+3. The "contact nature" → the extra power-law suppression of the
+   position-space tail, making the interaction shorter-ranged.
+
+The key physical input is that **the fermion-antifermion pair has
+intrinsic parity $(-1)^{L+1}$** (not $(-1)^L$ as for bosonic pairs),
+which is a direct consequence of the Dirac equation and spin-1/2
+statistics.
+
+## III. The Spectral Function Verification (Quantitative)
 
 ### Setup
 
@@ -167,7 +275,7 @@ calculation gives $e^{-2m_f r}/r^{7/2}$.  The qualitative conclusion
 (fermionic tail is steeper than bosonic) is unchanged; the quantitative
 exponent is corrected here.
 
-## III. Why the Muon Looks Structureless
+## IV. Why the Muon Looks Structureless
 
 Combining the qualitative and quantitative arguments:
 
@@ -195,7 +303,7 @@ composite of the same binding energy.
 transfer from the pion) while appearing structureless in scattering,
 because its binding is fermionic.**
 
-## IV. Form Factor of a Composite Fermion
+## V. Form Factor of a Composite Fermion
 
 ### Definition
 

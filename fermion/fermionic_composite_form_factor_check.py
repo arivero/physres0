@@ -2,7 +2,10 @@
 Fermionic composite form factor suppression — numerical checks.
 
 Verifies:
-1. Spectral function threshold exponents (3/2 for fermion, 1/2 for scalar)
+1. Spectral function threshold exponents:
+   - scalar coupling (3P0, L=1): alpha = 3/2
+   - pseudoscalar coupling (1S0, L=0): alpha = 1/2
+   - scalar loop comparison: alpha = 1/2
 2. Position-space tail from numerical Laplace transform
 3. Bound-state charge radius comparison at matched binding energy
 
@@ -40,6 +43,18 @@ def rho_fermion(s):
     return (g**2 / (24 * np.pi)) * delta**1.5 / np.sqrt(s)
 
 
+def rho_fermion_ps(s):
+    """Im Pi for fermion loop with PSEUDOSCALAR coupling (1S0, L=0).
+    Tr[gamma5(k+m)gamma5(k+q+m)] = 4[-k.(k+q) + m^2]
+    Integrand [m^2 + x(1-x)s] does NOT vanish at threshold.
+    Result: ~ (s - 4m^2)^{1/2} (same as scalar loop — S-wave)."""
+    if s <= threshold:
+        return 0.0
+    beta = np.sqrt(1 - threshold / s)
+    # The integral gives beta * (s + 2m^2) / (6s), leading to beta ~ delta^{1/2}
+    return (g**2 / (4 * np.pi)) * beta * (s + 2 * m_f**2) / (6 * s)
+
+
 def rho_scalar(s):
     """Im Pi for scalar loop: ~ (s - 4m^2)^{1/2}."""
     if s <= threshold:
@@ -53,21 +68,27 @@ deltas = np.logspace(-6, -1, 100)
 s_vals = threshold + deltas
 
 rho_F_vals = np.array([rho_fermion(s) for s in s_vals])
+rho_PS_vals = np.array([rho_fermion_ps(s) for s in s_vals])
 rho_S_vals = np.array([rho_scalar(s) for s in s_vals])
 
 # Fit log(rho) = alpha * log(delta) + const
 mask_F = rho_F_vals > 0
+mask_PS = rho_PS_vals > 0
 mask_S = rho_S_vals > 0
 
 alpha_F = np.polyfit(np.log(deltas[mask_F]), np.log(rho_F_vals[mask_F]), 1)[0]
+alpha_PS = np.polyfit(np.log(deltas[mask_PS]), np.log(rho_PS_vals[mask_PS]), 1)[0]
 alpha_S = np.polyfit(np.log(deltas[mask_S]), np.log(rho_S_vals[mask_S]), 1)[0]
 
-print(f"  Fermion loop: rho ~ delta^alpha, alpha = {alpha_F:.4f} (expected 1.5)")
-print(f"  Scalar loop:  rho ~ delta^alpha, alpha = {alpha_S:.4f} (expected 0.5)")
+print(f"  Fermion scalar coupling (3P0): rho ~ delta^{alpha_F:.4f} (expected 1.5)")
+print(f"  Fermion pseudoscalar   (1S0):  rho ~ delta^{alpha_PS:.4f} (expected 0.5)")
+print(f"  Scalar loop:                   rho ~ delta^{alpha_S:.4f} (expected 0.5)")
 
-checks["fermion_exponent"] = abs(alpha_F - 1.5) < 0.01
+checks["fermion_scalar_exponent"] = abs(alpha_F - 1.5) < 0.01
+checks["fermion_ps_exponent"] = abs(alpha_PS - 0.5) < 0.01
 checks["scalar_exponent"] = abs(alpha_S - 0.5) < 0.01
-checks["fermion_steeper"] = alpha_F > alpha_S + 0.5
+checks["parity_forced_barrier"] = alpha_F > alpha_PS + 0.5  # scalar coupling has extra barrier
+checks["ps_matches_scalar_loop"] = abs(alpha_PS - alpha_S) < 0.05  # both S-wave
 
 # ═══════════════════════════════════════════════════════════════════════
 # PART 2: Position-space tail from spectral integral
@@ -90,40 +111,43 @@ def V_from_spectral(r, rho_func, s_max=200.0):
 r_values = np.array([0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0])
 
 V_F = np.array([V_from_spectral(r, rho_fermion) for r in r_values])
+V_PS = np.array([V_from_spectral(r, rho_fermion_ps) for r in r_values])
 V_S = np.array([V_from_spectral(r, rho_scalar) for r in r_values])
 
-print(f"\n  {'r':>6}  {'V_fermion':>14}  {'V_scalar':>14}  {'ratio V_F/V_S':>14}")
+print(f"\n  {'r':>5}  {'V_scalar_cpg':>14}  {'V_pseudo_cpg':>14}  {'V_scalar_loop':>14}")
 print("  " + "-" * 55)
 for i, r in enumerate(r_values):
-    ratio = V_F[i] / V_S[i] if abs(V_S[i]) > 1e-30 else 0.0
-    print(f"  {r:>6.1f}  {V_F[i]:>14.6e}  {V_S[i]:>14.6e}  {ratio:>14.6e}")
+    print(f"  {r:>5.1f}  {V_F[i]:>14.6e}  {V_PS[i]:>14.6e}  {V_S[i]:>14.6e}")
 
 # Verify tail exponent by fitting V(r) * r * exp(2m*r) ~ 1/r^{alpha+1}
-# i.e., log(|V| * r * exp(2mr)) = -(alpha+1) * log(r) + const
-
-r_fit = r_values[r_values >= 1.5]  # use tail region
+r_fit = r_values[r_values >= 1.5]
 V_F_fit = np.array([V_from_spectral(r, rho_fermion) for r in r_fit])
+V_PS_fit = np.array([V_from_spectral(r, rho_fermion_ps) for r in r_fit])
 V_S_fit = np.array([V_from_spectral(r, rho_scalar) for r in r_fit])
 
 # Remove the exponential: multiply by exp(2m*r)
 y_F = np.log(np.abs(V_F_fit) * r_fit * np.exp(2 * m_f * r_fit))
+y_PS = np.log(np.abs(V_PS_fit) * r_fit * np.exp(2 * m_f * r_fit))
 y_S = np.log(np.abs(V_S_fit) * r_fit * np.exp(2 * m_f * r_fit))
 
 slope_F = np.polyfit(np.log(r_fit), y_F, 1)[0]
+slope_PS = np.polyfit(np.log(r_fit), y_PS, 1)[0]
 slope_S = np.polyfit(np.log(r_fit), y_S, 1)[0]
 
 # V ~ exp(-2mr) / r^p  => |V| r exp(2mr) ~ 1/r^{p-1}
-# so slope = -(p-1), p = -slope + 1
 p_F = -slope_F + 1
+p_PS = -slope_PS + 1
 p_S = -slope_S + 1
 
 print(f"\n  Position-space power law (V ~ exp(-2mr) / r^p):")
-print(f"    Fermion: p = {p_F:.3f} (expected 7/2 = 3.500)")
-print(f"    Scalar:  p = {p_S:.3f} (expected 5/2 = 2.500)")
+print(f"    Fermion scalar cpg (3P0):   p = {p_F:.3f} (expected 7/2 = 3.500)")
+print(f"    Fermion pseudo cpg (1S0):   p = {p_PS:.3f} (expected 5/2 = 2.500)")
+print(f"    Scalar loop:                p = {p_S:.3f} (expected 5/2 = 2.500)")
 
 checks["fermion_tail_power"] = abs(p_F - 3.5) < 0.3
+checks["pseudo_tail_power"] = abs(p_PS - 2.5) < 0.3
 checks["scalar_tail_power"] = abs(p_S - 2.5) < 0.3
-checks["fermion_tail_steeper"] = p_F > p_S + 0.5
+checks["parity_barrier_in_tail"] = p_F > p_PS + 0.5  # scalar cpg steeper than pseudo
 
 # ═══════════════════════════════════════════════════════════════════════
 # PART 3: Bound state comparison (Numerov, lean grid)
