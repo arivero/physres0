@@ -1321,13 +1321,13 @@ for both potentials as a function of binding energy:
 $E_0$ & $I_{\text{Yuk}}$ & $I_{\text{fer}}$ & $I_{\text{fer}}/I_{\text{Yuk}}$
   & $L_{\max}^{(\text{Y})}$ & $L_{\max}^{(\text{f})}$ \\
 \midrule
-$-0.01$ & 2.09 & 1.55 & 0.74 & 0 & 0 \\
-$-0.05$ & 2.39 & 1.55 & 0.65 & 0 & 0 \\
-$-0.50$ & 3.72 & 1.56 & 0.42 & 1 & 0 \\
-$-2.0$  & 5.63 & 1.59 & 0.28 & 2 & 0 \\
-$-5.0$  & 7.79 & 1.62 & 0.21 & 3 & 0 \\
-$-10.0$ & 10.13 & 1.65 & 0.16 & 4 & 0 \\
-$-20.0$ & 13.30 & 1.66 & 0.12 & 6 & 0 \\
+$-0.01$ & 2.00 & 1.80 & 0.90 & 0 & 0 \\
+$-0.05$ & 2.38 & 1.83 & 0.77 & 0 & 0 \\
+$-0.50$ & 3.84 & 1.93 & 0.50 & 1 & 0 \\
+$-2.0$  & 5.91 & 2.08 & 0.35 & 2 & 0 \\
+$-5.0$  & 8.30 & 2.25 & 0.27 & 3 & 0 \\
+$-10.0$ & 10.99 & 2.44 & 0.22 & 4 & 0 \\
+$-20.0$ & 14.81 & 2.70 & 0.18 & 6 & 0 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1340,8 +1340,8 @@ state, determined from $I/(2L+1) \geq 1$.
 Two crucial features emerge:
 \begin{enumerate}
 \item The Yukawa Bargmann integral grows monotonically with binding
-  energy, crossing $I = 3$ at $E_0 \approx -0.5$ (enabling $L=1$) and
-  $I = 5$ at $E_0 \approx -2$ (enabling $L=2$), generating a rich
+  energy, crossing $I = 3$ near $E_0 \approx -0.3$ (enabling $L=1$) and
+  $I = 5$ near $E_0 \approx -1.3$ (enabling $L=2$), generating a rich
   Regge tower.
 \item The fermion-loop Bargmann integral remains well below the
   $I = 3$ threshold for $L=1$ at all binding energies tested.
@@ -1360,20 +1360,19 @@ truncated at $L = 0$.
 
 \begin{proof}
 From the Bargmann bound \eqref{eq:bargmann}, $N_L = 0$ when $I < 2L+1$.
-The numerical computation (Table above) shows $I_{\text{fer}} \leq 1.66$
+The numerical computation (Table above) shows $I_{\text{fer}} \leq 2.70$
 at all binding energies tested ($E_0$ from $-0.01$ to $-20$).  Since
-$1.66 < 3 = 2\cdot 1+1$, we have $N_1 = 0$; and since $1.66 < 2L+1$
+$2.70 < 3 = 2\cdot 1+1$, we have $N_1 = 0$; and since $2.70 < 2L+1$
 for all $L \geq 1$, no higher partial waves bind either.
 
-A key subtlety strengthens this result.  The coupling $\lambda$ at each
-binding energy is determined variationally (minimizing over the trial
-parameter~$\alpha$).  Since the variational principle gives
-$E_{\text{var}} \geq E_{\text{exact}}$, achieving a target binding
-energy requires $\lambda_{\text{var}} \geq \lambda_{\text{exact}}$
-(the trial wavefunction is less efficient than the true ground state,
-so the coupling must compensate).  Therefore
-$I_{\text{var}} \geq I_{\text{exact}}$: the Bargmann integrals in
-the table are \emph{upper bounds} on the exact values.
+The coupling $\lambda$ at each binding energy is determined exactly
+by bisecting on the Pr\"ufer phase: for a given target energy
+$E_{\text{target}}$, we find $\lambda$ such that
+$\theta(\infty; E_{\text{target}})/\pi = 1$, i.e., $E_{\text{target}}$
+is exactly the ground-state eigenvalue
+(script: \texttt{corrected\_bargmann.py}).
+The Bargmann integrals in the table are therefore exact
+(up to ODE integration tolerance), not variational upper bounds.
 
 An independent, exact confirmation comes from integrating the
 Pr\"ufer angle of the zero-energy radial equation
@@ -1433,11 +1432,22 @@ $f_L(k)$, whose zeros on the positive imaginary axis correspond to
 bound states.  Newton~\cite{Newton1982} shows that if
 $\int_0^\infty r^{2L+1} |V(r)|\,\dd r < (2L)!/(2\,(L!)^2)$,
 then $f_L$ has no such zeros.  For $L = 1$, this reduces to
-$\int_0^\infty r^3 |V|\,\dd r < 1$.
+$J_1 \equiv \int_0^\infty r^3 |V|\,\dd r < 1$.
 Because $|V_{\text{fer}}| \sim \ee^{-2m_f r}/r^{7/2}$, the
-$r^3$-weighted integral converges more strongly than the Bargmann
-integral and offers a potentially sharper criterion for the absence
-of $L \geq 1$ states.
+$r^3$-weighted integral converges much more strongly than the Bargmann
+integral.  Numerically, at matched binding energy
+(script: \texttt{corrected\_bargmann.py}):
+\begin{equation}
+  J_1^{(\text{fer})} \approx 0.009\text{--}0.014 \ll 1,
+\end{equation}
+which is two orders of magnitude below the threshold---far more
+decisive than the Bargmann bound ($I_{\text{fer}} \leq 2.70$
+vs.\ threshold~$3$).  By contrast,
+$J_1^{(\text{Yuk})} \approx 2\text{--}15 > 1$ at the same binding
+energies, consistent with the Yukawa potential supporting $L = 1$
+states.  The Jost criterion thus provides a sharp, independent
+confirmation that no $L \geq 1$ bound states exist for the fermion
+potential.
 
 \paragraph{Levinson's theorem.}
 Complementarily, \emph{Levinson's theorem} relates the number of
@@ -1463,9 +1473,13 @@ inequality}~\cite{Simon1976}, which constrains the \textbf{total} number of
 bound states across all partial waves:
 $N_{\text{tot}} \leq L_{0,3}\int |V|^{3/2}\,\dd^3 r$, where
 $L_{0,3} \approx 0.116$ is a universal constant.
-For our short-range fermion potential ($|V| \sim \ee^{-2m_f r}/r^{7/2}$),
-this integral converges strongly, providing an independent bound on
-the total spectrum.
+For the fermion potential at weak binding ($E_0 = -0.01$), this
+gives $N_{\text{tot}} \leq 1.67$, i.e., at most one bound state
+across all partial waves combined.  Since the $L = 0$ ground state
+accounts for this single state, no other bound states can exist in
+any channel.  At deeper binding ($E_0 = -20$), the bound relaxes to
+$N_{\text{tot}} \leq 3.1$, which is less constraining but still
+consistent with the Pr\"ufer result.
 
 \subsection{Physical interpretation}
 
@@ -1671,6 +1685,8 @@ Script & Content \\
   & Numerov exact solver \\
 \texttt{calogero\_phase.py}
   & Pr\"ufer-angle bound-state count \\
+\texttt{corrected\_bargmann.py}
+  & Pr\"ufer-based Bargmann integral table \\
 \bottomrule
 \end{tabular}
 \end{center}
