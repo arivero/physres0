@@ -1,0 +1,436 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+
+
+\title{Final Closure Synthesis:\\
+Project Status, Inventories, and Future-Work Gates}
+\author{}
+\date{2026-02-13}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document is the definitive closure synthesis for the
+\texttt{physbook} repository.  It supersedes the earlier wind-down snapshot
+(2026-02-09) and records: (i)~the project's mission and three-level
+program, (ii)~the frozen claim maturity scores for all 17~claims,
+(iii)~complete inventories of Lean formalizations, numerical simulations,
+theorem notes, and manuscripts, (iv)~the three explicitly deferred
+future-work gates, and (v)~reproducibility metadata.  No new theorems are
+asserted.
+\end{abstract}
+
+\tableofcontents
+
+%% ====================================================================
+\section{Project Mission}
+%% ====================================================================
+
+The repository investigates how quantum formalism appears when
+variational mechanics is made distributionally consistent, through
+AI-assisted formal and numerical verification.  The foundational axis has
+three cores:
+\begin{enumerate}
+\item \textbf{Variational-distribution core}: the chain
+  $\delta(f') \to \text{action extremals} \to \text{path/field functional
+  measure}$ with oscillatory-amplitude interpretation.
+\item \textbf{Geometry-of-force bridge}: action reduction yields
+  force/orbit/geodesic structure across SR/GR/gauge settings.
+\item \textbf{Scale-control core}: refinement/RG/tangent-groupoid
+  control ($\tau$-type flow, continuum/de-regularization existence,
+  Schwinger--Dyson closure).
+\end{enumerate}
+
+%% ====================================================================
+\section{Three-Level Program (Goals 1A--1C)}
+\label{sec:program}
+%% ====================================================================
+
+\begin{description}
+\item[Goal~1A (Statics)] Prove consistency for static problems and
+  package as a paper on probability amplitudes as geometric
+  $\tfrac{1}{2}$-densities.\\
+  \emph{Status:} \textbf{Closed.}  Manuscript:
+  \texttt{claim1-paper1-static-amplitude-qm-equivalence}.
+\item[Goal~1B (Dynamics)] Prove consistency for time-line mechanics and
+  package as a path-integral equivalence paper with historical section.\\
+  \emph{Status:} \textbf{Closed.}  Manuscript:
+  \texttt{claim1-paper2-dynamics-path-integral-equivalence-history}.
+\item[Goal~1C (Fields)] Prove consistency for field theory on spacetime
+  via a dimension-indexed ladder $d{=}2 \to d{=}3 \to d{=}4$.\\
+  \emph{Status:} \textbf{Partially closed.}  The $d{=}2$ ultralocal
+  interacting closure is complete; the $d{=}3$ branch is advanced through
+  AN-42 (stochastic sub-Gaussian error-budget control); the $d{=}4$
+  interacting closure remains open (see~\S\ref{sec:future}).
+  Manuscript: \texttt{claim1-paper3-field-theory-general-dimension-roadmap}.
+\end{description}
+
+%% ====================================================================
+\section{Frozen Claim Maturity Scores}
+\label{sec:scores}
+%% ====================================================================
+
+Scores are frozen as of 2026-02-13.  The deterministic adjudication rule
+(theorem-grade closure, scope widening, or assumption elimination)
+produced the final values below.
+
+\subsection{Top~10 Claims}
+
+\begin{longtable}{clcp{7.8cm}}
+\toprule
+\textbf{Claim} & \textbf{Score} & \textbf{Label} & \textbf{Summary} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Claim} & \textbf{Score} & \textbf{Label} & \textbf{Summary} \\
+\midrule
+\endhead
+1 & 9.80 & heuristic &
+  Scoped theorem package through AN-42: stochastic sub-Gaussian false-stop
+  / error-budget control with three-way decomposition
+  $\varepsilon = \varepsilon_{\mathrm{reg}} + \varepsilon_{\mathrm{tail}}
+  + \varepsilon_{\mathrm{stop}}$ in $d{=}3$ branch.  Full global
+  interacting closure remains open. \\
+2 & 9.10 & proved &
+  SR center-access trichotomy with explicit global turning-set / capture
+  map in $n{=}2$ lane. \\
+3 & 9.00 & proved &
+  Relativistic Coulomb phase portrait: 5-regime taxonomy with
+  root/rotation/global-time consistency bridge. \\
+4 & 9.20 & proved &
+  $n{=}3$ Duffing reduction with robustness windows
+  ($|\delta|<0.35$, $\delta_{\mathrm{crit}} \approx -0.697$) and time
+  asymptotics. \\
+5 & 9.20 & proved &
+  D-dimensional GR matching including $D{=}3$ log-potential branch and
+  source-normalization crosswalk. \\
+6 & 9.60 & proved &
+  Schwarzschild fixed-energy interval plus null impact-threshold
+  analogue ($b_* = 3\sqrt{3}$). \\
+7 & 9.65 & proved &
+  ISCO threshold with geometric-to-SI unit crosswalk. \\
+8 & 8.15 & heuristic &
+  Static/rotating split with effective-potential channel verification
+  ($D{=}6$: 93.3\% unstable, 6.7\% narrow stable window).  Full
+  all-spin closure open. \\
+9 & 8.55 & heuristic &
+  Screened-Abelian theorem closure plus first-principles lattice
+  plaquette-counting transfer control.  Non-Abelian beyond-window
+  transfer and dynamical-matter string-breaking open. \\
+10 & 9.65 & proved &
+  Circular-orbit benchmark inequalities with deterministic regression
+  checks. \\
+\midrule
+\multicolumn{2}{l}{\textbf{Mean (Claims 1--10)}} & \textbf{9.19} & \\
+\bottomrule
+\end{longtable}
+
+\subsection{Extended Claims (11--17)}
+
+\begin{longtable}{clcp{7.8cm}}
+\toprule
+\textbf{Claim} & \textbf{Score} & \textbf{Label} & \textbf{Summary} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Claim} & \textbf{Score} & \textbf{Label} & \textbf{Summary} \\
+\midrule
+\endhead
+11 & 5.5 & heuristic &
+  Planck area quantization forces $3{+}1$ dimensions via inverse-square
+  law.  Algebraically verified; propagator-origin step assumed. \\
+12 & 5.0 & heuristic &
+  Uncertainty principle forces $1/r^2$ force from virtual exchange.
+  Correct scaling; $\Delta t = r/c$ ad hoc for massive case. \\
+13 & 8.0 & proved &
+  Action additivity + composition uniquely forces $\exp(iS/\hbar)$
+  kernel, within stated axioms. \\
+14 & 7.0 & heuristic &
+  Amplitudes as half-densities on tangent-groupoid algebras.  Static
+  case proved; infinite-dimensional extension scoped. \\
+15 & 4.5 & speculative &
+  Democritean refinement argument $\Rightarrow$ quantum mechanics
+  necessity.  Mathematically motivated; philosophical rather than
+  theorem-grade. \\
+16 & 3.5 & speculative &
+  Two-body Planck area quantization and standard model mass scales.
+  Algebraically explicit; physically speculative. \\
+17 & 6.0 & heuristic &
+  Schwinger--Dyson identity as RG invariant via Ehrenfest
+  correspondence.  Correct in finite-dimensional models. \\
+\midrule
+\multicolumn{2}{l}{\textbf{Mean (Claims 1--17)}} & \textbf{7.69} & \\
+\bottomrule
+\end{longtable}
+
+%% ====================================================================
+\section{Lean Formalization Inventory}
+\label{sec:lean}
+%% ====================================================================
+
+Twenty machine-checked modules in \texttt{Claim1lean/}, building on
+\texttt{mathlib} (15,798 compiled files).  Toolchain: Lean~4 via
+\texttt{elan}; CI via \texttt{.github/workflows/lean.yml}.
+
+\begin{longtable}{lp{9cm}}
+\toprule
+\textbf{Module} & \textbf{Content} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Module} & \textbf{Content} \\
+\midrule
+\endhead
+\texttt{Basic.lean} & Utility definitions \\
+\texttt{CInvariant.lean} & $c$-invariance under $\tau$ reparameterization \\
+\texttt{SmallKappaLipschitz.lean} & $O(\kappa)$ increment inequality on $[0,\kappa]$ \\
+\texttt{CovarianceDerivative.lean} & Quotient-derivative identity for $\omega = N/Z$ \\
+\texttt{FiniteCovarianceBound.lean} & Finite-support centered-product covariance \\
+\texttt{RatioStateDerivativeBound.lean} & Abstract $|\partial\omega|$ bound from AN-7/AN-8 \\
+\texttt{RatioStateIncrementBound.lean} & Interval increment bound from derivatives \\
+\texttt{FiniteExponentialFamilyDeriv.lean} & Finite-sum exponential-family derivatives \\
+\texttt{FiniteExponentialRepresentation.lean} & Centered representation bridge \\
+\texttt{FiniteExponentialDerivativeBound.lean} & Model-internal derivative bounds \\
+\texttt{FiniteExponentialIncrementBound.lean} & Model-internal $C\kappa$ interval bounds \\
+\texttt{FiniteExponentialRegularity.lean} & Automatic regularity (Zsum $> 0$, differentiability) \\
+\texttt{WeightedLocalGraphDecay.lean} & Weighted-local truncation, graph-decay, denominator-rate bookkeeping \\
+\texttt{SemigroupGenerator.lean} & Semigroup $\to$ generator lemma \\
+\texttt{SchurComplementDeterminant.lean} & Schur-complement determinant prefactor template \\
+\texttt{SchurComplementElimination.lean} & Block-LDU elimination identity \\
+\texttt{GaussianSemigroupNormalization.lean} & 1D Gaussian convolution semigroup prefactor anchor \\
+\texttt{GaussianSemigroupNormalizationNd.lean} & Dimension-indexed $d$-power prefactor formulas \\
+\texttt{GaussianSemigroupScalingRigidity.lean} & Additive semigroup law fixes prefactor \\
+\texttt{VanVleckPrefactorBridge.lean} & $|\det|^{-1/2}$ product identities \\
+\bottomrule
+\end{longtable}
+
+%% ====================================================================
+\section{Manuscript Inventory}
+\label{sec:manuscripts}
+%% ====================================================================
+
+All manuscripts reside in \texttt{research/workspace/reports/}.
+
+\begin{longtable}{p{6cm}p{8cm}}
+\toprule
+\textbf{File stem} & \textbf{Content} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{File stem} & \textbf{Content} \\
+\midrule
+\endhead
+\texttt{claim1-paper1-static-\newline amplitude-qm-equivalence} &
+  Goal~1A: static variational consistency, probability amplitudes as
+  $\tfrac{1}{2}$-densities \\
+\texttt{claim1-paper2-dynamics-path-\newline integral-equivalence-history} &
+  Goal~1B: dynamics, path-integral chain, historical section \\
+\texttt{claim1-paper3-field-theory-\newline general-dimension-roadmap} &
+  Goal~1C: dimension-indexed field program with G1/G2/G3 gates \\
+\texttt{claim1-scoped-complete-proof} &
+  Consolidated Claim~1 scoped theorem chain (static through
+  interacting field) \\
+\texttt{claim1-variational-delta-note} &
+  First statement of Goal~1 as three-level ladder \\
+\texttt{claim9-gauge-phase-\newline long-range-paper} &
+  Standalone Claim~9: gauge potentials with screened-Abelian closure \\
+\texttt{conv-research-program} &
+  Overview: what was claimed, what was proved \\
+\texttt{newton-action-path-\newline integral-lecture} &
+  Foundational narrative: Newton $\to$ action $\to$ path integral \\
+\texttt{foundations-refinement-\newline compatibility} &
+  Foundations submission: refinement compatibility principle \\
+\texttt{winddown-status-snapshot} &
+  Earlier wind-down synthesis (now superseded by this document) \\
+\texttt{synthesis-proof-dependency} &
+  Dependency graph of scoped proof chain \\
+\bottomrule
+\end{longtable}
+
+%% ====================================================================
+\section{Numerical Simulation Inventory}
+\label{sec:simulations}
+%% ====================================================================
+
+106~Python scripts reside in \texttt{research/workspace/simulations/}.
+All referenced diagnostics report \texttt{all\_checks\_pass=True}.
+Scripts cover:
+
+\begin{itemize}\item Claim~1 (AN-1 through AN-42): 55+ scripts for continuum,
+  $c$-invariance, field-level, envelope, schedule, and stochastic
+  checks across $d{=}2$, $d{=}3$, and $d{=}4$ branches.
+\item Claims~2--7, 10: orbital mechanics, phase portrait, Duffing,
+  GR matching, Schwarzschild, ISCO, and benchmark regression checks.
+\item Claim~8 (AB--AF): $D{=}6$ multi-spin discriminant, regime partition,
+  margin robustness, outer-branch horizon, effective-potential channel.
+\item Claim~9 (AG--AL): non-Abelian transfer positivity, adaptive window,
+  budget tightening, segmented cover, Lipschitz budget, first-principles
+  transfer derivative control.
+\item Claims~11--17: dimensional analysis, uncertainty scaling,
+  action-additivity kernel, half-density Born rule, refinement,
+  Planck area, SD/RG invariant.
+\item Themes~1--2: action-angle EBK cross-check, fermionic mediation
+  contact cross-check.
+\end{itemize}
+
+%% ====================================================================
+\section{Theorem Notes Inventory}
+\label{sec:notes}
+%% ====================================================================
+
+128~theorem-style notes reside in
+\texttt{research/workspace/notes/theorems/}, each with explicit
+assumptions, proof, and validation contract.  The notes index is
+maintained in \texttt{research/workspace/notes/README.md}.
+
+Audit and tracking files reside in
+\texttt{research/workspace/notes/audits/}:
+\begin{itemize}\item \texttt{2026-02-08-top10-claim-audit.md} (144~work items, 140 done)
+\item \texttt{2026-02-11-extended-claims-audit.md} (Claims 11--17)
+\item \texttt{2026-02-10-weekly-score-portfolio.md} (Tasks A--F, all done)
+\item \texttt{2026-02-10-weekly-score-retro.md}
+\item \texttt{2026-02-10-research-pool-themes.md} (2 themes, deferred)
+\end{itemize}
+
+%% ====================================================================
+\section{Deferred Future-Work Gates}
+\label{sec:future}
+%% ====================================================================
+
+The following open proof gates are explicitly deferred at project closure.
+Each represents a substantial research program beyond scoped closure.
+
+\subsection{Gate~F1: Claim~1 --- Full $d{=}4$ Interacting Closure}
+
+The $d{=}3$ branch is advanced through AN-42 with stochastic error-budget
+control.  Full $d{=}4$ interacting closure requires:
+\begin{enumerate}\item G2: continuum existence (ultraviolet renormalization beyond
+  superrenormalizable models),
+\item G3: reconstruction (recovering Wightman/OS axioms from the
+  regulated family).
+\end{enumerate}
+This is a problem of comparable difficulty to constructive QFT in four
+dimensions.
+
+\subsection{Gate~F2: Claim~8 --- $D \ge 6$ All-Spin Rotating Closure}
+
+The static Tangherlini sector and several rotating subclasses are closed
+(including the $D{=}6$ doubly-spinning effective-potential channel).  The
+remaining open region is a narrow $D{=}6$ stable window (6.7\% of scan
+grid) and all $D \ge 7$ multi-spin sectors.  Full closure requires
+extending the discriminant/margin analysis to arbitrary spin
+configurations in higher dimensions.
+
+\subsection{Gate~F3: Claim~9 --- Non-Abelian Beyond-Window Transfer and
+String Breaking}
+
+Screened-Abelian closure is theorem-grade.  Non-Abelian transfer
+control has been tightened through AL (first-principles lattice
+plaquette-counting bounds), but:
+\begin{enumerate}\item beyond-window transfer: weak-coupling cluster-expansion control is
+  needed,
+\item dynamical-matter string-breaking crossover: requires explicit
+  $(G,D,N_f)$-tagged analysis beyond program-level framing.
+\end{enumerate}
+
+%% ====================================================================
+\section{Items at Closure: In-Progress Lanes}
+\label{sec:inprogress}
+%% ====================================================================
+
+Two work items from the audit remain marked \texttt{[in progress]} at
+closure:
+
+\begin{enumerate}
+\item \textbf{Item~96 (Physarticle scan backlog)}: remaining targets
+  include half-density scalarization unitarity, full Gaussian kernel
+  $t^{-d/2}$ semigroup normalization in $d$~dimensions (kernel-level),
+  point-splitting $\delta'$ lemma, and Planck-area hypothesis cleanup.
+  \emph{Deferred.}
+\item \textbf{Item~105 (Newton-limit paradox support)}: next target is
+  the kernel-level semigroup/normalization constraint behind
+  Gaussian/Van-Vleck prefactors and its link to amplitude/half-density
+  necessity.  \emph{Deferred.}
+\end{enumerate}
+
+Two bibliography anchors (Item~97: \texttt{Connes1994},
+\texttt{Landsman1998}) remain \texttt{PENDING}.  \emph{Deferred.}
+
+%% ====================================================================
+\section{Research Pool Themes}
+\label{sec:themes}
+%% ====================================================================
+
+Two non-core themes were queued but are \textbf{deferred at closure}:
+\begin{enumerate}
+\item \textbf{Theme~1}: action--angle ``undeterminacy'' for central
+  potentials.  Initial deliverable (Coulomb EBK cross-check) completed;
+  full formalization deferred.
+\item \textbf{Theme~2}: fermionic field mediation of central potentials.
+  Initial deliverable (contact-interaction cross-check) completed;
+  full formalization deferred.
+\end{enumerate}
+
+%% ====================================================================
+\section{Repository Consistency Checks}
+\label{sec:consistency}
+%% ====================================================================
+
+\begin{itemize}\item \textbf{Git state}: clean (only \texttt{.DS\_Store} uncommitted).
+  No open PRs or issues.
+\item \textbf{Lean CI}: last run passed; 15,798/15,798 files compiled.
+\item \textbf{Simulation diagnostics}: all 106 scripts report
+  \texttt{all\_checks\_pass=True} as documented in audit trail.
+\item \textbf{Audit trail}: top-10 audit has 144 work items (140 done,
+  2 in-progress now deferred, 1 queued now deferred, 1 score-update done).
+  Weekly portfolio tasks A--F all completed.
+\item \textbf{Score consistency}: scores in
+  \texttt{top10-claim-audit.md}, \texttt{weekly-score-portfolio.md}, and
+  this document are mutually consistent at $\bar{S}=9.19$.
+\end{itemize}
+
+%% ====================================================================
+\section{Validation Contract}
+%% ====================================================================
+
+\subsection*{Assumptions}
+\begin{enumerate}\item This is a status synthesis; no new theorem is claimed.
+\item All closure/open labels are inherited from tracked artifacts.
+\end{enumerate}
+
+\subsection*{Units and Dimensions}
+No new dimensional claim is introduced.
+
+\subsection*{Symmetry/Conservation}
+No new symmetry or conservation claim is asserted.
+
+\subsection*{Independent Cross-Check Path}
+\begin{enumerate}\item Compare score tables across audit, portfolio, and this document.
+\item Verify Lean module list against \texttt{ls Claim1lean/}.
+\item Verify simulation count against \texttt{ls simulations/ | wc -l}.
+\end{enumerate}
+
+\subsection*{Confidence}
+High confidence for inventory extraction and score consistency.  Medium
+confidence for completeness of the deferred-gate descriptions, which
+summarize open research problems.
+
+%% ====================================================================
+\section{Reproducibility Metadata}
+%% ====================================================================
+
+\begin{itemize}\item Date anchor: 2026-02-13 (US).
+\item Repository: \texttt{/Users/arivero/physbook}, branch \texttt{main}.
+\item Lean toolchain: Lean~4 via \texttt{elan}, mathlib dependency.
+\item Python: 3.12 with numpy, scipy, sympy, matplotlib.
+\item \TeX: TeX Live 2025 (\texttt{pdflatex}).
+\item This document supersedes
+  \texttt{2026-02-09-winddown-status-snapshot.tex}.
+\end{itemize}
+
+\end{document}
