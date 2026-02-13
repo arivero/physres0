@@ -13,6 +13,8 @@ See: fermion/2026-02-13-fermionic-composite-form-factor-suppression.md
 """
 
 import numpy as np
+# Compatibility: numpy < 2.0 uses trapz, >= 2.0 uses trapezoid
+_trapz = getattr(np, 'trapezoid', np.trapz)
 from scipy.integrate import quad
 from scipy.optimize import brentq
 
@@ -244,11 +246,11 @@ for p_exp, label in power_cases:
         continue
 
     u = numerov(E, V)
-    norm2 = np.trapezoid(u**2, r_grid)
+    norm2 = _trapz(u**2, r_grid)
     u_n = u / np.sqrt(norm2)
     psi = u_n / r_grid
 
-    r2 = np.trapezoid(r_grid**2 * psi**2 * r_grid**2, r_grid)
+    r2 = _trapz(r_grid**2 * psi**2 * r_grid**2, r_grid)
     R = np.sqrt(r2)
     bs_results[p_exp] = {"lam": lam, "E": E, "r2": r2, "R": R, "psi": psi}
     print(f"  {p_exp:>5.1f}  {label:>22}  {lam:>12.4e}  {E:>12.6e}  {r2:>12.6e}  {R:>10.6f}")
@@ -281,10 +283,10 @@ if 1.0 in bs_results and 3.5 in bs_results:
         F1 = np.zeros_like(q_vals)
         for i, q in enumerate(q_vals):
             if q < 1e-15:
-                F1[i] = np.trapezoid(rho, r_grid)
+                F1[i] = _trapz(rho, r_grid)
             else:
                 j0 = np.sin(q * r_grid) / (q * r_grid)
-                F1[i] = np.trapezoid(j0 * rho, r_grid)
+                F1[i] = _trapz(j0 * rho, r_grid)
         return F1 / F1[0]  # normalize F1(0) = 1
 
     F1_yuk = form_factor(bs_results[1.0]["psi"], q_vals)

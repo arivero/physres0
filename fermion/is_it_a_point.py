@@ -15,6 +15,8 @@ See: fermion/2026-02-13-fermionic-composite-form-factor-suppression.md
 """
 
 import numpy as np
+# Compatibility: numpy < 2.0 uses trapz, >= 2.0 uses trapezoid
+_trapz = getattr(np, 'trapezoid', np.trapz)
 from scipy.integrate import quad
 from scipy.optimize import minimize_scalar, brentq
 
@@ -107,10 +109,10 @@ for r_val in [0.1, 0.5, 1.0, 2.0, 5.0]:
 def V_expectation(alpha, V_arr):
     """<V> for trial u = r*exp(-alpha*r) in potential V(r)."""
     w = r_grid**2 * np.exp(-2 * alpha * r_grid)
-    w_sum = np.trapezoid(w, r_grid)
+    w_sum = _trapz(w, r_grid)
     if w_sum < 1e-300:
         return 0.0
-    return np.trapezoid(w * V_arr, r_grid) / w_sum
+    return _trapz(w * V_arr, r_grid) / w_sum
 
 def var_energy(alpha, V_arr, lam):
     """Variational energy E(alpha) = T + lam*<V>."""
