@@ -46,13 +46,13 @@ def rho_fermion(s):
 def rho_fermion_ps(s):
     """Im Pi for fermion loop with PSEUDOSCALAR coupling (1S0, L=0).
     Tr[gamma5(k+m)gamma5(k+q+m)] = 4[-k.(k+q) + m^2]
-    Integrand [m^2 + x(1-x)s] does NOT vanish at threshold.
-    Result: ~ (s - 4m^2)^{1/2} (same as scalar loop — S-wave)."""
+    Feynman param integral: beta*(s+8m^2)/6 (verified by SymPy).
+    Does NOT vanish at threshold → rho ~ delta^{1/2} (S-wave)."""
     if s <= threshold:
         return 0.0
     beta = np.sqrt(1 - threshold / s)
-    # The integral gives beta * (s + 2m^2) / (6s), leading to beta ~ delta^{1/2}
-    return (g**2 / (4 * np.pi)) * beta * (s + 2 * m_f**2) / (6 * s)
+    # SymPy-verified: int_{x-}^{x+} [m^2+x(1-x)s] dx = beta*(s+8m^2)/6
+    return (g**2 / (4 * np.pi)) * beta * (s + 8 * m_f**2) / (6 * s)
 
 
 def rho_scalar(s):
